@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHOBIK - Regulation Preference Refined</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4258c",
+                        "brand-pink": "#f4258c",
+                        "brand-orange": "#ff8a5c",
+                        "brand-yellow": "#ffcc33",
+                        "background-light": "#f8f5f7",
+                        "background-dark": "#1a0b12",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --gradient-primary: linear-gradient(135deg, #f4258c 0%, #ff8a5c 50%, #ffcc33 100%);
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 100dvh;
+        }
+        .bg-brand-gradient {
+            background: var(--gradient-primary);
+        }
+        .text-brand-gradient {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-brand {
+            box-shadow: 0 0 25px -5px rgba(255, 138, 92, 0.3);
+        }
+        .glow-button {
+            box-shadow: 0 10px 30px -10px rgba(244, 37, 140, 0.5);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased">
+<div class="relative mx-auto flex h-screen max-w-md flex-col overflow-hidden bg-background-light dark:bg-background-dark">
+<header class="flex items-center justify-between p-4 pt-6">
+<button class="flex size-10 items-center justify-center rounded-full bg-slate-200/50 dark:bg-white/10 text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h2 class="text-sm font-bold uppercase tracking-widest opacity-60">Step 4 of 8</h2>
+<div class="size-10"></div>
+</header>
+<div class="flex w-full flex-row items-center justify-center gap-1.5 px-6 py-4">
+<div class="h-1.5 flex-1 rounded-full bg-brand-gradient"></div>
+<div class="h-1.5 flex-1 rounded-full bg-brand-gradient"></div>
+<div class="h-1.5 flex-1 rounded-full bg-brand-gradient"></div>
+<div class="h-1.5 flex-1 rounded-full bg-brand-gradient"></div>
+<div class="h-1.5 flex-1 rounded-full bg-slate-200 dark:bg-white/10"></div>
+<div class="h-1.5 flex-1 rounded-full bg-slate-200 dark:bg-white/10"></div>
+<div class="h-1.5 flex-1 rounded-full bg-slate-200 dark:bg-white/10"></div>
+<div class="h-1.5 flex-1 rounded-full bg-slate-200 dark:bg-white/10"></div>
+</div>
+<main class="flex flex-1 flex-col px-6 pt-6 overflow-y-auto">
+<h1 class="text-3xl font-extrabold leading-tight tracking-tight text-slate-900 dark:text-white">
+                When you’re stressed, what helps most?
+            </h1>
+<p class="mt-3 text-base font-medium text-slate-500 dark:text-brand-orange/80">
+                Select options to help us personalize your tools.
+            </p>
+<div class="mt-8 flex flex-wrap gap-2.5">
+<button class="flex h-11 items-center justify-center gap-2 rounded-full bg-brand-gradient px-5 transition-all shadow-md">
+<span class="text-sm font-bold text-white">Breathing</span>
+<span class="material-symbols-outlined text-[18px] text-white">check_circle</span>
+</button>
+<button class="flex h-11 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-white/5 px-5 hover:bg-slate-300 dark:hover:bg-white/10 transition-colors">
+<span class="text-sm font-bold text-slate-800 dark:text-white">Movement</span>
+</button>
+<button class="flex h-11 items-center justify-center gap-2 rounded-full bg-brand-gradient px-5 transition-all shadow-md">
+<span class="text-sm font-bold text-white">Calming sounds</span>
+<span class="material-symbols-outlined text-[18px] text-white">check_circle</span>
+</button>
+<button class="flex h-11 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-white/5 px-5 hover:bg-slate-300 dark:hover:bg-white/10 transition-colors">
+<span class="text-sm font-bold text-slate-800 dark:text-white">Learning</span>
+</button>
+<button class="flex h-11 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-white/5 px-5 hover:bg-slate-300 dark:hover:bg-white/10 transition-colors">
+<span class="text-sm font-bold text-slate-800 dark:text-white">Journaling</span>
+</button>
+<button class="flex h-11 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-white/5 px-5 hover:bg-slate-300 dark:hover:bg-white/10 transition-colors">
+<span class="text-sm font-bold text-slate-800 dark:text-white">Meditation</span>
+</button>
+<button class="flex h-11 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-white/5 px-5 hover:bg-slate-300 dark:hover:bg-white/10 transition-colors">
+<span class="text-sm font-bold text-slate-800 dark:text-white">Talking</span>
+</button>
+<button class="flex h-11 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-white/5 px-5 hover:bg-slate-300 dark:hover:bg-white/10 transition-colors">
+<span class="text-sm font-bold text-slate-800 dark:text-white">Listen to music</span>
+</button>
+<button class="flex h-11 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-white/5 px-5 hover:bg-slate-300 dark:hover:bg-white/10 transition-colors">
+<span class="text-sm font-bold text-slate-800 dark:text-white">Laughter</span>
+</button>
+<button class="flex h-11 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-white/5 px-5 hover:bg-slate-300 dark:hover:bg-white/10 transition-colors">
+<span class="text-sm font-bold text-slate-800 dark:text-white">Rest</span>
+</button>
+<button class="flex h-11 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-white/5 px-5 hover:bg-slate-300 dark:hover:bg-white/10 transition-colors">
+<span class="text-sm font-bold text-slate-800 dark:text-white">Cooking</span>
+</button>
+<button class="flex h-11 items-center justify-center gap-2 rounded-full bg-slate-200 dark:bg-white/5 px-5 hover:bg-slate-300 dark:hover:bg-white/10 transition-colors">
+<span class="text-sm font-bold text-slate-800 dark:text-white">Not sure yet</span>
+</button>
+<div class="w-full mt-2">
+<div class="relative flex h-11 items-center w-full rounded-full border border-slate-300 dark:border-white/10 bg-slate-100 dark:bg-white/5 focus-within:border-brand-orange/50 px-5 transition-all">
+<span class="text-sm font-bold text-slate-400 dark:text-slate-500 mr-2">Other:</span>
+<input class="w-full bg-transparent border-none p-0 text-sm font-bold text-slate-800 dark:text-white placeholder:text-slate-400 dark:placeholder:text-white/20 focus:ring-0" placeholder="type here..." type="text"/>
+</div>
+</div>
+</div>
+<div class="mt-8 mb-8 relative rounded-xl bg-white/5 p-5 border border-brand-orange/20 glow-brand overflow-hidden">
+<div class="absolute inset-0 bg-brand-gradient opacity-[0.05] rounded-xl pointer-events-none"></div>
+<div class="relative flex items-start gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-gradient text-white">
+<span class="material-symbols-outlined text-xl">info</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-brand-orange">Why this matters</h4>
+<p class="mt-1 text-xs leading-relaxed text-slate-600 dark:text-slate-400">
+                            We match your preferences with your current nervous system state to find your optimal stress tolerance.
+                        </p>
+</div>
+</div>
+</div>
+</main>
+<footer class="p-6 pb-10">
+<button class="flex w-full items-center justify-center rounded-full bg-brand-gradient py-4 text-center text-lg font-bold text-white glow-button active:scale-[0.98] transition-transform">
+                Continue
+            </button>
+<div class="mt-4 text-center">
+<p class="text-xs font-medium text-slate-400 uppercase tracking-widest">Selection Limit: 2 / 3</p>
+</div>
+</footer>
+<div class="absolute bottom-1 left-1/2 h-1.5 w-32 -translate-x-1/2 rounded-full bg-slate-800/20 dark:bg-white/20"></div>
+</div>
+
+</body></html>

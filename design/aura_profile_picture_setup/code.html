@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aura Profile Picture Setup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4258c",
+                        "accent-yellow": "#facc15",
+                        "background-light": "#f8f5f7",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .aura-glow {
+            box-shadow: 0 0 60px 10px rgba(244, 37, 140, 0.4), 0 0 100px 20px rgba(250, 204, 21, 0.2);
+        }
+        .aura-gradient-bg {
+            background: linear-gradient(135deg, #f4258c 0%, #facc15 100%);
+        }
+        .aura-overlay {
+            background: radial-gradient(circle at center, transparent 30%, rgba(244, 37, 140, 0.3) 70%, rgba(250, 204, 21, 0.2) 100%);
+            mix-blend-mode: screen;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-12">Profile Setup</h2>
+</header>
+<main class="flex-1 flex flex-col items-center px-6 max-w-md mx-auto w-full">
+<!-- HeadlineText -->
+<div class="w-full">
+<h2 class="text-slate-900 dark:text-white tracking-tight text-[32px] font-bold leading-tight px-4 text-center pb-2 pt-8">Your Signature Aura</h2>
+<!-- MetaText -->
+<p class="text-slate-500 dark:text-[#cb90ad] text-base font-normal leading-relaxed pb-8 px-4 text-center">Express your energy. Upload a photo to see your PHOBIK aura.</p>
+</div>
+<!-- ProfileHeader with Aura Effect -->
+<div class="relative flex p-4 justify-center items-center mb-10 mt-4 group">
+<!-- Aura Glow Rings -->
+<div class="absolute inset-0 aura-glow rounded-full opacity-60"></div>
+<div class="relative flex flex-col items-center">
+<div class="relative">
+<!-- The Profile Picture Container -->
+<div class="relative bg-center bg-no-repeat aspect-square bg-cover rounded-full h-48 w-48 border-4 border-primary/20 p-1 overflow-hidden" data-alt="User profile photo with a soft pink and yellow light overlay" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6nR8gywZgddm3v37cfjWRgiBC1vVnBBW59G_fb4Antloe5NARcgfQtpWS7mmv2jb3qt1DNdqd9ErAGdiOBqmUlpJxOZSE2GHa_7NkgTGfy9q8yFu5BFz1_8V7cDcg-jRIyrVGYsS2qFzwojstKtfw01Z4P_EbJJPFDgE3bYHzGNPJAfH8DZhsnnbvOUEqSiZpjCvylxlKOaneFqrpNQoL9KLKuAYgZLEOZ_oBzSRlsWAyQ7pnHQigr32CmPvrIHmKVovhLFoKRCU2");'>
+<!-- Aura Overlay -->
+<div class="absolute inset-0 aura-overlay"></div>
+</div>
+<!-- Edit Button FAB -->
+<button class="absolute bottom-2 right-2 bg-primary text-white p-3 rounded-full shadow-lg border-4 border-background-dark">
+<span class="material-symbols-outlined text-xl">photo_camera</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ActionPanel / Toggle -->
+<div class="w-full mb-8">
+<div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-xl border border-slate-200 dark:border-[#68314d] bg-white dark:bg-background-dark/50 p-5 @[480px]:flex-row @[480px]:items-center shadow-sm">
+<div class="flex flex-col gap-1">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight">Apply Aura Filter</p>
+<p class="text-slate-500 dark:text-[#cb90ad] text-sm font-normal leading-normal">Enhance your photo with our signature glow</p>
+</div>
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-200 dark:bg-[#492236] p-0.5 transition-colors duration-300">
+<!-- Simple Checkbox for styling -->
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="h-full w-[27px] rounded-full bg-white shadow-md transform transition-transform duration-300 translate-x-0 peer-checked:translate-x-5 peer-checked:bg-white"></div>
+<div class="absolute inset-0 rounded-full bg-primary/0 peer-checked:bg-primary transition-colors duration-300 -z-10"></div>
+</label>
+</div>
+</div>
+<!-- Footer Buttons -->
+<div class="w-full mt-auto pb-10 space-y-4">
+<button class="w-full aura-gradient-bg text-white font-bold py-4 rounded-full shadow-xl shadow-primary/20 hover:opacity-90 transition-all active:scale-[0.98]">
+                Looks Great
+            </button>
+<button class="w-full text-slate-500 dark:text-[#cb90ad] font-medium py-3 rounded-full hover:bg-slate-100 dark:hover:bg-white/5 transition-all">
+                Maybe Later
+            </button>
+</div>
+</main>
+<!-- Navigation Indicator (iOS style) -->
+<div class="flex justify-center pb-2">
+<div class="w-32 h-1.5 bg-slate-300 dark:bg-white/20 rounded-full"></div>
+</div>
+</body></html>

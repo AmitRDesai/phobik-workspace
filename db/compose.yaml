@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: phobik
+      PGDATA: /data
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./data:/data:delegated

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4258c",
+                        "victory-pink": "#FF3B8E",
+                        "victory-orange": "#FF8C37",
+                        "victory-yellow": "#FFD64D",
+                        "background-light": "#f8f5f7",
+                        "background-dark": "#12080D",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --victory-gradient: linear-gradient(135deg, #FF3B8E 0%, #FF8C37 50%, #FFD64D 100%);
+        }
+        .aura-victory {
+            background: radial-gradient(circle, rgba(255, 59, 142, 0.4) 0%, rgba(255, 140, 55, 0.2) 40%, rgba(255, 214, 77, 0.1) 60%, rgba(18, 8, 13, 0) 80%);
+        }
+        .victory-core {
+            background: var(--victory-gradient);
+            box-shadow: 0 0 60px 20px rgba(255, 140, 55, 0.25);
+        }
+        .victory-bar {
+            background: var(--victory-gradient);
+        }
+        .victory-btn {
+            background: var(--victory-gradient);
+            box-shadow: 0 10px 30px -5px rgba(255, 59, 142, 0.4);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col max-w-[430px] mx-auto overflow-hidden">
+<div class="flex items-center p-4 justify-between">
+<div class="text-zinc-400 flex size-12 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<div class="text-white/40 text-xs font-semibold uppercase tracking-widest">PHOBIK</div>
+<div class="size-12"></div>
+</div>
+<div class="flex flex-col gap-3 p-4">
+<div class="flex gap-6 justify-between">
+<p class="text-zinc-400 text-sm font-medium leading-normal">Onboarding Complete</p>
+<p class="text-victory-orange text-sm font-bold leading-normal">100%</p>
+</div>
+<div class="rounded-full bg-zinc-800/50 overflow-hidden h-1.5">
+<div class="h-full rounded-full victory-bar" style="width: 100%;"></div>
+</div>
+</div>
+<div class="flex flex-1 flex-col items-center justify-center px-6 pb-12">
+<div class="relative flex items-center justify-center w-full aspect-square max-w-[320px] mb-12">
+<div class="absolute inset-0 aura-victory scale-150 blur-3xl opacity-60"></div>
+<div class="absolute inset-0 aura-victory scale-110 blur-xl opacity-80"></div>
+<div class="relative w-48 h-48 rounded-full victory-core flex items-center justify-center">
+<div class="w-40 h-40 rounded-full border-2 border-white/30 flex items-center justify-center bg-white/5 backdrop-blur-sm">
+<div class="w-32 h-32 rounded-full border border-white/20 flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-white text-6xl font-light">check_circle</span>
+</div>
+</div>
+<div class="absolute inset-[-20px] rounded-full border border-victory-orange/20 scale-100"></div>
+<div class="absolute inset-[-40px] rounded-full border border-victory-pink/10 scale-100"></div>
+</div>
+<div class="absolute top-10 right-10 w-4 h-4 rounded-full bg-victory-yellow/40 blur-sm"></div>
+<div class="absolute bottom-10 left-10 w-6 h-6 rounded-full bg-victory-pink/30 blur-sm"></div>
+<div class="absolute top-1/2 -left-4 w-3 h-3 rounded-full bg-white/40 blur-xs"></div>
+</div>
+<div class="text-center">
+<h1 class="text-zinc-900 dark:text-white tracking-tight text-[36px] font-extrabold leading-tight pb-3">
+                    You’re set.
+                </h1>
+<p class="text-zinc-500 dark:text-zinc-400 text-lg font-medium leading-relaxed max-w-[280px] mx-auto">
+                    Phobik will meet you where you are and adapt as you go.
+                </p>
+</div>
+</div>
+<div class="p-6 pb-12 w-full flex flex-col items-center">
+<button class="group relative w-full py-5 rounded-2xl victory-btn text-white font-bold text-lg transition-all hover:scale-[1.02] active:scale-[0.98]">
+<div class="flex items-center justify-center gap-2 relative z-10">
+<span>Go to Today</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</div>
+<div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/20 to-transparent opacity-50 pointer-events-none"></div>
+</button>
+<p class="mt-8 text-zinc-500 text-[10px] font-bold uppercase tracking-[0.3em]">
+                Your journey starts now
+            </p>
+</div>
+</div>
+<div class="hidden">
+<div data-alt="vibrant pink orange yellow energy aura pulsing in darkness"></div>
+<div data-alt="minimalist success checkmark inside glowing radiant circles"></div>
+</div>
+
+</body></html>

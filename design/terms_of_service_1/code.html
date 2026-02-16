@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phobik – Security Promise &amp; Privacy Acceptance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4258c",
+                        "accent-yellow": "#fbbf24",
+                        "background-dark": "#000000",
+                        "card-dark": "#0a0a0a",
+                        "lavender-subtle": "#e0e0ff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-background-dark text-gray-100 font-display antialiased;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #f4258c 0%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-btn {
+            background: linear-gradient(90deg, #f4258c 0%, #fbbf24 100%);
+        }
+        .glow-circle {
+            box-shadow: 0 0 40px 5px rgba(244, 37, 140, 0.2);
+        }
+        .progress-segment-active {
+            background: linear-gradient(90deg, #f4258c 0%, #fbbf24 100%);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex items-center justify-center min-h-screen">
+<div class="relative flex h-[100dvh] w-full max-w-[430px] mx-auto flex-col overflow-hidden bg-background-dark shadow-2xl">
+<div class="px-6 pt-6 flex gap-1.5 w-full">
+<div class="h-1 flex-1 rounded-full progress-segment-active"></div>
+<div class="h-1 flex-1 rounded-full progress-segment-active"></div>
+<div class="h-1 flex-1 rounded-full progress-segment-active"></div>
+<div class="h-1 flex-1 rounded-full progress-segment-active"></div>
+<div class="h-1 flex-1 rounded-full progress-segment-active"></div>
+<div class="h-1 flex-1 rounded-full progress-segment-active"></div>
+<div class="h-1 flex-1 rounded-full bg-white/10"></div>
+</div>
+<header class="pt-6 px-6 pb-4 flex items-center justify-between">
+<button class="flex items-center justify-center size-10 rounded-full bg-white/5 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-white text-2xl">arrow_back_ios_new</span>
+</button>
+<span class="text-xs font-black tracking-[0.3em] text-white/40 uppercase">Security</span>
+<div class="size-10"></div>
+</header>
+<div class="flex-1 overflow-y-auto px-8 py-4 flex flex-col">
+<h1 class="text-white text-3xl font-extrabold tracking-tight leading-tight text-center mb-8">
+                Your Privacy is <br/>
+<span class="gradient-text">Our Priority</span>
+</h1>
+<div class="relative flex items-center justify-center mb-10 py-4">
+<div class="absolute size-48 rounded-full border border-white/5"></div>
+<div class="absolute size-36 rounded-full border border-white/10"></div>
+<div class="absolute size-24 rounded-full border border-white/20 glow-circle"></div>
+<div class="relative size-20 rounded-full bg-gradient-to-br from-primary/20 to-accent-yellow/20 flex items-center justify-center border border-white/20 shadow-2xl">
+<span class="material-symbols-outlined text-primary text-5xl font-light">lock</span>
+</div>
+</div>
+<div class="space-y-8 mb-8">
+<div class="flex gap-4">
+<div class="mt-1 size-6 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-green-500 text-[18px] font-bold">check</span>
+</div>
+<div>
+<h3 class="text-white font-bold text-base">Biometric data never leaves your device</h3>
+<p class="text-white/50 text-sm mt-1 leading-relaxed">Your facial data and fingerprints are processed locally using Apple's Secure Enclave.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1 size-6 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-green-500 text-[18px] font-bold">check</span>
+</div>
+<div>
+<h3 class="text-white font-bold text-base">End-to-end encrypted journaling</h3>
+<p class="text-white/50 text-sm mt-1 leading-relaxed">Only you hold the keys to your thoughts. Even we cannot access your journal entries.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1 size-6 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-green-500 text-[18px] font-bold">check</span>
+</div>
+<div>
+<h3 class="text-white font-bold text-base">Absolute anonymity in our community</h3>
+<p class="text-white/50 text-sm mt-1 leading-relaxed">Interact without fear. Your identity is fully protected through randomized aliases.</p>
+</div>
+</div>
+</div>
+<div class="mt-auto text-center space-y-4 mb-2">
+<p class="text-white/40 text-[11px] leading-relaxed uppercase tracking-wider px-4">
+                    By clicking below, you agree to our Privacy Policy and acknowledge how we handle your data.
+                </p>
+</div>
+</div>
+<footer class="px-8 pb-10 pt-2 flex flex-col items-center">
+<button class="gradient-btn w-full text-white font-black py-5 rounded-2xl shadow-2xl shadow-primary/30 active:scale-[0.98] transition-transform text-lg uppercase tracking-wide">
+                Agree and Continue
+            </button>
+<button class="mt-6 mb-1 text-lavender-subtle/70 hover:text-lavender-subtle active:scale-95 transition-all text-[11px] font-semibold uppercase tracking-[0.15em] underline underline-offset-4">
+                Download full privacy policy
+            </button>
+<span class="text-[10px] font-black tracking-[0.2em] text-white/30 uppercase mt-4">Step 6 of 7</span>
+<button class="w-full text-white/30 hover:text-white/60 font-bold py-4 active:scale-[0.98] transition-all text-xs uppercase tracking-widest">
+                Review Settings
+            </button>
+</footer>
+<div class="h-6 w-full"></div>
+</div>
+
+</body></html>

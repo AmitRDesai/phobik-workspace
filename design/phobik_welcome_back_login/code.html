@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHOBIK - Personalized Aura</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4258c",
+                        "accent-yellow": "#fbbf24",
+                        "background-dark": "#000000",
+                        "charcoal": "#1a1a1a",
+                        "lavender": "#cb90ad",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary: #f4258c;
+            --accent-yellow: #fbbf24;
+        }
+        .aura-circle {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        .aura-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(2px) saturate(1.2);
+        }
+        .wavy-aura {
+            position: absolute;
+            inset: -20px;
+            border-radius: 50%;
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+        .wavy-line-1 {
+            border: 3px solid var(--primary);
+            opacity: 0.4;
+            filter: blur(8px);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+        .wavy-line-2 {
+            border: 3px solid var(--accent-yellow);
+            opacity: 0.3;
+            filter: blur(12px);
+            border-radius: 60% 40% 30% 70% / 50% 60% 40% 60%;
+            transform: rotate(45deg);
+        }
+        .wavy-line-3 {
+            border: 2px solid white;
+            opacity: 0.2;
+            filter: blur(4px);
+            border-radius: 50% 50% 20% 80% / 30% 70% 30% 70%;
+            transform: rotate(-30deg);
+        }
+        .glow-background {
+            background: radial-gradient(circle at center, rgba(244, 37, 140, 0.2) 0%, rgba(251, 191, 36, 0.05) 40%, rgba(0, 0, 0, 0) 70%);
+        }
+        .btn-gradient {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent-yellow) 100%);
+        }
+        .input-glow:focus-within {
+            box-shadow: 0 0 15px rgba(244, 37, 140, 0.2);
+            border-color: rgba(244, 37, 140, 0.5);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-white selection:bg-primary/30">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-start overflow-x-hidden bg-background-dark px-6 pb-12 pt-10">
+<div class="relative flex h-80 w-full items-center justify-center">
+<div class="glow-background absolute h-[500px] w-[500px] rounded-full"></div>
+<div class="relative flex items-center justify-center">
+<div class="aura-circle shadow-[0_0_50px_rgba(244,37,140,0.3)]">
+<img alt="User Portrait" class="aura-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXUN-lIONpNec_J0O8TTwbJVzAo6xO9GYBmUViY1CQLG2UAm3mszh8OpvTcfJdmZg6AzPdbIt-2wWdzNL30aOETaQrW_x64GkhBlTF5nLoRdekmr9c8w1KIcRaDJlrOzj-7NyVoWadV5DwQIPEQ9eOVdTpkbYP3S-SbPZyCEn7fkxXNZdmiz8NddkZW0UKefEFnIFYde7EksibpKt3uB95YvoPDWDovuVJnqPzy1auP3VxJUTYIsxcj0KcSCSGFe0c4I9lQ7viivdI"/>
+<div class="wavy-aura wavy-line-1 scale-110"></div>
+<div class="wavy-aura wavy-line-2 scale-125"></div>
+<div class="wavy-aura wavy-line-3 scale-105"></div>
+</div>
+<div class="absolute -top-4 -right-4 h-3 w-3 bg-accent-yellow rounded-full blur-[2px] opacity-60"></div>
+<div class="absolute -bottom-8 -left-2 h-2 w-2 bg-primary rounded-full blur-[1px] opacity-40"></div>
+</div>
+</div>
+<div class="w-full max-w-md pt-4 text-center">
+<h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">Welcome Back</h1>
+<p class="mt-2 text-lavender/80 text-lg">We missed your energy today.</p>
+</div>
+<div class="mt-10 w-full max-w-md space-y-5">
+<div class="flex flex-col gap-2">
+<label class="px-4 text-[11px] font-bold text-lavender/70 uppercase tracking-[0.2em]">Email Address</label>
+<div class="input-glow flex items-center rounded-full border border-white/10 bg-charcoal/50 backdrop-blur-sm px-6 py-4 transition-all">
+<span class="material-symbols-outlined mr-3 text-lavender/50 text-xl">mail</span>
+<input class="w-full bg-transparent text-white placeholder:text-white/20 focus:outline-none focus:ring-0 border-none p-0 text-base" placeholder="your@email.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="px-4 text-[11px] font-bold text-lavender/70 uppercase tracking-[0.2em]">Password</label>
+<div class="input-glow flex items-center rounded-full border border-white/10 bg-charcoal/50 backdrop-blur-sm px-6 py-4 transition-all">
+<span class="material-symbols-outlined mr-3 text-lavender/50 text-xl">lock</span>
+<input class="w-full bg-transparent text-white placeholder:text-white/20 focus:outline-none focus:ring-0 border-none p-0 text-base" placeholder="••••••••" type="password"/>
+<button class="ml-2 flex items-center justify-center text-lavender/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex justify-end px-4">
+<a class="text-sm font-medium text-lavender/80 hover:text-primary transition-colors" href="#">Forgot Password?</a>
+</div>
+<div class="pt-4">
+<button class="btn-gradient w-full rounded-full py-5 text-lg font-bold text-white shadow-[0_10px_40px_rgba(244,37,140,0.3)] transition-transform active:scale-95">
+                    Sign In
+                </button>
+</div>
+</div>
+<div class="mt-auto pt-10 text-center">
+<p class="text-lavender/60">
+                Don't have an account? 
+                <a class="font-bold text-primary hover:underline" href="#">Sign Up</a>
+</p>
+</div>
+<div class="fixed bottom-2 left-1/2 h-1.5 w-32 -translate-x-1/2 rounded-full bg-white/10"></div>
+</div>
+
+</body></html>

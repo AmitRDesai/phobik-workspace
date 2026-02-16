@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHOBIK - Set Your Goals (Step 5 of 7)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "secondary-pink": "#f472b6",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#121212",
+                        "charcoal": "#181611",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .gradient-glow {
+            background: radial-gradient(circle at top, rgba(244, 114, 182, 0.15) 0%, rgba(238, 189, 43, 0.1) 40%, transparent 70%);
+        }
+        .card-selected {
+            border: 2px solid transparent;
+            background-image: linear-gradient(#181611, #181611), linear-gradient(to right, #f472b6, #eebd2b);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            box-shadow: 0 0 15px rgba(238, 189, 43, 0.3);
+        }
+        .btn-gradient {
+            background: linear-gradient(90deg, #f472b6 0%, #eebd2b 100%);
+        }
+        .progress-gradient {
+            background: linear-gradient(90deg, #f472b6 0%, #eebd2b 100%);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<div class="relative flex h-screen w-full flex-col overflow-hidden max-w-[430px] mx-auto bg-charcoal">
+<div class="gradient-glow absolute top-0 left-0 w-full h-64 pointer-events-none"></div>
+<div class="relative flex items-center p-4 pt-6 justify-between z-10">
+<div class="text-white flex size-12 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-white text-sm font-bold uppercase tracking-[0.2em] flex-1 text-center pr-12">Phobik</h2>
+</div>
+<div class="flex flex-col gap-2 px-6 py-2 relative z-10">
+<div class="flex justify-between items-center">
+<p class="text-white/60 text-xs font-medium">Goal Selection</p>
+<p class="text-primary text-xs font-bold uppercase tracking-wider">Step 5 of 7</p>
+</div>
+<div class="h-1.5 w-full rounded-full bg-white/10 overflow-hidden">
+<div class="h-full progress-gradient rounded-full" style="width: 71.4%;"></div>
+</div>
+</div>
+<div class="px-6 pt-8 pb-4 relative z-10">
+<h1 class="text-white text-3xl font-extrabold leading-tight">What brings you here?</h1>
+<p class="text-white/60 mt-2 text-base">Select the goals that matter most to you. We'll tailor your path accordingly.</p>
+</div>
+<div class="flex-1 overflow-y-auto px-6 py-4 space-y-4 no-scrollbar">
+<div class="card-selected flex items-center gap-4 p-5 rounded-xl cursor-pointer">
+<div class="flex size-12 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<div class="flex-1">
+<p class="text-white text-lg font-bold leading-tight">Reduce Panic &amp; Anxiety</p>
+<p class="text-white/50 text-xs">Manage symptoms and find calm</p>
+</div>
+<div class="flex size-6 items-center justify-center rounded-full bg-primary text-charcoal">
+<span class="material-symbols-outlined text-lg font-bold">check</span>
+</div>
+</div>
+<div class="flex items-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 cursor-pointer transition-all">
+<div class="flex size-12 items-center justify-center rounded-lg bg-white/5 text-white/70">
+<span class="material-symbols-outlined text-3xl">shield_with_heart</span>
+</div>
+<div class="flex-1">
+<p class="text-white text-lg font-bold leading-tight">Build Resilience</p>
+<p class="text-white/50 text-xs">Strengthen your mental fortitude</p>
+</div>
+<div class="flex size-6 items-center justify-center rounded-full border border-white/20"></div>
+</div>
+<div class="flex items-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 cursor-pointer transition-all">
+<div class="flex size-12 items-center justify-center rounded-lg bg-white/5 text-white/70">
+<span class="material-symbols-outlined text-3xl">bedtime</span>
+</div>
+<div class="flex-1">
+<p class="text-white text-lg font-bold leading-tight">Improve Sleep Quality</p>
+<p class="text-white/50 text-xs">Rest deeper and wake refreshed</p>
+</div>
+<div class="flex size-6 items-center justify-center rounded-full border border-white/20"></div>
+</div>
+<div class="flex items-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 cursor-pointer transition-all">
+<div class="flex size-12 items-center justify-center rounded-lg bg-white/5 text-white/70">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<div class="flex-1">
+<p class="text-white text-lg font-bold leading-tight">Face Social Fears</p>
+<p class="text-white/50 text-xs">Connect with confidence and ease</p>
+</div>
+<div class="flex size-6 items-center justify-center rounded-full border border-white/20"></div>
+</div>
+<div class="flex items-center gap-4 p-5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 cursor-pointer transition-all">
+<div class="flex size-12 items-center justify-center rounded-lg bg-white/5 text-white/70">
+<span class="material-symbols-outlined text-3xl">self_improvement</span>
+</div>
+<div class="flex-1">
+<p class="text-white text-lg font-bold leading-tight">Daily Mindfulness</p>
+<p class="text-white/50 text-xs">Practice being present every day</p>
+</div>
+<div class="flex size-6 items-center justify-center rounded-full border border-white/20"></div>
+</div>
+<div class="h-24"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-6 pb-10 bg-gradient-to-t from-charcoal via-charcoal/90 to-transparent">
+<button class="btn-gradient w-full flex cursor-pointer items-center justify-center rounded-xl h-14 px-5 text-charcoal text-lg font-extrabold leading-normal tracking-wide shadow-lg shadow-primary/20">
+                Continue
+            </button>
+</div>
+</div>
+
+</body></html>

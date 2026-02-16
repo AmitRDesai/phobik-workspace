@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding: Calendar Support</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f4258c",
+              "phobik-pink": "#f4258c",
+              "phobik-orange": "#ff6b3d",
+              "phobik-yellow": "#ffca28",
+              "background-light": "#f8f5f7",
+              "background-dark": "#221019",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            backgroundImage: {
+              'phobik-gradient': 'linear-gradient(to right, #f4258c, #ff6b3d, #ffca28)',
+            }
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #f4258c, #ff6b3d, #ffca28);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Step 6 of 8</h2>
+</div>
+<div class="flex flex-col gap-2 p-4 pt-0">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-slate-600 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Onboarding Progress</p>
+<p class="text-slate-900 dark:text-white text-xs font-bold">75%</p>
+</div>
+<div class="rounded-full bg-slate-200 dark:bg-[#4a2337] overflow-hidden">
+<div class="h-1.5 rounded-full bg-phobik-gradient" style="width: 75%;"></div>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-32">
+<div class="px-4">
+<h1 class="text-slate-900 dark:text-white tracking-tight text-[32px] font-extrabold leading-tight pb-2 pt-4">Sync Your Schedule</h1>
+<p class="text-slate-600 dark:text-[#cb90ad] text-base font-normal leading-relaxed pb-6">
+            PHOBIK notices upcoming events so you can prepare your nervous system before the stress hits.
+        </p>
+</div>
+<div class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-lg bg-white dark:bg-[#341826] border border-slate-100 dark:border-white/5 overflow-hidden">
+<div class="relative w-full bg-center bg-no-repeat aspect-[16/9] bg-cover" data-alt="Abstract calming purple and pink gradients with calendar icons" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQweDP0imoB7aJA0fjRAuk8ykgrYTZTDLbOFnWp66rUiA4RYrtoTqPBJ_zWFxpx3Go0XWmjpGV96bwtiJ4jZ5ptlWEnAX4E9BIg3WrEZVfn485K3tnc0HlE6Jym04ManIzq4zV0FA8pMlRqhMYrHzfX2qKnF0PwdTBJWiyFYejKAaP6-ip6fnXij3mIj3rd7iO7jjoqDBu7sHgkrhUpqzAYpvp9EP5uutjVieAd0r75jF75xsevr4IEi3FIJDW90S8cAGB_pJQ04WF");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent flex items-center justify-center">
+<div class="bg-white/20 backdrop-blur-md p-4 rounded-2xl border border-white/30 shadow-2xl">
+<span class="material-symbols-outlined text-6xl gradient-text" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+</div>
+</div>
+</div>
+<div class="flex w-full flex-col gap-4 p-5">
+<div>
+<p class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">Calendar Intelligence</p>
+<p class="text-slate-600 dark:text-[#cb90ad] text-sm mt-2 leading-relaxed">
+                        We'll scan for high-stress keywords like "Performance Review" or "Public Speaking" to offer pre-emptive nervous system support.
+                    </p>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl h-14 px-4 bg-phobik-gradient text-white text-base font-bold transition-all active:scale-95 shadow-lg shadow-phobik-pink/20">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="truncate">Connect my calendar</span>
+</button>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-xl h-12 px-4 bg-transparent text-slate-500 dark:text-slate-400 text-sm font-medium">
+                    Maybe later
+                </button>
+</div>
+</div>
+</div>
+<div class="px-4 mt-4 space-y-8">
+<section>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined gradient-text text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Which calendars to watch?
+            </h3>
+<div class="space-y-2">
+<label class="flex items-center justify-between p-4 rounded-xl bg-white dark:bg-[#341826] border border-slate-100 dark:border-white/5">
+<div class="flex items-center gap-3">
+<div class="size-3 rounded-full bg-blue-500"></div>
+<span class="font-medium">Work</span>
+</div>
+<input checked="" class="w-5 h-5 rounded text-phobik-pink focus:ring-phobik-pink bg-transparent border-slate-300 dark:border-white/20" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-4 rounded-xl bg-white dark:bg-[#341826] border border-slate-100 dark:border-white/5">
+<div class="flex items-center gap-3">
+<div class="size-3 rounded-full bg-green-500"></div>
+<span class="font-medium">Personal</span>
+</div>
+<input checked="" class="w-5 h-5 rounded text-phobik-pink focus:ring-phobik-pink bg-transparent border-slate-300 dark:border-white/20" type="checkbox"/>
+</label>
+</div>
+</section>
+<section>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-3">When should we check in?</h3>
+<div class="grid grid-cols-3 gap-2 p-1 bg-slate-100 dark:bg-[#1a0c13] rounded-xl border border-slate-200 dark:border-white/5">
+<button class="py-3 rounded-lg text-sm font-bold bg-phobik-gradient text-white shadow-sm">2 Days</button>
+<button class="py-3 rounded-lg text-sm font-medium text-slate-600 dark:text-[#cb90ad]">Day of</button>
+<button class="py-3 rounded-lg text-sm font-medium text-slate-600 dark:text-[#cb90ad]">1 Hour</button>
+</div>
+</section>
+<section class="pb-8">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-3">Choose your support tone</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-[#341826] border-2 border-phobik-pink shadow-md shadow-phobik-pink/10">
+<div class="flex-1">
+<p class="font-bold text-slate-900 dark:text-white">Gentle</p>
+<p class="text-xs text-slate-500 dark:text-[#cb90ad]">Soft nudges &amp; breathing prompts.</p>
+</div>
+<span class="material-symbols-outlined gradient-text" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-[#341826] border border-slate-100 dark:border-white/5">
+<div class="flex-1">
+<p class="font-bold text-slate-900 dark:text-white">Subtle</p>
+<p class="text-xs text-slate-500 dark:text-[#cb90ad]">Minimalist reminders only.</p>
+</div>
+<div class="size-6 rounded-full border-2 border-slate-200 dark:border-white/20"></div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-[#341826] border border-slate-100 dark:border-white/5">
+<div class="flex-1">
+<p class="font-bold text-slate-900 dark:text-white">Direct</p>
+<p class="text-xs text-slate-500 dark:text-[#cb90ad]">Clear, actionable preparation steps.</p>
+</div>
+<div class="size-6 rounded-full border-2 border-slate-200 dark:border-white/20"></div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light dark:via-background-dark to-transparent pt-10">
+<div class="max-w-md mx-auto">
+<button class="w-full bg-phobik-gradient text-white h-14 rounded-xl font-bold text-lg shadow-xl shadow-phobik-pink/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+            Continue
+            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</footer>
+
+</body></html>

@@ -1,0 +1,183 @@
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHOBIK Onboarding: Life Stressors Refined</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-pink": "#f4258c",
+                        "primary-orange": "#ff6b3d",
+                        "primary-yellow": "#fbd34d",
+                        "background-dark": "#050505",
+                        "card-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(to right, #f4258c, #ff6b3d, #fbd34d)',
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --brand-gradient: linear-gradient(90deg, #f4258c 0%, #ff6b3d 50%, #fbd34d 100%);
+        }
+        .text-gradient {
+            background: var(--brand-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-brand-gradient {
+            background: var(--brand-gradient);
+        }
+        .card-selected {
+            position: relative;
+            background: #121212;
+        }
+        .card-selected::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 0.75rem;
+            padding: 1.5px; 
+            background: var(--brand-gradient);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        .card-selected::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(244, 37, 140, 0.15);
+            filter: blur(12px);
+            z-index: -1;
+            opacity: 0.8;
+            border-radius: 0.75rem;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-white selection:bg-primary-pink/30">
+<div class="relative flex min-h-screen w-full max-w-[430px] mx-auto flex-col overflow-x-hidden bg-background-dark shadow-2xl">
+<header class="sticky top-0 z-20 bg-background-dark/80 backdrop-blur-md pt-6 pb-2 px-4">
+<div class="flex flex-row items-center justify-center gap-1.5 mb-6">
+<div class="h-1 w-full max-w-[40px] rounded-full bg-brand-gradient"></div>
+<div class="h-1 w-full max-w-[40px] rounded-full bg-brand-gradient"></div>
+<div class="h-1 w-full max-w-[40px] rounded-full bg-zinc-800"></div>
+<div class="h-1 w-full max-w-[40px] rounded-full bg-zinc-800"></div>
+<div class="h-1 w-full max-w-[40px] rounded-full bg-zinc-800"></div>
+<div class="h-1 w-full max-w-[40px] rounded-full bg-zinc-800"></div>
+<div class="h-1 w-full max-w-[40px] rounded-full bg-zinc-800"></div>
+<div class="h-1 w-full max-w-[40px] rounded-full bg-zinc-800"></div>
+</div>
+<div class="flex items-center justify-between">
+<button class="text-zinc-400">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<span class="text-[10px] font-bold tracking-[0.3em] text-white/40 uppercase">Phobik</span>
+<div class="w-6"></div>
+</div>
+</header>
+<main class="flex-1 px-5 pb-44">
+<div class="pt-6 mb-8">
+<p class="text-[11px] font-extrabold tracking-[0.2em] text-gradient uppercase mb-2">Step 2 of 8</p>
+<h2 class="text-white tracking-tight text-3xl font-extrabold leading-tight text-left">
+                What tends to drain you most?
+            </h2>
+<p class="text-zinc-500 text-sm font-medium mt-3 leading-relaxed">
+                Select all that apply to help us personalize your nervous system recovery plan.
+            </p>
+</div>
+<div class="grid grid-cols-2 gap-3 mb-6">
+<div class="card-selected cursor-pointer rounded-xl h-[92px] flex flex-col justify-between p-3.5 transition-all duration-300">
+<span class="material-symbols-outlined text-primary-pink text-[20px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<p class="text-primary-pink text-[14px] font-bold leading-tight">Work &amp; Performance</p>
+</div>
+<div class="bg-card-dark border border-white/5 cursor-pointer rounded-xl h-[92px] flex flex-col justify-between p-3.5 transition-all duration-300 hover:border-white/20">
+<span class="material-symbols-outlined text-zinc-500 text-[20px]">account_balance_wallet</span>
+<p class="text-white text-[14px] font-bold leading-tight">Financial Security</p>
+</div>
+<div class="card-selected cursor-pointer rounded-xl h-[92px] flex flex-col justify-between p-3.5 transition-all duration-300">
+<span class="material-symbols-outlined text-primary-pink text-[20px]" style="font-variation-settings: 'FILL' 1;">groups</span>
+<p class="text-primary-pink text-[14px] font-bold leading-tight">Relationships &amp; Conflict</p>
+</div>
+<div class="bg-card-dark border border-white/5 cursor-pointer rounded-xl h-[92px] flex flex-col justify-between p-3.5 transition-all duration-300 hover:border-white/20">
+<span class="material-symbols-outlined text-zinc-500 text-[20px]">person_search</span>
+<p class="text-white text-[14px] font-bold leading-tight">Self Image &amp; Comparison</p>
+</div>
+<div class="bg-card-dark border border-white/5 cursor-pointer rounded-xl h-[92px] flex flex-col justify-between p-3.5 transition-all duration-300 hover:border-white/20">
+<span class="material-symbols-outlined text-zinc-500 text-[20px]">schedule</span>
+<p class="text-white text-[14px] font-bold leading-tight">Time Scarcity</p>
+</div>
+<div class="bg-card-dark border border-white/5 cursor-pointer rounded-xl h-[92px] flex flex-col justify-between p-3.5 transition-all duration-300 hover:border-white/20">
+<span class="material-symbols-outlined text-zinc-500 text-[20px]">psychology_alt</span>
+<p class="text-white text-[14px] font-bold leading-tight">Inner Critic</p>
+</div>
+<div class="bg-card-dark border border-white/5 cursor-pointer rounded-xl h-[92px] flex flex-col justify-between p-3.5 transition-all duration-300 hover:border-white/20">
+<span class="material-symbols-outlined text-zinc-500 text-[20px]">person_off</span>
+<p class="text-white text-[14px] font-bold leading-tight">Isolation &amp; Loneliness</p>
+</div>
+<div class="bg-card-dark border border-white/5 cursor-pointer rounded-xl h-[92px] flex flex-col justify-between p-3.5 transition-all duration-300 hover:border-white/20">
+<span class="material-symbols-outlined text-zinc-500 text-[20px]">error</span>
+<p class="text-white text-[14px] font-bold leading-tight">Unresolved Fear</p>
+</div>
+<div class="bg-card-dark border border-white/5 cursor-pointer rounded-xl h-[92px] flex flex-col justify-between p-3.5 transition-all duration-300 hover:border-white/20">
+<span class="material-symbols-outlined text-zinc-500 text-[20px]">explore</span>
+<p class="text-white text-[14px] font-bold leading-tight">Lack of Purpose</p>
+</div>
+<div class="bg-card-dark border border-white/5 cursor-pointer rounded-xl h-[92px] flex flex-col justify-between p-3.5 transition-all duration-300 hover:border-white/20">
+<span class="material-symbols-outlined text-zinc-500 text-[20px]">battery_low</span>
+<p class="text-white text-[14px] font-bold leading-tight">Exhaustion &amp; Recovery</p>
+</div>
+</div>
+</main>
+<footer class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-gradient-to-t from-background-dark via-background-dark/95 to-transparent px-5 pb-10 pt-8 z-30">
+<div class="flex flex-col gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 flex-1 bg-brand-gradient text-white text-lg font-bold leading-normal tracking-wide shadow-[0_10px_30px_-5px_rgba(244,37,140,0.4)] active:scale-[0.98] transition-transform">
+<span class="truncate">Continue</span>
+</button>
+<button class="text-zinc-500 text-[11px] font-bold hover:text-white transition-colors py-2 text-center uppercase tracking-[0.2em]">
+                Skip for now
+            </button>
+</div>
+</footer>
+<div class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none opacity-20">
+<div class="absolute top-[5%] -left-[10%] w-[350px] h-[350px] bg-primary-pink/20 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[15%] -right-[10%] w-[300px] h-[300px] bg-primary-orange/20 rounded-full blur-[100px]"></div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding: Energy Patterns</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-pink": "#f4258c",
+                        "primary-orange": "#f97316",
+                        "accent-yellow": "#fbbf24",
+                        "background-light": "#f8f5f7",
+                        "background-dark": "#1a0b14",
+                        "surface-dark": "#2d1420",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        'warm-gradient': 'linear-gradient(to right, #f4258c, #f97316, #fbbf24)',
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .text-warm-gradient {
+            background: linear-gradient(to right, #f4258c, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .selected-chip-gradient {
+            background: linear-gradient(to right, #f4258c, #fbbf24);
+            box-shadow: 0 0 15px rgba(244, 37, 140, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col">
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">arrow_back_ios</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">
+            Map your rhythm
+        </h2>
+</header>
+<div class="flex flex-col gap-3 p-4">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal">Onboarding progress</p>
+<p class="text-primary-pink text-sm font-bold leading-normal">5 of 8</p>
+</div>
+<div class="h-2 rounded-full bg-slate-200 dark:bg-surface-dark overflow-hidden">
+<div class="h-full rounded-full bg-warm-gradient" style="width: 62.5%;"></div>
+</div>
+</div>
+<main class="flex-1 flex flex-col px-4 pb-24">
+<div class="pt-6 pb-8">
+<h3 class="text-slate-900 dark:text-white tracking-tight text-2xl font-extrabold leading-tight">
+                Understanding your energy helps PHOBIK tailor your nervous system regulation.
+            </h3>
+</div>
+<section class="mb-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-warm-gradient text-xl">bolt</span>
+<h4 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
+                    Focus comes easiest...
+                </h4>
+</div>
+<div class="flex h-12 items-center justify-center rounded-xl bg-slate-200 dark:bg-surface-dark p-1 gap-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:selected-chip-gradient has-[:checked]:text-white text-slate-500 dark:text-[#cb90ad] text-sm font-bold transition-all">
+<span class="truncate">Morning</span>
+<input checked="" class="hidden" name="focus-rhythm" type="radio" value="Morning"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:selected-chip-gradient has-[:checked]:text-white text-slate-500 dark:text-[#cb90ad] text-sm font-bold transition-all">
+<span class="truncate">Midday</span>
+<input class="hidden" name="focus-rhythm" type="radio" value="Midday"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:selected-chip-gradient has-[:checked]:text-white text-slate-500 dark:text-[#cb90ad] text-sm font-bold transition-all">
+<span class="truncate">Evening</span>
+<input class="hidden" name="focus-rhythm" type="radio" value="Evening"/>
+</label>
+</div>
+</section>
+<section class="mb-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-warm-gradient text-xl">auto_awesome</span>
+<h4 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
+                    Creativity flows most...
+                </h4>
+</div>
+<div class="flex h-12 items-center justify-center rounded-xl bg-slate-200 dark:bg-surface-dark p-1 gap-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:selected-chip-gradient has-[:checked]:text-white text-slate-500 dark:text-[#cb90ad] text-sm font-bold transition-all">
+<span class="truncate">Morning</span>
+<input class="hidden" name="creativity-rhythm" type="radio" value="Morning"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:selected-chip-gradient has-[:checked]:text-white text-slate-500 dark:text-[#cb90ad] text-sm font-bold transition-all">
+<span class="truncate">Midday</span>
+<input class="hidden" name="creativity-rhythm" type="radio" value="Midday"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:selected-chip-gradient has-[:checked]:text-white text-slate-500 dark:text-[#cb90ad] text-sm font-bold transition-all">
+<span class="truncate">Evening</span>
+<input checked="" class="hidden" name="creativity-rhythm" type="radio" value="Evening"/>
+</label>
+</div>
+</section>
+<section class="mb-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-warm-gradient text-xl">battery_low</span>
+<h4 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
+                    Energy dips most...
+                </h4>
+</div>
+<div class="flex h-12 items-center justify-center rounded-xl bg-slate-200 dark:bg-surface-dark p-1 gap-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:selected-chip-gradient has-[:checked]:text-white text-slate-500 dark:text-[#cb90ad] text-sm font-bold transition-all">
+<span class="truncate">Morning</span>
+<input class="hidden" name="dip-rhythm" type="radio" value="Morning"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:selected-chip-gradient has-[:checked]:text-white text-slate-500 dark:text-[#cb90ad] text-sm font-bold transition-all">
+<span class="truncate">Midday</span>
+<input checked="" class="hidden" name="dip-rhythm" type="radio" value="Midday"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:selected-chip-gradient has-[:checked]:text-white text-slate-500 dark:text-[#cb90ad] text-sm font-bold transition-all">
+<span class="truncate">Evening</span>
+<input class="hidden" name="dip-rhythm" type="radio" value="Evening"/>
+</label>
+</div>
+</section>
+</main>
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light dark:via-background-dark to-transparent">
+<button class="w-full bg-warm-gradient hover:opacity-90 text-white font-extrabold py-4 rounded-xl shadow-lg shadow-primary-pink/20 transition-all flex items-center justify-center gap-2">
+<span>Continue</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<div class="h-6"></div>
+</div>
+
+</body></html>
