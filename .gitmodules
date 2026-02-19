@@ -1,0 +1,6 @@
+[submodule "app"]
+	path = app
+	url = ./app
+[submodule "backend"]
+	path = backend
+	url = ./backend
