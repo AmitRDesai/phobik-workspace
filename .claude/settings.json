@@ -7,6 +7,10 @@
           {
             "type": "command",
             "command": "cd \"$CLAUDE_PROJECT_DIR/app\" && npm run format 2>/dev/null || true"
+          },
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR/backend\" && bun run format 2>/dev/null || true"
           }
         ]
       }
