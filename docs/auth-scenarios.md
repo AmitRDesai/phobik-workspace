@@ -15,7 +15,8 @@ A brand new user opens the app for the first time.
 7. User is taken to the **Email Verification** screen
 8. User opens the verification email and clicks the link, which opens the app
 9. A dialog appears: "Your email is verified"
-10. User is taken to biometric setup (if available) or **Home**
+10. User is taken to the **Onboarding** flow (aura selection, etc.)
+11. After completing onboarding, user is taken to **Biometric Setup** (if available) or **Home**
 
 **Key point:** The user must verify their email before reaching the Home screen.
 
@@ -32,7 +33,8 @@ A brand new user opens the app and signs up using Google or Apple.
 5. Since there's no profile yet, the user is shown a shorter **Profile Setup** flow:
    - Age, Gender, Goals, Data Security, Terms (5 steps)
 6. After accepting the Terms, the profile is saved
-7. User proceeds to biometric setup or **Home**
+7. User is taken to the **Onboarding** flow (aura selection, etc.)
+8. After completing onboarding, user proceeds to **Biometric Setup** (if available) or **Home**
 
 **Key point:** Social sign-in users skip the Welcome and Philosophy screens. They also skip email verification since their email is already verified by Google/Apple.
 
