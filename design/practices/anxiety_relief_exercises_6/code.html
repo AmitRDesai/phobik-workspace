@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PMR Practice Intro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "vibrant-pink": {
+                            50: "#fff1f2",
+                            100: "#ffe4e6",
+                            200: "#fecdd3",
+                            300: "#fda4af",
+                            400: "#fb7185",
+                            500: "#f43f5e",
+                            600: "#e11d48",
+                            900: "#881337",
+                        },
+                        "biometric-yellow": {
+                            50: "#fefce8",
+                            100: "#fef9c3",
+                            200: "#fef08a",
+                            300: "#fde047",
+                            400: "#facc15",
+                            500: "#eab308",
+                            900: "#713f12",
+                        },
+                        "background-dark": "#0a0a0c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0c;
+        }
+        .glow-overlay {
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, theme('colors.vibrant-pink.500/20') 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .glow-overlay-bottom {
+            position: fixed;
+            bottom: -5%;
+            left: -5%;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, theme('colors.biometric-yellow.500/15') 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .nav-active {
+            color: theme('colors.vibrant-pink.400');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="dark bg-background-dark text-white min-h-screen font-display flex flex-col relative overflow-x-hidden">
+<div class="glow-overlay"></div>
+<div class="glow-overlay-bottom"></div>
+<header class="sticky top-0 z-50 px-6 pt-12 pb-4 flex items-center justify-between bg-background-dark/80 backdrop-blur-md">
+<button class="size-10 flex items-center justify-center rounded-full bg-white/5 active:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-white/70">arrow_back_ios_new</span>
+</button>
+<div class="flex-1 text-center">
+<h1 class="text-lg font-bold tracking-tight text-white leading-tight px-4">Progressive Muscle Relaxation</h1>
+</div>
+<div class="size-10"></div> 
+</header>
+<main class="flex-1 px-6 pt-4 pb-32 z-10">
+<div class="mb-10 text-center">
+<p class="text-white/70 text-sm leading-relaxed max-w-sm mx-auto">
+                Progressive muscle relaxation (PMR) involves tensing and then slowly relaxing different muscle groups in the body. This technique helps release physical tension, calm the nervous system, and reduce stress by increasing awareness of how your body holds and releases tension.
+            </p>
+</div>
+<div class="space-y-6">
+<h2 class="text-center text-lg font-semibold text-white/90">What is your energy level before your session?</h2>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 active:bg-vibrant-pink-500/10 active:border-vibrant-pink-500/30 transition-all group">
+<span class="text-3xl mb-2">🌟</span>
+<span class="text-xs font-medium text-white/60 group-active:text-white">Peak Positive</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 active:bg-vibrant-pink-500/10 active:border-vibrant-pink-500/30 transition-all group">
+<span class="text-3xl mb-2">😌</span>
+<span class="text-xs font-medium text-white/60 group-active:text-white">Positive Calm</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 active:bg-vibrant-pink-500/10 active:border-vibrant-pink-500/30 transition-all group">
+<span class="text-3xl mb-2">🔋</span>
+<span class="text-xs font-medium text-white/60 group-active:text-white">Low Energy</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 active:bg-vibrant-pink-500/10 active:border-vibrant-pink-500/30 transition-all group">
+<span class="text-3xl mb-2">⚡</span>
+<span class="text-xs font-medium text-white/60 group-active:text-white">Stressed</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 active:bg-vibrant-pink-500/10 active:border-vibrant-pink-500/30 transition-all group">
+<span class="text-3xl mb-2">🌪️</span>
+<span class="text-xs font-medium text-white/60 group-active:text-white">Intense Negative</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 active:bg-vibrant-pink-500/10 active:border-vibrant-pink-500/30 transition-all group">
+<span class="text-3xl mb-2">❓</span>
+<span class="text-xs font-medium text-white/60 group-active:text-white">Don’t Know</span>
+</button>
+</div>
+</div>
+<div class="mt-12 flex flex-col gap-4">
+<button class="w-full py-4 rounded-2xl bg-gradient-to-r from-vibrant-pink-500 to-biometric-yellow-400 text-background-dark font-bold text-lg shadow-lg shadow-vibrant-pink-500/20 active:scale-[0.98] transition-transform">
+                Start
+            </button>
+<button class="w-full py-2 text-white/40 font-medium text-sm active:text-white/60 transition-colors">
+                Skip
+            </button>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-background-dark/90 backdrop-blur-xl border-t border-white/5 px-6 pb-8 pt-4 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-white/40 group-active:text-vibrant-pink-400">calendar_today</span>
+<span class="text-[10px] font-medium text-white/40">Today</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-vibrant-pink-500">fitness_center</span>
+<span class="text-[10px] font-bold text-vibrant-pink-400">Practices</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-white/40 group-active:text-vibrant-pink-400">psychology</span>
+<span class="text-[10px] font-medium text-white/40">Coach</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-white/40 group-active:text-vibrant-pink-400">groups</span>
+<span class="text-[10px] font-medium text-white/40">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-white/40 group-active:text-vibrant-pink-400">leaderboard</span>
+<span class="text-[10px] font-medium text-white/40">Insights</span>
+</a>
+</nav>
+
+</body></html>

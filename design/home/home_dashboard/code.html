@@ -1,0 +1,243 @@
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Affirmation: Feeling Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF4D94",
+                        "accent": "#FFD700",
+                        "obsidian": "#050505",
+                        "dust": "#2D1B33",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-gradient: linear-gradient(135deg, #FF4D94 0%, #FFD700 100%);
+        }
+        body {
+            background-color: #050505;
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+        .celestial-bg {
+            background: radial-gradient(circle at center, #1A0F1F 0%, #050505 100%);
+            position: relative;
+        }
+        .celestial-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            opacity: 0.1;
+        }
+        .ios-blur {
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+        }
+        .radiant-button {
+            background: var(--primary-gradient);
+            box-shadow: 0 4px 25px rgba(255, 77, 148, 0.4);
+        }
+        .compass-container {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            margin: 0 auto;
+        }
+        .core-hub {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.2);
+        }
+        .node {
+            position: absolute;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        .node-selected {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: transparent;
+            box-shadow: 0 0 20px rgba(255, 77, 148, 0.6);
+            position: relative;
+        }
+        .node-selected::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            z-index: -1;
+        }
+        .energy-line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 77, 148, 0.8), transparent);
+            transform-origin: left center;
+            z-index: 1;
+            width: 120px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .energy-line-active {
+            opacity: 1;
+        }.pos-0 { transform: translate(-50%, -50%) rotate(0deg) translateY(-120px) rotate(0deg); }
+        .pos-1 { transform: translate(-50%, -50%) rotate(45deg) translateY(-120px) rotate(-45deg); }
+        .pos-2 { transform: translate(-50%, -50%) rotate(90deg) translateY(-120px) rotate(-90deg); }
+        .pos-3 { transform: translate(-50%, -50%) rotate(135deg) translateY(-120px) rotate(-135deg); }
+        .pos-4 { transform: translate(-50%, -50%) rotate(180deg) translateY(-120px) rotate(-180deg); }
+        .pos-5 { transform: translate(-50%, -50%) rotate(225deg) translateY(-120px) rotate(-225deg); }
+        .pos-6 { transform: translate(-50%, -50%) rotate(270deg) translateY(-120px) rotate(-270deg); }
+        .pos-7 { transform: translate(-50%, -50%) rotate(315deg) translateY(-120px) rotate(-315deg); }.line-0 { transform: translateY(-50%) rotate(-90deg); }
+        .line-1 { transform: translateY(-50%) rotate(-45deg); }
+        .line-2 { transform: translateY(-50%) rotate(0deg); }
+        .line-3 { transform: translateY(-50%) rotate(45deg); }
+        .line-4 { transform: translateY(-50%) rotate(90deg); }
+        .line-5 { transform: translateY(-50%) rotate(135deg); }
+        .line-6 { transform: translateY(-50%) rotate(180deg); }
+        .line-7 { transform: translateY(-50%) rotate(225deg); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="celestial-bg flex flex-col min-h-screen">
+<header class="pt-14 px-6 pb-2 flex items-center justify-between z-20">
+<button class="text-white/60">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<div class="flex gap-1.5">
+<div class="h-1 w-6 rounded-full bg-primary/40"></div>
+<div class="h-1 w-6 rounded-full bg-primary"></div>
+<div class="h-1 w-6 rounded-full bg-white/10"></div>
+</div>
+<div class="w-6"></div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center px-6 pb-40">
+<div class="text-center mb-10 z-20">
+<h1 class="text-2xl font-light text-white leading-tight">
+            What do you want to feel <br/>
+<span class="italic font-normal">more of</span> today?
+        </h1>
+</div>
+<div class="compass-container">
+<div class="energy-line line-0 energy-line-active"></div>
+<div class="energy-line line-1"></div>
+<div class="energy-line line-2"></div>
+<div class="energy-line line-3"></div>
+<div class="energy-line line-4"></div>
+<div class="energy-line line-5"></div>
+<div class="energy-line line-6"></div>
+<div class="energy-line line-7"></div>
+<div class="core-hub">
+<div class="text-[10px] font-bold tracking-widest text-primary/80 uppercase">Core</div>
+</div>
+<div class="node pos-0 node-selected top-1/2 left-1/2">
+<span class="material-symbols-outlined text-white text-xl">bolt</span>
+<span class="text-[9px] font-bold absolute -bottom-6 text-white uppercase tracking-wider">Courage</span>
+</div>
+<div class="node pos-1 top-1/2 left-1/2">
+<span class="material-symbols-outlined text-white/40 text-xl">filter_drama</span>
+<span class="text-[9px] font-medium absolute -bottom-6 text-white/40 uppercase tracking-wider">Calm</span>
+</div>
+<div class="node pos-2 top-1/2 left-1/2">
+<span class="material-symbols-outlined text-white/40 text-xl">auto_awesome</span>
+<span class="text-[9px] font-medium absolute -bottom-6 text-white/40 uppercase tracking-wider">Confidence</span>
+</div>
+<div class="node pos-3 top-1/2 left-1/2">
+<span class="material-symbols-outlined text-white/40 text-xl">wb_sunny</span>
+<span class="text-[9px] font-medium absolute -bottom-6 text-white/40 uppercase tracking-wider">Clarity</span>
+</div>
+<div class="node pos-4 top-1/2 left-1/2">
+<span class="material-symbols-outlined text-white/40 text-xl">favorite</span>
+<span class="text-[9px] font-medium absolute -bottom-6 text-white/40 uppercase tracking-wider">Compassion</span>
+</div>
+<div class="node pos-5 top-1/2 left-1/2">
+<span class="material-symbols-outlined text-white/40 text-xl">psychology</span>
+<span class="text-[9px] font-medium absolute -bottom-6 text-white/40 uppercase tracking-wider">Curiosity</span>
+</div>
+<div class="node pos-6 top-1/2 left-1/2">
+<span class="material-symbols-outlined text-white/40 text-xl">palette</span>
+<span class="text-[9px] font-medium absolute -bottom-6 text-white/40 uppercase tracking-wider">Creativity</span>
+</div>
+<div class="node pos-7 top-1/2 left-1/2">
+<span class="material-symbols-outlined text-white/40 text-xl">diversity_1</span>
+<span class="text-[9px] font-medium absolute -bottom-6 text-white/40 uppercase tracking-wider">Connection</span>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 z-50">
+<div class="max-w-md mx-auto px-6 pb-6">
+<button class="radiant-button w-full py-5 rounded-2xl text-white font-bold text-lg tracking-wider uppercase shadow-2xl active:scale-[0.98] transition-transform">
+            Continue
+        </button>
+</div>
+<nav class="bg-obsidian/80 ios-blur border-t border-white/5 px-4 pt-3 pb-8">
+<div class="max-w-md mx-auto flex justify-between items-center px-2">
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-primary">
+<span class="material-symbols-outlined fill-1">calendar_today</span>
+<span class="text-[10px] font-bold">Today</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-white/40">
+<span class="material-symbols-outlined">self_improvement</span>
+<span class="text-[10px] font-medium">Practices</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-white/40">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-medium">Coach</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-white/40">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-medium">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-white/40">
+<span class="material-symbols-outlined">insights</span>
+<span class="text-[10px] font-medium">Insights</span>
+</button>
+</div>
+</nav>
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/10 rounded-full"></div>
+</div>
+
+</body></html>

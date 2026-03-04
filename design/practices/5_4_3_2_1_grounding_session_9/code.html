@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4256a",
+                        "accent-yellow": "#facc15",
+                        "background-light": "#f8f5f6",
+                        "background-dark": "#181113",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .gradient-text {
+                background: linear-gradient(to right, #f4256a, #facc15);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .gradient-glow-btn {
+                background: linear-gradient(135deg, #f4256a, #facc15);
+                box-shadow: 0 4px 15px rgba(244, 37, 106, 0.3);
+            }
+            .glass-card {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .selection-card {
+                @apply glass-card p-4 rounded-2xl flex flex-col items-center justify-center gap-2 text-center transition-all active:scale-95;
+            }
+            .selection-card.active {
+                @apply border-primary bg-primary/10;
+            }
+        }
+        body {
+            min-height: 100dvh;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-white flex flex-col max-w-md mx-auto overflow-x-hidden border-x border-white/5">
+<div class="flex items-center p-4 justify-between sticky top-0 bg-background-dark/80 backdrop-blur-md z-10">
+<div class="size-10 flex items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Technique Intro</h2>
+<div class="size-10 flex items-center justify-end">
+<span class="material-symbols-outlined cursor-pointer opacity-60">info</span>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto pb-10">
+<div class="px-6 pt-4 pb-8 text-center">
+<div class="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-[10px] font-bold tracking-widest text-primary uppercase mb-4">
+                Grounding Exercise
+            </div>
+<h1 class="text-4xl font-extrabold mb-4 leading-tight">
+                The <span class="gradient-text">5-4-3-2-1</span> technique
+            </h1>
+<p class="text-white/70 text-sm leading-relaxed max-w-[90%] mx-auto">
+                The 5-4-3-2-1 mindfulness technique grounds you in the present by naming 5 things you see, 4 things you feel, 3 things you hear, 2 things you smell and 1 thing you taste. It's a simple, sensory-based method to reduce anxiety and refocus your mind.
+            </p>
+</div>
+<div class="px-6 space-y-3 mb-10">
+<div class="glass-card p-4 rounded-2xl flex items-start gap-4">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="text-primary font-bold text-sm">5</span>
+</div>
+<div>
+<h4 class="text-white font-semibold text-sm">See</h4>
+<p class="text-white/50 text-xs mt-0.5">Acknowledge five things you see around you.</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-2xl flex items-start gap-4">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="text-primary font-bold text-sm">4</span>
+</div>
+<div>
+<h4 class="text-white font-semibold text-sm">Feel</h4>
+<p class="text-white/50 text-xs mt-0.5">Acknowledge four things you can feel.</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-2xl flex items-start gap-4">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="text-primary font-bold text-sm">3</span>
+</div>
+<div>
+<h4 class="text-white font-semibold text-sm">Hear</h4>
+<p class="text-white/50 text-xs mt-0.5">Acknowledge three things you can hear.</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-2xl flex items-start gap-4">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="text-primary font-bold text-sm">2</span>
+</div>
+<div>
+<h4 class="text-white font-semibold text-sm">Smell</h4>
+<p class="text-white/50 text-xs mt-0.5">Acknowledge two things you can smell.</p>
+</div>
+</div>
+<div class="glass-card p-4 rounded-2xl flex items-start gap-4">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="text-primary font-bold text-sm">1</span>
+</div>
+<div>
+<h4 class="text-white font-semibold text-sm">Taste</h4>
+<p class="text-white/50 text-xs mt-0.5">Acknowledge one thing you can taste.</p>
+</div>
+</div>
+</div>
+<div class="px-6 mb-12">
+<div class="flex justify-between items-end mb-6">
+<h3 class="text-lg font-bold">What is your energy level before your session?</h3>
+<button class="text-xs text-white/40 font-medium pb-1">Skip</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="selection-card">
+<span class="material-symbols-outlined text-accent-yellow text-3xl">wb_sunny</span>
+<p class="text-xs font-bold text-white/90">Peak Positive</p>
+</div>
+<div class="selection-card">
+<span class="material-symbols-outlined text-green-400 text-3xl">spa</span>
+<p class="text-xs font-bold text-white/90">Positive Calm</p>
+</div>
+<div class="selection-card">
+<span class="material-symbols-outlined text-blue-400 text-3xl">bed</span>
+<p class="text-xs font-bold text-white/90">Low energy</p>
+</div>
+<div class="selection-card">
+<span class="material-symbols-outlined text-orange-400 text-3xl">bolt</span>
+<p class="text-xs font-bold text-white/90">Stressed</p>
+</div>
+<div class="selection-card">
+<span class="material-symbols-outlined text-red-500 text-3xl">waves</span>
+<p class="text-xs font-bold text-white/90">Intense Negative</p>
+</div>
+<div class="selection-card">
+<span class="material-symbols-outlined text-white/40 text-3xl">help</span>
+<p class="text-xs font-bold text-white/90">Don't Know</p>
+</div>
+</div>
+</div>
+<div class="px-6 mb-8">
+<div class="text-center mb-6">
+<h3 class="text-xl font-bold">Ready to begin?</h3>
+<p class="text-white/40 text-xs mt-1">Estimated duration: 3-5 minutes</p>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full py-4 rounded-2xl gradient-glow-btn text-white font-bold text-lg">
+                    Start Session
+                </button>
+<button class="w-full py-4 rounded-2xl glass-card text-white/60 font-medium text-sm border-white/5">
+                    Restart Progress
+                </button>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between px-8 py-4 bg-background-dark/95 backdrop-blur-xl border-t border-white/5">
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-[10px] font-medium">Today</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-1">self_improvement</span>
+<span class="text-[10px] font-medium">Practices</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-medium">Coach</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-medium">Community</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-[10px] font-medium">Insights</span>
+</div>
+</div>
+<div class="h-6 w-full flex justify-center items-center pb-2 bg-background-dark">
+<div class="w-32 h-1 bg-white/20 rounded-full"></div>
+</div>
+
+</body></html>

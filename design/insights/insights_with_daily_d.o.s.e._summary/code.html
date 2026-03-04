@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHOBIK Insights Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-pink": "#FF4D97",
+                        "primary-yellow": "#FFD640",
+                        "background-pitch": "#000000",
+                        "card-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --pink: #FF4D97;
+            --yellow: #FFD640;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            background-color: #000000;
+        }
+        .nav-blur {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(20px);
+        }
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .glow-pink {
+            filter: drop-shadow(0 0 8px rgba(255, 77, 151, 0.4));
+        }
+        .glow-yellow {
+            filter: drop-shadow(0 0 8px rgba(255, 214, 64, 0.4));
+        }
+        .segmented-control {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 4px;
+        }
+        .segmented-item.active {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .line-graph-gradient {
+            stroke: url(#line-gradient);
+            filter: drop-shadow(0 0 6px rgba(255, 77, 151, 0.5));
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="text-white antialiased">
+<div class="max-w-[430px] mx-auto min-h-screen flex flex-col relative pb-32">
+<header class="sticky top-0 z-50 nav-blur border-b border-white/5">
+<div class="flex items-center p-4 justify-between">
+<div class="flex flex-col">
+<h1 class="text-xl font-black tracking-tight">Insights</h1>
+<span class="text-[10px] text-primary-pink font-medium uppercase tracking-widest">Biometric Intelligence</span>
+</div>
+<div class="size-10 rounded-full border border-white/20 overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByqvTq6fWflqlkAFRUd25V3Gx-j9uS-yAs1ogJ3jdn1IbERVystiZuKZLTU-90dIxcUEb5KOUKnGpuc-b_UhNO2_Cz-rY5BW31Cis_-vIUNX0IAjS_H0sDgJvX1p6dTpKi90wbQrzVNJ964LyUUrCz63xRZardPgvF6daeKoyGQ33wBNQubKAKmMoPgChBdqvY8FP8pzGWIVRGU6BqfW0ZM1JLY0IYtfIqUSB07k3qDFmIbuieOmGlhHwWMXRSqu1qKU4P2YnLcz5m"/>
+</div>
+</div>
+</header>
+<main class="flex-1 px-5 pt-6 space-y-8">
+<div class="segmented-control flex items-center justify-between text-xs font-semibold text-slate-500">
+<button class="segmented-item flex-1 py-2 rounded-lg transition-all">Day</button>
+<button class="segmented-item active flex-1 py-2 rounded-lg transition-all">Week</button>
+<button class="segmented-item flex-1 py-2 rounded-lg transition-all">2 Weeks</button>
+<button class="segmented-item flex-1 py-2 rounded-lg transition-all">Month</button>
+</div>
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400">Top Stressors</h2>
+<span class="text-[10px] text-primary-pink font-bold uppercase tracking-widest">Compass Link</span>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2 -mx-1 px-1">
+<div class="glass-card flex-shrink-0 min-w-[120px] p-4 rounded-2xl flex flex-col items-center text-center">
+<span class="text-3xl mb-2">💼</span>
+<span class="text-[10px] font-bold text-slate-300 uppercase tracking-tighter">Workload</span>
+<span class="text-lg font-black text-primary-pink">12x</span>
+</div>
+<div class="glass-card flex-shrink-0 min-w-[120px] p-4 rounded-2xl flex flex-col items-center text-center">
+<span class="text-3xl mb-2">💰</span>
+<span class="text-[10px] font-bold text-slate-300 uppercase tracking-tighter">Finances</span>
+<span class="text-lg font-black text-primary-yellow">8x</span>
+</div>
+<div class="glass-card flex-shrink-0 min-w-[120px] p-4 rounded-2xl flex flex-col items-center text-center">
+<span class="text-3xl mb-2">💔</span>
+<span class="text-[10px] font-bold text-slate-300 uppercase tracking-tighter">Conflict</span>
+<span class="text-lg font-black text-white">5x</span>
+</div>
+</div>
+</section><section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400">Quick Reset History</h2>
+<span class="text-[10px] text-white/60 font-bold uppercase tracking-widest">October</span>
+</div>
+<div class="glass-card rounded-3xl p-5">
+<div class="grid grid-cols-7 gap-y-4 text-center mb-2">
+<span class="text-[8px] font-black text-slate-500 uppercase">M</span>
+<span class="text-[8px] font-black text-slate-500 uppercase">T</span>
+<span class="text-[8px] font-black text-slate-500 uppercase">W</span>
+<span class="text-[8px] font-black text-slate-500 uppercase">T</span>
+<span class="text-[8px] font-black text-slate-500 uppercase">F</span>
+<span class="text-[8px] font-black text-slate-500 uppercase">S</span>
+<span class="text-[8px] font-black text-slate-500 uppercase">S</span>
+<!-- Row 1 -->
+<div class="flex flex-col items-center gap-1 opacity-20"><span class="text-[10px] font-bold">30</span></div>
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold">1</span><div class="size-1.5 rounded-full bg-primary-pink glow-pink"></div></div>
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold">2</span></div>
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold">3</span><div class="size-1.5 rounded-full bg-primary-pink glow-pink"></div></div>
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold">4</span><div class="size-1.5 rounded-full bg-primary-pink glow-pink"></div></div>
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold text-primary-yellow">5</span></div>
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold text-primary-yellow">6</span></div>
+<!-- Row 2 -->
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold">7</span><div class="size-1.5 rounded-full bg-primary-pink glow-pink"></div></div>
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold">8</span><div class="size-1.5 rounded-full bg-primary-pink glow-pink"></div></div>
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold">9</span></div>
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold">10</span><div class="size-1.5 rounded-full bg-primary-pink glow-pink"></div></div>
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold">11</span><div class="size-1.5 rounded-full bg-primary-pink glow-pink"></div></div>
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold text-primary-yellow">12</span></div>
+<div class="flex flex-col items-center gap-1"><span class="text-[10px] font-bold text-primary-yellow">13</span><div class="size-1.5 rounded-full bg-primary-pink glow-pink"></div></div>
+</div>
+<div class="mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
+<span class="text-[9px] text-slate-400 font-medium">Rewire Negative Thoughts</span>
+<span class="text-[9px] font-black text-primary-pink uppercase tracking-widest">9/13 Complete</span>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400">Energy Index Trend</h2>
+<div class="flex items-center gap-1.5">
+<span class="size-2 rounded-full bg-primary-pink"></span>
+<span class="text-[10px] font-bold text-white">Avg. 68</span>
+</div>
+</div>
+<div class="glass-card rounded-3xl p-6 relative overflow-hidden">
+<div class="h-[180px] w-full relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 150">
+<defs>
+<lineargradient id="line-gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#FF4D97"></stop>
+<stop offset="100%" stop-color="#FFD640"></stop>
+</lineargradient>
+<lineargradient id="area-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="rgba(255, 77, 151, 0.2)"></stop>
+<stop offset="100%" stop-color="transparent"></stop>
+</lineargradient>
+</defs>
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="400" y1="0" y2="0"></line>
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="400" y1="50" y2="50"></line>
+<line stroke="rgba(255,255,255,0.05)" stroke-width="1" x1="0" x2="400" y1="100" y2="100"></line>
+<path class="line-graph-gradient" d="M0,120 C50,110 80,40 120,60 C160,80 200,20 250,50 C300,80 350,10 400,30" fill="none" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0,120 C50,110 80,40 120,60 C160,80 200,20 250,50 C300,80 350,10 400,30 L400,150 L0,150 Z" fill="url(#area-gradient)"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none py-1">
+<span class="text-[8px] text-slate-500 font-bold uppercase">High</span>
+<span class="text-[8px] text-slate-500 font-bold uppercase">Med</span>
+<span class="text-[8px] text-slate-500 font-bold uppercase">Low</span>
+</div>
+</div>
+<div class="flex justify-between mt-4 text-[9px] text-slate-500 font-bold">
+<span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+</div>
+</div>
+</section>
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400">Daily D.O.S.E.</h2>
+<a class="text-[10px] text-primary-pink font-bold uppercase tracking-widest flex items-center gap-1" href="#">
+      View Full Report
+      <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+</a>
+</div>
+<div class="glass-card rounded-3xl p-5 cursor-pointer hover:bg-white/10 transition-colors" onclick="window.location.href='#'">
+<div class="mb-4">
+<h3 class="text-sm font-black">Daily D.O.S.E.</h3>
+<p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider">Neurochemical Balance</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Dopamine -->
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-xl bg-phobik-yellow/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-yellow text-lg" style="color: #FFD640;">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[8px] text-slate-500 font-bold uppercase tracking-tighter">Dopamine</span>
+<span class="text-xs font-black" style="color: #FFD640;">18 Coins</span>
+</div>
+</div>
+<!-- Oxytocin -->
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-xl bg-blue-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-400 text-lg">favorite</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[8px] text-slate-500 font-bold uppercase tracking-tighter">Oxytocin</span>
+<span class="text-xs font-black text-blue-400">9 Coins</span>
+</div>
+</div>
+<!-- Serotonin -->
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-xl bg-emerald-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-400 text-lg">eco</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[8px] text-slate-500 font-bold uppercase tracking-tighter">Serotonin</span>
+<span class="text-xs font-black text-emerald-400">22 Coins</span>
+</div>
+</div>
+<!-- Endorphins -->
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-xl bg-primary-pink/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-pink text-lg">exercise</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[8px] text-slate-500 font-bold uppercase tracking-tighter">Endorphins</span>
+<span class="text-xs font-black text-primary-pink">14 Coins</span>
+</div>
+</div>
+</div>
+</div>
+</section><section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400">Biometric Index</h2>
+<div class="flex gap-3">
+<div class="flex items-center gap-1">
+<span class="size-1.5 rounded-full bg-white"></span>
+<span class="text-[9px] font-bold text-white uppercase tracking-tighter">HR</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="size-1.5 rounded-full bg-primary-pink"></span>
+<span class="text-[9px] font-bold text-white uppercase tracking-tighter">HRV</span>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-3xl p-5">
+<div class="h-24 w-full relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 100">
+<path d="M0,50 L40,45 L80,60 L120,55 L160,70 L200,65 L240,50 L280,40 L320,55 L360,45 L400,50" fill="none" stroke="white" stroke-opacity="0.2" stroke-width="1.5"></path>
+<path class="glow-pink" d="M0,80 L40,70 L80,75 L120,60 L160,55 L200,40 L240,45 L280,55 L320,60 L360,50 L400,45" fill="none" stroke="#FF4D97" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-4 border-t border-white/5 pt-4">
+<div class="flex flex-col">
+<span class="text-[9px] text-slate-400 uppercase font-black tracking-widest">Resting Heart Rate</span>
+<span class="text-xl font-black">64 <span class="text-xs text-slate-500">BPM</span></span>
+</div>
+<div class="flex flex-col">
+<span class="text-[9px] text-slate-400 uppercase font-black tracking-widest">Mean HRV</span>
+<span class="text-xl font-black text-primary-pink">72 <span class="text-xs text-slate-500">ms</span></span>
+</div>
+</div>
+</div>
+</section>
+<section class="pb-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400">Sleep Intelligence</h2>
+<span class="text-[9px] text-primary-yellow font-bold uppercase tracking-widest">Wearable Sync: ON</span>
+</div>
+<div class="glass-card rounded-3xl p-5 flex items-center gap-6 relative overflow-hidden">
+<div class="absolute -left-10 top-0 w-32 h-32 bg-primary-pink/10 blur-[40px] rounded-full"></div>
+<div class="relative z-10 size-16 flex items-center justify-center bg-white/5 rounded-2xl border border-white/10">
+<span class="material-symbols-outlined text-primary-yellow text-4xl glow-yellow" style="font-variation-settings: 'FILL' 1">dark_mode</span>
+</div>
+<div class="flex-1 relative z-10">
+<div class="flex justify-between items-end mb-1">
+<h3 class="text-lg font-black">Restorative Sleep</h3>
+<span class="text-2xl font-black text-primary-pink">84%</span>
+</div>
+<div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-pink to-primary-yellow w-[84%] rounded-full shadow-[0_0_10px_rgba(255,77,151,0.5)]"></div>
+</div>
+<p class="text-[10px] text-slate-400 mt-3 font-medium">Deep &amp; REM cycles prioritized neural recovery today.</p>
+</div>
+</div>
+</section>
+</main>
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] z-[60]">
+<nav class="w-full bg-black/95 backdrop-blur-2xl border-t border-white/10 pb-8 pt-3 px-2 flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">today</span>
+<span class="text-[10px] font-medium">Today</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">self_improvement</span>
+<span class="text-[10px] font-medium">Practices</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">smart_toy</span>
+<span class="text-[10px] font-medium">Coach</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">groups</span>
+<span class="text-[10px] font-medium">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary-pink" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">bar_chart</span>
+<span class="text-[10px] font-medium">Insights</span>
+</a>
+</nav>
+</div>
+</div>
+</body></html>

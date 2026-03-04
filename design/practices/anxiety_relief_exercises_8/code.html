@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lazy 8 Breathing Intro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "vibrant-pink": {
+                            50: "#fff1f2",
+                            100: "#ffe4e6",
+                            200: "#fecdd3",
+                            300: "#fda4af",
+                            400: "#fb7185",
+                            500: "#f43f5e",
+                            600: "#e11d48",
+                        },
+                        "soft-yellow": {
+                            50: "#fefce8",
+                            100: "#fef9c3",
+                            200: "#fef08a",
+                            300: "#fde047",
+                            400: "#facc15",
+                            500: "#eab308",
+                        },
+                        "background-dark": "#0d0d0d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0d0d0d;
+        }
+        .pink-glow {
+            box-shadow: 0 0 30px rgba(244, 63, 94, 0.2);
+        }
+        .yellow-glow {
+            box-shadow: 0 0 30px rgba(250, 204, 21, 0.15);
+        }
+        .card-active {
+            border-color: #f43f5e;
+            background: rgba(244, 63, 94, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark text-white min-h-screen font-display flex flex-col">
+<header class="px-6 pt-6 flex items-center justify-between">
+<button class="size-10 flex items-center justify-start">
+<span class="material-symbols-outlined text-white">arrow_back_ios</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">Lazy 8 Breathing</h1>
+<div class="size-10"></div>
+</header>
+<main class="flex-1 px-6 pt-8 flex flex-col items-center">
+<div class="relative w-24 h-12 mb-8">
+<svg class="w-full h-full" viewBox="0 0 100 50">
+<path d="M25,25 C25,5 45,5 50,25 C55,45 75,45 75,25 C75,5 55,5 50,25 C45,45 25,45 25,25" fill="none" stroke="url(#grad)" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<linearGradient id="grad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#f43f5e;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#facc15;stop-opacity:1"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-vibrant-pink-500 rounded-full blur-[2px]"></div>
+</div>
+<p class="text-slate-300 text-center text-sm leading-relaxed mb-10 max-w-sm">
+            Lazy 8 breathing is a calming technique where you slowly trace a sideways figure eight with your eyes or finger, inhaling on one loop and exhaling on the other, promoting relaxation, focus, and balanced breathing.
+        </p>
+<h2 class="text-lg font-semibold mb-6 text-center">What is your energy level before your session?</h2>
+<div class="grid grid-cols-2 gap-4 w-full mb-10">
+<button class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center active:scale-95 transition-all hover:bg-white/10">
+<span class="block text-xl mb-1">⚡</span>
+<span class="text-xs font-medium text-slate-200 uppercase tracking-wider">Peak Positive</span>
+</button>
+<button class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center active:scale-95 transition-all hover:bg-white/10">
+<span class="block text-xl mb-1">✨</span>
+<span class="text-xs font-medium text-slate-200 uppercase tracking-wider">Positive Calm</span>
+</button>
+<button class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center active:scale-95 transition-all hover:bg-white/10">
+<span class="block text-xl mb-1">🕯️</span>
+<span class="text-xs font-medium text-slate-200 uppercase tracking-wider">Low Energy</span>
+</button>
+<button class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center active:scale-95 transition-all hover:bg-white/10">
+<span class="block text-xl mb-1">🌊</span>
+<span class="text-xs font-medium text-slate-200 uppercase tracking-wider">Stressed</span>
+</button>
+<button class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center active:scale-95 transition-all hover:bg-white/10">
+<span class="block text-xl mb-1">🌪️</span>
+<span class="text-xs font-medium text-slate-200 uppercase tracking-wider">Intense Negative</span>
+</button>
+<button class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center active:scale-95 transition-all hover:bg-white/10">
+<span class="block text-xl mb-1">❔</span>
+<span class="text-xs font-medium text-slate-200 uppercase tracking-wider">Don’t Know</span>
+</button>
+</div>
+<div class="w-full space-y-4 mb-10">
+<button class="w-full h-16 bg-gradient-to-r from-vibrant-pink-500 to-soft-yellow-400 rounded-2xl text-background-dark font-bold text-lg shadow-[0_8px_30px_rgb(244,63,94,0.3)] active:scale-[0.98] transition-transform">
+                Start Session
+            </button>
+<button class="w-full h-12 text-slate-400 font-medium text-sm active:opacity-60 transition-opacity">
+                Skip for now
+            </button>
+</div>
+</main>
+<nav class="bg-background-dark/80 backdrop-blur-xl border-t border-white/5 px-6 pb-8 pt-4">
+<div class="flex items-center justify-between">
+<div class="flex flex-col items-center gap-1 opacity-50">
+<span class="material-symbols-outlined text-2xl">today</span>
+<span class="text-[10px] font-medium">Today</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-vibrant-pink-400">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">grid_view</span>
+<span class="text-[10px] font-medium">Practices</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-50">
+<span class="material-symbols-outlined text-2xl">psychology</span>
+<span class="text-[10px] font-medium">Coach</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-50">
+<span class="material-symbols-outlined text-2xl">group</span>
+<span class="text-[10px] font-medium">Community</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-50">
+<span class="material-symbols-outlined text-2xl">monitoring</span>
+<span class="text-[10px] font-medium">Insights</span>
+</div>
+</div>
+</nav>
+<div class="w-32 h-1 bg-white/20 rounded-full self-center mb-2 shrink-0"></div>
+
+</body></html>

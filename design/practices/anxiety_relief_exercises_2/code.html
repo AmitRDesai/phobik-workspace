@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Box Breathing Session - Pink &amp; Yellow</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "vibrant-pink": {
+                            50: "#fdf2f8",
+                            100: "#fce7f3",
+                            200: "#fbcfe8",
+                            300: "#f9a8d4",
+                            400: "#f472b6",
+                            500: "#ec4899",
+                            600: "#db2777",
+                            900: "#831843",
+                        },
+                        "soft-yellow": {
+                            50: "#fffbeb",
+                            100: "#fef3c7",
+                            200: "#fde68a",
+                            300: "#fcd34d",
+                            400: "#fbbf24",
+                            500: "#f59e0b",
+                            900: "#78350f",
+                        },
+                        "primary": "#ec4899",
+                        "background-dark": "#0a0a0c",
+                        "charcoal": "#121214",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0c;
+        }
+        .dark body {
+            background: radial-gradient(circle at center, #1c1418 0%, #0a0a0c 100%);
+        }
+        .breathing-square {
+            width: 240px;
+            height: 240px;
+            border: 4px solid theme('colors.vibrant-pink.400');
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: rgba(236, 72, 153, 0.03);
+            box-shadow: 0 0 60px rgba(236, 72, 153, 0.1);
+        }
+        .glow-pulse {
+            position: absolute;
+            inset: -12px;
+            border-radius: 40px;
+            background: linear-gradient(135deg, theme('colors.vibrant-pink.500'), theme('colors.soft-yellow.400'));
+            opacity: 0.25;
+            filter: blur(24px);
+        }
+        .instruction-fade {
+            animation: textPulse 4s infinite ease-in-out;
+        }
+        @keyframes textPulse {
+            0%, 100% { opacity: 0.7; transform: scale(0.96); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        .active-dot {
+            box-shadow: 0 0 8px theme('colors.vibrant-pink.400');
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark text-white min-h-screen font-display flex flex-col overflow-hidden">
+<nav class="p-6 flex items-center justify-between">
+<button class="size-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-white/80">chevron_left</span>
+</button>
+<div class="flex flex-col items-center">
+<h1 class="text-white text-lg font-bold tracking-tight">Box Breathing</h1>
+<span class="text-vibrant-pink-400 text-[10px] font-bold uppercase tracking-[0.2em]">Biometric Sync</span>
+</div>
+<button class="size-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-white/80">more_horiz</span>
+</button>
+</nav>
+<main class="flex-1 flex flex-col items-center justify-center px-6 relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full border border-vibrant-pink-500/5"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] rounded-full border border-soft-yellow-500/5"></div>
+<div class="breathing-square">
+<div class="glow-pulse"></div>
+<div class="flex flex-col items-center gap-2 z-10">
+<span class="text-3xl font-bold instruction-fade text-white">Inhale 4s</span>
+<div class="flex gap-1.5">
+<div class="w-2 h-2 rounded-full bg-vibrant-pink-400 active-dot"></div>
+<div class="w-2 h-2 rounded-full bg-white/20"></div>
+<div class="w-2 h-2 rounded-full bg-white/20"></div>
+<div class="w-2 h-2 rounded-full bg-white/20"></div>
+</div>
+</div>
+</div>
+<div class="mt-20 text-center">
+<p class="text-white/40 text-xs mb-4 font-medium tracking-wide">MATCH YOUR BREATH TO THE SQUARE</p>
+<div class="flex gap-4">
+<div class="flex flex-col items-center px-6 py-3 rounded-2xl bg-charcoal border border-white/5">
+<span class="text-[10px] uppercase text-vibrant-pink-400 font-bold mb-1 tracking-wider">Completed</span>
+<span class="text-xl font-mono font-bold text-white/90">04:12</span>
+</div>
+<div class="flex flex-col items-center px-6 py-3 rounded-2xl bg-charcoal border border-white/5">
+<span class="text-[10px] uppercase text-soft-yellow-400 font-bold mb-1 tracking-wider">Goal</span>
+<span class="text-xl font-mono font-bold text-white/90">10:00</span>
+</div>
+</div>
+</div>
+</main>
+<footer class="p-6 pt-0">
+<div class="bg-gradient-to-br from-charcoal to-black backdrop-blur-2xl border border-white/10 rounded-[32px] p-6">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2.5">
+<div class="size-8 rounded-lg bg-vibrant-pink-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-vibrant-pink-400 text-lg">ecg_heart</span>
+</div>
+<div>
+<span class="text-xs font-bold text-white block">HRV Tracking</span>
+<span class="text-[10px] text-white/40 block leading-none">Optical Sensor Active</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-green-500/10 px-2.5 py-1 rounded-full border border-green-500/20">
+<span class="size-1.5 bg-green-500 rounded-full animate-pulse"></span>
+<span class="text-[10px] text-green-500 font-bold uppercase">Synced</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<div class="flex items-baseline gap-1.5">
+<span class="text-3xl font-bold text-white">72</span>
+<span class="text-xs font-medium text-vibrant-pink-400 uppercase tracking-tighter">ms</span>
+</div>
+<div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full w-[72%] bg-gradient-to-r from-vibrant-pink-500 to-soft-yellow-400 rounded-full"></div>
+</div>
+<span class="text-[10px] font-semibold text-white/30 uppercase tracking-widest">Variability</span>
+</div>
+<div class="flex flex-col gap-2 text-right">
+<div class="flex items-baseline gap-1.5 justify-end">
+<span class="text-3xl font-bold text-white">64</span>
+<span class="text-xs font-medium text-soft-yellow-400 uppercase tracking-tighter">bpm</span>
+</div>
+<div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden flex justify-end">
+<div class="h-full w-[64%] bg-gradient-to-l from-soft-yellow-400 to-vibrant-pink-500 rounded-full"></div>
+</div>
+<span class="text-[10px] font-semibold text-white/30 uppercase tracking-widest">Heart Rate</span>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-white/5 flex justify-center">
+<div class="flex gap-8 items-center">
+<button class="size-10 flex items-center justify-center rounded-full text-white/40 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">replay_5</span>
+</button>
+<button class="size-16 flex items-center justify-center rounded-full bg-gradient-to-br from-vibrant-pink-500 to-soft-yellow-400 text-charcoal shadow-lg shadow-vibrant-pink-500/20 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl font-bold fill-1">pause</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-full text-white/40 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">forward_5</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

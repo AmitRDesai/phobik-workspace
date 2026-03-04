@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lazy 8 Guided Session Refined</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "vibrant-pink": {
+                            50: "#fff1f2",
+                            100: "#ffe4e6",
+                            200: "#fecdd3",
+                            300: "#fda4af",
+                            400: "#fb7185",
+                            500: "#f43f5e",
+                            600: "#e11d48",
+                        },
+                        "soft-yellow": {
+                            50: "#fefce8",
+                            100: "#fef9c3",
+                            200: "#fef08a",
+                            300: "#fde047",
+                            400: "#facc15",
+                            500: "#eab308",
+                        },
+                        "background-dark": "#0d0d0d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0d0d0d;
+        }
+        .infinity-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 0;
+            fill: none;
+            stroke-width: 4;
+            stroke-linecap: round;
+        }
+        .orb-glow {
+            filter: blur(12px);
+            box-shadow: 0 0 25px rgba(244, 63, 94, 0.9), 0 0 50px rgba(250, 204, 21, 0.5);
+        }
+        @keyframes followPath {
+            0% { offset-distance: 0%; }
+            100% { offset-distance: 100%; }
+        }
+        .animated-orb {
+            offset-path: path('M32 40 C32 10, 80 10, 80 40 C80 70, 32 70, 32 40 C32 10, -16 10, -16 40 C-16 70, 32 70, 32 40');
+            animation: followPath 12s linear infinite;
+            width: 28px;
+            height: 28px;
+            background: radial-gradient(circle at center, #fef08a, #f43f5e);
+            border-radius: 50%;
+            position: absolute;
+        }
+        .instruction-text::after {
+            content: 'Inhale';
+            animation: pulseText 12s infinite;
+        }
+        @keyframes pulseText {
+            0%, 45% { opacity: 1; content: 'Inhale'; color: #fecdd3; }
+            50%, 95% { opacity: 1; content: 'Exhale'; color: #fef08a; }
+            48%, 98% { opacity: 0; }
+        }
+        .nav-active {
+            @apply text-vibrant-pink-400;
+        }
+        body {
+            min-height: 100dvh;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark text-white font-display flex flex-col overflow-hidden">
+<header class="z-50 bg-background-dark/90 backdrop-blur-lg shrink-0">
+<div class="flex items-center p-4 pb-2 justify-between">
+<button class="text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Lazy 8 Breathing</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-12 bg-transparent text-white">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-start relative px-6 overflow-y-auto pb-4">
+<div class="mt-8 mb-6 text-center h-20 flex flex-col items-center justify-center shrink-0">
+<p class="instruction-text text-5xl font-semibold tracking-wider"></p>
+<p class="text-slate-400 text-sm mt-3 uppercase tracking-widest font-medium">Focus on the light</p>
+</div>
+<div class="relative w-full aspect-[2/1] max-w-md shrink-0 mb-8">
+<svg class="w-full h-full drop-shadow-[0_0_20px_rgba(244,63,94,0.4)]" viewBox="-25 0 115 80">
+<path class="infinity-path" d="M32 40 C32 10, 80 10, 80 40 C80 70, 32 70, 32 40 C32 10, -16 10, -16 40 C-16 70, 32 70, 32 40" stroke="url(#grad1)"></path>
+<defs>
+<linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#f43f5e;stop-opacity:0.2"></stop>
+<stop offset="50%" style="stop-color:#facc15;stop-opacity:0.6"></stop>
+<stop offset="100%" style="stop-color:#f43f5e;stop-opacity:0.2"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="animated-orb orb-glow -mt-3.5 -ml-3.5"></div>
+</div>
+<div class="w-full max-w-xs bg-white/5 rounded-full h-1.5 overflow-hidden border border-white/5 shrink-0">
+<div class="bg-gradient-to-r from-vibrant-pink-500 via-soft-yellow-400 to-vibrant-pink-500 h-full w-2/5 rounded-full"></div>
+</div>
+<p class="text-slate-500 text-[10px] mt-3 font-bold tracking-widest uppercase mb-6">02:00 / 05:00</p>
+<div class="w-full max-w-sm mb-6">
+<div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 shadow-xl">
+<p class="text-sm leading-relaxed text-center text-vibrant-pink-50/90 font-medium">
+                    Follow the path with your eyes, inhale as it moves right, exhale as it moves left. Relax, breathe slowly, and repeat the loop.
+                </p>
+</div>
+</div>
+<div class="flex justify-center mb-8 gap-8 shrink-0">
+<button class="size-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-white/70">fast_rewind</span>
+</button>
+<button class="size-14 rounded-full bg-white flex items-center justify-center shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-background-dark text-2xl" style="font-variation-settings: 'FILL' 1">pause</span>
+</button>
+<button class="size-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-white/70">fast_forward</span>
+</button>
+</div>
+<div class="flex-grow"></div>
+<div class="w-full max-w-sm bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-3xl p-4 backdrop-blur-xl shadow-2xl mb-4">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-2xl bg-vibrant-pink-500/20 flex items-center justify-center border border-vibrant-pink-500/30">
+<span class="material-symbols-outlined text-vibrant-pink-400 animate-pulse text-xl" style="font-variation-settings: 'FILL' 1">favorite</span>
+</div>
+<div>
+<p class="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Heart Rate</p>
+<div class="flex items-baseline gap-1">
+<span class="text-xl font-bold text-white tracking-tighter">72</span>
+<span class="text-[9px] text-vibrant-pink-400 font-bold uppercase">BPM</span>
+</div>
+</div>
+</div>
+<div class="h-8 w-px bg-white/10"></div>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-2xl bg-soft-yellow-500/20 flex items-center justify-center border border-soft-yellow-500/30">
+<span class="material-symbols-outlined text-soft-yellow-400 text-xl">waves</span>
+</div>
+<div>
+<p class="text-[9px] text-slate-400 font-bold uppercase tracking-wider">HRV</p>
+<div class="flex items-baseline gap-1">
+<span class="text-xl font-bold text-white tracking-tighter">74</span>
+<span class="text-[9px] text-soft-yellow-400 font-bold uppercase">MS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-background-dark/95 backdrop-blur-xl border-t border-white/5 pt-4 shrink-0">
+<nav class="flex justify-around items-center px-4 pb-8">
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-slate-500 group-active:scale-90 transition-transform">calendar_today</span>
+<span class="text-[10px] font-medium text-slate-500">Today</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined nav-active group-active:scale-90 transition-transform" style="font-variation-settings: 'FILL' 1">self_improvement</span>
+<span class="text-[10px] font-medium nav-active">Practices</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-slate-500 group-active:scale-90 transition-transform">smart_toy</span>
+<span class="text-[10px] font-medium text-slate-500">Coach</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-slate-500 group-active:scale-90 transition-transform">group</span>
+<span class="text-[10px] font-medium text-slate-500">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-slate-500 group-active:scale-90 transition-transform">monitoring</span>
+<span class="text-[10px] font-medium text-slate-500">Insights</span>
+</button>
+</nav>
+<div class="w-32 h-1.5 bg-white/20 rounded-full mx-auto mb-2"></div>
+</footer>
+
+</body></html>

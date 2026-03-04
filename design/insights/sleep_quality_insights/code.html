@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sleep Quality Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f42559",
+                        "background-light": "#f8f5f6",
+                        "background-dark": "#121212", // Overriding to midnight charcoal as per description
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glow-moon {
+            background: linear-gradient(135deg, #f42559 0%, #fbbf24 100%);
+            box-shadow: 0 0 25px rgba(244, 37, 89, 0.4);
+        }
+        .chart-glow {
+            filter: drop-shadow(0 0 4px #fbbf24);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white transition-colors duration-300">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between p-4 sticky top-0 z-50 bg-background-dark/80 backdrop-blur-md">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-white/10">
+<span class="material-symbols-outlined text-white">arrow_back_ios</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Sleep Quality Insights</h1>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-white/10">
+<span class="material-symbols-outlined text-white">share</span>
+</button>
+</header>
+<main class="max-w-md mx-auto pb-12">
+<!-- Sleep Score Profile Header -->
+<section class="flex flex-col items-center py-8 px-4">
+<div class="relative flex items-center justify-center mb-6">
+<!-- Glowing Crescent Moon Shape -->
+<div class="glow-moon size-40 rounded-full relative flex items-center justify-center">
+<div class="absolute inset-0 bg-background-dark rounded-full scale-90 translate-x-4 -translate-y-2"></div>
+<div class="z-10 text-center">
+<span class="text-5xl font-extrabold block">84</span>
+<span class="text-[10px] uppercase tracking-widest font-bold opacity-80">Score</span>
+</div>
+</div>
+</div>
+<div class="text-center">
+<h2 class="text-2xl font-bold mb-1">Restorative Sleep</h2>
+<p class="text-primary/80 font-medium">Your body recovered efficiently last night</p>
+</div>
+</section>
+<!-- HRV Recovery Section -->
+<section class="mb-8 px-4">
+<div class="flex items-end justify-between mb-4">
+<div>
+<h3 class="text-white text-lg font-bold">HRV Recovery</h3>
+<p class="text-zinc-400 text-sm">Heart Rate Variability trend</p>
+</div>
+<div class="text-right">
+<p class="text-2xl font-bold text-[#fbbf24] chart-glow tracking-tight">62 <span class="text-xs font-normal">ms</span></p>
+<p class="text-[#0bda8e] text-xs font-bold">+5% from avg</p>
+</div>
+</div>
+<div class="bg-white/5 rounded-xl p-4 border border-white/10">
+<div class="h-[160px] w-full relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 150">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#fbbf24" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#fbbf24" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Area Fill -->
+<path d="M0,120 Q50,110 100,60 T200,80 T300,30 T400,100 L400,150 L0,150 Z" fill="url(#chartGradient)"></path>
+<!-- Line -->
+<path class="chart-glow" d="M0,120 Q50,110 100,60 T200,80 T300,30 T400,100" fill="none" stroke="#fbbf24" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+<div class="flex justify-between mt-4 px-1">
+<span class="text-[10px] font-bold text-zinc-500 uppercase">11PM</span>
+<span class="text-[10px] font-bold text-zinc-500 uppercase">1AM</span>
+<span class="text-[10px] font-bold text-zinc-500 uppercase">3AM</span>
+<span class="text-[10px] font-bold text-zinc-500 uppercase">5AM</span>
+<span class="text-[10px] font-bold text-zinc-500 uppercase">7AM</span>
+</div>
+</div>
+</section>
+<!-- Key Metrics Grid -->
+<section class="px-4 mb-8">
+<div class="grid grid-cols-3 gap-3">
+<div class="flex flex-col gap-2 rounded-xl border border-primary/20 bg-primary/5 p-4 items-center text-center">
+<span class="material-symbols-outlined text-primary text-xl">schedule</span>
+<div class="flex flex-col">
+<span class="text-white text-base font-bold">7h 24m</span>
+<span class="text-zinc-400 text-[10px] font-medium uppercase tracking-wider">Asleep</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-primary/20 bg-primary/5 p-4 items-center text-center">
+<span class="material-symbols-outlined text-primary text-xl">nights_stay</span>
+<div class="flex flex-col">
+<span class="text-white text-base font-bold">22%</span>
+<span class="text-zinc-400 text-[10px] font-medium uppercase tracking-wider">Deep</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-primary/20 bg-primary/5 p-4 items-center text-center">
+<span class="material-symbols-outlined text-primary text-xl">favorite</span>
+<div class="flex flex-col">
+<span class="text-white text-base font-bold">54</span>
+<span class="text-zinc-400 text-[10px] font-medium uppercase tracking-wider">BPM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Anxiety Impact Section -->
+<section class="px-4">
+<div class="glass-card rounded-2xl border border-white/10 p-5 relative overflow-hidden">
+<div class="absolute -right-8 -top-8 size-24 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<h3 class="text-white font-bold tracking-tight">Anxiety Impact</h3>
+</div>
+<div class="space-y-3">
+<p class="text-zinc-300 text-sm leading-relaxed">
+                        Yesterday's elevated <span class="text-primary font-bold">cortisol levels</span> from the afternoon stress spike delayed your REM entry by 42 minutes. 
+                    </p>
+<div class="h-px bg-white/5 w-full"></div>
+<p class="text-zinc-400 text-xs italic">
+                        "Your deep sleep was 15% lower than your baseline. Consider a 10-minute breathwork session before tonight's rest."
+                    </p>
+</div>
+<button class="mt-4 w-full py-3 bg-primary/20 hover:bg-primary/30 text-primary text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-2 uppercase tracking-widest">
+                    Open Guided Relief
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Footer / Timeframe Control -->
+<section class="mt-10 px-10">
+<div class="flex bg-white/5 rounded-full p-1 border border-white/5">
+<button class="flex-1 py-2 text-xs font-bold rounded-full bg-white/10 text-white">DAY</button>
+<button class="flex-1 py-2 text-xs font-bold rounded-full text-zinc-500">WEEK</button>
+<button class="flex-1 py-2 text-xs font-bold rounded-full text-zinc-500">MONTH</button>
+</div>
+</section>
+</main>
+<!-- Navigation Bar (iOS Style) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-dark/95 backdrop-blur-xl border-t border-white/5 pb-6 pt-2 px-6">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<div class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-[1]">bedtime</span>
+<span class="text-[10px] font-medium">Sleep</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-medium">Stats</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</div>
+</div>
+</nav>
+</body></html>

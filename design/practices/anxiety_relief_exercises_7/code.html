@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Double Inhale Guided Session</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "warm-pink": {
+                            50: "#fdf2f8",
+                            400: "#f472b6",
+                            500: "#ec4899",
+                            600: "#db2777",
+                        },
+                        "warm-yellow": {
+                            400: "#fbbf24",
+                            500: "#f59e0b",
+                        },
+                        "obsidian": "#0a0a0a",
+                        "background-dark": "#050505",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --gradient-pink: #ec4899;
+            --gradient-yellow: #fbbf24;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: "FILL" 1;
+        }
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #050505;
+        }
+        .wavy-container {
+            position: relative;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .glow-aura {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(236,72,153,0.15) 0%, rgba(251,191,36,0.05) 50%, transparent 70%);
+            filter: blur(40px);
+            z-index: 0;
+        }
+        .pulse-circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            background: linear-gradient(#050505, #050505) padding-box, linear-gradient(135deg, var(--gradient-pink), var(--gradient-yellow)) border-box;
+        }
+        .pulse-1 {
+            width: 220px;
+            height: 220px;
+            opacity: 0.2;
+        }
+        .pulse-2 {
+            width: 280px;
+            height: 280px;
+            opacity: 0.1;
+        }
+        .pulse-main {
+            width: 150px;
+            height: 150px;
+            z-index: 10;
+        }
+        .wave-bg {
+            background-image: radial-gradient(circle at center, rgba(236,72,153,0.05) 0%, transparent 70%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark text-white min-h-screen font-display flex flex-col overflow-hidden">
+<div class="px-6 pt-14 pb-4 flex items-center justify-between z-20">
+<button class="size-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+<span class="material-symbols-outlined text-white text-xl">close</span>
+</button>
+<div class="flex flex-col items-center">
+<div class="bg-white/5 px-4 py-1 rounded-full border border-white/10 backdrop-blur-md">
+<span class="text-sm font-mono font-bold text-warm-yellow-400">03:42</span>
+</div>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+<span class="material-symbols-outlined text-white text-xl">settings</span>
+</button>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center relative wave-bg">
+<div class="glow-aura"></div>
+<div class="wavy-container w-full">
+<div class="pulse-circle pulse-2"></div>
+<div class="pulse-circle pulse-1"></div>
+<div class="pulse-circle pulse-main flex items-center justify-center shadow-[0_0_60px_rgba(236,72,153,0.25)]">
+<div class="size-28 rounded-full bg-gradient-to-br from-warm-pink-500 to-warm-yellow-400 flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-white text-5xl filled">air</span>
+</div>
+</div>
+<div class="absolute inset-0 pointer-events-none opacity-30">
+<svg class="w-full h-full" viewBox="0 0 400 300">
+<path d="M50,150 Q100,80 150,150 T250,150 T350,150" fill="none" stroke="url(#grad1)" stroke-linecap="round" stroke-width="2"></path>
+<defs>
+<linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#ec4899;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+</div>
+<div class="mt-4 text-center space-y-3 z-10 px-6">
+<h2 class="text-5xl font-bold tracking-tight text-white transition-all duration-700">Deep Inhale</h2>
+<div class="flex flex-col items-center gap-4">
+<div class="flex items-center justify-center gap-1.5">
+<div class="h-1.5 w-10 rounded-full bg-warm-pink-500 shadow-[0_0_8px_rgba(236,72,153,0.6)]"></div>
+<div class="h-1.5 w-6 rounded-full bg-white/10"></div>
+<div class="h-1.5 w-14 rounded-full bg-white/10"></div>
+</div>
+<p class="text-warm-pink-400 text-sm font-bold tracking-widest uppercase">Step 1 of 3: Expanding Lungs</p>
+</div>
+</div>
+</div>
+<div class="px-6 pb-6 z-20">
+<div class="bg-obsidian/80 border border-white/10 rounded-3xl p-5 backdrop-blur-xl shadow-2xl">
+<div class="flex items-start gap-4">
+<div class="size-8 rounded-full bg-warm-pink-500/10 flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-warm-pink-400 text-lg">record_voice_over</span>
+</div>
+<p class="text-base text-slate-200 leading-relaxed font-medium">
+                    Take two quick inhales through your nose, then one long exhale through your mouth.
+                </p>
+</div>
+</div>
+</div>
+<div class="px-6 pb-10 flex items-center justify-center gap-10 z-20">
+<button class="size-12 rounded-full border border-white/5 bg-white/5 flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">replay_10</span>
+</button>
+<button class="size-20 rounded-full bg-white flex items-center justify-center shadow-[0_0_30px_rgba(236,72,153,0.3)]">
+<span class="material-symbols-outlined text-background-dark text-4xl filled">pause</span>
+</button>
+<button class="size-12 rounded-full border border-white/5 bg-white/5 flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">forward_10</span>
+</button>
+</div>
+<nav class="mt-auto px-6 py-3 bg-obsidian/90 border-t border-white/5 backdrop-blur-xl flex justify-between items-center z-30">
+<button class="flex flex-col items-center gap-1 flex-1">
+<span class="material-symbols-outlined text-slate-500">calendar_today</span>
+<span class="text-[10px] text-slate-500 font-medium">Today</span>
+</button>
+<button class="flex flex-col items-center gap-1 flex-1">
+<span class="material-symbols-outlined text-warm-pink-500 filled">self_improvement</span>
+<span class="text-[10px] text-warm-pink-400 font-bold">Practices</span>
+</button>
+<button class="flex flex-col items-center gap-1 flex-1">
+<span class="material-symbols-outlined text-slate-500">psychology</span>
+<span class="text-[10px] text-slate-500 font-medium">Coach</span>
+</button>
+<button class="flex flex-col items-center gap-1 flex-1">
+<span class="material-symbols-outlined text-slate-500">groups</span>
+<span class="text-[10px] text-slate-500 font-medium">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 flex-1">
+<span class="material-symbols-outlined text-slate-500">insights</span>
+<span class="text-[10px] text-slate-500 font-medium">Insights</span>
+</button>
+</nav>
+<div class="bg-obsidian/90 pb-2 flex justify-center">
+<div class="w-32 h-1 bg-white/20 rounded-full"></div>
+</div>
+
+</body></html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stress Compass Assessment Final</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-pink": "#FF4D97",
+                        "primary-yellow": "#FFD640",
+                        "obsidian": "#050505",
+                        "card-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --pink: #FF4D97;
+            --yellow: #FFD640;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            background-color: #050505;
+        }
+        .mood-gradient {
+            background: linear-gradient(to right, var(--pink), var(--yellow));
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            background: transparent;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 9999px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid var(--yellow);
+            margin-top: -8px;
+            box-shadow: 0 0 15px rgba(255, 214, 64, 0.4);
+            cursor: pointer;
+        }
+        .nav-blur {
+            background: rgba(5, 5, 5, 0.85);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-white antialiased">
+<div class="max-w-[430px] mx-auto min-h-screen flex flex-col relative bg-obsidian">
+<header class="sticky top-0 z-50 nav-blur border-b border-white/5">
+<div class="flex items-center p-4 justify-between">
+<button class="size-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-400">close</span>
+</button>
+<div class="flex flex-col items-center">
+<h1 class="text-[13px] font-bold tracking-[0.2em] uppercase text-primary-pink">Stress Compass</h1>
+<span class="text-[10px] text-slate-500 font-medium uppercase tracking-widest">Assessment</span>
+</div>
+<button class="size-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-yellow">info</span>
+</button>
+</div>
+</header>
+<main class="flex-1 px-6 pt-8 pb-56">
+<section class="mb-10">
+<h2 class="text-3xl font-black mb-4 leading-tight text-white">What is the Stress Compass?</h2>
+<p class="text-slate-300 text-[15px] leading-relaxed mb-6 font-light">
+                    The Stress Compass helps you understand which areas of life are drawing the most energy from you right now. It is not about labelling you - it is about giving you insight into your nervous system patterns.
+                </p>
+<div class="p-5 rounded-3xl bg-white/[0.03] border border-white/10">
+<h3 class="text-[11px] font-black uppercase tracking-widest text-primary-yellow mb-2">How it works</h3>
+<p class="text-sm text-slate-400 leading-relaxed">
+                        You will rate 10 core stressor categories on a scale of 1-10. <span class="text-white font-medium">1 is "draining me"</span> and <span class="text-white font-medium">10 "feels balanced"</span>. Your results create a "stress signature map" showing which nervous system pathways need support. You will receive personalized practices and micro challenges based on your unique pattern.
+                    </p>
+</div>
+</section>
+<div class="space-y-4">
+<div class="bg-card-dark rounded-[28px] p-6 border border-white/10">
+<div class="flex items-center gap-4 mb-5">
+<div class="size-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary-pink text-xl">trending_up</span>
+</div>
+<h3 class="font-bold text-base">Work &amp; Performance</h3>
+</div>
+<div class="space-y-3">
+<div class="relative flex items-center h-8">
+<div class="absolute inset-0 h-1.5 my-auto rounded-full bg-white/5 overflow-hidden">
+<div class="h-full w-full mood-gradient opacity-40"></div>
+</div>
+<input class="w-full relative z-10" max="10" min="1" step="1" type="range" value="5"/>
+</div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
+<span>Draining</span>
+<span class="text-primary-yellow">Rating: 5</span>
+<span>Balanced</span>
+</div>
+</div>
+</div>
+<div class="bg-card-dark rounded-[28px] p-6 border border-white/10">
+<div class="flex items-center gap-4 mb-5">
+<div class="size-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary-pink text-xl">account_balance_wallet</span>
+</div>
+<h3 class="font-bold text-base">Financial Security</h3>
+</div>
+<div class="space-y-3">
+<div class="relative flex items-center h-8">
+<div class="absolute inset-0 h-1.5 my-auto rounded-full bg-white/5 overflow-hidden">
+<div class="h-full w-full mood-gradient opacity-40"></div>
+</div>
+<input class="w-full relative z-10" max="10" min="1" step="1" type="range" value="5"/>
+</div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
+<span>Draining</span>
+<span class="text-primary-yellow">Rating: 5</span>
+<span>Balanced</span>
+</div>
+</div>
+</div>
+<div class="bg-card-dark rounded-[28px] p-6 border border-white/10">
+<div class="flex items-center gap-4 mb-5">
+<div class="size-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary-pink text-xl">diversity_3</span>
+</div>
+<h3 class="font-bold text-base">Relationships &amp; Conflict</h3>
+</div>
+<div class="space-y-3">
+<div class="relative flex items-center h-8">
+<div class="absolute inset-0 h-1.5 my-auto rounded-full bg-white/5 overflow-hidden">
+<div class="h-full w-full mood-gradient opacity-40"></div>
+</div>
+<input class="w-full relative z-10" max="10" min="1" step="1" type="range" value="5"/>
+</div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
+<span>Draining</span>
+<span class="text-primary-yellow">Rating: 5</span>
+<span>Balanced</span>
+</div>
+</div>
+</div>
+<div class="bg-card-dark rounded-[28px] p-6 border border-white/10">
+<div class="flex items-center gap-4 mb-5">
+<div class="size-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary-pink text-xl">person_search</span>
+</div>
+<h3 class="font-bold text-base">Self Image and Comparison</h3>
+</div>
+<div class="space-y-3">
+<div class="relative flex items-center h-8">
+<div class="absolute inset-0 h-1.5 my-auto rounded-full bg-white/5 overflow-hidden">
+<div class="h-full w-full mood-gradient opacity-40"></div>
+</div>
+<input class="w-full relative z-10" max="10" min="1" step="1" type="range" value="5"/>
+</div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
+<span>Draining</span>
+<span class="text-primary-yellow">Rating: 5</span>
+<span>Balanced</span>
+</div>
+</div>
+</div>
+<div class="bg-card-dark rounded-[28px] p-6 border border-white/10">
+<div class="flex items-center gap-4 mb-5">
+<div class="size-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary-pink text-xl">timer_off</span>
+</div>
+<h3 class="font-bold text-base">Time Scarcity</h3>
+</div>
+<div class="space-y-3">
+<div class="relative flex items-center h-8">
+<div class="absolute inset-0 h-1.5 my-auto rounded-full bg-white/5 overflow-hidden">
+<div class="h-full w-full mood-gradient opacity-40"></div>
+</div>
+<input class="w-full relative z-10" max="10" min="1" step="1" type="range" value="5"/>
+</div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
+<span>Draining</span>
+<span class="text-primary-yellow">Rating: 5</span>
+<span>Balanced</span>
+</div>
+</div>
+</div>
+<div class="bg-card-dark rounded-[28px] p-6 border border-white/10">
+<div class="flex items-center gap-4 mb-5">
+<div class="size-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary-pink text-xl">psychology</span>
+</div>
+<h3 class="font-bold text-base">Inner Critic</h3>
+</div>
+<div class="space-y-3">
+<div class="relative flex items-center h-8">
+<div class="absolute inset-0 h-1.5 my-auto rounded-full bg-white/5 overflow-hidden">
+<div class="h-full w-full mood-gradient opacity-40"></div>
+</div>
+<input class="w-full relative z-10" max="10" min="1" step="1" type="range" value="5"/>
+</div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
+<span>Draining</span>
+<span class="text-primary-yellow">Rating: 5</span>
+<span>Balanced</span>
+</div>
+</div>
+</div>
+<div class="bg-card-dark rounded-[28px] p-6 border border-white/10">
+<div class="flex items-center gap-4 mb-5">
+<div class="size-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary-pink text-xl">group_off</span>
+</div>
+<h3 class="font-bold text-base">Isolation and Loneliness</h3>
+</div>
+<div class="space-y-3">
+<div class="relative flex items-center h-8">
+<div class="absolute inset-0 h-1.5 my-auto rounded-full bg-white/5 overflow-hidden">
+<div class="h-full w-full mood-gradient opacity-40"></div>
+</div>
+<input class="w-full relative z-10" max="10" min="1" step="1" type="range" value="5"/>
+</div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
+<span>Draining</span>
+<span class="text-primary-yellow">Rating: 5</span>
+<span>Balanced</span>
+</div>
+</div>
+</div>
+<div class="bg-card-dark rounded-[28px] p-6 border border-white/10">
+<div class="flex items-center gap-4 mb-5">
+<div class="size-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary-pink text-xl">warning</span>
+</div>
+<h3 class="font-bold text-base">Unresolved Fear</h3>
+</div>
+<div class="space-y-3">
+<div class="relative flex items-center h-8">
+<div class="absolute inset-0 h-1.5 my-auto rounded-full bg-white/5 overflow-hidden">
+<div class="h-full w-full mood-gradient opacity-40"></div>
+</div>
+<input class="w-full relative z-10" max="10" min="1" step="1" type="range" value="5"/>
+</div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
+<span>Draining</span>
+<span class="text-primary-yellow">Rating: 5</span>
+<span>Balanced</span>
+</div>
+</div>
+</div>
+<div class="bg-card-dark rounded-[28px] p-6 border border-white/10">
+<div class="flex items-center gap-4 mb-5">
+<div class="size-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary-pink text-xl">explore</span>
+</div>
+<h3 class="font-bold text-base">Lack of Purpose</h3>
+</div>
+<div class="space-y-3">
+<div class="relative flex items-center h-8">
+<div class="absolute inset-0 h-1.5 my-auto rounded-full bg-white/5 overflow-hidden">
+<div class="h-full w-full mood-gradient opacity-40"></div>
+</div>
+<input class="w-full relative z-10" max="10" min="1" step="1" type="range" value="5"/>
+</div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
+<span>Draining</span>
+<span class="text-primary-yellow">Rating: 5</span>
+<span>Balanced</span>
+</div>
+</div>
+</div>
+<div class="bg-card-dark rounded-[28px] p-6 border border-white/10">
+<div class="flex items-center gap-4 mb-5">
+<div class="size-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-primary-pink text-xl">battery_charging_20</span>
+</div>
+<h3 class="font-bold text-base">Exhaustion and Recovery</h3>
+</div>
+<div class="space-y-3">
+<div class="relative flex items-center h-8">
+<div class="absolute inset-0 h-1.5 my-auto rounded-full bg-white/5 overflow-hidden">
+<div class="h-full w-full mood-gradient opacity-40"></div>
+</div>
+<input class="w-full relative z-10" max="10" min="1" step="1" type="range" value="5"/>
+</div>
+<div class="flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
+<span>Draining</span>
+<span class="text-primary-yellow">Rating: 5</span>
+<span>Balanced</span>
+</div>
+</div>
+</div>
+</div>
+<div class="py-16 text-center px-6">
+<p class="text-slate-500 text-sm italic font-light leading-relaxed max-w-[280px] mx-auto">
+                    "This is not a test you can fail. It is a map to help you find your way back to yourself."
+                </p>
+<div class="mt-8 flex justify-center">
+<div class="w-12 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] z-[60]">
+<div class="px-6 pb-24 pt-10 bg-gradient-to-t from-obsidian via-obsidian/95 to-transparent">
+<button class="w-full mood-gradient text-white font-black py-4 rounded-[22px] shadow-[0_10px_30px_rgba(255,77,151,0.3)] flex items-center justify-center gap-3 active:scale-[0.98] transition-transform">
+<span class="uppercase tracking-[0.15em] text-sm">Generate My Map</span>
+<span class="material-symbols-outlined text-[20px] font-bold">rocket_launch</span>
+</button>
+</div>
+<nav class="absolute bottom-0 w-full bg-obsidian/80 backdrop-blur-2xl border-t border-white/5 pb-8 pt-3 px-4 flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-[26px]">calendar_today</span>
+<span class="text-[10px] font-medium">Today</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-[26px]">self_improvement</span>
+<span class="text-[10px] font-medium">Practices</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary-pink" href="#">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1">psychology_alt</span>
+<span class="text-[10px] font-bold">Coach</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-[26px]">forum</span>
+<span class="text-[10px] font-medium">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-[26px]">monitoring</span>
+<span class="text-[10px] font-medium">Insights</span>
+</a>
+</nav>
+</div>
+</div>
+
+</body></html>

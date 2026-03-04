@@ -1,0 +1,230 @@
+<html class="dark" lang="en"><head><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="pb-32 overflow-x-hidden">```html
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHOBIK: Connect Wearable</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF4D94",
+                        "accent": "#FFD700",
+                        "deep-plum": "#120812",
+                        "card-plum": "#2D152D",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-gradient: linear-gradient(135deg, #FF4D94 0%, #FFD700 100%);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #120812;
+            min-height: 100vh;
+            color: white;
+        }
+        .ios-blur {
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+        }
+        .radiant-button {
+            background: var(--primary-gradient);
+            box-shadow: 0 4px 15px rgba(255, 77, 148, 0.4);
+        }
+        .scanning-pulse {
+            animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(0.8); opacity: 0.5; }
+        }
+        .scroll-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+
+
+<header class="sticky top-0 z-50 bg-[#120812]/70 ios-blur px-4 pt-12 pb-4">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<button class="size-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-white">arrow_back_ios_new</span>
+</button>
+<h1 class="text-sm font-bold uppercase tracking-[0.2em] text-white/60">Connect Wearable</h1>
+<div class="size-10"></div>
+</div>
+</header>
+<main class="max-w-md mx-auto px-6">
+<div class="flex flex-col items-center text-center mt-6 mb-10">
+<div class="relative mb-6">
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-2xl scale-150"></div>
+<div class="relative size-24 rounded-full border-2 border-primary/30 flex items-center justify-center">
+<div class="scanning-pulse size-16 rounded-full border-2 border-accent flex items-center justify-center">
+<span class="material-symbols-outlined text-accent text-3xl">bluetooth_searching</span>
+</div>
+</div>
+</div>
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Scanning for devices</p>
+<h2 class="text-3xl font-bold tracking-tight text-white mb-3">Sync Your Device</h2>
+<p class="text-sm text-slate-400 leading-relaxed max-w-[280px]">Connect via Bluetooth for real-time energy and stress monitoring.</p>
+</div>
+<div class="space-y-4 overflow-y-auto max-h-[580px] pb-12 scroll-hide">
+<div class="bg-card-plum/50 border border-white/10 rounded-2xl p-5 flex items-center justify-between backdrop-blur-sm group hover:border-primary/30 transition-all">
+<div class="flex items-center gap-4">
+<div class="size-12 bg-white/5 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80 text-2xl">watch_wake</span>
+</div>
+<div>
+<h4 class="font-bold text-white tracking-tight">Apple Watch</h4>
+<p class="text-[10px] text-slate-500 font-bold uppercase">Ready to pair</p>
+</div>
+</div>
+<button class="radiant-button px-5 py-2 rounded-full text-[10px] font-bold text-white uppercase tracking-wider active:scale-95 transition-transform">Connect</button>
+</div>
+<div class="bg-card-plum/50 border border-white/10 rounded-2xl p-5 flex items-center justify-between backdrop-blur-sm group hover:border-primary/30 transition-all">
+<div class="flex items-center gap-4">
+<div class="size-12 bg-white/5 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80 text-2xl">fitness_center</span>
+</div>
+<div>
+<h4 class="font-bold text-white tracking-tight">Whoop</h4>
+<p class="text-[10px] text-slate-500 font-bold uppercase">Search nearby</p>
+</div>
+</div>
+<button class="radiant-button px-5 py-2 rounded-full text-[10px] font-bold text-white uppercase tracking-wider active:scale-95 transition-transform">Connect</button>
+</div>
+<div class="bg-card-plum/50 border border-white/10 rounded-2xl p-5 flex items-center justify-between backdrop-blur-sm group hover:border-primary/30 transition-all">
+<div class="flex items-center gap-4">
+<div class="size-12 bg-white/5 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80 text-2xl">radio_button_checked</span>
+</div>
+<div>
+<h4 class="font-bold text-white tracking-tight">Oura Ring</h4>
+<p class="text-[10px] text-slate-500 font-bold uppercase">Gen 3 / Horizon</p>
+</div>
+</div>
+<button class="radiant-button px-5 py-2 rounded-full text-[10px] font-bold text-white uppercase tracking-wider active:scale-95 transition-transform">Connect</button>
+</div>
+<div class="bg-card-plum/50 border border-white/10 rounded-2xl p-5 flex items-center justify-between backdrop-blur-sm group hover:border-primary/30 transition-all">
+<div class="flex items-center gap-4">
+<div class="size-12 bg-white/5 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80 text-2xl">navigation</span>
+</div>
+<div>
+<h4 class="font-bold text-white tracking-tight">Garmin</h4>
+<p class="text-[10px] text-slate-500 font-bold uppercase">Fenix &amp; Venu</p>
+</div>
+</div>
+<button class="radiant-button px-5 py-2 rounded-full text-[10px] font-bold text-white uppercase tracking-wider active:scale-95 transition-transform">Connect</button>
+</div>
+<div class="bg-card-plum/50 border border-white/10 rounded-2xl p-5 flex items-center justify-between backdrop-blur-sm group hover:border-primary/30 transition-all">
+<div class="flex items-center gap-4">
+<div class="size-12 bg-white/5 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80 text-2xl">monitoring</span>
+</div>
+<div>
+<h4 class="font-bold text-white tracking-tight">Fitbit</h4>
+<p class="text-[10px] text-slate-500 font-bold uppercase">Versa &amp; Charge</p>
+</div>
+</div>
+<button class="radiant-button px-5 py-2 rounded-full text-[10px] font-bold text-white uppercase tracking-wider active:scale-95 transition-transform">Connect</button>
+</div>
+<div class="bg-card-plum/50 border border-white/10 rounded-2xl p-5 flex items-center justify-between backdrop-blur-sm group hover:border-primary/30 transition-all">
+<div class="flex items-center gap-4">
+<div class="size-12 bg-white/5 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80 text-2xl">fitness_tracker</span>
+</div>
+<div>
+<h4 class="font-bold text-white tracking-tight">Polar</h4>
+<p class="text-[10px] text-slate-500 font-bold uppercase">Vantage &amp; Ignite</p>
+</div>
+</div>
+<button class="radiant-button px-5 py-2 rounded-full text-[10px] font-bold text-white uppercase tracking-wider active:scale-95 transition-transform">Connect</button>
+</div>
+<div class="bg-card-plum/50 border border-white/10 rounded-2xl p-5 flex items-center justify-between backdrop-blur-sm group hover:border-primary/30 transition-all">
+<div class="flex items-center gap-4">
+<div class="size-12 bg-white/5 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80 text-2xl">explore</span>
+</div>
+<div>
+<h4 class="font-bold text-white tracking-tight">Suunto</h4>
+<p class="text-[10px] text-slate-500 font-bold uppercase">Peak &amp; Vertical</p>
+</div>
+</div>
+<button class="radiant-button px-5 py-2 rounded-full text-[10px] font-bold text-white uppercase tracking-wider active:scale-95 transition-transform">Connect</button>
+</div>
+<div class="bg-card-plum/50 border border-white/10 rounded-2xl p-5 flex items-center justify-between backdrop-blur-sm group hover:border-primary/30 transition-all">
+<div class="flex items-center gap-4">
+<div class="size-12 bg-white/5 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80 text-2xl">directions_bike</span>
+</div>
+<div>
+<h4 class="font-bold text-white tracking-tight">Wahoo</h4>
+<p class="text-[10px] text-slate-500 font-bold uppercase">Elemnt &amp; Rival</p>
+</div>
+</div>
+<button class="radiant-button px-5 py-2 rounded-full text-[10px] font-bold text-white uppercase tracking-wider active:scale-95 transition-transform">Connect</button>
+</div>
+<div class="bg-card-plum/50 border border-white/10 rounded-2xl p-5 flex items-center justify-between backdrop-blur-sm group hover:border-primary/30 transition-all">
+<div class="flex items-center gap-4">
+<div class="size-12 bg-white/5 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80 text-2xl">medical_services</span>
+</div>
+<div>
+<h4 class="font-bold text-white tracking-tight">Withings</h4>
+<p class="text-[10px] text-slate-500 font-bold uppercase">ScanWatch &amp; Steel</p>
+</div>
+</div>
+<button class="radiant-button px-5 py-2 rounded-full text-[10px] font-bold text-white uppercase tracking-wider active:scale-95 transition-transform">Connect</button>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-[#1A0B1A]/95 ios-blur border-t border-white/10 px-4 pt-3 pb-8 z-50">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-white/40 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-white/40 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">self_improvement</span>
+<span class="text-[10px] font-bold uppercase">Practices</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-white/40 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-bold uppercase">Coach</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-white/40 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-bold uppercase">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-white/40 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-accent fill-1">insights</span>
+<span class="text-[10px] font-bold uppercase">Insights</span>
+</button>
+</div>
+</nav>
+<div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-white/20 rounded-full z-[60]"></div>
+
+</body></html>

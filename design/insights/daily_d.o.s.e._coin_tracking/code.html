@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daily D.O.S.E. Tracker - PHOBIK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'phobik-black': '#000000',
+            'phobik-pink': '#FF2D85',
+            'phobik-yellow': '#FFD700',
+            'phobik-blue': '#00D4FF',
+            'phobik-green': '#00FF94',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="animations">
+    @keyframes wave {
+      0% { transform: translateX(0) scaleY(1); }
+      50% { transform: translateX(-25%) scaleY(1.1); }
+      100% { transform: translateX(0) scaleY(1); }
+    }
+    .waveform {
+      animation: wave 4s ease-in-out infinite;
+      opacity: 0.8;
+      filter: blur(4px);
+    }
+    .wave-2 { animation-duration: 3s; animation-delay: -1s; }
+    .wave-3 { animation-duration: 5s; animation-delay: -2s; }
+    .wave-4 { animation-duration: 3.5s; animation-delay: -0.5s; }
+
+    .glow-pink { box-shadow: 0 0 20px rgba(255, 45, 133, 0.3); }
+    .glow-yellow { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-phobik-black text-white font-sans min-h-screen pb-24">
+<!-- BEGIN: Header -->
+<header class="pt-12 pb-6 px-6" data-purpose="main-header">
+<h1 class="text-3xl font-bold tracking-tight bg-gradient-to-r from-phobik-pink to-phobik-yellow bg-clip-text text-transparent">
+      Daily D.O.S.E.
+    </h1>
+<p class="text-gray-400 mt-1 text-sm">How well did you nourish your brain today?</p>
+</header>
+<!-- END: Header -->
+<main class="px-6 space-y-8">
+<!-- BEGIN: Waveform Visualizer -->
+<section class="space-y-6" data-purpose="dose-visualizer">
+<!-- Dopamine (Yellow) -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-phobik-yellow font-medium">Dopamine</span>
+<p class="text-[10px] text-gray-500 uppercase tracking-widest">Progress &amp; Momentum</p>
+</div>
+<span class="text-phobik-yellow font-bold text-lg">18 Coins</span>
+</div>
+<div class="relative h-12 w-full bg-white/5 rounded-2xl overflow-hidden">
+<div class="absolute inset-0 bg-phobik-yellow/20 w-[72%] rounded-2xl"></div>
+<!-- Wave SVG Placeholder Logic -->
+<svg class="waveform absolute top-0 left-0 h-full w-[150%] text-phobik-yellow" preserveaspectratio="none" viewbox="0 0 1000 100">
+<path d="M0,50 C150,20 350,80 500,50 C650,20 850,80 1000,50 L1000,100 L0,100 Z" fill="currentColor" fill-opacity="0.4"></path>
+</svg>
+</div>
+</div>
+<!-- Oxytocin (Blue) -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-phobik-blue font-medium">Oxytocin</span>
+<p class="text-[10px] text-gray-500 uppercase tracking-widest">Connection &amp; Safety</p>
+</div>
+<span class="text-phobik-blue font-bold text-lg">9 Coins</span>
+</div>
+<div class="relative h-12 w-full bg-white/5 rounded-2xl overflow-hidden">
+<div class="absolute inset-0 bg-phobik-blue/20 w-[36%] rounded-2xl"></div>
+<svg class="waveform wave-2 absolute top-0 left-0 h-full w-[150%] text-phobik-blue" preserveaspectratio="none" viewbox="0 0 1000 100">
+<path d="M0,50 C200,80 400,20 600,50 C800,80 1000,20 1200,50 L1200,100 L0,100 Z" fill="currentColor" fill-opacity="0.4"></path>
+</svg>
+</div>
+</div>
+<!-- Serotonin (Green) -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-phobik-green font-medium">Serotonin</span>
+<p class="text-[10px] text-gray-500 uppercase tracking-widest">Confidence &amp; Stability</p>
+</div>
+<span class="text-phobik-green font-bold text-lg">22 Coins</span>
+</div>
+<div class="relative h-12 w-full bg-white/5 rounded-2xl overflow-hidden">
+<div class="absolute inset-0 bg-phobik-green/20 w-[88%] rounded-2xl"></div>
+<svg class="waveform wave-3 absolute top-0 left-0 h-full w-[150%] text-phobik-green" preserveaspectratio="none" viewbox="0 0 1000 100">
+<path d="M0,50 C100,10 250,90 400,50 C550,10 750,90 900,50 L1000,100 L0,100 Z" fill="currentColor" fill-opacity="0.4"></path>
+</svg>
+</div>
+</div>
+<!-- Endorphins (Pink) -->
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-phobik-pink font-medium">Endorphins</span>
+<p class="text-[10px] text-gray-400 uppercase tracking-widest">Stress Relief &amp; Resilience</p>
+</div>
+<span class="text-phobik-pink font-bold text-lg">14 Coins</span>
+</div>
+<div class="relative h-12 w-full bg-white/5 rounded-2xl overflow-hidden">
+<div class="absolute inset-0 bg-phobik-pink/20 w-[56%] rounded-2xl"></div>
+<svg class="waveform wave-4 absolute top-0 left-0 h-full w-[150%] text-phobik-pink" preserveaspectratio="none" viewbox="0 0 1000 100">
+<path d="M0,50 C300,30 600,70 900,50 C1200,30 1500,70 1800,50 L1800,100 L0,100 Z" fill="currentColor" fill-opacity="0.4"></path>
+</svg>
+</div>
+</div>
+</section>
+<!-- END: Waveform Visualizer -->
+<!-- BEGIN: Neuro-Deficiency Indicator -->
+<section class="glass-card p-5 rounded-3xl border-phobik-blue/30 relative overflow-hidden" data-purpose="insight-alert">
+<div class="absolute top-0 right-0 w-24 h-24 bg-phobik-blue/10 blur-3xl"></div>
+<div class="flex items-center gap-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-phobik-blue/20 flex items-center justify-center">
+<svg class="h-6 w-6 text-phobik-blue" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h3 class="font-semibold text-white">You're low on Oxytocin today</h3>
+<p class="text-sm text-gray-400 mt-1">Smart Tip: Try a 60-second connection reset with a loved one or pet.</p>
+</div>
+</div>
+</section>
+<!-- END: Neuro-Deficiency Indicator -->
+<!-- BEGIN: Activity Summary -->
+<section class="space-y-4" data-purpose="activity-summary">
+<h2 class="text-lg font-semibold px-1">Activity Log</h2>
+<div class="grid grid-cols-2 gap-3">
+<!-- Dopamine Card -->
+<div class="glass-card p-4 rounded-2xl">
+<div class="w-2 h-2 rounded-full bg-phobik-yellow mb-2"></div>
+<p class="text-xs text-gray-400">Micro Challenge</p>
+<p class="text-sm font-medium text-white">+5 Dopamine</p>
+</div>
+<!-- Serotonin Card -->
+<div class="glass-card p-4 rounded-2xl">
+<div class="w-2 h-2 rounded-full bg-phobik-green mb-2"></div>
+<p class="text-xs text-gray-400">Gratitude Log</p>
+<p class="text-sm font-medium text-white">+8 Serotonin</p>
+</div>
+<!-- Endorphin Card -->
+<div class="glass-card p-4 rounded-2xl">
+<div class="w-2 h-2 rounded-full bg-phobik-pink mb-2"></div>
+<p class="text-xs text-gray-400">Quick Workout</p>
+<p class="text-sm font-medium text-white">+10 Endorphins</p>
+</div>
+<!-- Oxytocin Card -->
+<div class="glass-card p-4 rounded-2xl">
+<div class="w-2 h-2 rounded-full bg-phobik-blue mb-2"></div>
+<p class="text-xs text-gray-400">Community Chat</p>
+<p class="text-sm font-medium text-white">+3 Oxytocin</p>
+</div>
+</div>
+</section>
+<!-- END: Activity Summary -->
+</main>
+<!-- BEGIN: Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-xl border-t border-white/10 px-6 py-4 flex justify-between items-center z-50" data-purpose="bottom-nav">
+<button class="flex flex-col items-center gap-1 text-phobik-pink">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px] font-bold">Today</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-500 hover:text-white transition-colors">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px]">Practices</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-500 hover:text-white transition-colors">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px]">Coach</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-500 hover:text-white transition-colors">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px]">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-500 hover:text-white transition-colors">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px]">Insights</span>
+</button>
+</nav>
+<!-- END: Bottom Navigation -->
+</body></html>

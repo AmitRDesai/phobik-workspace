@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Box Breathing Intro - PHOBIK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "vibrant-pink": {
+                            400: "#f472b6",
+                            500: "#ec4899",
+                            600: "#db2777",
+                        },
+                        "soft-yellow": {
+                            400: "#fbbf24",
+                            500: "#f59e0b",
+                        },
+                        "background-deep": "#050505",
+                        "charcoal": "#121214",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #050505;
+            background-image: radial-gradient(circle at top right, rgba(236, 72, 153, 0.08) 0%, transparent 40%),
+                              radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.05) 0%, transparent 40%);
+        }
+        .option-card {
+            @apply flex flex-col items-center justify-center p-4 rounded-2xl bg-charcoal/50 border border-white/5 text-center transition-all active:scale-95 active:bg-white/10;
+        }
+        .nav-item {
+            @apply flex flex-col items-center gap-1 text-white/40;
+        }
+        .nav-item.active {
+            @apply text-vibrant-pink-400;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-white min-h-screen font-display flex flex-col">
+<header class="p-6 flex items-center justify-between sticky top-0 bg-background-deep/80 backdrop-blur-md z-10">
+<button class="size-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-white/80">chevron_left</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">Box Breathing</h1>
+<button class="size-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-white/80">info</span>
+</button>
+</header>
+<main class="flex-1 px-6 pb-32 overflow-y-auto">
+<section class="mt-4 mb-8">
+<p class="text-white/70 leading-relaxed text-sm">
+                Box breathing is a calming technique that involves inhaling, holding, exhaling, and holding again - each for 4 seconds. Repeating this cycle helps reduce stress, improve focus, and regulate the nervous system.
+            </p>
+</section>
+<section class="mb-10 bg-gradient-to-br from-vibrant-pink-500/10 to-soft-yellow-500/5 p-6 rounded-[2rem] border border-vibrant-pink-500/20">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-vibrant-pink-400">integration_instructions</span>
+<h2 class="text-xs font-bold uppercase tracking-widest text-vibrant-pink-400">How-to Guide</h2>
+</div>
+<p class="text-white/90 text-sm leading-relaxed italic">
+                "Inhale to the count of 4, hold your breath for another slow count of 4, exhale through your mouth for the same slow count of 4 and then hold your breath again to the count of 4."
+            </p>
+</section>
+<section class="mb-8">
+<h3 class="text-lg font-semibold mb-4">What is your energy level before your session?</h3>
+<div class="grid grid-cols-2 gap-3">
+<button class="option-card">
+<span class="material-symbols-outlined mb-2 text-soft-yellow-400">wb_sunny</span>
+<span class="text-xs font-medium">Peak Positive</span>
+</button>
+<button class="option-card">
+<span class="material-symbols-outlined mb-2 text-vibrant-pink-400">self_care</span>
+<span class="text-xs font-medium">Positive Calm</span>
+</button>
+<button class="option-card">
+<span class="material-symbols-outlined mb-2 text-blue-400">battery_low</span>
+<span class="text-xs font-medium">Low Energy</span>
+</button>
+<button class="option-card">
+<span class="material-symbols-outlined mb-2 text-orange-400">bolt</span>
+<span class="text-xs font-medium">Stressed</span>
+</button>
+<button class="option-card border-vibrant-pink-500/30">
+<span class="material-symbols-outlined mb-2 text-vibrant-pink-500">emoticon</span>
+<span class="text-xs font-medium">Intense Negative</span>
+</button>
+<button class="option-card">
+<span class="material-symbols-outlined mb-2 text-white/30">question_mark</span>
+<span class="text-xs font-medium">Don’t Know</span>
+</button>
+</div>
+</section>
+<div class="flex flex-col gap-3 mt-4">
+<button class="w-full py-5 rounded-2xl bg-gradient-to-r from-vibrant-pink-500 to-soft-yellow-400 text-black font-bold text-lg shadow-[0_0_30px_rgba(236,72,153,0.3)] active:scale-[0.98] transition-transform">
+                Start Session
+            </button>
+<button class="w-full py-4 text-white/40 font-semibold text-sm">
+                Skip
+            </button>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-background-deep/90 backdrop-blur-xl border-t border-white/5 px-6 pt-3 pb-8 flex justify-between items-center z-20">
+<a class="nav-item" href="#">
+<span class="material-symbols-outlined">today</span>
+<span class="text-[10px] font-bold">Today</span>
+</a>
+<a class="nav-item active" href="#">
+<span class="material-symbols-outlined">exercise</span>
+<span class="text-[10px] font-bold">Practices</span>
+</a>
+<a class="nav-item" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-bold">Coach</span>
+</a>
+<a class="nav-item" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-bold">Community</span>
+</a>
+<a class="nav-item" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="text-[10px] font-bold">Insights</span>
+</a>
+</nav>
+
+</body></html>

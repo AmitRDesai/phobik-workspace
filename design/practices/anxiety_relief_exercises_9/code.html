@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Double Inhale Breathing Intro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "warm-pink": {
+                            400: "#f472b6",
+                            500: "#ec4899",
+                            600: "#db2777",
+                        },
+                        "warm-yellow": {
+                            400: "#fbbf24",
+                            500: "#f59e0b",
+                        },
+                        "background-dark": "#050505",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --gradient-start: #ec4899;
+            --gradient-end: #fbbf24;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #050505;
+        }
+        .bg-aura {
+            background: radial-gradient(circle at 50% 20%, rgba(236, 72, 153, 0.15) 0%, rgba(251, 191, 36, 0.05) 40%, transparent 70%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.2s ease;
+        }
+        .glass-card:active {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(236, 72, 153, 0.3);
+            transform: scale(0.98);
+        }
+        .nav-item {
+            @apply flex flex-col items-center justify-center gap-1 text-slate-500;
+        }
+        .nav-item.active {
+            @apply text-warm-pink-400;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark text-white min-h-screen font-display flex flex-col overflow-x-hidden">
+<div class="fixed inset-0 bg-aura pointer-events-none"></div>
+<div class="relative px-6 pt-14 pb-6 flex items-center justify-between z-10">
+<button class="size-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-white">chevron_left</span>
+</button>
+<div class="text-center">
+<h1 class="text-xs font-semibold tracking-widest uppercase text-warm-pink-400">PHOBIK Practice</h1>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-white text-xl">more_horiz</span>
+</button>
+</div>
+<main class="relative flex-1 px-6 pb-32 z-10 max-w-md mx-auto w-full">
+<div class="text-center mb-10">
+<div class="inline-flex items-center justify-center size-16 rounded-3xl bg-gradient-to-br from-warm-pink-500 to-warm-yellow-400 mb-6 shadow-lg shadow-warm-pink-500/20">
+<span class="material-symbols-outlined text-white text-3xl">air</span>
+</div>
+<h2 class="text-3xl font-bold mb-4 tracking-tight">Double Inhale Breathing</h2>
+<p class="text-slate-400 text-sm leading-relaxed px-2">
+                Double inhale breathing consists of two quick, deep breaths in through the nose, followed by a single strong exhale through the mouth. This energizing technique helps clear the lungs, boost alertness, and can be repeated for 3 to 5 cycles.
+            </p>
+</div>
+<div class="mb-8">
+<h3 class="text-center text-lg font-medium mb-6">What is your energy level before your session?</h3>
+<div class="grid grid-cols-2 gap-3">
+<button class="glass-card rounded-2xl p-4 text-left">
+<span class="text-xl mb-2 block">⚡️</span>
+<p class="font-semibold text-sm">Peak Positive</p>
+</button>
+<button class="glass-card rounded-2xl p-4 text-left">
+<span class="text-xl mb-2 block">🧘</span>
+<p class="font-semibold text-sm">Positive Calm</p>
+</button>
+<button class="glass-card rounded-2xl p-4 text-left">
+<span class="text-xl mb-2 block">🔋</span>
+<p class="font-semibold text-sm">Low Energy</p>
+</button>
+<button class="glass-card rounded-2xl p-4 text-left">
+<span class="text-xl mb-2 block">🌪️</span>
+<p class="font-semibold text-sm">Stressed</p>
+</button>
+<button class="glass-card rounded-2xl p-4 text-left">
+<span class="text-xl mb-2 block">🌑</span>
+<p class="font-semibold text-sm">Intense Negative</p>
+</button>
+<button class="glass-card rounded-2xl p-4 text-left">
+<span class="text-xl mb-2 block">❔</span>
+<p class="font-semibold text-sm">Don’t Know</p>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<button class="w-full py-4 rounded-2xl font-bold text-lg bg-gradient-to-r from-warm-pink-500 to-warm-yellow-500 text-background-dark shadow-xl shadow-warm-pink-500/20 active:opacity-90">
+                Start
+            </button>
+<button class="w-full py-2 text-slate-400 font-medium active:text-white transition-colors">
+                Skip
+            </button>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-background-dark/80 backdrop-blur-xl border-t border-white/5 px-6 pb-8 pt-4 z-50">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<button class="nav-item">
+<span class="material-symbols-outlined">today</span>
+<span class="text-[10px] font-medium">Today</span>
+</button>
+<button class="nav-item active">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">fitness_center</span>
+<span class="text-[10px] font-medium">Practices</span>
+</button>
+<button class="nav-item">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-medium">Coach</span>
+</button>
+<button class="nav-item">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-medium">Community</span>
+</button>
+<button class="nav-item">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-[10px] font-medium">Insights</span>
+</button>
+</div>
+<div class="flex justify-center mt-6">
+<div class="w-32 h-1 bg-white/20 rounded-full"></div>
+</div>
+</nav>
+
+</body></html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Star Breathing Intro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "vibrant-pink": {
+                            50: "#fdf2f8",
+                            100: "#fce7f3",
+                            200: "#fbcfe8",
+                            300: "#f9a8d4",
+                            400: "#f472b6",
+                            500: "#ec4899",
+                            600: "#db2777",
+                            900: "#831843",
+                        },
+                        "warm-yellow": {
+                            50: "#fffbeb",
+                            100: "#fef3c7",
+                            200: "#fde68a",
+                            300: "#fcd34d",
+                            400: "#fbbf24",
+                            500: "#f59e0b",
+                            900: "#78350f",
+                        },
+                        "background-charcoal": "#0a0a0c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0a0a0c;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .option-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.2s ease;
+        }
+        .option-card:active {
+            transform: scale(0.98);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(236, 72, 153, 0.3);
+        }
+        .nav-blur {
+            background: rgba(10, 10, 12, 0.85);
+            backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-glow {
+            background: radial-gradient(circle at center, rgba(236, 72, 153, 0.15) 0%, transparent 70%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-charcoal h-screen w-full flex flex-col font-display selection:bg-vibrant-pink-500/30 overflow-hidden relative">
+<div class="fixed top-20 right-[-10%] w-80 h-80 bg-vibrant-pink-600/10 blur-[100px] rounded-full pointer-events-none"></div>
+<div class="fixed bottom-40 left-[-10%] w-80 h-80 bg-warm-yellow-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+<header class="absolute top-0 left-0 w-full px-6 pt-14 pb-4 z-40">
+<button class="size-11 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-white/70">close</span>
+</button>
+</header>
+<main class="flex-1 flex flex-col justify-center items-center px-6 pt-24 pb-32 z-10 overflow-hidden">
+<div class="w-full max-w-md mx-auto flex flex-col items-center">
+<section class="mb-6 text-center">
+<div class="inline-flex items-center justify-center size-16 mb-4 relative">
+<div class="absolute inset-0 bg-gradient-to-tr from-vibrant-pink-500 to-warm-yellow-500 blur-xl opacity-20"></div>
+<span class="material-symbols-outlined text-4xl text-vibrant-pink-400" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<h1 class="text-3xl font-bold tracking-tight mb-3 text-white">Star Breathing</h1>
+<p class="text-white/60 leading-relaxed text-[13px] max-w-sm mx-auto">
+                    Star Breathing is a calming technique where you trace a five-pointed star, inhaling and exhaling along each side. Each point guides your breath helping you slow down and reduce stress.
+                </p>
+</section>
+<section class="w-full mb-6">
+<h2 class="text-base font-semibold text-white mb-4 text-center">What is your energy level now?</h2>
+<div class="grid grid-cols-2 gap-2.5">
+<button class="option-card p-3 rounded-xl text-left">
+<div class="size-7 rounded-lg bg-emerald-500/10 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-emerald-400 text-lg">bolt</span>
+</div>
+<p class="text-[13px] font-semibold text-white">Peak Positive</p>
+</button>
+<button class="option-card p-3 rounded-xl text-left">
+<div class="size-7 rounded-lg bg-blue-500/10 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-blue-400 text-lg">self_improvement</span>
+</div>
+<p class="text-[13px] font-semibold text-white">Positive Calm</p>
+</button>
+<button class="option-card p-3 rounded-xl text-left">
+<div class="size-7 rounded-lg bg-orange-500/10 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-orange-400 text-lg">battery_low</span>
+</div>
+<p class="text-[13px] font-semibold text-white">Low Energy</p>
+</button>
+<button class="option-card p-3 rounded-xl text-left">
+<div class="size-7 rounded-lg bg-vibrant-pink-500/10 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-vibrant-pink-400 text-lg">warning</span>
+</div>
+<p class="text-[13px] font-semibold text-white">Stressed</p>
+</button>
+<button class="option-card p-3 rounded-xl text-left">
+<div class="size-7 rounded-lg bg-red-500/10 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-red-400 text-lg">mood_bad</span>
+</div>
+<p class="text-[13px] font-semibold text-white">Intense Negative</p>
+</button>
+<button class="option-card p-3 rounded-xl text-left">
+<div class="size-7 rounded-lg bg-white/10 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-white/60 text-lg">question_mark</span>
+</div>
+<p class="text-[13px] font-semibold text-white">Don’t Know</p>
+</button>
+</div>
+</section>
+<div class="flex flex-col gap-3 w-full">
+<button class="w-full py-4 rounded-2xl bg-gradient-to-r from-vibrant-pink-500 to-warm-yellow-500 text-background-charcoal font-bold text-lg shadow-lg shadow-vibrant-pink-500/20 active:scale-[0.98] transition-all">
+                    Start
+                </button>
+<button class="w-full py-1 text-white/40 font-medium text-sm hover:text-white/60 transition-colors">
+                    Skip
+                </button>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 nav-blur z-50 px-6 pt-3 pb-8">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<button class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined text-[24px]">calendar_today</span>
+<span class="text-[10px] font-medium">Today</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-vibrant-pink-500">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span class="text-[10px] font-bold">Practices</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+<span class="text-[10px] font-medium">Coach</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined text-[24px]">group</span>
+<span class="text-[10px] font-medium">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined text-[24px]">leaderboard</span>
+<span class="text-[10px] font-medium">Insights</span>
+</button>
+</div>
+</nav>
+
+</body></html>

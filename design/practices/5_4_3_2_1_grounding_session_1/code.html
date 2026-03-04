@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4256a",
+                        "accent-yellow": "#facc15",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .gradient-text {
+            background: linear-gradient(to right, #f4256a, #facc15);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .aura-glow {
+            background: radial-gradient(circle, rgba(244, 37, 106, 0.15) 0%, rgba(250, 204, 21, 0.05) 50%, transparent 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .visualizer-bar {
+            width: 4px;
+            background: linear-gradient(to top, #f4256a, #facc15);
+            border-radius: 2px;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-white min-h-screen flex flex-col max-w-md mx-auto overflow-x-hidden border-x border-white/5 relative">
+<div class="absolute inset-0 pointer-events-none aura-glow overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full aspect-square bg-primary/10 blur-[100px] rounded-full"></div>
+</div>
+<div class="flex items-center p-4 pb-2 justify-between z-10">
+<div class="text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">close</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">5-4-3-2-1 Session</h2>
+<div class="flex w-12 items-center justify-end">
+<div class="bg-primary/10 px-2 py-1 rounded-full flex items-center gap-1 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-xs fill-1">favorite</span>
+<p class="text-primary text-[10px] font-bold leading-normal tracking-wider shrink-0 uppercase">72 BPM</p>
+</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center p-6 relative z-10">
+<div class="relative flex items-center justify-center mb-12">
+<svg class="size-64 -rotate-90">
+<circle class="text-white/5" cx="128" cy="128" fill="transparent" r="120" stroke="currentColor" stroke-width="4"></circle>
+<circle cx="128" cy="128" fill="transparent" r="120" stroke="url(#gradient)" stroke-dasharray="753.6" stroke-dashoffset="188.4" stroke-linecap="round" stroke-width="4"></circle>
+<defs>
+<linearGradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#f4256a"></stop>
+<stop offset="100%" style="stop-color:#facc15"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<div class="text-8xl font-bold tracking-tighter gradient-text leading-none mb-4">3</div>
+<div class="flex items-end gap-1.5 h-12">
+<div class="visualizer-bar h-4"></div>
+<div class="visualizer-bar h-8"></div>
+<div class="visualizer-bar h-12"></div>
+<div class="visualizer-bar h-6"></div>
+<div class="visualizer-bar h-10"></div>
+<div class="visualizer-bar h-4"></div>
+</div>
+</div>
+</div>
+<div class="text-center max-w-[280px] space-y-4">
+<h3 class="text-2xl font-bold text-white">
+                Now identify <span class="gradient-text">5 things</span> you can see.
+            </h3>
+<p class="text-white/60 text-base leading-relaxed">
+                Look around and notice the details in your environment.
+            </p>
+</div>
+</div>
+<div class="px-6 py-4 flex flex-col items-center gap-2 z-10">
+<span class="text-white/40 text-xs font-semibold tracking-widest uppercase">Time Remaining</span>
+<span class="text-white text-xl font-medium tabular-nums">01:45</span>
+</div>
+<div class="px-6 pb-6 z-10">
+<button class="w-full py-4 rounded-xl glass-card text-white/70 text-sm font-medium hover:bg-white/5 transition-colors">
+            Pause Session
+        </button>
+</div>
+<div class="flex items-center justify-between px-6 py-4 bg-background-dark/80 backdrop-blur-xl border-t border-white/5 z-10">
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-[10px] font-medium">Today</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-1">self_improvement</span>
+<span class="text-[10px] font-medium">Practices</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-medium">Coach</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-medium">Community</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-[10px] font-medium">Insights</span>
+</div>
+</div>
+<div class="h-6 w-full flex justify-center items-center pb-2 bg-background-dark/80 backdrop-blur-xl z-10">
+<div class="w-32 h-1 bg-white/20 rounded-full"></div>
+</div>
+
+</body></html>

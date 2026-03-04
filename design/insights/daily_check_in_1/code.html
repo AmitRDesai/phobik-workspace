@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHOBIK - Work Pressure Leader</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-pink": "#FF4D97",
+                        "primary-yellow": "#FFD640",
+                        "background-pitch": "#000000",
+                        "card-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --pink: #FF4D97;
+            --yellow: #FFD640;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            background-color: #000000;
+        }
+        .nav-blur {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(20px);
+        }
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .glow-pink-yellow {
+            filter: drop-shadow(0 0 15px rgba(255, 77, 151, 0.4)) drop-shadow(0 0 5px rgba(255, 214, 64, 0.3));
+        }
+        .radiant-gradient {
+            background: linear-gradient(135deg, var(--pink) 0%, var(--yellow) 100%);
+        }
+        .nebula-glow {
+            box-shadow: 0 0 20px rgba(255, 77, 151, 0.2);
+            background: radial-gradient(circle at center, rgba(255, 77, 151, 0.15) 0%, transparent 70%);
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-white antialiased">
+<div class="max-w-[430px] mx-auto min-h-screen flex flex-col relative pb-40">
+<header class="sticky top-0 z-50 nav-blur border-b border-white/5">
+<div class="flex items-center p-4">
+<button class="mr-4 text-slate-400">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<div class="flex flex-col">
+<h1 class="text-xl font-black tracking-tight uppercase leading-none">Work Pressure</h1>
+<span class="text-[10px] text-primary-pink font-bold uppercase tracking-widest mt-1">Stressor Detail</span>
+</div>
+</div>
+</header>
+<main class="flex-1 px-5 pt-8 space-y-8">
+<section class="flex flex-col items-center text-center">
+<div class="size-28 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 glow-pink-yellow">
+<span class="text-5xl">💼</span>
+</div>
+<div class="space-y-3 max-w-[320px]">
+<h2 class="text-2xl font-black tracking-tight italic uppercase leading-none">Achievement Pressure</h2>
+<p class="text-xs text-slate-400 leading-relaxed font-medium">
+                        Triggers cortisol and adrenaline surges through perceived threat to achievement or identity.
+                    </p>
+</div>
+</section>
+<section class="grid grid-cols-2 gap-4">
+<div class="glass-card p-4 rounded-2xl">
+<span class="text-[9px] text-slate-500 font-black uppercase tracking-widest block mb-1">Stress Impact</span>
+<div class="text-xl font-black text-primary-pink uppercase">High</div>
+</div>
+<div class="glass-card p-4 rounded-2xl">
+<span class="text-[9px] text-slate-500 font-black uppercase tracking-widest block mb-1">Avg Duration</span>
+<div class="text-xl font-black text-primary-yellow">4.2 hrs</div>
+</div>
+</section>
+<section>
+<div class="glass-card p-5 rounded-3xl border-l-4 border-l-primary-pink">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary-pink text-sm">psychology_alt</span>
+<h3 class="text-[10px] font-black uppercase tracking-[0.2em] text-primary-pink">Reflect</h3>
+</div>
+<p class="text-[15px] font-bold text-slate-100 leading-snug italic">
+                        “Do I feel like I’m always racing to prove my worth or stay ahead?”
+                    </p>
+</div>
+</section>
+<section>
+<div class="glass-card p-5 rounded-3xl">
+<h3 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-4">Stress Signs</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-300 italic">Tight jaw</span>
+<span class="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-300 italic">Racing mind</span>
+<span class="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-300 italic">Sunday dread</span>
+<span class="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-300 italic">Difficulty unplugging</span>
+</div>
+</div>
+</section>
+<section>
+<div class="glass-card p-5 rounded-3xl border border-white/10">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary-yellow text-sm">verified_user</span>
+<h3 class="text-[10px] font-black uppercase tracking-[0.2em] text-primary-yellow">Self-Leadership Check</h3>
+</div>
+<p class="text-[13px] font-bold text-white mb-4">Which strength will help you handle this stressor?</p>
+<div class="flex flex-wrap gap-2">
+<button class="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-[10px] font-bold text-slate-300 uppercase tracking-wider">Connect</button>
+<button class="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-[10px] font-bold text-slate-300 uppercase tracking-wider">Creativity</button>
+<button class="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-[10px] font-bold text-slate-300 uppercase tracking-wider">Curiosity</button>
+<button class="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-[10px] font-bold text-slate-300 uppercase tracking-wider">Compassion</button>
+<button class="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-[10px] font-bold text-slate-300 uppercase tracking-wider">Courage</button>
+<button class="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-[10px] font-bold text-slate-300 uppercase tracking-wider">Calm</button>
+<button class="bg-primary-pink px-4 py-1.5 rounded-full text-[10px] font-black text-white uppercase tracking-wider shadow-[0_4px_12px_rgba(255,77,151,0.3)]">Clarity</button>
+<button class="bg-primary-pink px-4 py-1.5 rounded-full text-[10px] font-black text-white uppercase tracking-wider shadow-[0_4px_12px_rgba(255,77,151,0.3)]">Confidence</button>
+</div>
+</div>
+</section>
+<section class="pb-8">
+<div class="mb-6">
+<h2 class="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2">Self-Leadership Plan</h2>
+<div class="flex items-center gap-2 text-[10px] font-bold text-primary-pink/80 bg-primary-pink/5 p-2 rounded-lg border border-primary-pink/10">
+<span class="material-symbols-outlined text-xs">rocket_launch</span>
+<span>Inner CEO: Choose your strength above to activate these tools.</span>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<div class="glass-card p-5 rounded-3xl flex items-center gap-4 relative overflow-hidden nebula-glow border-primary-pink/30">
+<div class="size-14 rounded-2xl bg-white/10 flex items-center justify-center relative shadow-[0_0_15px_rgba(255,77,151,0.3)] shrink-0">
+<span class="material-symbols-outlined text-primary-pink text-3xl" style="font-variation-settings: 'FILL' 1">auto_awesome</span>
+</div>
+<div class="flex-1">
+<h3 class="font-black text-sm text-white leading-none mb-1">AI Courage Coach</h3>
+<p class="text-[10px] text-slate-300 leading-tight pr-2">Get a personalized micro challenge.</p>
+</div>
+<button class="radiant-gradient px-3 py-2.5 rounded-xl text-[9px] font-black uppercase tracking-wider shadow-lg whitespace-nowrap min-w-[100px] text-black shrink-0">Get Challenge</button>
+</div>
+<div class="mt-2 ml-4 flex items-center gap-1.5">
+<span class="size-1 rounded-full bg-primary-pink"></span>
+<span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">Supports: Courage &amp; Action</span>
+</div>
+</div>
+<div>
+<div class="glass-card p-5 rounded-3xl flex items-center gap-4">
+<div class="size-12 rounded-2xl bg-white/5 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-pink">air</span>
+</div>
+<div class="flex-1">
+<h3 class="font-black text-sm">Double Inhale</h3>
+<p class="text-[10px] text-slate-400">Physiological Sigh to reset</p>
+</div>
+<button class="radiant-gradient px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider shadow-lg text-black shrink-0">Start</button>
+</div>
+<div class="mt-2 ml-4 flex items-center gap-1.5">
+<span class="size-1 rounded-full bg-primary-pink"></span>
+<span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">Supports: Calm &amp; Clarity</span>
+</div>
+</div>
+<div>
+<div class="glass-card p-5 rounded-3xl flex items-center gap-4">
+<div class="size-12 rounded-2xl bg-white/5 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-yellow">grid_view</span>
+</div>
+<div class="flex-1">
+<h3 class="font-black text-sm">Box Breathing</h3>
+<p class="text-[10px] text-slate-400">For mental focus</p>
+</div>
+<button class="radiant-gradient px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider shadow-lg text-black shrink-0">Start</button>
+</div>
+<div class="mt-2 ml-4 flex items-center gap-1.5">
+<span class="size-1 rounded-full bg-primary-yellow"></span>
+<span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">Supports: Focus &amp; Calm</span>
+</div>
+</div>
+<div>
+<div class="glass-card p-5 rounded-3xl flex items-center gap-4">
+<div class="size-12 rounded-2xl bg-white/5 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white">accessibility_new</span>
+</div>
+<div class="flex-1">
+<h3 class="font-black text-sm">Muscle Relaxation</h3>
+<p class="text-[10px] text-slate-400">Release jaw and shoulder tension</p>
+</div>
+<button class="radiant-gradient px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider shadow-lg text-black shrink-0">Start</button>
+</div>
+<div class="mt-2 ml-4 flex items-center gap-1.5">
+<span class="size-1 rounded-full bg-white/40"></span>
+<span class="text-[9px] font-black text-slate-500 uppercase tracking-widest">Supports: Physical Ease</span>
+</div>
+</div>
+</div>
+</section>
+<section class="pb-12">
+<div class="glass-card p-6 rounded-[2rem] border-dashed border-primary-pink/30">
+<h3 class="text-[11px] font-black uppercase tracking-[0.2em] text-primary-pink mb-4">Next Step</h3>
+<div class="relative">
+<input class="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-5 text-sm font-medium placeholder:text-slate-600 focus:outline-none focus:border-primary-pink/50 focus:ring-1 focus:ring-primary-pink/50 transition-all italic text-white" placeholder="One small action I will take now..." type="text"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-primary-pink">send</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] z-[60]">
+<nav class="w-full bg-black/95 backdrop-blur-2xl border-t border-white/10 pb-8 pt-3 px-2 flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">today</span>
+<span class="text-[10px] font-medium">Today</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary-pink" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">self_improvement</span>
+<span class="text-[10px] font-medium">Practices</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">smart_toy</span>
+<span class="text-[10px] font-medium">Coach</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">groups</span>
+<span class="text-[10px] font-medium">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">bar_chart</span>
+<span class="text-[10px] font-medium">Insights</span>
+</a>
+</nav>
+</div>
+</div>
+
+</body></html>
