@@ -1,0 +1,288 @@
+<html class="dark" lang="en"><head><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-deep-plum text-white pb-32">```html
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Today Hub: Updated Hierarchy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF4D94",
+                        "accent": "#FFD700",
+                        "deep-plum": "#120812",
+                        "card-plum": "#2D152D",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-gradient: linear-gradient(135deg, #FF4D94 0%, #FFD700 100%);
+            --energy-gradient: linear-gradient(to right, #FF4D94 0%, #4ADE80 50%, #FFD700 100%);
+            --glow-shadow: 0 0 15px rgba(255, 77, 148, 0.4);
+            --bar-glow: drop-shadow(0 0 4px rgba(255, 215, 0, 0.4));
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            background-color: #120812;
+            min-height: 100vh;
+        }
+        .ios-blur {
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+        }
+        .gradient-glow {
+            background: radial-gradient(circle at center, rgba(255, 77, 148, 0.2) 0%, rgba(255, 215, 0, 0) 70%);
+        }
+        .card-glow {
+            box-shadow: 0 0 20px rgba(255, 77, 148, 0.1);
+        }
+        .ring-glow {
+            filter: drop-shadow(0 0 8px rgba(255, 77, 148, 0.6));
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255, 77, 148, 0.5);
+        }
+        .subtle-glow-border {
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        .radiant-button {
+            background: linear-gradient(135deg, #FF4D94 0%, #FFD700 100%);
+            box-shadow: 0 4px 25px rgba(255, 77, 148, 0.4);
+        }
+        .affirmation-glow {
+            box-shadow: inset 0 0 40px rgba(255, 77, 148, 0.08), 0 0 25px rgba(255, 77, 148, 0.15);
+        }
+        .streak-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            width: 100%;
+        }
+        .streak-day {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        .streak-circle {
+            aspect-ratio: 1;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .streak-circle.active {
+            background: rgba(255, 77, 148, 0.2);
+            border-color: rgba(255, 77, 148, 0.5);
+            color: #FF4D94;
+        }
+    </style>
+<header class="sticky top-0 z-50 bg-[#120812]/70 ios-blur px-4 pt-12 pb-4 border-b border-white/10">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full border-2 border-primary/40 overflow-hidden bg-cover bg-center shadow-lg shadow-primary/20" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPQkZYFUD1ZBC_rf9njX3r7DyVYDNxcbznW5iM1LMjrXpzOOB-EB7qAHWeSzIvfip1v5LM_D-8n0EWrel49HQgKR_hsT1RN3guc-3swHKpiyBylIV-p4cxTPwQAaAk1eG4QbBQoMovnMd6b4QWsepRIzb5wPoWkc9KVuCWZHyOp7qzqqRAuAFbv4fO2RS26NlIMnbPgKe01vjqkggrgVa0ROZAqZtc94b66pn1x89-hxu4UaX0lgcnJYhDQPlH7Kx1fA9Cm9Qh8Uxn");'></div>
+<div>
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest">Welcome back</p>
+<h2 class="text-lg font-bold leading-tight tracking-tight text-white">Alex Sterling</h2>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="size-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-accent text-[22px]">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto">
+<div class="px-4 py-4">
+<div class="relative overflow-hidden rounded-2xl bg-card-plum/80 backdrop-blur-md p-8 border border-white/10 affirmation-glow flex flex-col items-center text-center min-h-[200px] justify-between">
+<div class="w-full flex justify-between items-start mb-2">
+<div class="w-6"></div>
+<p class="text-[10px] font-medium text-white/50 tracking-wide italic leading-tight max-w-[180px]">Set the intention for the day</p>
+<button class="active:scale-90 transition-transform text-primary/70 hover:text-primary">
+<span class="material-symbols-outlined text-lg">sync</span>
+</button>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center py-4">
+<h3 class="text-2xl font-light italic text-white/95 leading-relaxed">
+                        "Today, I move with <span class="text-primary font-bold">courage</span>."
+                    </h3>
+</div>
+<button class="bg-white/5 px-4 py-2 rounded-full subtle-glow-border transition-all active:scale-95 mt-4">
+<span class="text-[10px] font-bold text-accent uppercase tracking-widest">Personalize affirmation</span>
+</button>
+</div>
+</div>
+<div class="px-4 pb-4">
+<div class="relative overflow-hidden rounded-2xl bg-card-plum/80 backdrop-blur-md p-6 border border-white/10 card-glow">
+<div class="absolute top-0 right-0 w-40 h-40 gradient-glow -mr-16 -mt-16"></div>
+<div class="flex justify-between items-start mb-6">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+</span>
+<p class="text-accent font-bold text-[10px] uppercase tracking-[0.15em]">Real-time Analysis</p>
+</div>
+<h3 class="text-2xl font-bold tracking-tight text-white">Peaceful</h3>
+</div>
+<button class="bg-primary/20 px-4 py-1.5 rounded-full border border-primary/30 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">watch_wake</span>
+<span class="text-primary text-[10px] font-bold tracking-wider uppercase">Connect</span>
+</button>
+</div>
+<div class="flex items-center justify-between gap-8 py-2">
+<div class="relative flex items-center justify-center flex-shrink-0">
+<svg class="w-40 h-40 transform -rotate-90">
+<circle cx="80" cy="80" fill="none" r="70" stroke="rgba(255,255,255,0.05)" stroke-width="12"></circle>
+<defs>
+<lineargradient id="ringGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#FF4D94"></stop>
+<stop offset="100%" style="stop-color:#FFD700"></stop>
+</lineargradient>
+</defs>
+<circle class="ring-glow" cx="80" cy="80" fill="none" r="70" stroke="url(#ringGradient)" stroke-dasharray="440" stroke-dashoffset="140" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute text-center">
+<p class="text-5xl font-black text-white text-glow">28</p>
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mt-1">Energy</p>
+</div>
+</div>
+<div class="flex flex-col gap-8 flex-1 justify-center">
+<div class="flex flex-col">
+<p class="text-slate-400 text-[12px] font-bold uppercase tracking-widest mb-1">Heart Rate</p>
+<p class="text-4xl font-black text-white flex items-baseline gap-1.5 leading-none">
+                                62 <span class="text-[14px] font-bold text-primary uppercase tracking-tighter">Bpm</span>
+</p>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-400 text-[12px] font-bold uppercase tracking-widest mb-1">HRV Balance</p>
+<p class="text-4xl font-black text-white flex items-baseline gap-1.5 leading-none">
+                                74 <span class="text-[14px] font-bold text-accent uppercase tracking-tighter">Ms</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 pb-4">
+<div class="flex gap-3">
+<button class="radiant-button flex-1 py-5 px-4 rounded-2xl flex items-center justify-center gap-2 transition-transform active:scale-[0.98] shadow-2xl">
+<span class="material-symbols-outlined text-white text-xl">auto_awesome</span>
+<span class="text-white font-bold text-xs sm:text-sm tracking-wide uppercase whitespace-nowrap">Check In</span>
+</button>
+<button class="radiant-button flex-1 py-5 px-4 rounded-2xl flex items-center justify-center gap-2 transition-transform active:scale-[0.98] shadow-2xl">
+<span class="material-symbols-outlined text-white text-xl">refresh</span>
+<span class="text-white font-bold text-xs sm:text-sm tracking-wide uppercase whitespace-nowrap">Quick Reset</span>
+</button>
+</div>
+</div>
+<div class="px-4 pb-4">
+<div class="relative overflow-hidden rounded-2xl bg-card-plum/80 backdrop-blur-md p-5 border border-white/10 card-glow">
+<div class="grid grid-cols-12 gap-4 mb-5">
+<div class="col-span-4 flex flex-col justify-center border-r border-white/10">
+<p class="text-slate-400 text-[9px] font-bold uppercase tracking-widest mb-1 leading-tight">Total<br/>Challenges</p>
+<div class="flex items-baseline">
+<span class="text-4xl font-black text-primary text-glow">124</span>
+</div>
+</div>
+<div class="col-span-8">
+<p class="text-slate-400 text-[8px] font-bold uppercase tracking-widest mb-3 text-right">WEEKLY STREAK</p>
+<div class="streak-grid">
+<div class="streak-day"><span class="text-[7px] text-white/40 font-bold">S</span><div class="streak-circle active"><span class="material-symbols-outlined text-[12px]">check</span></div></div>
+<div class="streak-day"><span class="text-[7px] text-white/40 font-bold">M</span><div class="streak-circle active"><span class="material-symbols-outlined text-[12px]">check</span></div></div>
+<div class="streak-day"><span class="text-[7px] text-white/40 font-bold">T</span><div class="streak-circle active"><span class="material-symbols-outlined text-[12px]">check</span></div></div>
+<div class="streak-day"><span class="text-[7px] text-white/40 font-bold">W</span><div class="streak-circle"><span class="text-[8px] text-white/20">16</span></div></div>
+<div class="streak-day"><span class="text-[7px] text-white/40 font-bold">T</span><div class="streak-circle"><span class="text-[8px] text-white/20">17</span></div></div>
+<div class="streak-day"><span class="text-[7px] text-white/40 font-bold">F</span><div class="streak-circle"><span class="text-[8px] text-white/20">18</span></div></div>
+<div class="streak-day"><span class="text-[7px] text-white/40 font-bold">S</span><div class="streak-circle"><span class="text-[8px] text-white/20">19</span></div></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<p class="text-xs text-white/70 font-medium mb-4 text-center">Complete one micro challenge to start building your streak.</p>
+<button class="bg-white/10 border border-white/20 w-full py-3.5 px-6 rounded-xl flex items-center justify-center gap-3 transition-transform active:scale-[0.98]">
+<span class="text-accent font-bold text-sm tracking-wide uppercase">Start Today's Challenge</span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-4 pb-8">
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center gap-3 p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-accent text-[22px]">book_2</span>
+<span class="text-[11px] font-bold text-slate-300 uppercase tracking-wider">Library</span>
+</button>
+<button class="flex items-center gap-3 p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-accent text-[22px]">shield_moon</span>
+<span class="text-[11px] font-bold text-slate-300 uppercase tracking-wider">Courage</span>
+</button>
+<button class="flex items-center gap-3 p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-accent text-[22px]">favorite</span>
+<span class="text-[11px] font-bold text-slate-300 uppercase tracking-wider">Love</span>
+</button>
+<button class="flex items-center gap-3 p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-accent text-[22px]">edit_note</span>
+<span class="text-[11px] font-bold text-slate-300 uppercase tracking-wider">Journal</span>
+</button>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 z-50">
+<nav class="bg-[#1A0B1A]/95 ios-blur border-t border-white/10 px-4 pt-3 pb-8">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-primary text-glow">
+<span class="material-symbols-outlined fill-1">calendar_today</span>
+<span class="text-[10px] font-bold">Today</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-accent/80">
+<span class="material-symbols-outlined">self_improvement</span>
+<span class="text-[10px] font-medium">Practices</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-accent/80">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-medium">Coach</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-accent/80">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-medium">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 min-w-[64px] text-accent/80">
+<span class="material-symbols-outlined">insights</span>
+<span class="text-[10px] font-medium">Insights</span>
+</button>
+</div>
+</nav>
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-white/20 rounded-full"></div>
+</div>
+</body></html>
