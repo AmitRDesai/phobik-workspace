@@ -135,6 +135,10 @@ const [timeRemaining, setTimeRemaining] = useState(initialTimeRef.current);
 
 The step index is derived from elapsed time, so only `timeRemaining` needs to be restored.
 
+### Completion Navigation
+
+When `timeRemaining` reaches 0, a `useEffect` clears the session state and navigates to the completion screen via `router.replace('/practices/completion')`. This matches the pattern used by `useSessionTimer` in other exercises, keeping the navigation outside of the `setTimeRemaining` updater to avoid React "setState during render" warnings.
+
 ### Clearing
 
 Session state is cleared (`setGroundingSession(null)`) in two places:

@@ -143,6 +143,19 @@ After the instruction audio finishes, a 3-second countdown plays before the exer
 
 ---
 
+## Scenario 11: Skipping the Instruction
+
+A user taps the skip button during the instruction narration.
+
+1. User opens the session and instruction audio begins playing
+2. Square shows "Listen"
+3. User taps the skip button (skip-next icon)
+4. Narration stops
+5. A 3-second countdown begins: "Starting in 3s", "Starting in 2s", "Starting in 1s"
+6. After the countdown, the exercise begins with "Inhale 4s"
+
+---
+
 ## Edge Cases
 
 ### App goes to background during session

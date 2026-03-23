@@ -93,9 +93,9 @@ A user has saved progress but wants to start over.
 
 ---
 
-## Scenario 7: Using the Restart Button (In-Session)
+## Scenario 7: Restarting Mid-Session
 
-A user wants to start over mid-session.
+A user taps the restart button while the breathing exercise is already running.
 
 1. User is in cycle 3
 2. User taps the restart (replay) button
@@ -141,6 +141,19 @@ When a cycle completes and the next one begins:
 3. Ring resets to empty for the next cycle
 4. Inner glow begins expanding again for the new inhale phase
 5. Tibetan bowl sounds at the start of the new cycle
+
+---
+
+## Scenario 11: Skipping the Instruction
+
+A user taps the skip button during the instruction narration.
+
+1. User opens the session and instruction audio begins playing
+2. Screen shows "Listen" with the inner glow at resting size
+3. User taps the skip button (skip-next icon)
+4. Narration stops
+5. A 3-second countdown begins: "Starting in 3s", "Starting in 2s", "Starting in 1s"
+6. Session starts normally — text switches to "Inhale Deeply", inner glow begins expanding
 
 ---
 

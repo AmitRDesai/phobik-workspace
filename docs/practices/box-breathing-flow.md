@@ -149,6 +149,10 @@ Jumps to the start of the **previous** phase by adding `timeIntoPhase + PHASE_DU
 
 Jumps to the start of the **next** phase by subtracting the remaining time in the current phase from `timeRemaining`. Clamped to 0.
 
+### Skip/Restart
+
+During the instruction phase, the restart button functions as a skip button (`skip-next` icon) and calls `skipToCountdown()` — stops instruction audio and triggers the 3-second countdown instead of jumping straight to the session. During the active session, it shows the `replay` icon and performs a full restart.
+
 ## Session Persistence
 
 ### Saving (on back navigation)

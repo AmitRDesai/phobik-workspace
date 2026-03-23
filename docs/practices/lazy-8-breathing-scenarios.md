@@ -103,6 +103,45 @@ The glowing orb traces the infinity path in sync with the breathing instructions
 
 ---
 
+## Scenario 8: Muting Audio
+
+A user wants to practice without sound.
+
+1. User is in the session with audio playing
+2. User taps the volume button (volume-up icon)
+3. Icon changes to volume-off
+4. All sounds go silent — no breathing cues, no tibetan bowl
+5. The orb continues tracing the infinity path and phase text still updates
+6. User taps the volume button again
+7. Icon changes back to volume-up, sounds are audible again
+
+---
+
+## Scenario 9: Skipping the Instruction
+
+A user taps the skip button during the instruction narration.
+
+1. User opens the session and instruction audio begins playing
+2. Screen shows "Listen" with the orb not yet moving
+3. User taps the skip button (skip-next icon)
+4. Narration stops
+5. A 3-second countdown begins: "Starting in 3s", "Starting in 2s", "Starting in 1s"
+6. Session starts normally — orb begins tracing the infinity path, breathing text appears
+
+---
+
+## Scenario 10: Restarting Mid-Session
+
+A user taps the restart button during the breathing exercise.
+
+1. User is at 00:16 remaining, orb is tracing the infinity path
+2. User taps the restart button (replay icon)
+3. Timer resets to full (00:40)
+4. Animation restarts from the beginning
+5. Breathing resumes immediately without instruction audio
+
+---
+
 ## Edge Cases
 
 ### App goes to background during session

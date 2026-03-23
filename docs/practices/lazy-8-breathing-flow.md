@@ -112,6 +112,14 @@ After the instruction audio finishes, a 3-second countdown displays ("Starting i
 
 `success-trumpets.mp3` plays on the Completion screen (shared with all practices).
 
+## Controls
+
+| Button       | Icon                           | Action                                                          |
+| ------------ | ------------------------------ | --------------------------------------------------------------- |
+| Mute         | `volume-up` / `volume-off`     | Toggle all audio volumes to 0 / restore                        |
+| Pause        | `pause` / `play-arrow`         | Pause/resume timer, audio, and animation (solid white circle)  |
+| Skip/Restart | `skip-next` / `replay`         | During instruction: skip to countdown. During session: full restart |
+
 ## Session Persistence
 
 ### Saving (on back navigation)

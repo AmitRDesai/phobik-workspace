@@ -159,7 +159,7 @@ Session state cleared in two places:
 | -------- | ------------- | --------------------------------------------------- |
 | Mute     | `volume-up` / `volume-off` | Toggle all audio volumes to 0 / restore  |
 | Pause    | `pause` / `play-arrow`     | Pause/resume timer, audio, and animation |
-| Restart  | `replay`      | Reset timer, skip instruction, start breathing immediately |
+| Skip/Restart | `skip-next` / `replay` | During instruction: skip to countdown. During session: full restart |
 
 ## Intro Screen Logic
 

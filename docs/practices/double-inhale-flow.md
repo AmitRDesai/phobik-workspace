@@ -140,7 +140,7 @@ The mute button toggles `isMuted` state. When muted, all audio player volumes ar
 | -------- | ------------------------------ | ---------------------------------------------------------- |
 | Mute     | `volume-up` / `volume-off`     | Toggle all audio volumes to 0 / restore                    |
 | Pause    | `pause` / `play-arrow`         | Pause/resume timer, audio, and animation (solid white circle) |
-| Restart  | `replay`                       | Reset timer, skip instruction, start breathing immediately |
+| Skip/Restart | `skip-next` / `replay`   | During instruction: skip to countdown. During session: full restart |
 
 Mute and restart buttons use glass style (border-white/[0.08], bg-white/[0.04], 56px circle). The pause/play button is a solid white 80px circle with a dark icon and pink shadow glow.
 

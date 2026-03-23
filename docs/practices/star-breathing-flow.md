@@ -2,7 +2,7 @@
 
 ## Overview
 
-The star breathing exercise guides users through a single star-trace breathing practice (~50 seconds). A glowing orb traces a five-pointed star while the user follows along: inhaling along an edge to a tip, holding at the tip, then exhaling to the next inner point. An instruction audio plays at the start, followed by a 3-second countdown before the breathing session begins. Phase audio cues (inhale, hold, exhale) play at each transition. The session supports pause/resume, state persistence for mid-session exits, and a completion screen with rewards.
+The star breathing exercise guides users through a single star-trace breathing practice (~50 seconds). A glowing orb traces a five-pointed star while the user follows along: inhaling along an edge to a tip, holding at the tip, then exhaling to the next inner point. An instruction audio plays at the start, followed by a 3-second countdown before the breathing session begins. Phase audio cues (inhale, hold, exhale) play at each transition. The session supports pause/resume, mute/unmute, skip/restart controls, state persistence for mid-session exits, and a completion screen with rewards. The layout is scrollable with a fixed header, matching the Lazy 8 pattern.
 
 ## Screen Sequence
 
@@ -34,6 +34,8 @@ interface StarBreathingSessionState {
 | `overallProgress` | `elapsed / TOTAL_DURATION`              | 0–1 value driving the gradient progress bar            |
 | `currentPhase`    | `BreathingStar` `onPhaseChange` callback | "Inhale", "Hold", or "Exhale" (or "Listen" / countdown) |
 | `isPaused`        | Local `useState`                        | Whether the timer, audio, and star animation are paused |
+| `isMuted`         | Local `useState`                        | Whether all audio is muted (volumes set to 0)          |
+| `restartKey`      | Local `useState`                        | Incremented on restart to remount BreathingStar        |
 | `instructionDone` | Detected from audio playback status     | Whether the intro audio has finished                   |
 | `sessionReady`    | Set after countdown completes           | Whether the breathing session timer is running         |
 | `countdown`       | 3→2→1→0 after `instructionDone`         | Countdown before session starts                        |
@@ -104,6 +106,10 @@ Files from `src/assets/audio/practices/common/`:
 
 Phase audio is triggered by `phaseIndex` changes (derived from `elapsed % 10`). Only plays when `sessionReady && !isPaused`. All phase audio is paused when the session is paused.
 
+### Mute/Unmute
+
+The mute button toggles `isMuted` state. When muted, all audio player volumes (instruction, inhale, hold, exhale) are set to 0. Audio continues playing silently so phase transitions stay in sync. When unmuted, volumes restore to their normal levels.
+
 ### Countdown
 
 After the instruction audio finishes, a 3-second countdown displays ("Starting in 3s", "Starting in 2s", "Starting in 1s") before `sessionReady` is set to `true` and the breathing session begins.
@@ -111,6 +117,16 @@ After the instruction audio finishes, a 3-second countdown displays ("Starting i
 ### Completion Audio
 
 `success-trumpets.mp3` plays on the Completion screen (shared with all practices).
+
+## Controls
+
+| Button       | Icon                           | Action                                                          |
+| ------------ | ------------------------------ | --------------------------------------------------------------- |
+| Mute         | `volume-up` / `volume-off`     | Toggle all audio volumes to 0 / restore                        |
+| Pause        | `pause` / `play-arrow`         | Pause/resume timer, audio, and animation (solid white circle)  |
+| Skip/Restart | `skip-next` / `replay`         | During instruction: skip to countdown. During session: full restart |
+
+During instruction phase, the button shows `skip-next` and calls `skipToCountdown()` — stops instruction audio and triggers the 3-second countdown. During the active session, the button shows `replay` and performs a full restart: resets timer, remounts animation, skips to ready, clears saved state.
 
 ## Session Persistence
 

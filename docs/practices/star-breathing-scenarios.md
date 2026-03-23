@@ -40,10 +40,10 @@ A user finishes the full 50-second session.
 A user pauses the exercise during the session.
 
 1. User is at 00:30 remaining, text shows "Hold"
-2. User taps "Pause Session"
+2. User taps the pause button (solid white circle in the control row at the bottom)
 3. Timer stops, glowing dot freezes in place, phase audio stops
-4. Button text changes to "Resume Session"
-5. User taps "Resume Session"
+4. Pause icon changes to a play icon
+5. User taps the play button
 6. Timer resumes, dot continues from the exact position, breathing text updates
 7. Session continues normally
 
@@ -102,6 +102,45 @@ The glowing dot traces the star in sync with the breathing instructions. Phase a
 3. "Exhale" (4s) — dot moves from the tip to the next inner point, exhale audio plays
 4. This repeats — 10 seconds per breath, 5 breaths per full star (50s)
 5. The star is traced 1 time during the session
+
+---
+
+## Scenario 8: Muting Audio
+
+A user wants to practice without sound.
+
+1. User is in the session with audio playing
+2. User taps the volume button (volume-up icon)
+3. Icon changes to volume-off
+4. All sounds go silent — no breathing cues, no instruction narration
+5. The glowing dot continues tracing the star and phase text still updates
+6. User taps the volume button again
+7. Icon changes back to volume-up, sounds are audible again
+
+---
+
+## Scenario 9: Skipping the Instruction
+
+A user taps the skip button during the instruction narration.
+
+1. User opens the session and instruction audio begins playing
+2. Screen shows "Listen" with the glowing dot not yet moving
+3. User taps the skip button (skip-next icon) in the control row
+4. Narration stops
+5. A 3-second countdown begins: "Starting in 3s", "Starting in 2s", "Starting in 1s"
+6. Session starts normally — dot begins tracing the star, breathing text appears
+
+---
+
+## Scenario 10: Restarting Mid-Session
+
+A user taps the restart button during the breathing exercise.
+
+1. User is at 00:25 remaining, dot is tracing the star
+2. User taps the restart button (replay icon) in the control row
+3. Timer resets to full (00:50)
+4. The star animation restarts from the beginning
+5. Breathing resumes immediately without instruction audio
 
 ---
 

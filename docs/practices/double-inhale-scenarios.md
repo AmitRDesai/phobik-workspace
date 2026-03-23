@@ -106,9 +106,9 @@ The orb animates in sync with the breathing instructions.
 
 ---
 
-## Scenario 8: Using the Restart Button (In-Session)
+## Scenario 8: Restarting Mid-Session
 
-A user wants to start over mid-session.
+A user taps the restart button while the breathing exercise is already running.
 
 1. User is in cycle 2
 2. User taps the restart (replay) button
@@ -143,6 +143,19 @@ After the instruction audio finishes, a 3-second countdown plays before the exer
 4. After 1 second: "Starting in 2s"
 5. After 2 seconds: "Starting in 1s"
 6. After 3 seconds: exercise begins with "Deep Inhale"
+
+---
+
+## Scenario 11: Skipping the Instruction
+
+A user taps the skip button during the instruction narration.
+
+1. User opens the session and instruction audio begins playing
+2. Text shows "Listen" with the orb at resting size
+3. User taps the skip button (skip-next icon)
+4. Narration stops
+5. A 3-second countdown begins: "Starting in 3s", "Starting in 2s", "Starting in 1s"
+6. Session starts normally — text switches to "Deep Inhale", orb begins expanding
 
 ---
 
