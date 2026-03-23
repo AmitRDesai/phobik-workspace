@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Phobik Icon Export</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&display=swap');
+  body { background: #1a1a1a; color: white; font-family: sans-serif; padding: 40px; display: flex; flex-wrap: wrap; gap: 40px; }
+  .icon-card { text-align: center; }
+  .icon-card h3 { margin: 0 0 12px; font-size: 14px; opacity: 0.7; }
+  canvas { border: 1px solid #333; border-radius: 12px; }
+  button { margin-top: 12px; padding: 8px 20px; background: #FF2D85; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; }
+  button:hover { opacity: 0.85; }
+</style>
+</head>
+<body>
+
+<div class="icon-card">
+  <h3>App Icon (icon.png)</h3>
+  <canvas id="icon" width="1024" height="1024" style="width:256px;height:256px"></canvas>
+  <br><button onclick="download('icon','icon.png')">Download</button>
+</div>
+
+<div class="icon-card">
+  <h3>Splash Icon (splash-icon.png)</h3>
+  <canvas id="splash" width="1024" height="1024" style="width:256px;height:256px"></canvas>
+  <br><button onclick="download('splash','splash-icon.png')">Download</button>
+</div>
+
+<div class="icon-card">
+  <h3>Android Foreground (android-icon-foreground.png)</h3>
+  <canvas id="foreground" width="1024" height="1024" style="width:256px;height:256px"></canvas>
+  <br><button onclick="download('foreground','android-icon-foreground.png')">Download</button>
+</div>
+
+<div class="icon-card">
+  <h3>Android Background (android-icon-background.png)</h3>
+  <canvas id="background" width="1024" height="1024" style="width:256px;height:256px"></canvas>
+  <br><button onclick="download('background','android-icon-background.png')">Download</button>
+</div>
+
+<div class="icon-card">
+  <h3>Android Monochrome (android-icon-monochrome.png)</h3>
+  <canvas id="monochrome" width="1024" height="1024" style="width:256px;height:256px"></canvas>
+  <br><button onclick="download('monochrome','android-icon-monochrome.png')">Download</button>
+</div>
+
+<div class="icon-card">
+  <h3>Favicon (favicon.png)</h3>
+  <canvas id="favicon" width="48" height="48" style="width:96px;height:96px"></canvas>
+  <br><button onclick="download('favicon','favicon.png')">Download</button>
+</div>
+
+<div style="width:100%">
+  <button onclick="downloadAll()" style="font-size:18px;padding:14px 40px;">Download All</button>
+</div>
+
+<script>
+const FONT = '800 280px "Bricolage Grotesque"';
+const TEXT = 'Phobik';
+
+function createGradient(ctx, w, h) {
+  const grad = ctx.createLinearGradient(0, 0, w, h);
+  grad.addColorStop(0, '#FF2D85');
+  grad.addColorStop(0.5, '#FF6B3D');
+  grad.addColorStop(1, '#FFD700');
+  return grad;
+}
+
+function drawText(ctx, text, font, color, w, h) {
+  ctx.font = font;
+  ctx.fillStyle = color;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.letterSpacing = '-6px';
+  ctx.fillText(text, w / 2, h / 2 + 16);
+}
+
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}
+
+function waitForFont() {
+  return document.fonts.load(FONT);
+}
+
+async function render() {
+  await waitForFont();
+
+  // App Icon - gradient bg with rounded corners + white text
+  {
+    const c = document.getElementById('icon');
+    const ctx = c.getContext('2d');
+    // Fill entire square with gradient (no rounded corners - OS handles masking)
+    ctx.fillStyle = createGradient(ctx, 1024, 1024);
+    ctx.fillRect(0, 0, 1024, 1024);
+    drawText(ctx, TEXT, FONT, '#FFFFFF', 1024, 1024);
+  }
+
+  // Splash Icon - transparent bg + white text
+  {
+    const c = document.getElementById('splash');
+    const ctx = c.getContext('2d');
+    ctx.clearRect(0, 0, 1024, 1024);
+    drawText(ctx, TEXT, FONT, '#FFFFFF', 1024, 1024);
+  }
+
+  // Android Foreground - transparent bg + white text
+  {
+    const c = document.getElementById('foreground');
+    const ctx = c.getContext('2d');
+    ctx.clearRect(0, 0, 1024, 1024);
+    drawText(ctx, TEXT, FONT, '#FFFFFF', 1024, 1024);
+  }
+
+  // Android Background - gradient only
+  {
+    const c = document.getElementById('background');
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = createGradient(ctx, 1024, 1024);
+    ctx.fillRect(0, 0, 1024, 1024);
+  }
+
+  // Android Monochrome - transparent bg + black text
+  {
+    const c = document.getElementById('monochrome');
+    const ctx = c.getContext('2d');
+    ctx.clearRect(0, 0, 1024, 1024);
+    drawText(ctx, TEXT, FONT, '#000000', 1024, 1024);
+  }
+
+  // Favicon - small gradient + text
+  {
+    const c = document.getElementById('favicon');
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = createGradient(ctx, 48, 48);
+    ctx.fillRect(0, 0, 48, 48);
+    ctx.font = '800 14px "Bricolage Grotesque"';
+    ctx.fillStyle = '#FFFFFF';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.letterSpacing = '-0.5px';
+    ctx.fillText('Phobik', 24, 25);
+  }
+}
+
+function download(id, filename) {
+  const c = document.getElementById(id);
+  const a = document.createElement('a');
+  a.download = filename;
+  a.href = c.toDataURL('image/png');
+  a.click();
+}
+
+async function downloadAll() {
+  const files = [
+    ['icon', 'icon.png'],
+    ['splash', 'splash-icon.png'],
+    ['foreground', 'android-icon-foreground.png'],
+    ['background', 'android-icon-background.png'],
+    ['monochrome', 'android-icon-monochrome.png'],
+    ['favicon', 'favicon.png'],
+  ];
+  for (const [id, name] of files) {
+    download(id, name);
+    await new Promise(r => setTimeout(r, 300));
+  }
+}
+
+render();
+</script>
+</body>
+</html>
