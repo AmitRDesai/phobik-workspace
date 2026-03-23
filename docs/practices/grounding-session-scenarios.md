@@ -38,10 +38,10 @@ A user finishes all 5 steps of the grounding session.
 A user pauses the exercise during a step.
 
 1. User is on step 3 (3 things you can hear), timer counting down
-2. User taps "Pause Session"
+2. User taps the pause button (solid white circle in the control row at the bottom)
 3. Timer stops, audio pauses, visualizer bars collapse
-4. Button text changes to "Resume Session"
-5. User taps "Resume Session"
+4. Pause icon changes to a play icon
+5. User taps the play button
 6. Timer resumes, audio resumes, visualizer reactivates
 7. Session continues normally
 
@@ -97,6 +97,32 @@ Each narration audio is shorter than the step duration. This gives the user quie
 3. Visualizer bars stop animating
 4. Timer continues counting down (user has remaining time to practice)
 5. When the timer reaches zero, the next step begins with new narration
+
+---
+
+## Scenario 8: Muting Audio
+
+A user wants to practice without the narration sound.
+
+1. User is in the session with narration playing
+2. User taps the volume button (volume-up icon) in the control row
+3. Icon changes to volume-off
+4. Narration goes silent, visualizer bars stop animating
+5. The timer continues counting down and steps still advance normally
+6. User taps the volume button again
+7. Icon changes back to volume-up, narration is audible again
+
+---
+
+## Scenario 9: Restarting Mid-Session
+
+A user taps the restart button during the exercise.
+
+1. User is on step 3 (3 things you can hear) with time remaining
+2. User taps the restart button (replay icon) in the control row
+3. Session resets to the beginning — step 1 (5 things you can see)
+4. Timer resets to full
+5. Narration plays from the start
 
 ---
 

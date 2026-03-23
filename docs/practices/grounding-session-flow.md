@@ -111,6 +111,14 @@ const audioLevels = useMemo(() => {
 
 Recording permission is disabled since `useAudioSampleListener` is not used in production.
 
+## Controls
+
+| Button   | Icon                           | Action                                                     |
+| -------- | ------------------------------ | ---------------------------------------------------------- |
+| Mute     | `volume-up` / `volume-off`     | Toggle narration audio volume to 0 / restore               |
+| Pause    | `pause` / `play-arrow`         | Pause/resume timer and audio (solid white circle)          |
+| Restart  | `replay`                       | Reset to step 1, full timer, replay narration from start   |
+
 ## Session Persistence
 
 ### Saving (on back navigation)

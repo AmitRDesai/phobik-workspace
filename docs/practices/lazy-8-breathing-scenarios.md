@@ -40,10 +40,10 @@ A user finishes the full 40-second session.
 A user pauses the exercise during the session.
 
 1. User is at 00:20 remaining, text shows "Exhale"
-2. User taps "Pause Session"
+2. User taps the pause button (solid white circle in the control row at the bottom)
 3. Timer stops, orb freezes in place, phase audio stops
-4. Button text changes to "Resume Session"
-5. User taps "Resume Session"
+4. Pause icon changes to a play icon
+5. User taps the play button
 6. Timer resumes, orb continues from the exact position, breathing text updates
 7. Session continues normally
 
