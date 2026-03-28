@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calm Above the Clouds Store</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3713ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#131022",
+                        "charcoal-dark": "#0a0a0f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .sunset-gradient-btn {
+            background: linear-gradient(90deg, #ff4e50 0%, #f9d423 100%);
+        }
+        .aura-glow {
+            box-shadow: 0 0 60px 10px rgba(255, 78, 80, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-charcoal-dark font-display text-white selection:bg-primary/30">
+<div class="relative flex h-auto min-h-screen w-full flex-col max-w-[480px] mx-auto overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="flex items-center p-4 pb-2 justify-between sticky top-0 z-50 bg-charcoal-dark/80 backdrop-blur-md">
+<button class="text-white flex size-12 shrink-0 items-center justify-start cursor-pointer hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" style="font-size: 24px;">close</span>
+</button>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0 hover:opacity-70">
+<span class="material-symbols-outlined" style="font-size: 24px;">help_outline</span>
+</button>
+</div>
+</div>
+<!-- HeaderImage (Aura Asset) -->
+<div class="@container px-4 py-3">
+<div class="relative w-full aspect-[4/5] bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden rounded-xl aura-glow" data-alt="silhouette against a pink yellow sunset above clouds" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4ZIei46_kWqUbyGbcG35K6CfYN4lGXBSx5KMq4M3730DE3nsljxFqSjWHRCHYHV089KXg4NDw3T8Qev4k_bsBxxF924UY8N9iQmrMSlzfECSJM42tugw1NHF1DCdGhEJxtSHsqGA0eA9yKtH2kIZL6eaQ-Qwdbe1XDNR5FGZIQCx4oXcuG8Gvgwymix7TklU5tsNvRpB54FPA1ImAgiczeJQ2eSgPPy_Ayu1U508j-sgh17h77Z4_88VLzFvwwHe6LW_cblBY_f5o");'>
+<!-- Inner Glow Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal-dark via-transparent to-transparent opacity-80"></div>
+<!-- Silhouette & Clouds specific decoration if needed could be a layered div -->
+<div class="absolute inset-0 bg-gradient-to-b from-pink-500/20 to-transparent mix-blend-overlay"></div>
+</div>
+</div>
+<!-- HeadlineText -->
+<div class="px-4">
+<h1 class="text-white tracking-tight text-[32px] font-bold leading-tight text-center pt-6">
+                Calm Above the Clouds
+            </h1>
+</div>
+<!-- BodyText -->
+<div class="px-4">
+<p class="text-gray-400 text-lg font-normal leading-relaxed pb-6 pt-2 px-4 text-center">
+                The ultimate toolkit to transform flight anxiety into serenity.
+            </p>
+</div>
+<!-- SectionHeader -->
+<div class="px-4">
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-3 pt-4 border-b border-white/10">
+                What's included
+            </h3>
+</div>
+<!-- List Items -->
+<div class="flex flex-col gap-3 p-4">
+<!-- Item 1 -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">menu_book</span>
+</div>
+<div class="flex flex-col">
+<span class="text-white font-semibold text-base">The Flight Mindfulness E-Book</span>
+<span class="text-gray-400 text-sm">Step-by-step techniques for grounding</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">checklist_rtl</span>
+</div>
+<div class="flex flex-col">
+<span class="text-white font-semibold text-base">Quick Flight Checklist</span>
+<span class="text-gray-400 text-sm">Your companion for boarding and takeoff</span>
+</div>
+</div>
+</div>
+<!-- Spacer for content -->
+<div class="h-24"></div>
+<!-- Bottom CTA Section -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[480px] p-4 bg-gradient-to-t from-charcoal-dark via-charcoal-dark to-transparent pt-10">
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center px-2">
+<span class="text-gray-400 text-sm font-medium uppercase tracking-widest">Premium Access</span>
+<span class="text-white font-bold text-xl">$9.99</span>
+</div>
+<button class="sunset-gradient-btn w-full py-4 rounded-full text-black font-bold text-lg shadow-lg shadow-orange-500/20 active:scale-95 transition-transform">
+                    Buy Now
+                </button>
+<p class="text-center text-[10px] text-gray-500 px-8 pb-2">
+                    Restore purchase • Terms of Service • Privacy Policy
+                </p>
+</div>
+</div>
+</div>
+</body></html>

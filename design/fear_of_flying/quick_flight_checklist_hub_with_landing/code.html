@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quick Flight Checklist - PHOBIK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-pink": "#ec4899",
+                        "primary-yellow": "#facc15",
+                    },
+                    fontFamily: {
+                        "sans": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            min-height: max(884px, 100dvh);
+        }
+        .bg-mesh {
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(236, 72, 153, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(250, 204, 21, 0.05) 0px, transparent 50%);
+        }
+        .premium-glow {
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black border-b border-gray-900 flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-pink-500" style="">flight_takeoff</span>
+<h1 class="text-2xl font-black italic bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent tracking-tight" style="">PHOBIK</h1>
+</div>
+<button class="text-gray-500 hover:opacity-80 transition-opacity" style="">
+<span class="material-symbols-outlined" style="">settings</span>
+</button>
+</header>
+<main class="flex-grow pt-24 pb-32 px-6 max-w-2xl mx-auto w-full bg-mesh">
+<!-- Hero Image Section -->
+<div class="relative w-full rounded-2xl overflow-hidden mb-8 border border-white/10 premium-glow">
+<img alt="Calm horizon" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI0F6GUbjAfgwx5-iipQfRuL8xGoBEeRzpyqav5yJb8vYLQrakStWfphpRSq6Fo_fI5-Ap0cZpcC0buzXdX7_fy8GyjErWta4KVmsvkuSvMzCE2Dn39XwQHhsCJrnOpO9os4rcy7B-iA92iTNHREzQYPh29sAhcmT6bziq8dtHIgrWudNAOprr6j-QjC0mK-BmbR8JC8HVU18xBbWQeKAvczo3IlAV3RRI9eVfS8FJOKVDVH_ysvOg1CO-jQXlyP0X9Z6jPP6SmfOp" style=""/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+<div class="inline-block self-start px-3 py-1 rounded-full bg-pink-500 text-white text-[10px] font-black uppercase tracking-widest mb-2 shadow-lg shadow-pink-500/30" style="">
+                    PHObik</div>
+</div>
+</div>
+<!-- Header -->
+<div class="mb-8 text-center">
+<h2 class="text-4xl font-black tracking-tighter leading-tight mb-2 uppercase" style="">Quick Flight Checklist</h2>
+<p class="text-gray-400 text-sm" style="">Prepare your mind for a peaceful journey.</p>
+</div>
+<!-- Progress Section -->
+<!-- Categories List -->
+<div class="space-y-4">
+<!-- Before the Airport -->
+<button class="w-full group flex items-center justify-between p-5 bg-white/5 border border-white/10 rounded-xl hover:border-pink-500/50 hover:bg-white/10 transition-all duration-300 active:scale-[0.98]" style="">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-pink-500/10 flex items-center justify-center text-pink-500 group-hover:bg-pink-500 group-hover:text-black transition-colors">
+<span class="material-symbols-outlined" style="">home</span>
+</div>
+<span class="text-lg font-bold" style="">Before the Airport</span>
+</div>
+<span class="material-symbols-outlined text-gray-700 group-hover:text-pink-500 transition-colors" style="">chevron_right</span>
+</button>
+<!-- At the Airport -->
+<button class="w-full group flex items-center justify-between p-5 bg-white/5 border border-white/10 rounded-xl hover:border-yellow-500/50 hover:bg-white/10 transition-all duration-300 active:scale-[0.98]" style="">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 group-hover:bg-yellow-500 group-hover:text-black transition-colors">
+<span class="material-symbols-outlined" style="">apartment</span>
+</div>
+<span class="text-lg font-bold" style="">At the Airport</span>
+</div>
+<span class="material-symbols-outlined text-gray-700 group-hover:text-yellow-400 transition-colors" style="">chevron_right</span>
+</button>
+<!-- Once Seated -->
+<button class="w-full group flex items-center justify-between p-5 bg-white/5 border border-white/10 rounded-xl hover:border-pink-500/50 hover:bg-white/10 transition-all duration-300 active:scale-[0.98]" style="">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-pink-500/10 flex items-center justify-center text-pink-500 group-hover:bg-pink-500 group-hover:text-black transition-colors">
+<span class="material-symbols-outlined" style="">airline_seat_recline_normal</span>
+</div>
+<span class="text-lg font-bold" style="">Once Seated</span>
+</div>
+<span class="material-symbols-outlined text-gray-700 group-hover:text-pink-500 transition-colors" style="">chevron_right</span>
+</button>
+<!-- During Takeoff -->
+<button class="w-full group flex items-center justify-between p-5 bg-white/5 border border-white/10 rounded-xl hover:border-yellow-500/50 hover:bg-white/10 transition-all duration-300 active:scale-[0.98]" style="">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 group-hover:bg-yellow-500 group-hover:text-black transition-colors">
+<span class="material-symbols-outlined" style="">flight_takeoff</span>
+</div>
+<span class="text-lg font-bold" style="">During Takeoff</span>
+</div>
+<span class="material-symbols-outlined text-gray-700 group-hover:text-yellow-400 transition-colors" style="">chevron_right</span>
+</button>
+<!-- During Turbulence -->
+<button class="w-full group flex items-center justify-between p-5 bg-white/5 border border-white/10 rounded-xl hover:border-pink-500/50 hover:bg-white/10 transition-all duration-300 active:scale-[0.98]" style="">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-pink-500/10 flex items-center justify-center text-pink-500 group-hover:bg-pink-500 group-hover:text-black transition-colors">
+<span class="material-symbols-outlined" style="">air</span>
+</div>
+<span class="text-lg font-bold" style="">During Turbulence</span>
+</div>
+<span class="material-symbols-outlined text-gray-700 group-hover:text-pink-500 transition-colors" style="">chevron_right</span>
+</button><!-- During Landing -->
+<button class="w-full group flex items-center justify-between p-5 bg-white/5 border border-white/10 rounded-xl hover:border-yellow-500/50 hover:bg-white/10 transition-all duration-300 active:scale-[0.98]" style="">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 group-hover:bg-yellow-500 group-hover:text-black transition-colors">
+<span class="material-symbols-outlined" style="">flight_land</span>
+</div>
+<span class="text-lg font-bold" style="">During Landing</span>
+</div>
+<span class="material-symbols-outlined text-gray-700 group-hover:text-yellow-400 transition-colors" style="">chevron_right</span>
+</button>
+</div>
+<!-- Panic SOS Button -->
+<div class="mt-12 mb-8">
+<button class="w-full flex items-center justify-center gap-3 bg-red-500/10 border border-red-500/30 text-red-500 py-4 rounded-xl font-black tracking-widest uppercase hover:bg-red-500/20 active:scale-95 transition-all" style="">
+<span class="material-symbols-outlined" style="">emergency</span>Quick Reset</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-3 bg-black/95 backdrop-blur-md border-t border-gray-900 shadow-2xl">
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#" style="">
+<span class="material-symbols-outlined mb-1" style="">calendar_today</span>
+<span class="text-[10px] font-bold uppercase tracking-widest" style="">Today</span>
+</a>
+<a class="flex flex-col items-center justify-center text-pink-500 bg-pink-500/10 rounded-xl px-4 py-1.5 translate-y-[-2px] transition-transform shadow-[0_0_20px_rgba(236,72,153,0.1)]" href="#" style="">
+<span class="material-symbols-outlined mb-1" style='font-variation-settings: "FILL" 1;'>fitness_center</span>
+<span class="text-[10px] font-bold uppercase tracking-widest" style="">Practices</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#" style="">
+<span class="material-symbols-outlined mb-1" style="">psychology</span>
+<span class="text-[10px] font-bold uppercase tracking-widest" style="">Coach</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#" style="">
+<span class="material-symbols-outlined mb-1" style="">group</span>
+<span class="text-[10px] font-bold uppercase tracking-widest" style="">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#" style="">
+<span class="material-symbols-outlined mb-1" style="">analytics</span>
+<span class="text-[10px] font-bold uppercase tracking-widest" style="">Insights</span>
+</a>
+</nav>
+<!-- Decorative Elements -->
+<div class="fixed top-[20%] right-[-10%] w-64 h-64 bg-pink-600/5 blur-[120px] rounded-full -z-10"></div>
+<div class="fixed bottom-[20%] left-[-10%] w-80 h-80 bg-yellow-500/5 blur-[150px] rounded-full -z-10"></div>
+</body></html>

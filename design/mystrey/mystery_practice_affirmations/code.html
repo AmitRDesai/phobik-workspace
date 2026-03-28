@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phobik - Affirmations Challenge</title>
+<!-- BEGIN: Scripts and Meta -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'phobik-dark': '#0a0a0a',
+            'phobik-gray': '#1a1a1a',
+            'phobik-pink': '#ff0080',
+            'phobik-yellow': '#ffcc00',
+          },
+          backgroundImage: {
+            'gradient-radial-brand': 'radial-gradient(circle at top right, rgba(255, 0, 128, 0.2), transparent), radial-gradient(circle at bottom left, rgba(255, 204, 0, 0.1), transparent)',
+            'gradient-brand': 'linear-gradient(135deg, #ff0080 0%, #ffcc00 100%)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- END: Scripts and Meta -->
+<style data-purpose="custom-styling">
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      -webkit-tap-highlight-color: transparent;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .blur-glow {
+      filter: blur(80px);
+      z-index: -1;
+    }
+    .card-glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    /* Simple animation for the gradient text */
+    @keyframes shimmer {
+      0% { opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { opacity: 0.8; }
+    }
+    .animate-shimmer {
+      animation: shimmer 3s ease-in-out infinite;
+    }
+  </style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+  let timerInterval;
+  let seconds = 0;
+
+  function startTimer() {
+    if (timerInterval) return;
+    timerInterval = setInterval(() => {
+      seconds++;
+      const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+      const secs = (seconds % 60).toString().padStart(2, '0');
+      document.getElementById('challenge-timer').innerText = `${mins}:${secs}`;
+    }, 1000);
+  }
+
+  function stopTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+</script></head>
+<body class="min-h-screen flex flex-col">
+<!-- BEGIN: Ambient Background Effects -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none">
+<div class="absolute top-[-10%] right-[-10%] w-[300px] h-[300px] bg-phobik-pink opacity-20 blur-glow rounded-full"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] bg-phobik-yellow opacity-10 blur-glow rounded-full"></div>
+</div>
+<!-- END: Ambient Background Effects -->
+<!-- BEGIN: Header -->
+<header class="pt-12 pb-6 px-6 text-center" data-purpose="header-section">
+<h2 class="text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-phobik-pink to-phobik-yellow" style="">
+      AFFIRMATIONS
+    </h2>
+</header>
+<!-- END: Header -->
+<!-- BEGIN: Main Content -->
+<main class="flex-grow px-6 pb-24 max-w-md mx-auto w-full" data-purpose="main-challenge-container">
+<!-- BEGIN: Subtext/Education -->
+<section class="mb-8" data-purpose="challenge-description">
+<p class="text-gray-400 text-center leading-relaxed text-sm italic" style="">
+        "When you repeat positive statements daily, your brain starts to believe them — thanks to its natural ability to adapt called neuroplasticity. Over time, this shifts your mindset, boosts self-esteem and helps calm stress and anxiety."
+      </p>
+</section>
+<!-- END: Subtext/Education -->
+<!-- BEGIN: Challenge Card -->
+<div class="card-glass rounded-3xl p-8 relative overflow-hidden" data-purpose="main-action-card"><button class="absolute top-4 right-4 z-10 text-white/40 hover:text-phobik-pink transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+<!-- Decorative Gradient Border Accent -->
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-phobik-pink to-phobik-yellow"></div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-gradient-brand flex items-center justify-center mb-6 shadow-lg shadow-phobik-pink/20">
+<svg class="h-8 w-8 text-phobik-dark" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="text-xl font-bold mb-4" style=""><h3 class="text-xl font-bold mb-4 cursor-text" data-stitch-added-classes="cursor-text" spellcheck="false" style="--tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; outline: none !important;">Today's Practice</h3></h3>
+<div class="mt-6 mb-2">
+<span class="text-4xl font-mono font-bold bg-clip-text text-transparent bg-gradient-to-r from-phobik-pink to-phobik-yellow transition-all duration-300" id="challenge-timer">
+    00:00
+  </span>
+</div><p class="text-lg text-white/90 leading-snug" style="">
+          Say out loud 3 times: <br/>
+<span class="text-phobik-yellow font-bold italic" style="">"I am capable of leading myself through this day with calm and clarity."</span>
+</p>
+<div class="mt-8 flex gap-4 w-full">
+<button class="flex-1 py-4 px-6 rounded-2xl bg-gradient-brand text-phobik-dark font-bold text-sm tracking-wider uppercase transition-transform active:scale-95 shadow-lg shadow-phobik-pink/20" id="start-btn" onclick="startTimer()" style="">START</button>
+<button class="flex-1 py-4 px-6 rounded-2xl border-2 border-white/20 text-white font-bold text-sm tracking-wider uppercase transition-transform active:scale-95 hover:bg-white/5" id="done-btn" onclick="stopTimer()" style="">
+    Done
+  </button>
+</div><!-- BEGIN: Daily DOSE Rewards -->
+<div class="mt-8 pt-6 border-t border-white/10 w-full">
+<p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] mb-4" style="">Daily D.O.S.E. Reward</p>
+<div class="grid grid-cols-4 gap-2">
+<div class="flex flex-col items-center">
+<span class="text-phobik-pink font-bold text-sm" style="">+10</span>
+<span class="text-[8px] text-gray-500 uppercase" style="">Dopamine</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-phobik-yellow font-bold text-sm" style="">+0</span>
+<span class="text-[8px] text-gray-500 uppercase" style="">Oxytocin</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-phobik-pink font-bold text-sm" style="">+5</span>
+<span class="text-[8px] text-gray-500 uppercase" style="">Serotonin</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-phobik-yellow font-bold text-sm" style="">+0</span>
+<span class="text-[8px] text-gray-500 uppercase" style="">Endorphins</span>
+</div>
+</div>
+</div>
+<!-- END: Daily DOSE Rewards -->
+</div>
+</div>
+<!-- END: Challenge Card -->
+<!-- BEGIN: Journaling Placeholder -->
+<div class="mt-6 text-center">
+<p class="text-phobik-pink/60 text-xs font-medium uppercase tracking-widest" style="">Mindful Insight</p>
+<p class="text-gray-500 text-xs mt-1" style="">Consistency is the key to neural rewiring.</p>
+</div><div class="mt-8 pt-6 border-t border-white/5">
+<p class="text-center text-[10px] font-bold text-white/40 uppercase tracking-[0.2em] mb-4" style="">Daily D.O.S.E. Rewards</p>
+<div class="flex justify-center gap-3">
+<div class="flex items-center gap-2 bg-phobik-pink/10 border border-phobik-pink/20 rounded-full py-2 px-4">
+<span class="text-phobik-pink text-xs font-bold" style="">+10</span>
+<span class="text-white/80 text-[10px] font-medium uppercase tracking-tight" style="">Dopamine</span>
+</div>
+<div class="flex items-center gap-2 bg-phobik-yellow/10 border border-phobik-yellow/20 rounded-full py-2 px-4">
+<span class="text-phobik-yellow text-xs font-bold" style="">+5</span>
+<span class="text-white/80 text-[10px] font-medium uppercase tracking-tight" style="">Serotonin</span>
+</div>
+</div>
+</div>
+<!-- END: Journaling Placeholder -->
+</main>
+<!-- END: Main Content -->
+<!-- BEGIN: Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-phobik-dark/80 backdrop-blur-xl border-t border-white/10 pb-8 pt-3 px-4" data-purpose="bottom-navigation">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<!-- Nav Item: Today -->
+<a class="flex flex-col items-center gap-1 group" href="#" style="">
+<div class="p-2 rounded-xl bg-gradient-to-br from-phobik-pink to-phobik-yellow">
+<svg class="h-5 w-5 text-phobik-dark" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011-1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+</svg>
+</div>
+<span class="text-[10px] font-bold text-phobik-pink uppercase tracking-tighter" style="">Today</span>
+</a>
+<!-- Nav Item: Practices -->
+<a class="flex flex-col items-center gap-1 group opacity-40 hover:opacity-100 transition-opacity" href="#" style="">
+<div class="p-2 rounded-xl">
+<svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-[10px] font-medium text-white uppercase tracking-tighter" style="">Practices</span>
+</a>
+<!-- Nav Item: Coach -->
+<a class="flex flex-col items-center gap-1 group opacity-40 hover:opacity-100 transition-opacity" href="#" style="">
+<div class="p-2 rounded-xl">
+<svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-[10px] font-medium text-white uppercase tracking-tighter" style="">Coach</span>
+</a>
+<!-- Nav Item: Community -->
+<a class="flex flex-col items-center gap-1 group opacity-40 hover:opacity-100 transition-opacity" href="#" style="">
+<div class="p-2 rounded-xl">
+<svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-[10px] font-medium text-white uppercase tracking-tighter" style="">Community</span>
+</a>
+<!-- Nav Item: Insights -->
+<a class="flex flex-col items-center gap-1 group opacity-40 hover:opacity-100 transition-opacity" href="#" style="">
+<div class="p-2 rounded-xl">
+<svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-[10px] font-medium text-white uppercase tracking-tighter" style="">Insights</span>
+</a>
+</div>
+</nav>
+<!-- END: Navigation -->
+</body></html>

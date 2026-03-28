@@ -1,0 +1,232 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>E-Book Table of Contents - PHOBIK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3713ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#131022",
+                        "accent-pink": "#ff007a",
+                        "accent-yellow": "#fbd38d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .cloud-gradient {
+            background: linear-gradient(180deg, rgba(255, 0, 122, 0.2) 0%, rgba(251, 211, 141, 0.1) 100%);
+        }
+        .current-chapter-gradient {
+            background: linear-gradient(90deg, rgba(255, 0, 122, 0.15) 0%, rgba(251, 211, 141, 0.05) 100%);
+            border-left: 4px solid #ff007a;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white selection:bg-primary/30">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden max-w-[430px] mx-auto bg-background-light dark:bg-background-dark shadow-2xl">
+<header class="sticky top-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between border-b border-white/5">
+<div class="text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-white/10 transition-colors cursor-pointer">
+<span class="material-symbols-outlined" style="">close</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10" style="">Table of Contents</h2>
+</header>
+<main class="flex-1 overflow-y-auto pb-24 pt-4">
+<div class="px-6 text-left py-4 mb-2">
+<h3 class="text-white/60 tracking-tight text-sm font-semibold uppercase mb-1" style="">E-Book</h3>
+<h1 class="text-white text-3xl font-bold leading-tight" style="">Calm Above the Clouds</h1>
+</div>
+<div class="flex flex-col w-full">
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Foreword</span>
+<span class="text-white/80 text-base font-medium" style="">A Personal Note</span>
+</div>
+<span class="material-symbols-outlined text-accent-yellow text-xl" style="">check_circle</span>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Introduction</span>
+<span class="text-white/80 text-base font-medium" style="">A New Way to Understand</span>
+</div>
+<span class="material-symbols-outlined text-accent-yellow text-xl" style="">check_circle</span>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 1</span>
+<span class="text-white/80 text-base font-medium" style="">How Flying Works</span>
+</div>
+<span class="material-symbols-outlined text-accent-yellow text-xl" style="">check_circle</span>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 2</span>
+<span class="text-white/80 text-base font-medium" style="">How Anxiety Actually Works</span>
+</div>
+<span class="material-symbols-outlined text-accent-yellow text-xl" style="">check_circle</span>
+</a>
+<a class="flex items-center justify-between px-6 py-4 current-chapter-gradient cursor-pointer border-b border-white/5" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-accent-pink text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 3</span>
+<span class="text-white text-base font-bold" style="">Your Brain’s Alarm System</span>
+</div>
+<span class="text-white/50 text-xs font-medium" style="">Reading</span>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 4</span>
+<span class="text-white/80 text-base font-medium" style="">Why Flying Is a Perfect Storm</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 5</span>
+<span class="text-white/80 text-base font-medium" style="">Why Regulation Practice Matters</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 6</span>
+<span class="text-white/80 text-base font-medium" style="">Your Inner CEO</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 7</span>
+<span class="text-white/80 text-base font-medium" style="">When Fear Begins</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 8</span>
+<span class="text-white/80 text-base font-medium" style="">Getting Trapped in Your Own Fear</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 9</span>
+<span class="text-white/80 text-base font-medium" style="">Stories During Turbulence</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 10</span>
+<span class="text-white/80 text-base font-medium" style="">Rumination Loop</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 11</span>
+<span class="text-white/80 text-base font-medium" style="">Executive Function Overload</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 12</span>
+<span class="text-white/80 text-base font-medium" style="">Frozen Executive Function</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 13</span>
+<span class="text-white/80 text-base font-medium" style="">Panic Is Not Always Danger</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 14</span>
+<span class="text-white/80 text-base font-medium" style="">Automatic vs. Manual Regulation</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 15</span>
+<span class="text-white/80 text-base font-medium" style="">Building Tolerance Without Avoidance</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 16</span>
+<span class="text-white/80 text-base font-medium" style="">Strengthening the Nervous System</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 17</span>
+<span class="text-white/80 text-base font-medium" style="">Anticipatory Anxiety</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 18</span>
+<span class="text-white/80 text-base font-medium" style="">Identity Shift</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 19</span>
+<span class="text-white/80 text-base font-medium" style="">Setbacks, Slips, and Relapse Prevention</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 20</span>
+<span class="text-white/80 text-base font-medium" style="">The Goal is Freedom</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 21</span>
+<span class="text-white/80 text-base font-medium" style="">The C.A.L.M. method</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors border-b border-white/5 cursor-pointer" href="#" style="">
+<div class="flex flex-col pr-4">
+<span class="text-white/50 text-xs font-semibold uppercase tracking-wider mb-1" style="">Chapter 22</span>
+<span class="text-white/80 text-base font-medium" style="">Closing Reflections</span>
+</div>
+</a>
+</div>
+</main>
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-background-dark/95 backdrop-blur-lg border-t border-white/10 px-6 py-3 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-white/50 hover:text-white transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-2xl" style="">home</span>
+<span class="text-[10px] font-medium uppercase tracking-wider" style="">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-accent-pink" href="#" style="">
+<span class="material-symbols-outlined text-2xl font-fill" style="">menu_book</span>
+<span class="text-[10px] font-medium uppercase tracking-wider" style="">E-Book</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-white/50 hover:text-white transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-2xl" style="">exercise</span>
+<span class="text-[10px] font-medium uppercase tracking-wider" style="">Exercises</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-white/50 hover:text-white transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-2xl" style="">person</span>
+<span class="text-[10px] font-medium uppercase tracking-wider" style="">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

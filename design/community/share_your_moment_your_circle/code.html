@@ -1,0 +1,151 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Share Your Moment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4258c",
+                        "accent-yellow": "#f4c225",
+                        "background-light": "#f8f5f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .gradient-button {
+            background: linear-gradient(90deg, #f4258c 0%, #f4c225 100%);
+            box-shadow: 0 4px 25px -5px rgba(244, 37, 140, 0.5);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #f4258c 0%, #f4c225 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom scrollbar for textarea */
+        textarea::-webkit-scrollbar {
+            width: 4px;
+        }
+        textarea::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background: rgba(244, 37, 140, 0.3);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex justify-center">
+<div class="relative flex h-[844px] w-full max-w-[390px] flex-col bg-background-light dark:bg-background-dark overflow-hidden shadow-2xl">
+<!-- TopAppBar -->
+<header class="flex items-center bg-transparent p-4 pb-2 justify-between z-10">
+<div class="text-gray-900 dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer" style="">close</span>
+</div>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center font-display" style="">Share Your Moment</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-10 items-center justify-center rounded-full bg-gray-100 dark:bg-white/10 text-gray-900 dark:text-white" style="">
+<span class="material-symbols-outlined text-[20px]" style="">help</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<div class="flex-1 px-6 py-4 flex flex-col gap-6 overflow-y-auto">
+<!-- Text Input Section -->
+<div class="flex flex-col gap-4">
+<div class="space-y-1">
+<h1 class="text-gray-900 dark:text-white text-2xl font-bold font-display tracking-tight" style="">Bravery grows when it’s seen. Share one moment you showed up today.?</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed" style="">Share with awareness, not self-judgment. Your experience is valid.</p>
+</div>
+<div class="relative group">
+<textarea class="w-full h-64 bg-white dark:bg-white/5 border-2 border-gray-100 dark:border-white/10 rounded-2xl p-5 text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-white/20 focus:border-primary focus:ring-0 transition-all text-lg leading-relaxed resize-none font-display" placeholder="Start writing here..."></textarea>
+<div class="absolute bottom-4 right-4 text-xs text-gray-400 font-medium" style="">
+                        0 / 500
+                    </div>
+</div>
+</div>
+<!-- Options Section -->
+<div class="space-y-4">
+<!-- Anonymous Toggle -->
+<!-- Your Circle Section -->
+<div class="flex flex-col gap-3 mb-6">
+<p class="text-gray-900 dark:text-white font-bold text-sm px-1" style="">Your Circle</p>
+<div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+<div class="flex-none px-4 py-2 rounded-full border border-white/10 bg-white/5 text-gray-400 text-xs font-medium cursor-pointer transition-all hover:bg-white/10" style="">
+            18-24
+        </div>
+<div class="flex-none px-4 py-2 rounded-full border border-white/10 bg-white/5 text-gray-400 text-xs font-medium cursor-pointer transition-all hover:bg-white/10" style="">
+            25-34
+        </div>
+<div class="flex-none px-4 py-2 rounded-full border border-white/10 bg-white/5 text-gray-400 text-xs font-medium cursor-pointer transition-all hover:bg-white/10" style="">
+            35-44
+        </div>
+<div class="flex-none px-4 py-2 rounded-full border border-white/10 bg-white/5 text-gray-400 text-xs font-medium cursor-pointer transition-all hover:bg-white/10" style="">
+            45-54
+        </div>
+<div class="flex-none px-4 py-2 rounded-full text-white text-xs font-bold cursor-pointer transition-all relative p-[1px] bg-gradient-to-r from-[#f4258c] to-[#f4c225]">
+<div class="bg-background-dark rounded-full px-4 py-[7px] w-full h-full flex items-center justify-center" style="">
+                55+
+            </div>
+</div>
+</div>
+</div><div class="flex items-center justify-between p-4 bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-2xl">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" style="">shield_person</span>
+</div>
+<div>
+<p class="text-gray-900 dark:text-white font-bold text-sm" style="">Post Anonymously</p>
+<p class="text-gray-500 dark:text-gray-400 text-[11px]" style="">Your identity will be hidden from the wall</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer" style="">
+<input class="sr-only peer" type="checkbox" value="">
+<div class="w-11 h-6 bg-gray-200 dark:bg-white/10 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Guidance Info -->
+<div class="flex items-start gap-3 px-2">
+<span class="material-symbols-outlined text-accent-yellow text-lg shrink-0 mt-0.5" style="">auto_awesome</span>
+<p class="text-gray-500 dark:text-gray-400 text-xs leading-normal" style="">
+                        Your words are a reflection of your journey. Take a deep breath before hitting post.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="px-6 pb-6 pt-2">
+<!-- Post Button (SingleButton) -->
+<div class="mb-4">
+<button class="gradient-button flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-16 px-5 text-white text-lg font-bold leading-normal tracking-wide transition-transform active:scale-95 group" style="">
+<span class="truncate" style="">Post to Wall</span>
+<span class="material-symbols-outlined ml-2 text-[22px] transition-transform group-hover:translate-x-1" style="">send</span>
+</button>
+</div>
+<!-- Bottom Indicator (iOS style) -->
+<div class="flex justify-center">
+<div class="w-32 h-1.5 bg-gray-300 dark:bg-white/20 rounded-full"></div>
+</div>
+</div>
+</div>
+</body></html>

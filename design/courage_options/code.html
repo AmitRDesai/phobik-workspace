@@ -1,0 +1,182 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Courage Practices - PHOBIK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec135b",
+                        "accent-yellow": "#facc15",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#121212",
+                        "card-dark": "#1e1e1e",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .glow-pink {
+            box-shadow: 0 0 20px rgba(236, 19, 91, 0.2);
+        }
+        .gradient-border-pink-yellow {
+            position: relative;
+            background: #1e1e1e;
+            background-clip: padding-box;
+            border: 1px solid transparent;
+        }
+        .gradient-border-pink-yellow::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -1px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, #ec135b, #facc15);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex flex-col">
+<header class="flex items-center justify-between px-6 pt-12 pb-4 bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" style="">arrow_back_ios</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight" style="">Courage Practices</h1>
+<div class="size-10 rounded-full overflow-hidden border-2 border-primary/30">
+<img alt="User avatar profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaV5b3RQ4bSptRBUYiXyKIg-A_momx8Xg_a4rPuUxYGDOUVEBw23PBCVUzv_trQEteXq9ytaAoz45xizyMKyyTLvRS1Ytu_rZ940cM_u7DYLeAAT96BhvBU0I3IsL1UiJIedWy4z_ySj2qwkOs7nnMtYys98rDZbac--OnR5GA2Hcrk9azitxaov5yLFJZtrAy42SfVQGoOuPQUQ-vMdAPVrhRBsYxp5qiUG1MiutI8ldiA6Vxbv7iOeuen7nh5iX51IlGlXRTU_U9" class="" style="">
+</div>
+</header>
+<main class="flex-1 px-4 space-y-4 pb-28">
+<section class="px-2 py-2">
+<p class="text-primary font-semibold uppercase tracking-widest text-xs mb-1" style="">Growth Hub</p>
+<h2 class="text-2xl font-bold" style="">Choose your path</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm" style="">Every small action builds a stronger you.</p>
+</section>
+<div class="gradient-border-pink-yellow rounded-xl p-0.5 overflow-hidden">
+<div class="bg-card-dark rounded-[calc(0.75rem-1px)] p-4 flex items-stretch gap-4 transition-transform active:scale-[0.98]">
+<div class="flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 1;">terrain</span>
+<h3 class="text-lg font-bold text-white" style="">Micro Challenges</h3>
+</div>
+<p class="text-slate-400 text-xs leading-snug" style="">Your mood follows your chemistry - and you can change it. Start with one small habit today.</p>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg font-semibold text-xs w-fit flex items-center gap-2 group" style="">
+                    Start Now
+                    <span class="material-symbols-outlined text-xs group-hover:translate-x-1 transition-transform" style="">chevron_right</span>
+</button>
+</div>
+<div class="w-24 h-24 rounded-lg bg-gradient-to-br from-primary/20 to-transparent flex items-center justify-center relative overflow-hidden shrink-0">
+<div class="absolute inset-0 bg-primary/10 blur-xl rounded-full translate-x-4 translate-y-4"></div>
+<span class="material-symbols-outlined text-5xl text-primary opacity-80" style="font-variation-settings: &quot;wght&quot; 200;">landscape</span>
+</div>
+</div>
+</div>
+<div class="gradient-border-pink-yellow rounded-xl p-0.5 overflow-hidden">
+<div class="bg-card-dark rounded-[calc(0.75rem-1px)] p-4 flex items-stretch gap-4 transition-transform active:scale-[0.98]">
+<div class="flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-accent-yellow" style="font-variation-settings: &quot;FILL&quot; 1;">auto_awesome</span>
+<h3 class="text-lg font-bold text-white" style="">Mystery Challenge</h3>
+</div>
+<p class="text-slate-400 text-xs leading-snug" style="">What if your mood was a code waiting to be cracked? Begin the experiment one habit at a time.</p>
+</div>
+<button class="bg-accent-yellow text-background-dark px-4 py-2 rounded-lg font-bold text-xs w-fit flex items-center gap-2 group" style="">
+                    Discover
+                    <span class="material-symbols-outlined text-xs" style="">flare</span>
+</button>
+</div>
+<div class="w-24 h-24 rounded-lg bg-gradient-to-tr from-accent-yellow/20 to-transparent flex items-center justify-center relative overflow-hidden shrink-0">
+<div class="absolute inset-0 bg-accent-yellow/10 blur-xl rounded-full -translate-x-4 -translate-y-4"></div>
+<span class="material-symbols-outlined text-5xl text-accent-yellow opacity-80" style="font-variation-settings: &quot;wght&quot; 100;">filter_vintage</span>
+</div>
+</div>
+</div>
+<div class="gradient-border-pink-yellow rounded-xl p-0.5 overflow-hidden">
+<div class="bg-card-dark rounded-[calc(0.75rem-1px)] p-4 flex items-stretch gap-4 transition-transform active:scale-[0.98]">
+<div class="flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: &quot;FILL&quot; 1;">filter_drama</span>
+<h3 class="text-lg font-bold text-white" style="">Specialized Packs</h3>
+</div>
+<p class="text-slate-400 text-xs leading-snug" style="">Explore deeper toolkits for specific situations and calm.</p>
+</div>
+<button class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-4 py-2 rounded-lg font-semibold text-xs w-fit flex items-center gap-2 group" style="">
+                    Explore
+                    <span class="material-symbols-outlined text-xs" style="">cloud_download</span>
+</button>
+</div>
+<div class="w-24 h-24 rounded-lg bg-gradient-to-b from-white/10 to-transparent flex items-center justify-center relative overflow-hidden shrink-0">
+<div class="absolute inset-0 bg-white/5 blur-xl rounded-full translate-y-6"></div>
+<span class="material-symbols-outlined text-5xl text-white opacity-60" style="font-variation-settings: &quot;wght&quot; 200;">cloud</span>
+</div>
+</div>
+</div>
+<div class="gradient-border-pink-yellow rounded-xl p-0.5 overflow-hidden">
+<div class="bg-card-dark rounded-[calc(0.75rem-1px)] p-4 flex items-stretch gap-4 transition-transform active:scale-[0.98]">
+<div class="flex flex-col flex-1 justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: &quot;FILL&quot; 0;">explore</span>
+<h3 class="text-lg font-bold text-white" style="">Self Check Ins</h3>
+</div>
+<p class="text-slate-400 text-xs leading-snug" style="">Assess your growth through guided evaluations and tracking.</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-accent-yellow text-white px-4 py-2 rounded-lg font-bold text-xs w-fit flex items-center gap-2 group" style="">
+                    Get Curious<span class="material-symbols-outlined text-xs" style="">checklist</span>
+</button>
+</div>
+<div class="w-24 h-24 rounded-lg bg-gradient-to-bl from-primary/10 via-accent-yellow/10 to-transparent flex items-center justify-center relative overflow-hidden shrink-0">
+<div class="absolute inset-0 bg-primary/5 blur-xl rounded-full translate-x-2 translate-y-2"></div>
+<span class="material-symbols-outlined text-5xl text-accent-yellow opacity-70" style="font-variation-settings: &quot;wght&quot; 200;">explore</span>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-[#1a1a1a]/95 backdrop-blur-md border-t border-white/5 px-6 pb-8 pt-3 z-20">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#" style="">
+<span class="material-symbols-outlined" style="">home</span>
+<span class="text-[10px] font-medium" style="">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#" style="">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">shield_with_heart</span>
+<span class="text-[10px] font-bold" style="">Practices</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#" style="">
+<span class="material-symbols-outlined" style="">support_agent</span>
+<span class="text-[10px] font-medium" style="">Coach</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#" style="">
+<span class="material-symbols-outlined" style="">groups</span>
+<span class="text-[10px] font-medium" style="">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#" style="">
+<span class="material-symbols-outlined" style="">analytics</span>
+<span class="text-[10px] font-medium" style="">Insights</span>
+</a>
+</div>
+</nav>
+
+</body></html>

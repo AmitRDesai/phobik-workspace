@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {},
+                    fontFamily: {
+                        "headline": ["Public Sans"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-black antialiased text-white min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black border-b border-gray-900 flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-pink-500" data-icon="flight_takeoff">flight_takeoff</span>
+<h1 class="text-2xl font-black italic bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent font-sans tracking-tight">PHOBIK</h1>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-gray-500 hover:opacity-80 transition-opacity cursor-pointer" data-icon="settings">settings</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-32 px-6 max-w-2xl mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-10 flex items-center gap-3">
+<div>
+<h2 class="text-3xl font-extrabold tracking-tight mb-2 uppercase flex items-center gap-2">TURBULENCE TOOLS</h2>
+<div class="h-1 w-20 bg-gradient-to-r from-pink-500 to-yellow-400 rounded-full"></div>
+</div>
+</div>
+<!-- Tools List -->
+<div class="space-y-6">
+<!-- Cup of Water -->
+<div class="group p-5 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-pink-500/50 transition-all duration-300">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center shrink-0 border border-pink-500/20">
+<span class="material-symbols-outlined text-pink-500" data-icon="coffee">coffee</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-gray-100 mb-1 uppercase tracking-wide">Cup of Water</h3>
+<p class="text-sm text-gray-300 leading-relaxed">Place a half-full cup or transparent bottle on the tray table. Notice how little the liquid moves.</p>
+<div class="mt-3 p-3 bg-black/40 rounded-lg border-l-2 border-yellow-400">
+<p class="text-xs text-yellow-400/90 font-medium">Why it helps: Shows the plane is moving fractions of an inch, even when it feels dramatic.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Note Check -->
+<div class="group p-5 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-pink-500/50 transition-all duration-300">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center shrink-0 border border-pink-500/20">
+<span class="material-symbols-outlined text-pink-500" data-icon="edit_note">edit_note</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-gray-100 mb-1 uppercase tracking-wide">Sticky Note Check</h3>
+<p class="text-sm text-gray-300 leading-relaxed">Write <span class="text-yellow-400 font-bold italic">'If I can read this, I’m okay.'</span> and place it on the seat in front of you.</p>
+</div>
+</div>
+</div>
+<!-- Gelatin Visualization -->
+<div class="group p-5 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-pink-500/50 transition-all duration-300">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center shrink-0 border border-pink-500/20"><span class="material-symbols-outlined text-pink-500" data-icon="waves">waves</span></div>
+<div>
+<h3 class="text-lg font-bold text-gray-100 mb-1 uppercase tracking-wide">Gelatin Visualization</h3>
+<p class="text-sm text-gray-300 leading-relaxed">Picture the plane suspended in thick gelatin. It can jiggle — but it cannot fall.</p>
+</div>
+</div>
+</div>
+<!-- Highlighted Quote -->
+<div class="mt-8 p-6 bg-gradient-to-br from-pink-500/20 to-yellow-400/5 rounded-2xl border border-pink-500/30 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-7xl" data-icon="magic_button">magic_button</span>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-pink-500 mb-2 scale-125" data-icon="magic_button">magic_button</span>
+<h4 class="text-2xl font-black italic tracking-tighter bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent uppercase mb-2">ANIMATED REALITY</h4>
+<p class="text-sm text-white/80 max-w-md italic leading-relaxed">
+                    Next time fear pops up, immediately turn it into a ridiculous cartoon character. If you’re on a plane and feel anxious, picture a tiny animated version of yourself sitting in the cockpit, pushing buttons randomly, with the plane flying just fine anyway! The more you practice, the easier it becomes to see fear as something lighthearted instead of overwhelming.
+                </p>
+</div>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="mt-10 flex flex-col items-center">
+<button class="w-full py-5 bg-gradient-to-r from-pink-500 to-yellow-400 text-black font-black text-lg tracking-[0.2em] rounded-xl active:scale-95 duration-150 shadow-[0_0_30px_rgba(236,72,153,0.3)]">
+                CONTINUE SESSION
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-black/95 backdrop-blur-md border-t border-gray-800 flex justify-around items-center px-4 pb-6 pt-3 shadow-2xl">
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="calendar_today">calendar_today</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Today</span>
+</div>
+<div class="flex flex-col items-center justify-center text-pink-500 bg-pink-500/10 rounded-xl px-3 py-1 cursor-pointer translate-y-[-2px] transition-transform">
+<span class="material-symbols-outlined mb-1" data-icon="fitness_center">fitness_center</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Practices</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="psychology">psychology</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Coach</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="group">group</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Community</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="analytics">analytics</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Insights</span>
+</div>
+</nav>
+<!-- Decorative Elements (Visual Style Anchor) -->
+<div class="fixed top-[20%] right-[-10%] w-64 h-64 bg-pink-600/10 blur-[120px] rounded-full -z-10"></div>
+<div class="fixed bottom-[10%] left-[-10%] w-80 h-80 bg-yellow-500/5 blur-[150px] rounded-full -z-10"></div>
+</body></html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Locked Journal - Pink &amp; Yellow</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF4D94",
+                        "accent": "#FFD700",
+                        "deep-charcoal": "#121212",
+                        "card-charcoal": "#1E1E1E",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-gradient: linear-gradient(135deg, #FF4D94 0%, #FFD700 100%);
+            --glow-aura: radial-gradient(circle, rgba(255, 77, 148, 0.4) 0%, rgba(255, 215, 0, 0.2) 50%, rgba(18, 18, 18, 0) 70%);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            background-color: #121212;
+            min-height: 100vh;
+        }
+        .ios-blur {
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+        }
+        .aura-glow {
+            background: var(--glow-aura);
+            filter: blur(20px);
+        }
+        .btn-shadow {
+            box-shadow: 0 4px 20px rgba(255, 77, 148, 0.4);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255, 77, 148, 0.5);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-deep-charcoal text-white overflow-hidden">
+<header class="fixed top-0 left-0 right-0 z-50 px-4 pt-12 pb-4 flex items-center justify-between max-w-md mx-auto">
+<button class="size-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-white text-[22px]">chevron_left</span>
+</button>
+<h1 class="text-sm font-bold tracking-widest uppercase text-slate-400">Secure Journal</h1>
+<button class="size-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-white text-[22px]">settings</span>
+</button>
+</header>
+<main class="max-w-md mx-auto h-screen flex flex-col items-center justify-center px-8 relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 aura-glow rounded-full opacity-60"></div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="relative mb-12">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-150"></div>
+<div class="size-40 rounded-full border border-white/10 bg-white/5 flex items-center justify-center relative shadow-2xl">
+<span class="material-symbols-outlined text-[80px] bg-gradient-to-br from-primary via-primary to-accent bg-clip-text text-transparent !fill-1">favorite</span>
+</div>
+<div class="absolute -bottom-2 -right-2 size-12 bg-card-charcoal border border-white/20 rounded-2xl flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-accent text-2xl">lock</span>
+</div>
+</div>
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4 tracking-tight">Your Thoughts are Protected</h2>
+<p class="text-slate-400 text-sm leading-relaxed max-w-[280px] mx-auto">
+                    This journal is locked for your privacy. Unlock to access your biometric-linked emotional reflections.
+                </p>
+</div>
+<div class="w-full grid grid-cols-3 gap-3 mb-12 opacity-50 blur-[2px]">
+<div class="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
+<p class="text-[10px] text-slate-500 font-bold uppercase mb-1">Entries</p>
+<p class="text-lg font-bold">24</p>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
+<p class="text-[10px] text-slate-500 font-bold uppercase mb-1">Streak</p>
+<p class="text-lg font-bold">12</p>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
+<p class="text-[10px] text-slate-500 font-bold uppercase mb-1">Avg HRV</p>
+<p class="text-lg font-bold">72</p>
+</div>
+</div>
+<button class="w-full max-w-[280px] bg-gradient-to-r from-primary to-accent py-4 px-8 rounded-2xl flex items-center justify-center gap-3 group transition-all active:scale-95 btn-shadow">
+<span class="material-symbols-outlined text-white font-bold">fingerprint</span>
+<span class="text-white font-bold text-lg">Unlock Journal</span>
+</button>
+<p class="mt-6 text-[11px] font-bold text-accent uppercase tracking-widest flex items-center gap-2">
+<span class="size-1.5 rounded-full bg-accent animate-pulse"></span>
+                Secure Biometric Access
+            </p>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-[#121212]/80 ios-blur border-t border-white/10 px-4 pt-3 pb-8 flex justify-around items-center z-50 max-w-md mx-auto">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary text-glow">
+<span class="material-symbols-outlined text-[24px] fill-1">exercise</span>
+<span class="text-[10px] font-bold">Practices</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-[24px]">smart_toy</span>
+<span class="text-[10px] font-medium">Coach</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-[24px]">group</span>
+<span class="text-[10px] font-medium">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-[24px]">leaderboard</span>
+<span class="text-[10px] font-medium">Insights</span>
+</button>
+</nav>
+<div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/10 rounded-full z-[60]"></div>
+
+</body></html>

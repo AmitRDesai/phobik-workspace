@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community Courage Wall</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4258c",
+                        "accent-yellow": "#fbd38d",
+                        "background-light": "#f8f5f7",
+                        "background-dark": "#12080d",
+                        "surface-dark": "#221019",
+                        "surface-accent": "#492236",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .aura-glow-pink {
+            box-shadow: 0 0 25px 5px rgba(244, 37, 140, 0.3);
+        }
+        .aura-glow-yellow {
+            box-shadow: 0 0 25px 5px rgba(251, 211, 141, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto shadow-2xl overflow-x-hidden border-x border-white/5">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-full bg-surface-dark/10 dark:bg-surface-accent">
+<span class="material-symbols-outlined text-primary">arrow_back_ios_new</span>
+</div>
+</div>
+<h1 class="text-xl font-bold tracking-tight">Courage Wall</h1>
+<div class="flex items-center gap-2">
+<div class="p-2 rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined fill-icon">notifications</span>
+</div>
+</div>
+</div>
+<!-- Search & Filters -->
+<div class="flex flex-col gap-3">
+<label class="relative flex items-center w-full">
+<span class="absolute left-4 material-symbols-outlined text-primary/60">search</span>
+<input class="w-full h-12 pl-12 pr-4 bg-white dark:bg-surface-accent/40 border-none rounded-xl focus:ring-2 focus:ring-primary/50 text-sm placeholder:text-gray-400 dark:placeholder:text-primary/30" placeholder="Find inspiration..." type="text"/>
+</label>
+<div class="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-5 shadow-lg shadow-primary/20 cursor-pointer">
+<span class="text-sm font-semibold">All Stories</span>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-accent px-5 border border-primary/10 cursor-pointer">
+<span class="material-symbols-outlined text-sm">emoji_events</span>
+<p class="text-sm font-medium">Challenges</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-accent px-5 border border-primary/10 cursor-pointer">
+<span class="material-symbols-outlined text-sm">self_improvement</span>
+<p class="text-sm font-medium">Mindfulness</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-accent px-5 border border-primary/10 cursor-pointer">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+<p class="text-sm font-medium">Victories</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Feed (Masonry Style Simulation) -->
+<main class="px-4 pb-24">
+<div class="flex flex-col gap-6">
+<!-- Card 1 -->
+<div class="flex flex-col gap-3"><div class="bg-surface-dark/5 dark:bg-surface-accent/20 rounded-3xl p-5 flex flex-col gap-4 border border-white/5 aura-glow-pink">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-gradient-to-br from-primary to-accent-yellow blur-[2px]"></div>
+<div>
+<p class="text-sm font-bold opacity-80">Sarah</p>
+<p class="text-[10px] opacity-50 uppercase tracking-wider font-bold">Just now</p>
+</div>
+</div>
+<p class="text-xl font-bold leading-tight">Faced my fear of public speaking today!</p>
+<div class="flex gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">❤️ I see you</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">💪 You’ve got this</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🤝 Not alone</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🌱 Keep going</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🔥 Courage moment</button>
+</div>
+</div>
+<div class="bg-surface-dark/5 dark:bg-surface-accent/20 rounded-3xl p-5 flex flex-col gap-4 border border-white/5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-gradient-to-br from-blue-400 to-primary blur-[2px]"></div>
+<div>
+<p class="text-sm font-bold opacity-80">James</p>
+<p class="text-[10px] opacity-50 uppercase tracking-wider font-bold">2h ago</p>
+</div>
+</div>
+<p class="text-lg font-medium opacity-90 italic">"I finally drove through the highway tunnel alone. Big win for me."</p>
+<div class="flex gap-2">
+<div class="px-3 py-1 rounded-full bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider">Anxiety</div>
+</div>
+<div class="flex gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">❤️ I see you</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">💪 You’ve got this</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🤝 Not alone</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🌱 Keep going</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🔥 Courage moment</button>
+</div>
+</div></div>
+<!-- Column 2 -->
+<div class="flex flex-col gap-4"><div class="bg-surface-dark/5 dark:bg-surface-accent/20 rounded-3xl p-5 flex flex-col gap-4 border border-white/5 aura-glow-yellow">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-gradient-to-br from-accent-yellow to-orange-400 blur-[2px]"></div>
+<div>
+<p class="text-sm font-bold opacity-80">Elena</p>
+<p class="text-[10px] opacity-50 uppercase tracking-wider font-bold">5h ago</p>
+</div>
+</div>
+<div class="relative aspect-video rounded-2xl overflow-hidden bg-surface-accent">
+<img alt="Meditation space" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDruHvHghEE9WEHglRFp5vnu8BB9_DR3zfDjbA8rnaPzuBY6g5Bb-5mkWJ_QQ5YHKXt5X1sVDn9qxpwB5AqT6vUPAHQjPuFBNKJDASkpO6RsQ-kWqKoEyohVNakNlMIyOfYdJw8wVYYMjLfLZoUv1ACAULljvP1cqqLayDMz-kuXEGzkTNydd_jqC6TZBYcR3-xiTO8_Wd-txox5fbMAjTsHSPAgRG9vObAF5Py0Rl8Av1_a4We80DwbM4dZpsSh4-qrK4wYCZN50vg"/>
+<div class="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black/80 to-transparent">
+<p class="text-lg font-bold text-white">Hit a 7-day streak!</p>
+</div>
+</div>
+<div class="flex gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">❤️ I see you</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">💪 You’ve got this</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🤝 Not alone</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🌱 Keep going</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🔥 Courage moment</button>
+</div>
+</div>
+<div class="bg-surface-dark/5 dark:bg-surface-accent/20 rounded-3xl p-5 flex flex-col gap-4 border border-white/5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-gradient-to-br from-green-400 to-blue-300 blur-[2px]"></div>
+<div>
+<p class="text-sm font-bold opacity-80">Marcus</p>
+<p class="text-[10px] opacity-50 uppercase tracking-wider font-bold">Yesterday</p>
+</div>
+</div>
+<p class="text-lg font-bold leading-tight">Practiced deep breathing for 10 mins during my lunch break.</p>
+<div class="flex gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">❤️ I see you</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">💪 You’ve got this</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🤝 Not alone</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🌱 Keep going</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🔥 Courage moment</button>
+</div>
+</div>
+<div class="bg-primary/5 rounded-3xl p-5 flex flex-col gap-4 border border-primary/10">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-gradient-to-br from-white to-primary/40 blur-[2px]"></div>
+<div>
+<p class="text-sm font-bold opacity-80">Lila</p>
+<p class="text-[10px] opacity-50 uppercase tracking-wider font-bold">Yesterday</p>
+</div>
+</div>
+<p class="text-base font-medium">Spoke up in a meeting today for the first time in months. My heart was racing but I did it!</p>
+<div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full"></div>
+</div>
+<div class="flex gap-2 overflow-x-auto no-scrollbar py-1">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-primary text-white text-xs font-bold">❤️ I see you</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">💪 You’ve got this</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🤝 Not alone</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🌱 Keep going</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-bold hover:bg-primary/20 transition-colors">🔥 Courage moment</button>
+</div>
+</div></div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<!-- Navigation Bar (iOS Style) -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-white/5 flex justify-around items-center py-4 px-6 z-40">
+<div class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined">home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-icon">diversity_3</span>
+<div class="size-1 bg-primary rounded-full"></div>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined">person</span>
+</div>
+</nav>
+</div>
+</body></html>

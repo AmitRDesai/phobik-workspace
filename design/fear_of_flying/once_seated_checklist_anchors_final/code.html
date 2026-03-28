@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {},
+                    fontFamily: {
+                        "headline": ["Public Sans"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body text-white antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black border-b border-gray-900 flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-pink-500" data-icon="flight_takeoff">flight_takeoff</span>
+<span class="text-2xl font-black italic bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent">PHOBIK</span>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-gray-500 hover:opacity-80 transition-opacity cursor-pointer" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-gray-500 hover:opacity-80 transition-opacity cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto">
+<!-- Header Section -->
+<header class="mb-10">
+<h1 class="text-4xl font-extrabold tracking-tight mb-2">Once Seated Checklist</h1>
+<p class="text-gray-400 text-lg">Focus on the present moment. Your safety is managed by professionals.</p>
+</header>
+<!-- Bento Checklist Grid -->
+<div class="space-y-4">
+<!-- Checklist Item 1 -->
+<div class="group flex items-center justify-between p-5 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-pink-500/50 transition-all duration-300">
+<span class="text-lg font-medium text-gray-200">Feet flat on floor</span>
+<div class="w-8 h-8 rounded-full border-2 border-gray-700 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-pink-500 group-hover:to-yellow-400 group-hover:border-transparent transition-all">
+<span class="material-symbols-outlined text-transparent group-hover:text-black text-sm" data-icon="check" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<!-- Checklist Item 2 -->
+<div class="group flex items-center justify-between p-5 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-pink-500/50 transition-all duration-300">
+<span class="text-lg font-medium text-gray-200">Sit fully back in seat</span>
+<div class="w-8 h-8 rounded-full border-2 border-gray-700 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-pink-500 group-hover:to-yellow-400 group-hover:border-transparent transition-all">
+<span class="material-symbols-outlined text-transparent group-hover:text-black text-sm" data-icon="check" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<!-- Checklist Item 3 -->
+<div class="group flex items-center justify-between p-5 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-pink-500/50 transition-all duration-300">
+<span class="text-lg font-medium text-gray-200">Drop shoulders</span>
+<div class="w-8 h-8 rounded-full border-2 border-gray-700 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-pink-500 group-hover:to-yellow-400 group-hover:border-transparent transition-all">
+<span class="material-symbols-outlined text-transparent group-hover:text-black text-sm" data-icon="check" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<!-- Checklist Item 4 -->
+<div class="group flex items-center justify-between p-5 bg-gray-900/50 rounded-xl border border-gray-800 hover:border-pink-500/50 transition-all duration-300">
+<span class="text-lg font-medium text-gray-200">Unclench jaw</span>
+<div class="w-8 h-8 rounded-full border-2 border-gray-700 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-pink-500 group-hover:to-yellow-400 group-hover:border-transparent transition-all">
+<span class="material-symbols-outlined text-transparent group-hover:text-black text-sm" data-icon="check" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<!-- Feature Card: Breathing -->
+<div class="relative overflow-hidden group p-6 bg-pink-500/5 rounded-xl border border-pink-500/20 hover:border-pink-500/40 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-pink-500">60-90 seconds of slow breathing</h3>
+<p class="text-gray-400 text-sm mt-1">Regulate your nervous system before taxi.</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-yellow-400 flex items-center justify-center text-black">
+<span class="material-symbols-outlined" data-icon="air">air</span>
+</div>
+</div>
+<div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-pink-500 to-yellow-400 h-full w-1/3"></div>
+</div>
+</div>
+<!-- Reality Check Block -->
+<div class="group flex items-center justify-between p-5 bg-yellow-400/5 rounded-xl border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300">
+<div class="flex gap-4 items-center">
+<span class="material-symbols-outlined text-yellow-400" data-icon="verified">verified</span>
+<span class="text-lg font-semibold text-yellow-400 italic">Reality check: Right now, nothing is required of me</span>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-gray-700 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-pink-500 group-hover:to-yellow-400 group-hover:border-transparent transition-all">
+<span class="material-symbols-outlined text-transparent group-hover:text-black text-sm" data-icon="check" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<!-- Anchor Selection Card -->
+<div class="p-6 bg-gray-900 rounded-xl border border-gray-800">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-pink-500" data-icon="anchor">anchor</span>
+                    Choose an anchor
+                </h3>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center gap-2 p-3 rounded-lg bg-black border border-gray-800 hover:bg-pink-500/10 hover:border-pink-500 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="edit_note">edit_note</span> Journal
+                    </button>
+<button class="flex items-center gap-2 p-3 rounded-lg bg-black border border-gray-800 hover:bg-pink-500/10 hover:border-pink-500 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="graphic_eq">graphic_eq</span> Sound Therapy
+                    </button>
+<button class="flex items-center gap-2 p-3 rounded-lg bg-black border border-gray-800 hover:bg-pink-500/10 hover:border-pink-500 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="podcasts">podcasts</span> Podcast
+                    </button>
+<button class="flex items-center gap-2 p-3 rounded-lg bg-black border border-gray-800 hover:bg-pink-500/10 hover:border-pink-500 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="movie">movie</span> Movie
+                    </button>
+<button class="flex items-center gap-2 p-3 rounded-lg bg-black border border-gray-800 hover:bg-pink-500/10 hover:border-pink-500 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="menu_book">menu_book</span> Book
+                    </button>
+<button class="flex items-center gap-2 p-3 rounded-lg bg-black border border-gray-800 hover:bg-pink-500/10 hover:border-pink-500 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="air">air</span> Breathing
+                    </button>
+<button class="flex items-center gap-2 p-3 rounded-lg bg-black border border-gray-800 hover:bg-pink-500/10 hover:border-pink-500 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="restaurant">restaurant</span> Chewing Gum
+                    </button>
+<button class="flex items-center gap-2 p-3 rounded-lg bg-black border border-gray-800 hover:bg-pink-500/10 hover:border-pink-500 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="music_note">music_note</span> Music
+                    </button>
+<button class="flex items-center gap-2 p-3 rounded-lg bg-black border border-gray-800 hover:bg-pink-500/10 hover:border-pink-500 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="format_list_numbered">format_list_numbered</span> 5-4-3-2-1
+                    </button>
+<button class="flex items-center gap-2 p-3 rounded-lg bg-black border border-gray-800 hover:bg-pink-500/10 hover:border-pink-500 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="more_horiz">more_horiz</span> Other
+                    </button>
+</div>
+</div>
+</div>
+<!-- CTA Action -->
+<div class="mt-12 pb-20">
+<button class="w-full py-5 rounded-2xl bg-gradient-to-r from-pink-500 to-yellow-400 text-black font-black text-xl tracking-widest hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-pink-500/20">
+                NEXT STEP
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-black/95 backdrop-blur-md border-t border-gray-800 shadow-2xl">
+<a class="flex flex-col items-center justify-center text-pink-500 bg-pink-500/10 rounded-xl px-3 py-1 transition-transform Active: translate-y-[-2px]" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Today</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Practices</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Coach</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Insights</span>
+</a>
+</nav>
+</body></html>

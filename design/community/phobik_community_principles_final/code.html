@@ -1,0 +1,175 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f4258c",
+              "accent-yellow": "#fbbf24",
+              "background-light": "#f8f5f7",
+              "background-dark": "#121212",
+              "surface-dark": "#221019",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .gradient-border {
+        position: relative;
+        background: #1a0c13;
+        background-clip: padding-box;
+        border: 2px solid transparent;
+      }
+      .gradient-border::before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -2px;
+        border-radius: inherit;
+        background: linear-gradient(to bottom right, #f4258c, #fbbf24);
+        opacity: 0.6;
+      }
+      .bg-blur-overlay {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+      /* Custom scrollbar for better aesthetics in the dark theme */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #4a1d35;
+        border-radius: 10px;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-hidden h-screen">
+<!-- Background Interface Simulation (Behind Modal) -->
+<div class="absolute inset-0 z-0 p-6 flex flex-col gap-4 opacity-30 grayscale">
+<div class="h-12 w-12 rounded-full bg-primary/20"></div>
+<div class="h-40 w-full rounded-lg bg-primary/10"></div>
+<div class="h-40 w-full rounded-lg bg-primary/10"></div>
+<div class="h-40 w-full rounded-lg bg-primary/10"></div>
+</div>
+<!-- Semi-transparent dark charcoal blur overlay -->
+<div class="absolute inset-0 z-10 bg-black/70 bg-blur-overlay flex items-center justify-center p-6">
+<!-- Central Card with Gradient Border -->
+<div class="gradient-border w-full max-w-sm rounded-lg shadow-[0_0_50px_rgba(244,37,140,0.15)] overflow-hidden flex flex-col max-h-[90vh]">
+<!-- BottomSheetHandle Style Top Decorator -->
+<div class="flex h-5 w-full items-center justify-center mt-2 shrink-0">
+<div class="h-1.5 w-12 rounded-full bg-[#4a1d35]"></div>
+</div>
+<!-- Close Icon -->
+<div class="flex justify-end px-6 pt-1 shrink-0">
+<button class="text-white/30 hover:text-white transition-colors" style="">
+<span class="material-symbols-outlined" style="">close</span>
+</button>
+</div>
+<!-- Header Section -->
+<div class="px-6 py-4 text-center shrink-0">
+<h4 class="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-1" style="">PHOBIK COMMUNITY</h4>
+<h1 class="text-white text-2xl font-bold leading-tight" style="">Phobik Community Principles</h1>
+<p class="text-[#cb90ad] text-[13px] mt-2 leading-relaxed" style="">Kindness matters. Courage grows in Community.</p>
+</div>
+<!-- Guidelines Pillars - Scrollable Area -->
+<div class="px-6 py-2 flex flex-col gap-2 overflow-y-auto custom-scrollbar">
+<!-- Principle 1 -->
+<div class="flex items-start gap-4 bg-white/[0.03] rounded-lg px-4 py-3 border border-white/[0.05]">
+<div class="text-white flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent-yellow shrink-0 size-9 shadow-lg shadow-primary/20 mt-0.5">
+<span class="material-symbols-outlined text-base" style="">campaign</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-semibold leading-normal" style="">Speak your truth</p>
+<p class="text-white/60 text-xs leading-tight mt-0.5" style="">Be real about what you're experiencing.</p>
+</div>
+</div>
+<!-- Principle 2 -->
+<div class="flex items-start gap-4 bg-white/[0.03] rounded-lg px-4 py-3 border border-white/[0.05]">
+<div class="text-white flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent-yellow shrink-0 size-9 shadow-lg shadow-primary/20 mt-0.5">
+<span class="material-symbols-outlined text-base" style="">forum</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-semibold leading-normal" style="">Name what’s real</p>
+<p class="text-white/60 text-xs leading-tight mt-0.5" style="">Putting feelings into words creates clarity.</p>
+</div>
+</div>
+<!-- Principle 3 -->
+<div class="flex items-start gap-4 bg-white/[0.03] rounded-lg px-4 py-3 border border-white/[0.05]">
+<div class="text-white flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent-yellow shrink-0 size-9 shadow-lg shadow-primary/20 mt-0.5">
+<span class="material-symbols-outlined text-base" style="">favorite</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-semibold leading-normal" style="">Notice what's here</p>
+<p class="text-white/60 text-xs leading-tight mt-0.5" style="">Fear and struggle are part of being human.</p>
+</div>
+</div>
+<!-- Principle 4 -->
+<div class="flex items-start gap-4 bg-white/[0.03] rounded-lg px-4 py-3 border border-white/[0.05]">
+<div class="text-white flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent-yellow shrink-0 size-9 shadow-lg shadow-primary/20 mt-0.5">
+<span class="material-symbols-outlined text-base" style="">volunteer_activism</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-semibold leading-normal" style="">Listen with compassion</p>
+<p class="text-white/60 text-xs leading-tight mt-0.5" style="">Support others without judgment or fixing.</p>
+</div>
+</div>
+<!-- Principle 5 -->
+<div class="flex items-start gap-4 bg-white/[0.03] rounded-lg px-4 py-3 border border-white/[0.05]">
+<div class="text-white flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent-yellow shrink-0 size-9 shadow-lg shadow-primary/20 mt-0.5">
+<span class="material-symbols-outlined text-base" style="">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-semibold leading-normal" style="">Celebrate courage</p>
+<p class="text-white/60 text-xs leading-tight mt-0.5" style="">Small brave steps matter.</p>
+</div>
+</div>
+<!-- Principle 6 -->
+<div class="flex items-start gap-4 bg-white/[0.03] rounded-lg px-4 py-3 border border-white/[0.05]">
+<div class="text-white flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent-yellow shrink-0 size-9 shadow-lg shadow-primary/20 mt-0.5">
+<span class="material-symbols-outlined text-base" style="">groups</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-semibold leading-normal" style="">Move forward together</p>
+<p class="text-white/60 text-xs leading-tight mt-0.5" style="">No one struggles alone here.</p>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="px-6 py-6 shrink-0">
+<button class="w-full h-14 rounded-full bg-gradient-to-r from-primary to-accent-yellow text-white font-bold text-lg shadow-[0_4px_20px_rgba(244,37,140,0.4)] flex items-center justify-center gap-2 active:scale-[0.98] transition-all hover:brightness-110" style="">
+<span class="" style="">I'm Here for this</span>
+<span class="material-symbols-outlined text-xl" style="">arrow_forward</span>
+</button>
+<p class="text-center text-[9px] text-[#cb90ad]/50 mt-4 uppercase tracking-[0.2em] font-medium" style="">Safe-sharing protocol active</p>
+</div>
+</div>
+</div>
+<!-- Background Patterns -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none opacity-20 dark:opacity-40">
+<div class="absolute top-[-10%] right-[-10%] w-[350px] h-[350px] rounded-full bg-primary blur-[120px]"></div>
+<div class="absolute bottom-[-5%] left-[-5%] w-[300px] h-[300px] rounded-full bg-accent-yellow blur-[120px]"></div>
+</div>
+</body></html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Chapter 13: Panic is not Danger - PHOBIK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3713ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#1a1a1c",
+                        "charcoal": "#222224",
+                        "accent-pink": "#ff007a",
+                        "accent-yellow": "#fbd38d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .yellow-aura {
+            background: radial-gradient(circle at center, rgba(251, 211, 141, 0.15) 0%, rgba(26, 26, 28, 0) 70%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white selection:bg-accent-yellow/30">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden max-w-[430px] mx-auto bg-charcoal shadow-2xl">
+<header class="sticky top-0 z-50 flex items-center bg-charcoal/90 backdrop-blur-md p-4 pb-2 justify-between border-b border-white/5">
+<div class="text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-white/10 transition-colors cursor-pointer">
+<span class="material-symbols-outlined" style="">arrow_back_ios_new</span>
+</div>
+<h2 class="text-white text-sm font-semibold uppercase tracking-widest flex-1 text-center pr-10 text-white/70" style="">Chapter 13</h2>
+</header>
+<div class="sticky top-[57px] z-40 bg-charcoal/95 backdrop-blur-md border-b border-white/5 px-6 py-3">
+<div class="flex justify-between items-center mb-1.5">
+<span class="text-[10px] text-white/50 font-bold uppercase tracking-wider" style="">BOOK PROGRESS</span>
+<span class="text-xs text-white/80 font-semibold" style="">60%</span>
+</div>
+<div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-accent-yellow shadow-[0_0_8px_rgba(251,211,141,0.3)] transition-all duration-500" style="width: 60%;"></div>
+</div>
+</div>
+<main class="flex-1 overflow-y-auto pb-12 relative">
+<div class="absolute inset-0 pointer-events-none yellow-aura z-0"></div>
+<div class="relative z-10 px-6 py-8">
+<h1 class="text-white tracking-tight text-4xl font-extrabold leading-tight mb-8" style="">Chapter 13:<div class="" style="">Panic is not always Danger</div></h1>
+<div class="space-y-6 text-white/80 text-lg leading-relaxed font-medium">
+<p class="" style="">
+            When you're in the air and turbulence hits, your body might react as if it's in a life-or-death situation. But a core principle of overcoming flight anxiety is understanding this distinction:
+        </p>
+<div class="bg-accent-yellow/10 border-l-4 border-accent-yellow p-6 rounded-r-xl my-10">
+<h3 class="text-accent-yellow text-3xl font-black uppercase tracking-wide leading-snug" style="">Commitment ends panic</h3>
+</div>
+<p class="" style="">
+            Panic feeds on hesitation. It thrives in the space where you are deciding whether you should try to escape or fight. On a plane, escape isn't an option. Once you commit entirely to the fact that you are on this flight until it lands, the fuel for panic begins to dry up.
+        </p>
+<p class="" style="">
+            Acceptance is not defeat. It is the active, powerful choice to stop fighting the reality of your situation.
+        </p>
+</div>
+<!-- Navigation Controls matching Chapter 3 style -->
+<div class="mt-12 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 flex items-center justify-between font-display">
+<button class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors group" style="">
+<span class="material-symbols-outlined text-2xl group-active:scale-90 transition-transform" style="">chevron_left</span>
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Previous</span>
+</button>
+<button class="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all hover:scale-110 active:scale-95" style="">
+<span class="material-symbols-outlined text-2xl" style="">menu_book</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors group" style="">
+<span class="material-symbols-outlined text-2xl group-active:scale-90 transition-transform" style="">chevron_right</span>
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Next</span>
+</button>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-charcoal/95 backdrop-blur-lg border-t border-white/5 font-display z-50">
+<nav class="flex justify-around items-center px-2 pb-6 pt-2">
+<a class="flex flex-col items-center gap-1 p-2 text-white/40 hover:text-white transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-2xl" style="">home</span>
+<span class="text-[10px] font-medium" style="">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-accent-yellow transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-2xl fill-1" style="font-variation-settings: &quot;FILL&quot; 1;">menu_book</span>
+<span class="text-[10px] font-medium" style="">E-Book</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-white/40 hover:text-white transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-2xl" style="">checklist</span>
+<span class="text-[10px] font-medium" style="">Checklist</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-white/40 hover:text-white transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-2xl" style="">settings</span>
+<span class="text-[10px] font-medium" style="">Settings</span>
+</a>
+</nav>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 1: How Flying Works - PHOBIK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3713ec",
+                        "background-dark": "#1c1c1e",
+                        "accent-pink": "#ff007a",
+                        "accent-yellow": "#fbd38d",
+                        "off-white": "#f4f4f5"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Merriweather", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-dark font-serif text-off-white selection:bg-accent-pink/30">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden max-w-[430px] mx-auto bg-background-dark shadow-2xl pb-24">
+<header class="sticky top-0 z-50 flex flex-col bg-background-dark/90 backdrop-blur-md border-b border-white/5 font-display">
+<div class="flex items-center p-4 pb-3 justify-between">
+<div class="text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-white/10 transition-colors cursor-pointer">
+<span class="material-symbols-outlined" style="">arrow_back_ios_new</span>
+</div>
+<div class="flex-1 flex flex-col items-center pr-10">
+<span class="text-white/60 text-xs font-semibold uppercase tracking-wider mb-0.5" style="">Calm Above the Clouds</span>
+<h2 class="text-white text-sm font-bold leading-tight tracking-tight" style="">Chapter 1</h2>
+</div>
+</div>
+<!-- Progress Bar moved to top, just below header -->
+<div class="px-6 pb-4">
+<div class="flex justify-between items-center mb-1.5">
+<span class="text-xs text-white/50 font-medium" style="">Book Progress</span>
+<span class="text-xs text-white/80 font-semibold" style="">45%</span>
+</div>
+<div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-accent-pink to-accent-yellow rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto px-6 py-8 pb-12">
+<article class="prose prose-invert prose-p:leading-relaxed prose-p:text-off-white/80 prose-headings:text-off-white">
+<h1 class="text-3xl font-bold mb-8 leading-tight" style="">Chapter 1:<div>How Flying Works</div></h1>
+<p class="text-lg font-light leading-relaxed mb-8" style="">
+                    Understanding the mechanics of flight is one of the most powerful tools to ease flight anxiety. When you know why an airplane stays in the air, the sensations you feel become expected rather than frightening.
+                </p>
+<h2 class="text-2xl font-semibold mt-10 mb-4" style="">The Principle of Lift</h2>
+<p class="mb-6" style="">
+                    Airplanes do not stay up by magic; they rest on a solid bed of air. As the engines push the plane forward, air rushes over the wings. Because of the wing's special shape—curved on top and flatter on the bottom—the air moves faster over the top than underneath. 
+                </p>
+<p class="mb-6" style="">
+                    This difference in speed creates lower pressure above the wing and higher pressure below. The higher pressure pushes up, generating what we call <strong>lift</strong>. Once the plane reaches cruising speed, the air is as firm as a mattress supporting the aircraft.
+                </p>
+<h2 class="text-2xl font-semibold mt-10 mb-4" style="">Built-in Redundancy</h2>
+<p class="mb-6" style="">
+                    A common fear is: "What if something breaks?" Aviation engineering is built around a concept called <strong>redundancy</strong>. This means that for every critical system on an airplane, there is at least one backup, and often several.
+                </p>
+<p class="mb-6" style="">
+                    If an engine were to fail, a commercial jet is fully capable of flying and landing safely on the remaining engine(s). The electrical systems, hydraulics, and navigation computers all have multiple independent backups. The airplane is designed to handle almost any situation with safety as the absolute priority.
+                </p>
+<div class="h-8"></div>
+</article>
+<div class="mt-12 mb-8 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 flex items-center justify-between font-display">
+<button class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors group" style="">
+<span class="material-symbols-outlined text-2xl group-active:scale-90 transition-transform" style="">chevron_left</span>
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Previous</span>
+</button>
+<button class="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all hover:scale-110 active:scale-95" style="">
+<span class="material-symbols-outlined text-2xl" style="">menu_book</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors group" style="">
+<span class="material-symbols-outlined text-2xl group-active:scale-90 transition-transform" style="">chevron_right</span>
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Next</span>
+</button>
+</div></main>
+<footer class="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-background-dark/95 backdrop-blur-lg border-t border-white/5 font-display z-50">
+<nav class="flex justify-around items-center px-2 pb-6 pt-2">
+<a class="flex flex-col items-center gap-1 p-2 text-white/40 hover:text-white transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-2xl" style="">home</span>
+<span class="text-[10px] font-medium" style="">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-accent-yellow transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-2xl fill-1" style='font-variation-settings: "FILL" 1;'>menu_book</span>
+<span class="text-[10px] font-medium" style="">E-Book</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-white/40 hover:text-white transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-2xl" style="">checklist</span>
+<span class="text-[10px] font-medium" style="">Checklist</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-white/40 hover:text-white transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-2xl" style="">settings</span>
+<span class="text-[10px] font-medium" style="">Settings</span>
+</a>
+</nav>
+</footer>
+</div>
+</body></html>

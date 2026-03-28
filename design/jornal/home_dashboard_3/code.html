@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reflection: Expanded Journaling</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF4D94",
+                        "accent": "#FFD700",
+                        "deep-plum": "#1A0B1A",
+                        "card-plum": "#2D152D",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-gradient: linear-gradient(135deg, #FF4D94 0%, #FFD700 100%);
+            --glow-pink: 0 0 15px rgba(255, 77, 148, 0.4);
+            --glow-yellow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            background-color: #120812;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .ios-blur {
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+        }
+        .glow-pink-border {
+            box-shadow: 0 0 8px rgba(255, 77, 148, 0.2);
+            border: 1px solid rgba(255, 77, 148, 0.4);
+        }
+        .glow-yellow-border {
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+        }
+        .glow-pink-chip {
+            box-shadow: 0 0 12px rgba(255, 77, 148, 0.3);
+            border: 1px solid rgba(255, 77, 148, 0.5);
+            background: rgba(255, 77, 148, 0.15);
+        }
+        .glow-yellow-chip {
+            box-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
+            border: 1px solid rgba(255, 215, 0, 0.5);
+            background: rgba(255, 215, 0, 0.15);
+        }
+        .gradient-button {
+            background: var(--primary-gradient);
+            box-shadow: 0 4px 20px rgba(255, 77, 148, 0.4);
+        }
+        textarea::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+        textarea {
+            caret-color: #FF4D94;
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        .main-container {
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-deep-plum text-white">
+<div class="main-container max-w-md mx-auto relative">
+<header class="flex-none bg-[#120812]/80 ios-blur px-4 pt-12 pb-4 z-50">
+<div class="flex items-center justify-between">
+<button class="flex items-center text-white/70">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Focus on what matters</h1>
+<button class="text-accent font-bold text-sm">Drafts</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto px-6 pt-4 pb-32 flex flex-col">
+<div class="mb-4 flex-none">
+<details class="group">
+<summary class="flex items-center justify-between p-4 rounded-2xl bg-card-plum/40 glow-pink-border cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">favorite</span>
+<span class="font-semibold text-base">What are you feeling?</span>
+</div>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 grid grid-cols-2 gap-2 px-1">
+<button class="p-3 text-left rounded-xl bg-white/5 border border-white/10 text-xs font-medium hover:bg-primary/10 transition-colors">Pleasant</button>
+<button class="p-3 text-left rounded-xl bg-white/5 border border-white/10 text-xs font-medium hover:bg-primary/10 transition-colors">Connected</button>
+<button class="p-3 text-left rounded-xl bg-white/5 border border-white/10 text-xs font-medium hover:bg-primary/10 transition-colors">Neutral</button>
+<button class="p-3 text-left rounded-xl bg-white/5 border border-white/10 text-xs font-medium hover:bg-primary/10 transition-colors">Unpleasant</button>
+<button class="p-3 text-left rounded-xl bg-white/5 border border-white/10 text-xs font-medium hover:bg-primary/10 transition-colors">Anxious</button>
+<button class="p-3 text-left rounded-xl bg-white/5 border border-white/10 text-xs font-medium hover:bg-primary/10 transition-colors">Angry</button>
+</div>
+</details>
+</div>
+<div class="mb-6 flex-none">
+<details class="group">
+<summary class="flex items-center justify-between p-4 rounded-2xl bg-card-plum/40 glow-yellow-border cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent">auto_awesome</span>
+<span class="font-semibold text-base">What are you needing?</span>
+</div>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 grid grid-cols-2 gap-2 px-1">
+<button class="p-3 text-left rounded-xl bg-white/5 border border-white/10 text-xs font-medium hover:bg-accent/10 transition-colors">Connection</button>
+<button class="p-3 text-left rounded-xl bg-white/5 border border-white/10 text-xs font-medium hover:bg-accent/10 transition-colors">Safety</button>
+<button class="p-3 text-left rounded-xl bg-white/5 border border-white/10 text-xs font-medium hover:bg-accent/10 transition-colors">Autonomy</button>
+<button class="p-3 text-left rounded-xl bg-white/5 border border-white/10 text-xs font-medium hover:bg-accent/10 transition-colors">Meaning</button>
+</div>
+</details>
+</div>
+<div class="mb-6 flex-none">
+<p class="text-[10px] text-white/40 font-bold uppercase tracking-widest mb-3 px-1">Selected Tags</p>
+<div class="flex flex-wrap gap-2">
+<div class="px-4 py-1.5 rounded-full text-primary text-xs font-bold glow-pink-chip flex items-center gap-1">
+                        Anxious <span class="material-symbols-outlined text-xs">close</span>
+</div>
+<div class="px-4 py-1.5 rounded-full text-accent text-xs font-bold glow-yellow-chip flex items-center gap-1">
+                        Safety <span class="material-symbols-outlined text-xs">close</span>
+</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col mb-4">
+<div class="flex items-center justify-between mb-4 px-1 flex-none">
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest">Private Entry</p>
+<span class="text-[10px] text-white/30 font-medium">Auto-saving...</span>
+</div>
+<textarea class="flex-1 w-full bg-transparent border-none p-0 text-white placeholder-white/20 text-lg leading-relaxed focus:ring-0 resize-none font-light" placeholder="How is your body feeling right now?">I'm identifying a deep need for safety right now. My biometric data showed a spike when I was thinking about the upcoming presentation, and I'm realizing that my 'Anxious' feeling is a signal that I need more preparation or support. This expanded space allows me to dive deeper into the root of these sensations.</textarea>
+</div>
+</main>
+<div class="absolute bottom-0 left-0 right-0 p-6 pt-10 bg-gradient-to-t from-[#120812] via-[#120812] to-transparent z-50">
+<button class="w-full gradient-button py-4 rounded-2xl flex items-center justify-center gap-2 text-white font-bold text-lg mb-6">
+<span>Save Reflection</span>
+<span class="material-symbols-outlined">check_circle</span>
+</button>
+<div class="w-32 h-1 bg-white/20 rounded-full mx-auto"></div>
+</div>
+</div>
+
+</body></html>

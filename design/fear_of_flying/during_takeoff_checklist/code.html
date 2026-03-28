@@ -1,0 +1,158 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {},
+                    fontFamily: {
+                        "headline": ["Public Sans"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Public Sans', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #ec4899, #facc15);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black flex items-center justify-between px-6 py-4 w-full border-b border-gray-900">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-pink-500" data-icon="flight_takeoff" style="">flight_takeoff</span>
+<span class="text-2xl font-black italic bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent font-sans tracking-tight" style="">PHOBIK</span>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-gray-500 hover:opacity-80 transition-opacity cursor-pointer" data-icon="settings" style="">settings</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 min-h-screen flex flex-col">
+<!-- Header Section -->
+<div class="mb-10">
+<p class="text-pink-500 font-bold tracking-[0.2em] text-xs uppercase mb-2" style=""><br></p>
+<h1 class="text-4xl font-black tracking-tighter leading-none mb-4" style="">During Takeoff Checklist</h1>
+<div class="h-1 w-20 bg-gradient-to-r from-pink-500 to-yellow-400 rounded-full"></div>
+</div>
+<!-- Checklist Canvas (Bento-ish Layout) -->
+<div class="grid grid-cols-1 gap-4 mb-12">
+<!-- Item 1 -->
+<div class="glass-card p-6 rounded-xl flex items-center justify-between group active:scale-95 duration-150 transition-all border-l-4 border-l-pink-500">
+<div class="flex-1 pr-4">
+<p class="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1" style="">Sensation</p>
+<p class="text-lg font-semibold leading-snug" style="">Expect regular sensations (Noise, Vibration, Acceleration)</p>
+</div>
+<div class="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-pink-500 to-yellow-400 shadow-lg shadow-pink-500/20">
+<span class="material-symbols-outlined text-black font-bold" data-icon="check" style="font-variation-settings: &quot;FILL&quot; 0, &quot;wght&quot; 700;">check</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="glass-card p-6 rounded-xl flex items-center justify-between group active:scale-95 duration-150 transition-all">
+<div class="flex-1 pr-4">
+<p class="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1" style="">Breathwork</p>
+<p class="text-lg font-semibold leading-snug" style="">Breathing cue: Inhale through nose -&gt; long exhale through mouth</p>
+</div>
+<div class="w-12 h-12 rounded-full flex items-center justify-center border-2 border-gray-800 text-gray-700 group-hover:border-pink-500 group-hover:text-pink-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="circle" style="">circle</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="glass-card p-6 rounded-xl flex items-center justify-between group active:scale-95 duration-150 transition-all">
+<div class="flex-1 pr-4">
+<p class="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1" style="">Mindset</p>
+<p class="text-lg font-semibold leading-snug" style="">Affirmation: This is a sensation, that's all right.&nbsp; I am o.k.&nbsp; Allow these sensations to be here without the need to do anything different.&nbsp; You can hold a picture of your loved one, squeeze your partners hand, I am not alone.</p>
+</div>
+<div class="w-12 h-12 rounded-full flex items-center justify-center border-2 border-gray-800 text-gray-700 group-hover:border-pink-500 group-hover:text-pink-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="circle" style="">circle</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="glass-card p-6 rounded-xl flex items-center justify-between group active:scale-95 duration-150 transition-all">
+<div class="flex-1 pr-4">
+<p class="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1" style="">Embodiment</p>
+<p class="text-lg font-semibold leading-snug" style="">Let the body react: sensations rise and fall</p>
+</div>
+<div class="w-12 h-12 rounded-full flex items-center justify-center border-2 border-gray-800 text-gray-700 group-hover:border-pink-500 group-hover:text-pink-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="circle" style="">circle</span>
+</div>
+</div>
+</div>
+<!-- Visual Anchor / Decorative Element -->
+<div class="mt-auto relative overflow-hidden rounded-2xl h-32 bg-zinc-900 flex items-center p-6 border border-white/5">
+<div class="z-10">
+<h3 class="font-bold text-xl leading-tight" style="">Focus on your<br><span class="gradient-text" style="">Exhale</span></h3>
+<p class="text-xs text-gray-500 mt-1 uppercase tracking-tighter" style="">Current altitude: Increasing</p>
+</div>
+<div class="absolute right-[-20px] top-[-10px] opacity-20">
+<span class="material-symbols-outlined text-[120px]" data-icon="air" style="">air</span>
+</div>
+<!-- Abstract background graphic -->
+<div class="absolute inset-0 bg-gradient-to-tr from-pink-500/10 to-transparent"></div>
+</div>
+<!-- Primary Action -->
+<div class="mt-10">
+<button class="w-full py-5 bg-gradient-to-r from-pink-500 to-yellow-400 rounded-xl text-black font-black text-lg tracking-widest active:scale-[0.98] transition-transform shadow-xl shadow-pink-500/20" style="">
+                NEXT STEP
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-black/95 backdrop-blur-md border-t border-gray-800 shadow-2xl">
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="calendar_today" style="">calendar_today</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest" style="">Today</span>
+</div>
+<div class="flex flex-col items-center justify-center text-pink-500 bg-pink-500/10 rounded-xl px-3 py-1 translate-y-[-2px] transition-transform cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="fitness_center" style="">fitness_center</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest" style="">Practices</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="psychology" style="">psychology</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest" style="">Coach</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="group" style="">group</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest" style="">Community</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="analytics" style="">analytics</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest" style="">Insights</span>
+</div>
+</nav>
+</body></html>

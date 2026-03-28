@@ -1,0 +1,133 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,700;0,800;0,900;1,800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {},
+            fontFamily: {
+              "headline": ["Public Sans"],
+              "body": ["Public Sans"],
+              "label": ["Public Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-mesh {
+            background-color: #000000;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(250, 204, 21, 0.1) 0px, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black text-white font-body min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-6 py-4 w-full bg-black border-b border-gray-900">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-pink-500" data-icon="flight_takeoff" style="">flight_takeoff</span>
+<h1 class="text-2xl font-black italic bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent font-sans tracking-tight" style="">PHOBIK</h1>
+</div>
+<button class="text-gray-500 hover:opacity-80 transition-opacity active:scale-95 duration-150" style="">
+<span class="material-symbols-outlined" style="">more_vert</span>
+</button>
+</header>
+<main class="flex-grow pt-24 pb-32 px-6 bg-mesh">
+<!-- Header Section -->
+<div class="mb-10">
+<div class="inline-block px-3 py-1 rounded-full bg-pink-500/10 text-pink-500 text-[10px] font-bold uppercase tracking-widest mb-4" style=""></div>
+<h2 class="text-4xl font-black tracking-tighter leading-none mb-2" style="">At the Airport Checklist</h2>
+<div class="h-1 w-12 bg-gradient-to-r from-pink-500 to-yellow-400 rounded-full"></div>
+</div>
+<!-- Checklist Bento Grid -->
+<div class="grid grid-cols-1 gap-4">
+<!-- Item 1 -->
+<div class="group relative bg-white/5 border border-white/10 rounded-xl p-5 flex items-center justify-between hover:bg-white/10 transition-all active:scale-[0.98]">
+<div class="flex flex-col gap-1 pr-4">
+<span class="text-xs font-bold text-gray-500 uppercase tracking-widest" style="">Action</span>
+<p class="text-lg font-bold leading-tight" style="">Pause when entering the terminal</p>
+</div>
+<div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-pink-500/30 flex items-center justify-center bg-gradient-to-tr from-pink-500 to-yellow-400 text-black">
+<span class="material-symbols-outlined font-bold" style="font-variation-settings: &quot;FILL&quot; 1;">check</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group relative bg-white/5 border border-white/10 rounded-xl p-5 flex items-center justify-between hover:bg-white/10 transition-all active:scale-[0.98]">
+<div class="flex flex-col gap-1 pr-4">
+<span class="text-xs font-bold text-gray-500 uppercase tracking-widest" style="">Grounding</span>
+<p class="text-lg font-bold leading-tight" style="">Familiarize yourself with your environment.&nbsp; Look for your favorite colors, people that smile etc.</p>
+</div>
+<div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gray-700 flex items-center justify-center text-transparent hover:text-white transition-colors">
+<span class="material-symbols-outlined font-bold" style="">check</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group relative bg-white/5 border border-white/10 rounded-xl p-5 flex items-center justify-between hover:bg-white/10 transition-all active:scale-[0.98]">
+<div class="flex flex-col gap-1 pr-4">
+<span class="text-xs font-bold text-gray-500 uppercase tracking-widest" style="">Reframe</span>
+<p class="text-lg font-bold leading-tight" style="">Busy airport does not mean unsafe</p>
+</div>
+<div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gray-700 flex items-center justify-center text-transparent hover:text-white transition-colors">
+<span class="material-symbols-outlined font-bold" style="">check</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="group relative bg-white/5 border border-white/10 rounded-xl p-5 flex items-center justify-between hover:bg-white/10 transition-all active:scale-[0.98]">
+<div class="flex flex-col gap-1 pr-4">
+<span class="text-xs font-bold text-gray-500 uppercase tracking-widest" style="">Affirmation</span>
+<p class="text-lg font-bold leading-tight italic font-serif" style="">"I can move slowly even if the environment is fast"</p>
+</div>
+<div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-gray-700 flex items-center justify-center text-transparent hover:text-white transition-colors">
+<span class="material-symbols-outlined font-bold" style="">check</span>
+</div>
+</div>
+</div>
+<!-- Next Step Button -->
+<div class="mt-12 mb-8">
+<button class="w-full bg-gradient-to-r from-pink-500 to-yellow-400 py-5 rounded-xl text-black font-black text-xl tracking-tighter uppercase shadow-lg shadow-pink-500/20 active:scale-95 transition-transform" style="">
+                NEXT STEP
+            </button>
+<p class="text-center text-gray-500 text-xs mt-4 uppercase tracking-[0.2em]" style="">Ready for boarding phase</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-black/95 backdrop-blur-md border-t border-gray-800 shadow-2xl">
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#" style="">
+<span class="material-symbols-outlined" data-icon="calendar_today" style="">calendar_today</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1" style="">Today</span>
+</a>
+<a class="flex flex-col items-center justify-center text-pink-500 bg-pink-500/10 rounded-xl px-3 py-1 translate-y-[-2px] transition-transform" href="#" style="">
+<span class="material-symbols-outlined" data-icon="fitness_center" style="">fitness_center</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1" style="">Practices</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#" style="">
+<span class="material-symbols-outlined" data-icon="psychology" style="">psychology</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1" style="">Coach</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#" style="">
+<span class="material-symbols-outlined" data-icon="group" style="">group</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1" style="">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#" style="">
+<span class="material-symbols-outlined" data-icon="analytics" style="">analytics</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1" style="">Insights</span>
+</a>
+</nav>
+</body></html>

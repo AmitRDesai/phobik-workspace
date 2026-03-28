@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calm Above the Clouds - Introduction</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3713ec",
+                        "accent-pink": "#ff4d94",
+                        "accent-yellow": "#ffcc00",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0c0a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glow-gradient {
+            background: linear-gradient(135deg, #ff4d94 0%, #ffcc00 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #ff4d94 0%, #ffcc00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blur-orb {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 77, 148, 0.15) 0%, rgba(55, 19, 236, 0.05) 100%);
+            filter: blur(60px);
+            z-index: 0;
+            border-radius: 50%;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto overflow-hidden border-x border-slate-200 dark:border-slate-800 shadow-2xl">
+<!-- Background Accents -->
+<div class="blur-orb -top-20 -right-20"></div>
+<div class="blur-orb top-1/2 -left-40"></div>
+<!-- Top Navigation -->
+<nav class="relative z-10 flex items-center p-6 justify-between">
+<button class="text-slate-900 dark:text-slate-100 flex items-center justify-center p-2 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="px-3 py-1 rounded-full border border-slate-700/50 bg-slate-900/40 backdrop-blur-md">
+<span class="text-xs font-medium tracking-widest uppercase opacity-70">Introduction</span>
+</div>
+<button class="text-slate-900 dark:text-slate-100 flex items-center justify-center p-2">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</nav>
+<main class="relative z-10 flex-1 px-6 pb-32">
+<!-- Hero Image Section -->
+<div class="mt-4 @container">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent z-10"></div>
+<img alt="Aerial view above fluffy clouds at sunset" class="w-full h-full object-cover" data-alt="Soft sunset glow over white fluffy clouds from airplane window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL48GVBbRVPhdl9iijcRr-qWN7uxEC1EkQh51WJL4Wxn-SmO0n-cdqQUnsE49oMuO2AZc0WLsj7yqyaqnjimfTkrKpROfoSdzgpaCz2KuSDC1j-ruHAinWnHVRT0PAWYqyP-vgHVv3jt0nukyNi3orwHj3x1UpvtS8jhLtucwlE0Kn7iEqc5Uxc1qqtPjV4EK5ChU2yWTUkGloIKwR2Bi7RpudLMrpRRd81iymxE800FQzwvl59Q1Q4E32YR02bKbCK-co1hAgYaCD"/>
+<div class="absolute bottom-4 left-4 z-20">
+<span class="px-2 py-1 glow-gradient text-[10px] font-bold text-white rounded uppercase tracking-tighter">Phobik Series</span>
+</div>
+</div>
+</div>
+<!-- Title Section -->
+<div class="mt-8">
+<h1 class="text-slate-900 dark:text-white text-4xl font-bold leading-tight tracking-tight">
+                    A New Way to Understand and Work with the <span class="text-gradient">Fear of Flying</span>
+</h1>
+<div class="mt-4 h-1 w-12 glow-gradient rounded-full"></div>
+</div>
+<!-- Content Body -->
+<div class="mt-8 space-y-6">
+<h3 class="text-xl font-semibold text-slate-900 dark:text-slate-200">Welcome to Calm Above the Clouds</h3>
+<p class="font-serif text-lg leading-relaxed text-slate-700 dark:text-slate-300 italic">
+                    "This package is designed to help you navigate the skies with confidence. My personal journey through flight anxiety led to the creation of this two-part approach."
+                </p>
+<div class="space-y-4 pt-4">
+<!-- Component 1 -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+<div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-primary/20 text-primary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">1. Intellectual Reassurance</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Gaining a logical understanding of how aviation works to dispel common myths and technical fears.</p>
+</div>
+</div>
+<!-- Component 2 -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+<div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-accent-pink/20 text-accent-pink">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">2. Emotional Safety</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Nervous System Regulation via the Phobik app to manage the physical symptoms of anxiety in real-time.</p>
+</div>
+</div>
+</div>
+<div class="pt-6 pb-12">
+<p class="text-base leading-normal text-slate-600 dark:text-slate-400">
+                        By combining logic with somatic tools, we address both the mind and the body, ensuring you feel supported from takeoff to landing.
+                    </p>
+</div>
+</div>
+</main>
+<!-- Bottom Action Button -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto p-6 bg-gradient-to-t from-background-dark via-background-dark/90 to-transparent">
+<button class="w-full glow-gradient text-white font-bold py-4 rounded-xl shadow-[0_0_20px_rgba(255,77,148,0.3)] hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                Start Reading
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>

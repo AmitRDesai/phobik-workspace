@@ -1,0 +1,162 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "LY9aH",
+      "x": 0,
+      "y": 0,
+      "name": "App Icon",
+      "width": 1024,
+      "height": 1024,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 225,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#FF2D85",
+            "position": 0
+          },
+          {
+            "color": "#FF6B3D",
+            "position": 0.5
+          },
+          {
+            "color": "#FFD700",
+            "position": 1
+          }
+        ]
+      },
+      "layout": "vertical",
+      "padding": 60,
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "VxgEQ",
+          "name": "logoText",
+          "fill": "#FFFFFF",
+          "content": "Phobik",
+          "fontFamily": "Bricolage Grotesque",
+          "fontSize": 280,
+          "fontWeight": "800",
+          "letterSpacing": -6
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ECFqL",
+      "x": 1124,
+      "y": 0,
+      "name": "Splash Icon",
+      "width": 1024,
+      "height": 1024,
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "j2K65",
+          "name": "splashText",
+          "fill": "#FFFFFF",
+          "content": "Phobik",
+          "fontFamily": "Bricolage Grotesque",
+          "fontSize": 280,
+          "fontWeight": "800",
+          "letterSpacing": -6
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "5z8rz",
+      "x": 0,
+      "y": 1124,
+      "name": "Android Foreground",
+      "width": 1024,
+      "height": 1024,
+      "layout": "vertical",
+      "padding": 200,
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "sEy2Z",
+          "name": "fgText",
+          "fill": "#FFFFFF",
+          "content": "Phobik",
+          "fontFamily": "Bricolage Grotesque",
+          "fontSize": 200,
+          "fontWeight": "800",
+          "letterSpacing": -4
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ZtLKI",
+      "x": 1124,
+      "y": 1124,
+      "name": "Android Background",
+      "width": 1024,
+      "height": 1024,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 225,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#FF2D85",
+            "position": 0
+          },
+          {
+            "color": "#FF6B3D",
+            "position": 0.5
+          },
+          {
+            "color": "#FFD700",
+            "position": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "frame",
+      "id": "AYXBI",
+      "x": 2248,
+      "y": 0,
+      "name": "Android Monochrome",
+      "width": 1024,
+      "height": 1024,
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "lJBPE",
+          "name": "monoText",
+          "fill": "#000000",
+          "content": "Phobik",
+          "fontFamily": "Bricolage Grotesque",
+          "fontSize": 280,
+          "fontWeight": "800",
+          "letterSpacing": -6
+        }
+      ]
+    }
+  ]
+}

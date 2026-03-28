@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {},
+                    fontFamily: {
+                        "headline": ["Public Sans"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black border-b border-gray-900 flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-pink-500">flight_takeoff</span>
+<h1 class="text-2xl font-black italic bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent font-sans tracking-tight">PHOBIK</h1>
+</div>
+<button class="text-gray-500 hover:opacity-80 transition-opacity active:scale-95 duration-150">
+<span class="material-symbols-outlined">close</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-32 px-6 relative overflow-hidden">
+<!-- Background Visual: Descent Horizon -->
+<div class="absolute inset-0 z-0 opacity-30">
+<div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
+<img alt="Aerial view of runway lights at dusk" class="w-full h-full object-cover" data-alt="Aerial view of runway lights at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOYRgsrMh7VAE0PKoedxd6t0SzfvnVGTMOCzNvsJ2CYI6j_rlJ2sGIFaL2hew3HSkpRtcgJet7_Fbd7kCoxLge3lHX34sqDl013CwLXEGBFxrTF0y22QrTY_BnqpwgKu11WJXBFaLqDowQda3_QNIcfk4wf6HMmuqrtu1Ztum9VlbIncYxxrywTZ4ias0wQkeAs_n6cNtKw-2E7c7roXd-JEDXTGSzblt6Dvsi6-p_VnqC3OKn6tzNBOzeppfmsyg8NcdnCVf4t0OC"/>
+</div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<!-- Header Section -->
+<div class="mb-8">
+<p class="text-pink-500 font-bold tracking-widest text-xs uppercase mb-2">Current Phase</p>
+<h2 class="text-4xl font-extrabold text-white leading-tight">DURING LANDING</h2>
+<div class="h-1 w-20 bg-gradient-to-r from-pink-500 to-yellow-400 mt-4 rounded-full"></div><p class="text-gray-400 text-sm leading-relaxed mt-4 max-w-xl">As the plane begins its descent, pilots carefully follow a controlled approach using precise navigation and communication with air traffic control. Landing is a routine, well-practiced process, with pilots trained to adjust for weather and runway conditions. If anxiety rises, focus on deep breathing, grounding exercises, or visualizing a smooth landing to stay calm and confident.</p>
+</div>
+<!-- Checklist Bento/Glassmorphism Cards -->
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="group bg-gray-900/40 backdrop-blur-xl border border-gray-800 p-5 rounded-xl flex items-center justify-between transition-all hover:border-pink-500/50">
+<div class="flex items-start gap-4 pr-4">
+<span class="material-symbols-outlined text-yellow-400 mt-1">settings_input_component</span>
+<p class="text-gray-200 text-lg leading-snug">Expect normal changes in engine sound and flap movement.</p>
+</div>
+<div class="shrink-0">
+<input class="w-7 h-7 rounded border-gray-700 bg-black text-pink-500 focus:ring-pink-500 focus:ring-offset-black transition-all" type="checkbox"/>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group bg-gray-900/40 backdrop-blur-xl border border-gray-800 p-5 rounded-xl flex items-center justify-between transition-all hover:border-pink-500/50">
+<div class="flex items-start gap-4 pr-4">
+<span class="material-symbols-outlined text-yellow-400 mt-1">hearing</span>
+<p class="text-gray-200 text-lg leading-snug">Ears may feel pressure; try swallowing or yawning.</p>
+</div>
+<div class="shrink-0">
+<input class="w-7 h-7 rounded border-gray-700 bg-black text-pink-500 focus:ring-pink-500 focus:ring-offset-black transition-all" type="checkbox"/>
+</div>
+</div>
+<!-- Item 3: Affirmation -->
+<div class="group bg-gradient-to-br from-pink-500/10 to-yellow-400/5 backdrop-blur-xl border border-pink-500/30 p-6 rounded-xl flex items-center justify-between transition-all hover:border-pink-500">
+<div class="flex items-start gap-4 pr-4">
+<span class="material-symbols-outlined text-pink-500 mt-1" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<p class="text-white text-xl font-semibold italic">"I am arriving safely and grounded."</p>
+</div>
+<div class="shrink-0">
+<input class="w-7 h-7 rounded border-pink-500/50 bg-black text-pink-500 focus:ring-pink-500 focus:ring-offset-black transition-all" type="checkbox"/>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="group bg-gray-900/40 backdrop-blur-xl border border-gray-800 p-5 rounded-xl flex items-center justify-between transition-all hover:border-pink-500/50">
+<div class="flex items-start gap-4 pr-4">
+<span class="material-symbols-outlined text-yellow-400 mt-1">grid_view</span>
+<p class="text-gray-200 text-lg leading-snug">Notice the transition from air to solid ground.</p>
+</div>
+<div class="shrink-0">
+<input class="w-7 h-7 rounded border-gray-700 bg-black text-pink-500 focus:ring-pink-500 focus:ring-offset-black transition-all" type="checkbox"/>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="mt-12 mb-8">
+<button class="w-full py-5 bg-gradient-to-r from-pink-500 to-yellow-400 rounded-xl text-black font-black text-lg tracking-widest uppercase hover:opacity-90 active:scale-[0.98] transition-all shadow-lg shadow-pink-500/20">
+                    PRACTICE COMPLETED
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-black/95 backdrop-blur-md border-t border-gray-800 shadow-2xl">
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Today</span>
+</a>
+<a class="flex flex-col items-center justify-center text-pink-500 bg-pink-500/10 rounded-xl px-3 py-1 translate-y-[-2px] transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Practices</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Coach</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 hover:text-yellow-400 transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Insights</span>
+</a>
+</nav>
+</body></html>

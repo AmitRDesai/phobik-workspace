@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Specialized Packs Hub - PHOBIK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec135b",
+                        "accent-yellow": "#fbbf24",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#121212",
+                        "card-bg": "#1c1c1c"
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .gradient-border {
+            background: linear-gradient(#1c1c1c, #1c1c1c) padding-box,
+                        linear-gradient(to right, #ec135b, #fbbf24) border-box;
+            border: 2px solid transparent;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #ec135b, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-primary {
+            background: linear-gradient(to right, #ec135b, #fbbf24);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex flex-col">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">Specialized Packs</h1>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary/50 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile avatar close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxKsJZmpLLn3exV3WkTmUMZQ1PwLbO1_tBsIFY93pw08bPhhvfFqtD7ICQy7IWbTP7JV_EA53Z9Id5i06Bbi-bWkHrLii3dtHxjyR4DYmyvwldox8wfLXEIxjgm1rt3070_eczY5wNu91wlQ9IabyqWfsODEBEUo1hIfLAvBi7-pPJvbT2_j_h3E_aJ37LRB1-8FLZEuBk592miE5lDpu6lNa1uyJ8k-Dl_FxRPDwarL7vQuAl3ayT_zCIJlmVw41aO4qc5hGQCK3Q"/>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto px-4 pb-24">
+<div class="mt-4 mb-8">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium uppercase tracking-widest">Premium Journeys</p>
+<h2 class="text-3xl font-bold mt-1">Enhance Your Mind</h2>
+</div>
+<div class="space-y-6 max-w-md mx-auto">
+<!-- Featured Card: Fear of Flying -->
+<div class="gradient-border rounded-xl bg-card-bg overflow-hidden shadow-2xl">
+<div class="relative h-56 bg-gradient-to-br from-gray-800 to-black flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+<div class="relative z-10 flex flex-col items-center">
+<span class="material-symbols-outlined text-7xl text-white mb-2">cloud</span>
+<span class="material-symbols-outlined text-5xl text-primary absolute top-4 right-[-15px] rotate-12">flight</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-bold">Fear of Flying</h3>
+<span class="text-xs font-semibold py-1 px-3 rounded-full bg-primary/20 text-primary uppercase tracking-wider">Advanced</span>
+</div>
+<p class="text-gray-400 text-base mb-6 italic">Calm Above the Clouds</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-gray-500 text-xs font-medium uppercase tracking-tight">Transformation Goal:</span>
+<span class="text-gradient font-bold text-sm">Master the Skies</span>
+</div>
+<button class="w-full bg-gradient-primary text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">shopping_cart</span>
+                            Unlock Full Journey
+                        </button>
+<p class="text-[10px] text-center text-gray-500">Includes 12 guided sessions &amp; lifetime access</p>
+</div>
+</div>
+</div><!-- Fear of Missing Out Card -->
+<div class="rounded-xl bg-card-bg/50 border border-gray-800 overflow-hidden shadow-xl">
+<div class="relative h-56 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+<div class="relative z-10 flex flex-col items-center">
+<span class="material-symbols-outlined text-7xl text-gray-600 mb-2">notifications_off</span>
+<span class="material-symbols-outlined text-5xl text-gray-700 absolute top-4 right-[-15px] rotate-12">group</span>
+</div>
+</div>
+<div class="p-6 opacity-80">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-bold text-gray-300">Fear of Missing Out</h3>
+<span class="text-xs font-semibold py-1 px-3 rounded-full bg-gray-800 text-gray-400 uppercase tracking-wider">Coming Soon</span>
+</div>
+<p class="text-gray-500 text-base mb-6 italic">Be Present, Not Connected</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-gray-600 text-xs font-medium uppercase tracking-tight">Transformation Goal:</span>
+<span class="text-gray-400 font-bold text-sm">Mindful Presence</span>
+</div>
+<div class="w-full bg-gray-800 text-gray-500 font-bold py-4 rounded-xl flex items-center justify-center gap-2 cursor-not-allowed">
+<span class="material-symbols-outlined">lock</span>
+                Coming Soon
+            </div>
+<p class="text-[10px] text-center text-gray-600 italic">Join the waitlist for early access</p>
+</div>
+</div>
+</div>
+<!-- Fear of Intimacy Card -->
+<div class="rounded-xl bg-card-bg/50 border border-gray-800 overflow-hidden shadow-xl mt-6">
+<div class="relative h-56 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+<div class="relative z-10 flex flex-col items-center">
+<span class="material-symbols-outlined text-7xl text-gray-600 mb-2">favorite</span>
+<span class="material-symbols-outlined text-5xl text-gray-700 absolute top-4 right-[-15px] rotate-12">lock_open</span>
+</div>
+</div>
+<div class="p-6 opacity-80">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-bold text-gray-300">Fear of Intimacy</h3>
+<span class="text-xs font-semibold py-1 px-3 rounded-full bg-gray-800 text-gray-400 uppercase tracking-wider">Coming Soon</span>
+</div>
+<p class="text-gray-500 text-base mb-6 italic">Open Your Heart</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-gray-600 text-xs font-medium uppercase tracking-tight">Transformation Goal:</span>
+<span class="text-gray-400 font-bold text-sm">Deep Connection</span>
+</div>
+<div class="w-full bg-gray-800 text-gray-500 font-bold py-4 rounded-xl flex items-center justify-center gap-2 cursor-not-allowed">
+<span class="material-symbols-outlined">lock</span>
+                Coming Soon
+            </div>
+<p class="text-[10px] text-center text-gray-600 italic">Join the waitlist for early access</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-[#1c1c1c] border-t border-gray-200 dark:border-gray-800 px-6 py-3 flex items-center justify-between safe-area-inset-bottom">
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-[10px] font-bold">Practices</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="text-[10px] font-medium">Coach</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-medium">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-[10px] font-medium">Insights</span>
+</a>
+</nav>
+</body></html>
