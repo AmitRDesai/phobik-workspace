@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Empathy Master Badge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "accent-yellow": "#fbbf24",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .empathy-glow {
+            box-shadow: 0 0 60px 10px rgba(238, 43, 140, 0.4), 0 0 100px 20px rgba(251, 191, 36, 0.2);
+        }
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: white;
+            opacity: 0.3;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-dark font-display antialiased text-white selection:bg-primary/30">
+<div class="relative flex h-screen w-full flex-col bg-background-dark overflow-hidden max-w-[430px] mx-auto border-x border-white/5">
+<!-- Background Decor -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<div class="particle w-1 h-1 top-[10%] left-[20%]" style="box-shadow: 0 0 10px 2px #ee2b8c;"></div>
+<div class="particle w-2 h-2 top-[30%] right-[15%]" style="box-shadow: 0 0 12px 3px #fbbf24;"></div>
+<div class="particle w-1.5 h-1.5 bottom-[25%] left-[10%]" style="box-shadow: 0 0 8px 2px #ee2b8c;"></div>
+<div class="particle w-1 h-1 bottom-[40%] right-[30%]" style="box-shadow: 0 0 10px 1px #fbbf24;"></div>
+</div>
+<!-- Top Navigation -->
+<div class="flex items-center p-6 justify-between z-10">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+<span class="material-symbols-outlined text-white text-[20px]">close</span>
+</div>
+<h2 class="text-white/60 text-sm font-semibold leading-tight tracking-widest uppercase">Challenge Complete</h2>
+<div class="size-10"></div> <!-- Spacer -->
+</div>
+<div class="flex-1 flex flex-col items-center justify-center px-6 text-center z-10">
+<!-- Badge Section -->
+<div class="relative mb-12 group">
+<div class="absolute inset-0 bg-primary/20 blur-[80px] rounded-full"></div>
+<div class="relative w-64 h-64 rounded-full bg-gradient-to-br from-primary via-primary to-accent-yellow p-[2px] empathy-glow">
+<div class="w-full h-full rounded-full bg-[#11050a] flex items-center justify-center overflow-hidden">
+<!-- 3D Heart Visual Replacement -->
+<div class="relative flex items-center justify-center">
+<span class="material-symbols-outlined text-[120px] text-transparent bg-clip-text bg-gradient-to-tr from-primary to-accent-yellow fill-1" style="font-variation-settings: 'FILL' 1;">
+                                favorite
+                            </span>
+<div class="absolute inset-0 flex items-center justify-center opacity-40 blur-sm">
+<span class="material-symbols-outlined text-[130px] text-white">favorite</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Badge Shine -->
+<div class="absolute -top-4 -right-4 w-12 h-12 bg-accent-yellow/30 rounded-full blur-xl animate-pulse"></div>
+</div>
+<!-- Headline Section -->
+<h1 class="text-white tracking-tight text-4xl font-bold leading-tight mb-4">Empathy Master!</h1>
+<p class="text-white/70 text-lg font-normal leading-relaxed max-w-[320px]">
+                You've completed 7 days of growth. Your heart is more open, and your connections are stronger.
+            </p>
+<!-- Stats Grid -->
+<div class="w-full flex gap-4 mt-10 justify-center">
+<div class="flex flex-col items-center gap-2 rounded-2xl p-5 bg-white/5 border border-white/10 backdrop-blur-md w-full max-w-[180px]">
+<span class="material-symbols-outlined text-primary mb-1">calendar_today</span>
+<p class="text-white/50 text-[11px] font-bold uppercase tracking-widest">Sessions Done</p>
+<p class="text-white text-2xl font-bold leading-tight">7/7</p>
+</div>
+</div><div class="w-full flex flex-col gap-3 mt-8">
+<h3 class="text-white/40 text-[10px] font-bold uppercase tracking-[0.2em] text-center mb-1">Daily D.O.S.E. Reward</h3>
+<div class="flex gap-4">
+<div class="flex flex-1 items-center justify-center gap-3 rounded-2xl p-4 bg-white/5 border border-white/10 backdrop-blur-md">
+<div class="size-8 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white/50 text-[9px] font-bold uppercase tracking-wider">Oxytocin</p>
+<p class="text-white text-lg font-bold">+10</p>
+</div>
+</div>
+<div class="flex flex-1 items-center justify-center gap-3 rounded-2xl p-4 bg-white/5 border border-white/10 backdrop-blur-md">
+<div class="size-8 rounded-full bg-blue-500/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-400 text-xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white/50 text-[9px] font-bold uppercase tracking-wider">Serotonin</p>
+<p class="text-white text-lg font-bold">+5</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div class="p-6 pb-10 flex flex-col gap-3 z-10">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-5 rounded-full shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">share</span>
+                Share Achievement
+            </button>
+<button class="w-full bg-white/5 hover:bg-white/10 text-white/80 font-semibold py-5 rounded-full border border-white/10 transition-all active:scale-[0.98]">
+                Return to Home
+            </button>
+</div>
+<!-- Safe Area Indicator (Visual) -->
+<div class="h-1.5 w-32 bg-white/20 rounded-full mx-auto mb-2"></div>
+</div>
+</body></html>

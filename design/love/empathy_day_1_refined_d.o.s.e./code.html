@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "accent-pink": "#f472b6",
+                        "accent-yellow": "#fbbf24",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#000000",
+                        "card-dark": "#111111",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #f472b6, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f472b6 0%, #fbbf24 100%);
+        }
+        .radiant-gradient {
+            background: radial-gradient(circle at center, #fbbf24 0%, #f472b6 100%);
+        }
+        .energy-wave {
+            background: radial-gradient(circle at 70% 30%, rgba(244, 114, 182, 0.4) 0%, transparent 60%),
+                        radial-gradient(circle at 20% 80%, rgba(251, 191, 36, 0.3) 0%, transparent 50%),
+                        linear-gradient(45deg, #111 0%, #000 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .energy-wave::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-conic-gradient(from 0deg, transparent 0deg 20deg, rgba(244, 114, 182, 0.05) 25deg 30deg);
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+</head>
+<body class="bg-background-dark text-slate-100 min-h-screen flex flex-col">
+<!-- Header Navigation -->
+<header class="flex items-center bg-background-dark p-4 justify-between sticky top-0 z-10 border-b border-white/5">
+<div class="text-slate-100 flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">close</span>
+</div>
+<h2 class="text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display uppercase tracking-widest">Phobik</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-transparent text-slate-100">
+<span class="material-symbols-outlined">info</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-28">
+<!-- Progress Bar -->
+<div class="flex flex-col gap-2 p-4">
+<div class="flex justify-between items-end">
+<p class="text-slate-300 text-sm font-semibold font-display">7-Day Empathy Challenge</p>
+<p class="text-accent-pink text-xs font-bold font-display uppercase tracking-wider">Day 1 of 7</p>
+</div>
+<div class="h-1.5 w-full rounded-full bg-white/10 overflow-hidden">
+<div class="h-full gradient-bg" style="width: 14.28%;"></div>
+</div>
+</div>
+<!-- Hero Section (Redesigned with Energy Wave) -->
+<div class="@container px-4 py-2">
+<div class="relative overflow-hidden rounded-3xl min-h-[240px] flex flex-col justify-end p-8 energy-wave border border-white/10 shadow-2xl">
+<div class="relative z-10">
+<span class="inline-block px-3 py-1 rounded-full bg-white/5 backdrop-blur-md text-[10px] font-bold uppercase tracking-widest text-accent-yellow mb-3 border border-white/10">Perspective Empathy</span>
+<h1 class="text-white text-3xl font-bold leading-tight font-display drop-shadow-lg">Day 1: See Through New Eyes</h1>
+</div>
+</div>
+</div>
+<!-- Content Sections -->
+<div class="px-4 space-y-10 mt-8">
+<!-- Intention Section -->
+<section>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-accent-pink" style="font-variation-settings: 'FILL' 1">target</span>
+<h2 class="text-white text-lg font-bold font-display tracking-tight">Intention</h2>
+</div>
+<div class="bg-card-dark p-6 rounded-2xl border border-white/5 shadow-inner">
+<p class="text-xl italic font-medium text-slate-200 leading-relaxed">"I can understand without needing to agree."</p>
+</div>
+</section>
+<!-- Challenge Section -->
+<section>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-accent-yellow" style="font-variation-settings: 'FILL' 1">bolt</span>
+<h2 class="text-white text-lg font-bold font-display tracking-tight">Today's Challenge</h2>
+</div>
+<div class="space-y-6">
+<p class="text-slate-400 leading-relaxed text-base">
+                        Think of someone who triggered frustration or annoyance in you today. Pause and ask yourself: 
+                        <span class="text-white font-semibold italic">"What might they be worried about or trying to protect?"</span>
+</p>
+<div class="flex flex-col gap-3">
+<label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">Write one sentence from their point of view:</label>
+<textarea class="w-full bg-card-dark border border-white/10 rounded-2xl p-4 text-slate-100 focus:border-accent-pink focus:ring-0 transition-all placeholder:text-slate-600 resize-none shadow-sm" placeholder="Example: 'I am acting defensively because I'm afraid of losing my job...'" rows="3"></textarea>
+</div>
+</div>
+</section>
+<!-- Completion Button (Redesigned with Radiant Gradient) -->
+<section class="space-y-3">
+<div class="flex items-center justify-between px-1">
+<h4 class="text-slate-500 text-[11px] font-bold uppercase tracking-wider">Daily D.O.S.E. Reward</h4>
+<span class="text-[10px] font-black text-accent-yellow">EARNED ON COMPLETION</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-3 group transition-colors hover:bg-white/10">
+<div class="w-10 h-10 rounded-full bg-accent-pink/20 flex items-center justify-center text-accent-pink">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div>
+<p class="text-white text-sm font-black">+10</p>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-tight">Oxytocin</p>
+</div>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-3 group transition-colors hover:bg-white/10">
+<div class="w-10 h-10 rounded-full bg-accent-yellow/20 flex items-center justify-center text-accent-yellow">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+</div>
+<div>
+<p class="text-white text-sm font-black">+5</p>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-tight">Serotonin</p>
+</div>
+</div>
+</div>
+</section><section class="pt-4 pb-4">
+<button class="w-full radiant-gradient hover:brightness-110 text-white font-bold py-5 rounded-2xl shadow-[0_10px_40px_-10px_rgba(244,114,182,0.4)] transition-all flex items-center justify-center gap-3 active:scale-[0.97]">
+<span class="material-symbols-outlined font-bold">check_circle</span>
+<span class="tracking-wide uppercase text-sm">Complete Day 1</span>
+</button>
+</section>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Updated) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-black/90 backdrop-blur-2xl border-t border-white/5 px-2 pb-8 pt-3 flex justify-around items-end z-20">
+<a class="flex flex-col items-center gap-1 flex-1 py-1 text-accent-pink" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">calendar_today</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter font-display">Today</span>
+</a>
+<a class="flex flex-col items-center gap-1 flex-1 py-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">directions_bike</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter font-display">Practices</span>
+</a>
+<a class="flex flex-col items-center gap-1 flex-1 py-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter font-display">Coach</span>
+</a>
+<a class="flex flex-col items-center gap-1 flex-1 py-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter font-display">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 flex-1 py-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-[9px] font-bold uppercase tracking-tighter font-display">Insights</span>
+</a>
+</nav>
+</body></html>

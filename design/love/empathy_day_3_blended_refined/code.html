@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHOBIK - 7-Day Empathy Challenge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#000000",
+                        "accent-pink": "#ff63b9",
+                        "accent-yellow": "#facc15",
+                        "lavender": "#E6E6FA",
+                        "gold": "#FFD700"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .glow-border {
+            position: relative;
+        }
+        .glow-border::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(45deg, #E6E6FA, #FFD700);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto border-x border-white/5">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
+<div class="flex items-center p-4 justify-between">
+<button class="text-slate-100 hover:bg-white/10 p-2 rounded-full transition-colors" style="">
+<span class="material-symbols-outlined" style="">arrow_back</span>
+</button>
+<h2 class="text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center" style="">Day 3: Pause Before You Reply</h2>
+<div class="w-10"></div>
+</div>
+<div class="flex flex-col gap-2 px-4 pb-4">
+<div class="flex justify-between items-center">
+<p class="text-accent-pink text-[10px] font-black uppercase tracking-[0.2em]" style="">Empathy Challenge</p>
+<p class="text-slate-500 text-[10px] font-bold" style="">3 of 7 days completed</p>
+</div>
+<div class="h-1 w-full rounded-full bg-white/5 overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-accent-pink to-accent-yellow transition-all duration-500" style="width: 43%;"></div>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<div class="p-4 space-y-6">
+<!-- Pulse Energy Visual Hero -->
+<div class="relative aspect-[16/9] w-full overflow-hidden rounded-2xl group">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+<!-- Radial Radiant Accents -->
+<div class="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-lavender/30 via-transparent to-transparent"></div>
+<!-- Energy Visual Replacement -->
+<img alt="Pulse energy visual" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuEkYrgwrzAA11kEIYUZ7UOwV7-pyHeUry7n6egT5FMZee6nJCUIL1q4jbcbm5YKOoa-PSLJcC9Fa8GWh83iQb028G6VMP_4ts9K0aC5Ndiu4jc4RAKmQZrw-Gq5VYz3nHMNqkLbyopKQ_lA7oBVeRH_B1AyckoErjOTHoi6Z1vo7dZ3rdh7YW8kBqpfP4khyrSUUYAMY9m_OqwMZOBo9b_fcYVQh6UYpBDNYc7EzHQYEB1BYpwpAwbirt8Vz9iaGcaNzWFkTlsdbm" style=""/>
+<div class="absolute inset-0 bg-gradient-to-br from-lavender/10 to-gold/10 mix-blend-overlay"></div>
+<div class="absolute bottom-0 left-0 p-6 z-20">
+<p class="text-white text-2xl font-bold leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]" style="">Pause • Sense • Choose</p>
+<div class="flex items-center gap-2 mt-1">
+<div class="h-1 w-8 bg-gold rounded-full"></div>
+<p class="text-gold text-[10px] font-black uppercase tracking-widest" style="">DAILY INTENTION</p>
+</div>
+</div>
+</div>
+<!-- Premium Card Layout -->
+<section class="glow-border bg-[#0a0a0a] rounded-2xl p-6 border border-white/5 shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-lavender/5 blur-3xl -mr-16 -mt-16 rounded-full"></div>
+<div class="flex items-center gap-3 mb-5">
+<div class="w-10 h-10 rounded-full bg-lavender/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-lavender text-xl" style="">bolt</span>
+</div>
+<h3 class="text-xl font-bold tracking-tight" style="">The Challenge</h3>
+</div>
+<p class="text-slate-400 leading-relaxed mb-6 font-medium" style="">
+                    Before responding to a message or comment, consciously interrupt your immediate reaction:
+                </p>
+<ul class="space-y-4">
+<li class="flex gap-4 text-slate-300 items-start" style="">
+<span class="material-symbols-outlined text-gold mt-0.5" style='font-variation-settings: "FILL" 1;'>chat_bubble</span>
+<span class="text-sm font-medium" style="">What might they be feeling?</span>
+</li>
+<li class="flex gap-4 text-slate-300 items-start" style="">
+<span class="material-symbols-outlined text-accent-pink mt-0.5" style='font-variation-settings: "FILL" 1;'>favorite</span>
+<span class="text-sm font-medium" style="">What am I feeling?</span>
+</li>
+<li class="flex gap-4 text-slate-300 items-start" style="">
+<span class="material-symbols-outlined text-lavender mt-0.5" style="">air</span>
+<span class="text-sm font-medium" style="">Take one grounding breath, then respond with awareness.</span>
+</li>
+</ul>
+</section>
+<!-- Reflection -->
+<section class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-lavender" style="">edit_note</span>
+<h3 class="text-lg font-bold" style="">Reflect</h3>
+</div>
+<div class="space-y-3">
+<label class="text-slate-500 text-[11px] font-bold uppercase tracking-wider px-1" style="">How did empathy change my tone or response?</label>
+<textarea class="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-slate-100 focus:ring-1 focus:ring-lavender/50 focus:border-lavender outline-none transition-all placeholder:text-slate-700 min-h-[140px] text-sm leading-relaxed" placeholder="Share your experience..."></textarea>
+</div>
+</section>
+<!-- Daily D.O.S.E. Rewards -->
+<section class="space-y-3">
+<div class="flex items-center justify-between px-1">
+<h4 class="text-slate-500 text-[11px] font-bold uppercase tracking-wider">Daily D.O.S.E. Reward</h4>
+<span class="text-[10px] font-black text-gold">EARNED ON COMPLETION</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-3 group transition-colors hover:bg-white/10">
+<div class="w-10 h-10 rounded-full bg-accent-pink/20 flex items-center justify-center text-accent-pink">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div>
+<p class="text-white text-sm font-black">+10</p>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-tight">Oxytocin</p>
+</div>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-3 group transition-colors hover:bg-white/10">
+<div class="w-10 h-10 rounded-full bg-accent-yellow/20 flex items-center justify-center text-accent-yellow">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+</div>
+<div>
+<p class="text-white text-sm font-black">+5</p>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-tight">Serotonin</p>
+</div>
+</div>
+</div>
+</section><div class="pt-4 pb-12">
+<button class="w-full py-4.5 px-6 rounded-full bg-gradient-to-r from-accent-pink to-accent-yellow text-black font-black text-sm uppercase tracking-widest shadow-xl shadow-accent-pink/10 hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2 group h-14" style="">
+<span class="" style="">Complete Day 3</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1" style="">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Standardized Navigation -->
+<nav class="sticky bottom-0 bg-black/95 backdrop-blur-xl border-t border-white/5 px-4 pt-3 pb-8">
+<div class="flex items-center justify-between max-w-sm mx-auto">
+<a class="flex flex-col items-center gap-1 group text-accent-pink" href="#" style="">
+<span class="material-symbols-outlined text-[26px]" style='font-variation-settings: "FILL" 1;'>calendar_today</span>
+<span class="text-[10px] font-black uppercase tracking-wider" style="">Today</span>
+</a>
+<a class="flex flex-col items-center gap-1 group text-slate-600 hover:text-lavender transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[26px]" style="">exercise</span>
+<span class="text-[10px] font-bold uppercase tracking-wider" style="">Practices</span>
+</a>
+<a class="flex flex-col items-center gap-1 group text-slate-600 hover:text-lavender transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[26px]" style="">chat_bubble</span>
+<span class="text-[10px] font-bold uppercase tracking-wider" style="">Coach</span>
+</a>
+<a class="flex flex-col items-center gap-1 group text-slate-600 hover:text-lavender transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[26px]" style="">groups</span>
+<span class="text-[10px] font-bold uppercase tracking-wider" style="">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 group text-slate-600 hover:text-lavender transition-colors" href="#" style="">
+<span class="material-symbols-outlined text-[26px]" style="">monitoring</span>
+<span class="text-[10px] font-bold uppercase tracking-wider" style="">Insights</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

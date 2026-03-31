@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phobik 7-Day Empathy Challenge - Day 5</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "accent-pink": "#f472b6",
+                        "accent-yellow": "#fbbf24",
+                        "background-light": "#000000",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .gradient-text {
+            background: linear-gradient(to right, #f472b6, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f472b6 0%, #fbbf24 100%);
+        }
+        .card-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .ripple-wave {
+            background: radial-gradient(circle at center, rgba(251, 191, 36, 0.15) 0%, rgba(244, 114, 182, 0.05) 50%, transparent 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .ripple-wave::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-radial-gradient(circle, transparent 0, transparent 20px, rgba(251, 191, 36, 0.2) 21px, transparent 22px);
+            transform: translate(-50%, -50%);
+            animation: ripple 8s linear infinite;
+        }
+        @keyframes ripple {
+            from { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+            50% { opacity: 1; }
+            to { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+        }
+        .radiant-button {
+            background: linear-gradient(135deg, #f472b6 0%, #fbbf24 100%);
+            box-shadow: 0 0 20px rgba(244, 114, 182, 0.4), 0 0 40px rgba(251, 191, 36, 0.2);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-100 min-h-screen flex flex-col">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl bg-black">
+<!-- Top Progress Bar Container -->
+<div class="flex flex-col gap-2 p-4 pt-6">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-slate-400 text-xs font-semibold uppercase tracking-widest" style="">7-Day Empathy Challenge</p>
+<p class="text-accent-yellow font-bold text-sm" style="">Day 5 of 7</p>
+</div>
+<div class="rounded-full bg-slate-900 h-1.5 overflow-hidden">
+<div class="h-full gradient-bg" style="width: 71.4%;"></div>
+</div>
+</div>
+<!-- Header -->
+<div class="flex items-center p-4 justify-between">
+<button class="text-slate-100 flex size-10 items-center justify-center rounded-full hover:bg-white/10 transition-colors" style="">
+<span class="material-symbols-outlined" style="">arrow_back</span>
+</button>
+<h2 class="text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10" style="">Day 5: Kindness in Motion</h2>
+</div>
+<!-- Hero Section -->
+<div class="px-6 py-6 text-center">
+<h3 class="gradient-text tracking-tight text-3xl font-extrabold leading-tight mb-2" style="">Empathy grows through small gestures.</h3>
+<p class="text-slate-500 text-sm font-medium" style="">DAILY INTENTION</p>
+</div>
+<!-- Challenge Card -->
+<div class="p-4">
+<div class="flex flex-col items-stretch justify-start rounded-2xl shadow-lg card-glass overflow-hidden border border-white/5">
+<!-- Abstract Ripple Hero -->
+<div class="w-full aspect-video ripple-wave flex items-center justify-center bg-black/40">
+<div class="relative">
+<span class="material-symbols-outlined text-6xl gradient-text opacity-80" style='font-variation-settings: "FILL" 1;'>waves</span>
+<div class="absolute inset-0 blur-xl gradient-bg opacity-20 scale-150 rounded-full"></div>
+</div>
+</div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-3 p-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent-pink" style="">volunteer_activism</span>
+<p class="text-slate-100 text-lg font-bold tracking-tight" style="">Today's Challenge</p>
+</div>
+<p class="text-slate-300 text-base leading-relaxed" style="">
+                        Do one simple act of care — text appreciation, listen fully, smile first, or hold space for someone who needs it.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Reflection Section -->
+<div class="p-4 flex flex-col gap-4">
+<div class="flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-accent-yellow text-xl" style="">psychology_alt</span>
+<p class="text-slate-200 text-sm font-semibold tracking-wide uppercase" style="">Reflection</p>
+</div>
+<div class="flex flex-col gap-4 bg-white/5 p-5 rounded-2xl border border-white/5">
+<p class="text-slate-300 text-sm font-medium leading-snug" style="">How did that act shift my own energy or outlook?</p>
+<textarea class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-slate-100 text-sm placeholder:text-slate-600 focus:ring-1 focus:ring-accent-pink/50 focus:border-accent-pink/50 outline-none transition-all resize-none h-28" placeholder="Write your thoughts here..."></textarea>
+</div>
+</div>
+<!-- Action Button -->
+<!-- Daily D.O.S.E. Rewards -->
+<section class="space-y-3 px-4 py-2">
+<div class="flex items-center justify-between px-1">
+<h4 class="text-slate-500 text-[11px] font-bold uppercase tracking-wider">Daily D.O.S.E. Reward</h4>
+<span class="text-[10px] font-black text-accent-yellow">EARNED ON COMPLETION</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-3 group transition-colors hover:bg-white/10">
+<div class="w-10 h-10 rounded-full bg-accent-pink/20 flex items-center justify-center text-accent-pink">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div>
+<p class="text-white text-sm font-black">+10</p>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-tight">Oxytocin</p>
+</div>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-3 group transition-colors hover:bg-white/10">
+<div class="w-10 h-10 rounded-full bg-accent-yellow/20 flex items-center justify-center text-accent-yellow">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+</div>
+<div>
+<p class="text-white text-sm font-black">+5</p>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-tight">Serotonin</p>
+</div>
+</div>
+</div>
+</section><div class="p-6 mt-auto">
+<button class="w-full radiant-button text-black font-extrabold py-4 rounded-2xl transition-all flex items-center justify-center gap-3 active:scale-[0.97] hover:brightness-110" style="">
+                Complete Day 5
+                <span class="material-symbols-outlined font-bold" style="">check_circle</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="flex gap-2 border-t border-white/5 bg-black/80 backdrop-blur-xl px-4 pb-8 pt-3 sticky bottom-0">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-accent-pink" href="#" style="">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>calendar_today</span>
+</div>
+<p class="text-[10px] font-bold leading-normal tracking-wide" style="">Today</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500" href="#" style="">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="">exercise</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide" style="">Practices</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500" href="#" style="">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="">chat_bubble</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide" style="">Coach</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500" href="#" style="">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="">group</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide" style="">Community</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500" href="#" style="">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="">query_stats</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide" style="">Insights</p>
+</a>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "accent-pink": "#ff6b9d",
+                        "accent-yellow": "#fee440",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glowing-border {
+            position: relative;
+            background: #1c271f;
+            border-radius: 0.75rem;
+        }
+        .glowing-border::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #ff6b9d, #fee440);
+            border-radius: 0.85rem;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        .desaturated {
+            filter: grayscale(1) opacity(0.4);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-white min-h-screen">
+<div class="max-w-md mx-auto min-h-screen flex flex-col bg-background-light dark:bg-background-dark">
+<!-- TopAppBar -->
+<div class="flex items-center p-4 pt-6 justify-between sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-20">
+<div class="text-white flex size-10 shrink-0 items-center justify-center cursor-pointer" data-icon="arrow_back_ios">
+<span class="material-symbols-outlined text-white" style="">arrow_back_ios</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10" style="">Empathy Challenge</h2>
+</div>
+<!-- Progress Header -->
+<div class="flex flex-col gap-3 p-4">
+<div class="flex gap-6 justify-between items-end">
+<p class="text-white text-base font-medium leading-normal" style="">Overall Progress</p>
+<p class="text-primary text-sm font-bold leading-normal" style="">0/7 Days</p>
+</div>
+<div class="rounded-full bg-white/10 h-2 overflow-hidden">
+<div class="h-2 rounded-full bg-gradient-to-r from-accent-pink to-accent-yellow" style="width: 5%;"></div>
+</div>
+</div>
+<!-- Timeline / Challenge Content -->
+<div class="flex flex-col px-4 py-2 space-y-2">
+<!-- Day 1: Active Card -->
+<div class="grid grid-cols-[40px_1fr] gap-x-4">
+<div class="flex flex-col items-center">
+<div class="size-10 rounded-full bg-gradient-to-br from-accent-pink to-accent-yellow flex items-center justify-center shadow-lg shadow-accent-pink/20">
+<span class="text-background-dark font-bold text-sm" style="">1</span>
+</div>
+<div class="w-[2px] bg-gradient-to-b from-accent-yellow to-white/10 h-full min-h-[100px]"></div>
+</div>
+<div class="pb-8">
+<div class="glowing-border p-4 shadow-2xl">
+<div class="w-full h-32 bg-center bg-no-repeat bg-cover rounded-lg mb-4" data-alt="Calm abstract pattern with soft pink and yellow gradients" style="background-image: linear-gradient(135deg, #ff6b9d 0%, #fee440 100%);">
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-white text-xl font-bold tracking-tight" style="">Day 1: See Through New Eyes</h3>
+<p class="text-gray-300 text-sm font-light leading-relaxed mb-4" style="">
+                                Think of someone who triggered frustration today.&nbsp; Pause and ask, "What might they be worried about or trying to protect?"</p>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-primary text-background-dark text-base font-bold transition-transform active:scale-95 shadow-lg shadow-primary/20" style="">
+<span class="" style="">Start Day 1</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Day 2: Desaturated -->
+<div class="grid grid-cols-[40px_1fr] gap-x-4 desaturated">
+<div class="flex flex-col items-center">
+<div class="size-10 rounded-full border-2 border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg" style="">lock</span>
+</div>
+<div class="w-[2px] bg-white/10 h-full min-h-[60px]"></div>
+</div>
+<div class="flex flex-col py-2">
+<p class="text-white text-lg font-semibold" style="">Day 2: Perspective Taking</p>
+<p class="text-gray-400 text-sm" style="">Unlock tomorrow</p>
+</div>
+</div>
+<!-- Day 3: Desaturated -->
+<div class="grid grid-cols-[40px_1fr] gap-x-4 desaturated">
+<div class="flex flex-col items-center">
+<div class="size-10 rounded-full border-2 border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg" style="">lock</span>
+</div>
+<div class="w-[2px] bg-white/10 h-full min-h-[60px]"></div>
+</div>
+<div class="flex flex-col py-2">
+<p class="text-white text-lg font-semibold" style="">Day 3: Emotional Validation</p>
+<p class="text-gray-400 text-sm" style="">Locked</p>
+</div>
+</div>
+<!-- Day 4: Desaturated -->
+<div class="grid grid-cols-[40px_1fr] gap-x-4 desaturated">
+<div class="flex flex-col items-center">
+<div class="size-10 rounded-full border-2 border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg" style="">lock</span>
+</div>
+<div class="w-[2px] bg-white/10 h-full min-h-[60px]"></div>
+</div>
+<div class="flex flex-col py-2">
+<p class="text-white text-lg font-semibold" style="">Day 4: Self-Compassion</p>
+<p class="text-gray-400 text-sm" style="">Locked</p>
+</div>
+</div>
+<!-- Day 5: Desaturated -->
+<div class="grid grid-cols-[40px_1fr] gap-x-4 desaturated">
+<div class="flex flex-col items-center">
+<div class="size-10 rounded-full border-2 border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg" style="">lock</span>
+</div>
+<div class="w-[2px] bg-white/10 h-full min-h-[60px]"></div>
+</div>
+<div class="flex flex-col py-2">
+<p class="text-white text-lg font-semibold" style="">Day 5: Non-Verbal Cues</p>
+<p class="text-gray-400 text-sm" style="">Locked</p>
+</div>
+</div>
+<!-- Day 6: Desaturated -->
+<div class="grid grid-cols-[40px_1fr] gap-x-4 desaturated">
+<div class="flex flex-col items-center">
+<div class="size-10 rounded-full border-2 border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg" style="">lock</span>
+</div>
+<div class="w-[2px] bg-white/10 h-full min-h-[60px]"></div>
+</div>
+<div class="flex flex-col py-2">
+<p class="text-white text-lg font-semibold" style="">Day 6: Genuine Curiosity</p>
+<p class="text-gray-400 text-sm" style="">Locked</p>
+</div>
+</div>
+<!-- Day 7: Desaturated -->
+<div class="grid grid-cols-[40px_1fr] gap-x-4 desaturated">
+<div class="flex flex-col items-center">
+<div class="size-10 rounded-full border-2 border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg" style="">stars</span>
+</div>
+</div>
+<div class="flex flex-col py-2 pb-12">
+<p class="text-white text-lg font-semibold" style="">Day 7: Summary &amp; Reflection</p>
+<p class="text-gray-400 text-sm" style="">Locked</p>
+</div>
+</div>
+</div>
+<!-- iOS Home Indicator Spacing -->
+<div class="h-8 bg-background-light dark:bg-background-dark"></div>
+</div>
+</body></html>

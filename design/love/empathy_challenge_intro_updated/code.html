@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Empathy Challenge Intro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b5b",
+                        "accent-yellow": "#f5af19",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .aura-glow {
+            background: radial-gradient(circle at top, rgba(238, 43, 91, 0.4) 0%, rgba(245, 175, 25, 0.2) 35%, transparent 70%);
+        }
+        .gradient-btn {
+            background: linear-gradient(90deg, #ee2b5b 0%, #f5af19 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #ee2b5b 0%, #f5af19 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-x-hidden">
+<!-- Top AppBar -->
+<div class="relative flex h-auto w-full flex-col bg-background-light dark:bg-background-dark">
+<div class="flex items-center px-4 py-4 justify-between">
+<div class="text-white flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">close</span>
+</div>
+<h2 class="text-white text-base font-bold tracking-widest flex-1 text-center pr-10">PHOBIK</h2>
+</div>
+</div>
+<!-- Aura Silhouette Section -->
+<div class="relative w-full overflow-hidden h-40">
+<div class="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[150%] h-[200px] aura-glow rounded-full blur-3xl"></div>
+</div>
+<!-- Headline Section -->
+<div class="px-6 text-center -mt-10 relative z-10">
+<h1 class="text-white tracking-tight text-[36px] font-bold leading-tight pb-3">7-Day Empathy Challenge</h1>
+<p class="text-gray-400 text-lg font-normal leading-relaxed max-w-xs mx-auto">A week to strengthen awareness, connection, and compassion. Empathy isn't one thing - it's a skill of the mind, heart and action. Each day, you'll explore one layer: Perspective(Cognitive), Feeling (Emotional), and Compassion (Action).</p>
+</div>
+<!-- Benefit Points Section -->
+<div class="mt-12 px-6 flex flex-col gap-4 max-w-md mx-auto">
+<!-- Benefit 1 -->
+<div class="flex items-center gap-4 bg-white/5 border border-white/10 p-4 rounded-xl">
+<div class="text-white flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12">
+<span class="material-symbols-outlined text-primary">visibility</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-base font-semibold">Understand Others</p>
+<p class="text-gray-400 text-sm">Gain insight into different perspectives</p>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="flex items-center gap-4 bg-white/5 border border-white/10 p-4 rounded-xl">
+<div class="text-white flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-base font-semibold">Deepen Bonds</p>
+<p class="text-gray-400 text-sm">Build stronger emotional bridges</p>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="flex items-center gap-4 bg-white/5 border border-white/10 p-4 rounded-xl">
+<div class="text-white flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12">
+<span class="material-symbols-outlined text-primary">self_care</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-base font-semibold">Self-Compassion</p>
+<p class="text-gray-400 text-sm">Learning to be kind to yourself</p>
+</div>
+</div>
+</div>
+<!-- CTA Button Section -->
+<div class="mt-12 px-6 pb-32">
+<button class="w-full h-16 rounded-xl gradient-btn text-white text-lg font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+            Join Challenge
+        </button>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-[#1a1a1a]/80 backdrop-blur-md border-t border-white/5 px-6 pb-8 pt-3 flex justify-between items-center z-50">
+<div class="flex flex-col items-center gap-1 group cursor-pointer">
+<span class="material-symbols-outlined text-gray-500 group-hover:text-primary">home</span>
+<span class="text-[10px] text-gray-500 font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">exercise</span>
+<span class="text-[10px] text-primary font-medium">Practices</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer">
+<span class="material-symbols-outlined text-gray-500 group-hover:text-primary">support_agent</span>
+<span class="text-[10px] text-gray-500 font-medium">Coach</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer">
+<span class="material-symbols-outlined text-gray-500 group-hover:text-primary">group</span>
+<span class="text-[10px] text-gray-500 font-medium">Community</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer">
+<span class="material-symbols-outlined text-gray-500 group-hover:text-primary">insights</span>
+<span class="text-[10px] text-gray-500 font-medium">Insights</span>
+</div>
+</div>
+</body></html>

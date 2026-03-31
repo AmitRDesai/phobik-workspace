@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phobik Empathy Challenge - Day 6</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#000000",
+                        "background-dark": "#000000",
+                        "accent-pink": "#ff4d8d",
+                        "accent-yellow": "#ffcd38",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+        .font-variation-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        .wave-container {
+            position: relative;
+            height: 40px;
+            width: 100px;
+            margin: 0 auto 12px;
+        }
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #ff4d8d, #ffcd38);
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Cpath d='M0 20 Q 25 10 50 20 T 100 20' fill='none' stroke='black' stroke-width='4'/%3E%3C/svg%3E") no-repeat center;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Cpath d='M0 20 Q 25 10 50 20 T 100 20' fill='none' stroke='black' stroke-width='4'/%3E%3C/svg%3E") no-repeat center;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-100 min-h-screen flex flex-col">
+<!-- Header Section -->
+<header class="sticky top-0 z-10 bg-black/80 backdrop-blur-md border-b border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-lg mx-auto w-full">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-800 text-slate-100">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Day 6: Support Without Absorbing</h1>
+<div class="w-10"></div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-lg mx-auto pb-24">
+<!-- Progress Bar Section -->
+<div class="flex flex-col gap-3 p-6">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-accent-pink font-bold text-sm uppercase tracking-wider">7-Day Empathy Challenge</span>
+<h2 class="text-2xl font-extrabold mt-1">Resilient Compassion</h2>
+</div>
+<p class="text-sm font-semibold opacity-80 text-slate-400">6 of 7</p>
+</div>
+<div class="h-3 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-accent-pink to-accent-yellow rounded-full transition-all duration-500" style="width: 85.7%;"></div>
+</div>
+</div>
+<!-- Affirmation/Intention Card -->
+<div class="px-6 mb-8">
+<div class="relative overflow-hidden rounded-xl p-8 text-center bg-gradient-to-br from-accent-pink/10 to-accent-yellow/10 border border-accent-pink/30">
+<div class="wave-container">
+<div class="wave"></div>
+</div>
+<p class="text-sm uppercase tracking-[0.2em] font-medium text-accent-pink/80 mb-2">Today's Intention</p>
+<h3 class="text-2xl font-bold italic">"I can help without burning out."</h3>
+</div>
+</div>
+<!-- Challenge Content -->
+<div class="px-6 space-y-6">
+<div class="bg-slate-900/40 rounded-xl p-6 border border-slate-800 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 rounded-lg bg-gradient-to-br from-accent-pink to-accent-yellow text-black">
+<span class="material-symbols-outlined">exercise</span>
+</div>
+<h4 class="text-lg font-bold">The Challenge</h4>
+</div>
+<p class="text-slate-300 leading-relaxed text-base">
+                Notice if you’ve taken on someone’s emotion. Take three steady breaths and imagine releasing that feeling with love.
+            </p>
+</div>
+<!-- Reflection Section -->
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-gradient-to-br from-accent-pink to-accent-yellow text-black">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h4 class="text-lg font-bold">Daily Reflection</h4>
+</div>
+<label class="block text-sm font-medium text-slate-400" for="reflection">
+                What does balanced compassion feel like in my body?
+            </label>
+<textarea class="w-full bg-slate-900 border border-slate-800 rounded-xl p-4 focus:ring-2 focus:ring-accent-pink focus:border-transparent outline-none transition-all placeholder-slate-600 text-slate-100" id="reflection" placeholder="Describe the physical sensations..." rows="4"></textarea>
+</div>
+<!-- Complete Button -->
+<!-- Daily D.O.S.E. Rewards -->
+<section class="space-y-3">
+<div class="flex items-center justify-between px-1">
+<h4 class="text-slate-500 text-[11px] font-bold uppercase tracking-wider">DAILY D.O.S.E. REWARD</h4>
+<span class="text-[10px] font-black text-accent-yellow">EARNED ON COMPLETION</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-3 group transition-colors hover:bg-white/10">
+<div class="w-10 h-10 rounded-full bg-accent-pink/20 flex items-center justify-center text-accent-pink">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div>
+<p class="text-white text-sm font-black">+10</p>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-tight">Oxytocin</p>
+</div>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-3 group transition-colors hover:bg-white/10">
+<div class="w-10 h-10 rounded-full bg-accent-yellow/20 flex items-center justify-center text-accent-yellow">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+</div>
+<div>
+<p class="text-white text-sm font-black">+5</p>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-tight">Serotonin</p>
+</div>
+</div>
+</div>
+</section><button class="w-full group relative overflow-hidden rounded-xl bg-gradient-to-r from-accent-pink to-accent-yellow p-[2px] focus:outline-none focus:ring-2 focus:ring-accent-pink focus:ring-offset-2 focus:ring-offset-black">
+<div class="bg-black group-hover:bg-transparent transition-colors rounded-[10px] py-4 flex items-center justify-center gap-2">
+<span class="text-white font-bold text-lg">Complete Day 6</span>
+<span class="material-symbols-outlined text-white">check_circle</span>
+</div>
+</button>
+</div>
+</main>
+<!-- Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-black/95 backdrop-blur-md border-t border-slate-800 pb-safe">
+<div class="flex justify-around items-center max-w-lg mx-auto h-16 px-2">
+<a class="flex flex-col items-center gap-1 text-accent-pink" href="#">
+<span class="material-symbols-outlined text-[28px] font-variation-fill">calendar_today</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Today</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-accent-pink transition-colors" href="#">
+<span class="material-symbols-outlined text-[28px]">directions_bike</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Practices</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-accent-pink transition-colors" href="#">
+<span class="material-symbols-outlined text-[28px]">chat_bubble</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Coach</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-accent-pink transition-colors" href="#">
+<span class="material-symbols-outlined text-[28px]">group</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-accent-pink transition-colors" href="#">
+<span class="material-symbols-outlined text-[28px]">insights</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Insights</span>
+</a>
+</div>
+</nav>
+</body></html>
