@@ -1,0 +1,26 @@
+replication:
+  connections:
+    - type: postgresql
+      uri: !env PS_DB_URI
+      sslmode: disable
+
+storage:
+  type: postgresql
+  uri: !env PS_STORAGE_URI
+  sslmode: disable
+
+port: 80
+
+sync_config:
+  path: sync-config.yaml
+
+client_auth:
+  jwks:
+    keys:
+      - kty: !env PS_JWK_KTY
+        alg: ES256
+        kid: !env PS_KID
+        crv: !env PS_JWK_CRV
+        x: !env PS_JWK_X
+        y: !env PS_JWK_Y
+  audience: ["powersync"]

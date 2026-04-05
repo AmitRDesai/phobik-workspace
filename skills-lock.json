@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "powersync": {
+      "source": "powersync-ja/agent-skills",
+      "sourceType": "github",
+      "computedHash": "a02ddc46c7f4622a52103135526f46eb40459b1ce71e7c82dc881c2aedc73282"
+    },
     "react-native-ease-refactor": {
       "source": "appandflow/react-native-ease",
       "sourceType": "github",

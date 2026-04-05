@@ -1,0 +1,39 @@
+config:
+  edition: 3
+
+streams:
+  user_profiles:
+    auto_subscribe: true
+    query: SELECT * FROM user_profile WHERE user_id = auth.user_id()
+
+  calendar_preferences:
+    auto_subscribe: true
+    query: SELECT * FROM calendar_preferences WHERE user_id = auth.user_id()
+
+  journal_entries:
+    auto_subscribe: true
+    query: SELECT * FROM journal_entry WHERE user_id = auth.user_id()
+
+  journal_tags:
+    auto_subscribe: true
+    query: SELECT * FROM journal_tag WHERE user_id = auth.user_id()
+
+  gentle_letters:
+    auto_subscribe: true
+    query: SELECT * FROM gentle_letter WHERE user_id = auth.user_id()
+
+  empathy_challenges:
+    auto_subscribe: true
+    query: SELECT * FROM empathy_challenge WHERE user_id = auth.user_id()
+
+  empathy_challenge_days:
+    auto_subscribe: true
+    query: SELECT * FROM empathy_challenge_day WHERE user_id = auth.user_id()
+
+  mystery_challenges:
+    auto_subscribe: true
+    query: SELECT * FROM mystery_challenge WHERE user_id = auth.user_id()
+
+  self_check_ins:
+    auto_subscribe: true
+    query: SELECT * FROM self_check_in WHERE user_id = auth.user_id()

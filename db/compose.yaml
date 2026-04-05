@@ -1,6 +1,7 @@
 services:
   db:
-    image: postgres:18
+    image: pgvector/pgvector:0.8.2-pg18
+    command: -c wal_level=logical -c max_wal_senders=10 -c max_replication_slots=10
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: postgres
@@ -10,6 +11,33 @@ services:
       - "5433:5432"
     volumes:
       - ./data:/data:delegated
+      - ./init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d phobik"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  powersync:
+    image: journeyapps/powersync-service:latest
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "9100:80"
+    volumes:
+      - ./powersync.yaml:/powersync.yaml
+      - ./sync-config.yaml:/sync-config.yaml
+    environment:
+      POWERSYNC_CONFIG_PATH: /powersync.yaml
+      PS_DB_URI: postgresql://powersync_role:powersync_password@db:5432/phobik
+      PS_STORAGE_URI: postgresql://user:postgres@db:5432/phobik
+      PS_KID: powersync-key
+      PS_JWK_KTY: EC
+      PS_JWK_CRV: P-256
+      PS_JWK_X: k0IQy_y9RYyTfLTpd-4mJ3QfcXT-cmZrKuEebUgFZjQ
+      PS_JWK_Y: 5_Bog74TtWfEVPelDCRbBpVaiHgt_DsaXTRVBTtdDng
 
   rustfs:
     image: rustfs/rustfs:latest
