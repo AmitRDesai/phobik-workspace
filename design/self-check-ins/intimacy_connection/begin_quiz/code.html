@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quiz Intro: Connection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4258c",
+                        "accent": "#ffd700",
+                        "background-dark": "#121212",
+                        "charcoal": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .mandala-glow {
+                filter: drop-shadow(0 0 25px rgba(244, 37, 140, 0.5));
+            }
+            .gradient-button {
+                background: linear-gradient(90deg, #f4258c 0%, #ffd700 100%);
+            }
+            .text-glow {
+                text-shadow: 0 0 10px rgba(244, 37, 140, 0.3);
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col max-w-[480px] mx-auto overflow-x-hidden pb-32">
+<div class="flex items-center p-4 justify-between sticky top-0 z-20 backdrop-blur-md bg-background-dark/80">
+<div class="text-primary flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Assessment</h2>
+<div class="flex w-12 items-center justify-end">
+<span class="material-symbols-outlined text-zinc-500">info</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center pt-8 pb-12 px-6">
+<div class="relative w-56 h-56 flex items-center justify-center mandala-glow">
+<div class="absolute inset-0 border-2 border-primary/20 rounded-full animate-pulse"></div>
+<div class="relative flex items-center justify-center bg-charcoal rounded-full p-8 border border-primary/30">
+<span class="material-symbols-outlined text-7xl text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-accent text-8xl opacity-20">filter_vintage</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-8 text-center">
+<h1 class="text-white tracking-tight text-3xl font-bold leading-tight pb-3">Balanced Communication Quiz</h1>
+<p class="text-zinc-400 text-base mb-10 leading-relaxed">A self-reflection tool for mindful listening and clear expression.</p>
+</div>
+<div class="px-8 space-y-6">
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">1</div>
+<p class="text-zinc-300 text-sm leading-snug pt-1">Focus on your actions and interactions over the past month.</p>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold">2</div>
+<p class="text-zinc-300 text-sm leading-snug pt-1">Rate each statement from <span class="text-white font-semibold">0 (Not true)</span> to <span class="text-white font-semibold">4 (Almost always)</span>.</p>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-zinc-400 font-bold">3</div>
+<p class="text-zinc-300 text-sm leading-snug pt-1">Be honest with yourself for the most accurate resonance results.</p>
+</div>
+</div>
+<div class="fixed bottom-20 left-0 right-0 p-6 z-30 max-w-[480px] mx-auto">
+<button class="w-full gradient-button text-charcoal font-black text-lg py-5 rounded-full shadow-2xl shadow-primary/40 flex items-center justify-center gap-3 active:scale-95 transition-transform">
+                Begin Quiz
+                <span class="material-symbols-outlined font-bold">play_arrow</span>
+</button>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-background-dark/95 border-t border-white/5 backdrop-blur-lg px-6 py-3 z-40 max-w-[480px] mx-auto">
+<div class="flex justify-between items-center">
+<div class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px]">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">self_improvement</span>
+<span class="text-[10px]">Practices</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="text-[10px]">Coach</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px]">Community</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px]">Insights</span>
+</div>
+</div>
+</div>
+<div class="fixed -top-20 -right-20 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[300px] text-accent">filter_vintage</span>
+</div>
+</div>
+
+</body></html>

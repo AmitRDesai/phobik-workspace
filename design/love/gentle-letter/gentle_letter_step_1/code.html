@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#120a0e",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Spline Sans', sans-serif;
+        }
+        .glow-border {
+            box-shadow: 0 0 15px rgba(238, 43, 140, 0.2);
+        }
+        .glow-border:focus-within {
+            box-shadow: 0 0 25px rgba(238, 43, 140, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col font-display">
+<!-- Top App Bar -->
+<header class="flex items-center justify-between px-4 py-4 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<div class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-[10px] uppercase tracking-[0.2em] text-primary font-bold">PHOBIK</span>
+<h2 class="text-sm font-semibold leading-tight">Gentle Letter Writing</h2>
+</div>
+<div class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">close</span>
+</div>
+</header>
+<!-- Content Area -->
+<main class="flex-1 flex flex-col px-6 max-w-md mx-auto w-full">
+<!-- Page Indicators & Step Label -->
+<div class="pt-6 flex flex-col items-center gap-4">
+<div class="flex w-full flex-row items-center justify-center gap-2">
+<div class="h-1.5 w-6 rounded-full bg-primary shadow-[0_0_8px_rgba(238,43,140,0.6)]"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-primary/20 dark:bg-[#543b47]"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-primary/20 dark:bg-[#543b47]"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-primary/20 dark:bg-[#543b47]"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-primary/20 dark:bg-[#543b47]"></div>
+</div>
+<p class="text-xs font-medium text-primary/80 uppercase tracking-widest">Step 1 of 5: Notice what is here</p>
+</div>
+<!-- Headline -->
+<div class="pt-8 pb-4">
+<h3 class="text-2xl font-bold leading-tight text-center px-2">
+                Acknowledge your feelings without judgment.
+            </h3>
+</div>
+<!-- Body Instruction -->
+<div class="pb-8">
+<p class="text-base font-normal leading-relaxed text-center text-slate-600 dark:text-slate-400">
+                What is your heart feeling right now? Write it down as it is.
+            </p>
+</div>
+<!-- Text Input Field with Pink Glow -->
+<div class="flex-1 flex flex-col min-h-[300px]">
+<div class="flex-1 flex flex-col glow-border rounded-xl border border-primary/30 bg-white/5 dark:bg-[#271c21]/30 transition-all duration-500 overflow-hidden">
+<textarea class="form-input flex-1 w-full resize-none bg-transparent border-none text-slate-900 dark:text-white focus:ring-0 placeholder:text-slate-400 dark:placeholder:text-[#b99dab] p-6 text-lg font-light leading-relaxed" placeholder="I am feeling..."></textarea>
+</div>
+<!-- Contextual Tip -->
+<div class="mt-4 flex items-center justify-center gap-2 text-slate-500 dark:text-slate-500 text-xs italic">
+<span class="material-symbols-outlined text-sm">info</span>
+<span>There are no wrong answers here.</span>
+</div>
+</div>
+<!-- Action Button -->
+<div class="py-8">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-full shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+                Next Step
+            </button>
+</div>
+</main>
+<!-- Global Navigation Bar -->
+<nav class="sticky bottom-0 bg-white dark:bg-[#1a0d14] border-t border-slate-200 dark:border-white/5 px-6 py-3 pb-8">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[28px] font-bold">self_improvement</span>
+<span class="text-[10px] font-bold">Practices</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-medium">Coach</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-medium">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-[10px] font-medium">Insights</span>
+</button>
+</div>
+</nav>
+</body></html>

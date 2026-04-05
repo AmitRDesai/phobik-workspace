@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#665500",
+              "error-dim": "#9f0519",
+              "tertiary-fixed": "#bda1ff",
+              "tertiary-container": "#bda1ff",
+              "on-secondary": "#fff2cd",
+              "primary": "#b60055",
+              "error": "#b31b25",
+              "surface-tint": "#b60055",
+              "on-secondary-fixed": "#453900",
+              "on-tertiary-fixed": "#1f0052",
+              "secondary-fixed": "#ffd709",
+              "primary-fixed": "#ff719b",
+              "inverse-surface": "#0e0e0e",
+              "surface-container-highest": "#dfdcdb",
+              "outline": "#787676",
+              "on-error-container": "#570008",
+              "on-error": "#ffefee",
+              "on-secondary-container": "#5b4b00",
+              "surface-bright": "#f9f6f5",
+              "primary-dim": "#a0004a",
+              "outline-variant": "#afacac",
+              "surface-dim": "#d7d4d3",
+              "surface-container-low": "#f3f0ef",
+              "on-primary-fixed": "#000000",
+              "tertiary-dim": "#6200e1",
+              "on-surface-variant": "#5c5b5b",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "primary-container": "#ff719b",
+              "on-background": "#2f2e2e",
+              "error-container": "#fb5151",
+              "tertiary-fixed-dim": "#b190ff",
+              "secondary-dim": "#5e4e00",
+              "surface": "#f9f6f5",
+              "secondary": "#6c5a00",
+              "on-surface": "#2f2e2e",
+              "secondary-container": "#ffd709",
+              "surface-variant": "#dfdcdb",
+              "primary-fixed-dim": "#ff528c",
+              "on-primary-container": "#4c0020",
+              "inverse-primary": "#ff4b89",
+              "on-tertiary": "#f8f1ff",
+              "on-primary-fixed-variant": "#5e0028",
+              "surface-container-high": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+        }
+        .aura-glow {
+            background: radial-gradient(circle at center, rgba(228, 0, 108, 0.15) 0%, transparent 70%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .selected-glow {
+            box-shadow: 0 0 20px rgba(255, 113, 155, 0.4);
+        }
+    </style>
+</head>
+<body class="font-body text-surface-bright selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col overflow-x-hidden">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-black/80 backdrop-blur-md border-b border-white/5">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-neutral-400 hover:text-white transition-colors" data-icon="arrow_back">arrow_back</button>
+<h1 class="font-headline font-bold tracking-tighter text-2xl text-white">Intimacy Quiz</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-neutral-400 hover:text-white transition-colors" data-icon="more_vert">more_vert</button>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-32 px-6 max-w-2xl mx-auto w-full relative">
+<!-- Aura Visual Background Element -->
+<div class="fixed -top-24 -right-24 w-96 h-96 aura-glow pointer-events-none opacity-60"></div>
+<div class="fixed top-1/2 -left-32 w-80 h-80 aura-glow pointer-events-none opacity-40"></div>
+<!-- Progress Header -->
+<div class="mb-12 flex flex-col items-start">
+<span class="text-primary-fixed font-semibold tracking-widest uppercase text-xs mb-2">Speaker Role</span>
+<div class="flex items-end justify-between w-full">
+<h2 class="text-white font-headline font-extrabold text-5xl leading-tight">Question 02</h2>
+<div class="text-neutral-500 font-label text-sm mb-2">
+<span class="text-white font-bold">02</span> / 08
+                </div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-1.5 bg-neutral-800 mt-4 rounded-full overflow-hidden">
+<div class="h-full w-1/4 bg-gradient-to-r from-primary-fixed to-secondary-fixed"></div>
+</div>
+</div>
+<!-- Question Section -->
+<section class="mb-12">
+<div class="glass-card rounded-[2.5rem] p-10 border border-white/5 relative overflow-hidden">
+<div class="absolute top-4 right-6 opacity-10">
+<span class="material-symbols-outlined text-7xl" data-icon="format_quote">format_quote</span>
+</div>
+<p class="text-2xl font-headline font-bold text-white leading-relaxed relative z-10">
+                    “When I speak, I use “I-statements” (e.g., “I feel…”, “I think…”) instead of blaming or accusing.”
+                </p>
+</div>
+</section>
+<!-- Standardized Rating Scale (Circular Buttons) -->
+<section class="mb-14">
+<div class="flex justify-between items-start gap-2">
+<div class="flex flex-col items-center gap-3 flex-1">
+<button class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:border-[#ff8aa9] transition-all">
+<span class="font-headline font-bold text-xl">0</span>
+</button>
+<span class="font-label text-[10px] uppercase tracking-wider text-neutral-600 font-bold">Never</span>
+</div>
+<div class="flex flex-col items-center gap-3 flex-1">
+<button class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:border-[#ff8aa9] transition-all">
+<span class="font-headline font-bold text-xl">1</span>
+</button>
+</div>
+<div class="flex flex-col items-center gap-3 flex-1">
+<button class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:border-[#ff8aa9] transition-all">
+<span class="font-headline font-bold text-xl">2</span>
+</button>
+</div>
+<div class="flex flex-col items-center gap-3 flex-1">
+<button class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-neutral-400 hover:border-[#ff8aa9] transition-all">
+<span class="font-headline font-bold text-xl">3</span>
+</button>
+</div>
+<!-- Selected State -->
+<div class="flex flex-col items-center gap-3 flex-1">
+<button class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-tr from-[#ff8aa9] to-[#ffd709] flex items-center justify-center text-black selected-glow transform scale-110 ring-4 ring-black ring-offset-0">
+<span class="font-headline font-bold text-xl">4</span>
+</button>
+<span class="font-label text-[10px] uppercase tracking-wider text-neutral-600 font-bold">Always</span>
+</div>
+</div>
+</section>
+<!-- Educational Section -->
+<section class="space-y-6">
+<div class="flex items-center gap-3">
+<div class="h-[1px] flex-grow bg-neutral-800/50"></div>
+<h3 class="font-headline font-bold text-neutral-500 text-xs tracking-[0.2em] uppercase">Why this matters</h3>
+<div class="h-[1px] flex-grow bg-neutral-800/50"></div>
+</div>
+<div class="glass-card rounded-[2rem] p-8 border border-white/5 flex gap-6 items-start">
+<div class="p-3.5 rounded-2xl bg-primary-fixed/10 text-primary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-2xl" data-icon="psychology">psychology</span>
+</div>
+<div>
+<p class="text-neutral-300 leading-relaxed font-body text-lg">
+                        I-statements reduce defensiveness in others. By focusing on your own experience rather than pointing fingers, you create a safe space for dialogue and mutual understanding.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Actions -->
+<div class="mt-16 flex justify-center">
+<button class="w-full max-w-xs bg-gradient-to-tr from-primary-fixed to-secondary-fixed text-black font-headline font-extrabold py-5 rounded-full shadow-[0_12px_40px_rgba(255,113,155,0.3)] hover:translate-y-[-2px] transition-all duration-300 active:scale-[0.98] uppercase tracking-[0.2em] text-sm">
+                Next Question
+            </button>
+</div>
+</main>
+<!-- Standardized BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-end px-4 pb-8 pt-3 bg-black/60 backdrop-blur-3xl rounded-t-[2.5rem] border-t border-white/5">
+<div class="flex flex-col items-center justify-center text-neutral-500 px-5 py-2 transition-colors hover:text-primary-fixed">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="favorite">favorite</span>
+<span class="font-label text-[10px] font-bold tracking-widest uppercase">Connect</span>
+</div>
+<div class="flex flex-col items-center justify-center pb-2">
+<div class="bg-gradient-to-tr from-primary-fixed to-secondary-fixed text-black rounded-3xl px-6 py-2.5 shadow-lg flex flex-col items-center gap-0.5">
+<span class="material-symbols-outlined text-2xl" data-icon="analytics" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label text-[10px] font-extrabold tracking-widest uppercase leading-none">Insights</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-500 px-5 py-2 transition-colors hover:text-primary-fixed">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="menu_book">menu_book</span>
+<span class="font-label text-[10px] font-bold tracking-widest uppercase">Library</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-500 px-5 py-2 transition-colors hover:text-primary-fixed">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="person">person</span>
+<span class="font-label text-[10px] font-bold tracking-widest uppercase">Profile</span>
+</div>
+</nav>
+</body></html>

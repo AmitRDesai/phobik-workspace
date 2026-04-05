@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "phobik-black": "#000000",
+                        "phobik-pink": "#f472b6",
+                        "phobik-yellow": "#fbbf24",
+                        "surface-dark": "#111111",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    backgroundImage: {
+                        'phobik-gradient': 'linear-gradient(to right, #f472b6, #fbbf24)',
+                    }
+                },
+            },
+        }
+    </script>
+<title>PHOBIK Micro-Challenge: Reflect</title>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+            background-color: #000000;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #f472b6, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-phobik-black font-display text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-phobik-black">
+<!-- Header / TopAppBar -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-white flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-3xl" style="">arrow_back</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12" style="">Step 6: Reflect with Curiosity</h2>
+</div>
+<!-- Step Indicator -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-5">
+<div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+<div class="h-2 w-10 rounded-full bg-phobik-gradient"></div>
+</div>
+<!-- Main Question -->
+<div class="px-6 py-4">
+<h3 class="text-white tracking-tight text-3xl font-bold leading-tight text-center pb-2" style="">Reflect with Curiosity</h3>
+<p class="text-slate-400 text-center text-sm" style="">Growth happens when we reflect without judging ourselves.&nbsp; Instead of asking: What's wrong with me?&nbsp; Ask, what is the feeling trying to tell me?</p>
+</div>
+<!-- Reflection Prompts Section -->
+<div class="px-6 space-y-3 mt-4">
+<div class="flex items-center gap-4 bg-surface-dark p-4 rounded-xl border border-white/5 shadow-sm">
+<div class="flex items-center justify-center rounded-lg bg-emerald-400/10 text-emerald-400 shrink-0 size-10">
+<span class="material-symbols-outlined" style="">psychology</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-semibold" style="">Next time, what could I do sooner to care for that need?</p>
+<p class="text-slate-500 text-xs" style=""><br></p>
+</div>
+</div>
+</div>
+<!-- Focused Text Input Area -->
+<div class="px-6 py-6 mt-4">
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2" for="reflection" style="">My Reflection Note</label>
+<textarea class="w-full bg-surface-dark border border-white/10 focus:border-phobik-pink/50 focus:ring-0 rounded-xl p-4 text-slate-100 placeholder:text-slate-600 transition-colors shadow-inner min-h-[140px]" id="reflection" placeholder="Next time..." rows="4"></textarea>
+</div>
+<!-- Spacer -->
+<div class="flex-grow"></div>
+<!-- Save & Finish Button -->
+<div class="p-6">
+<button class="w-full bg-phobik-gradient hover:opacity-90 text-black font-bold py-4 rounded-xl shadow-lg shadow-phobik-pink/10 flex items-center justify-center gap-2 transition-all active:scale-95" style="">
+<span class="material-symbols-outlined font-bold" style="">check_circle</span>
+                Save &amp; Finish
+            </button>
+<div class="flex flex-col items-center mt-6">
+<div class="w-full h-1 bg-white/10 rounded-full overflow-hidden mb-3">
+<div class="h-full bg-phobik-gradient w-full"></div>
+</div>
+<p class="text-center text-xs text-slate-500 uppercase tracking-widest font-medium" style="">Completion 100% — You're doing great!</p>
+</div>
+</div>
+</div>
+</body></html>

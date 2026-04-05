@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Compassion Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b8c",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#121212",
+                        "surface-dark": "#1e1e1e",
+                        "accent-yellow": "#fcd34d"
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glow-heart {
+            filter: drop-shadow(0 0 4px #ee2b8c) drop-shadow(0 0 8px #fcd34d);
+        }
+        body {
+            font-family: "Spline Sans", sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 pb-2 justify-between max-w-md mx-auto w-full">
+<div class="text-gray-900 dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center font-display">My Compassion Archive</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-12 cursor-pointer items-center justify-center rounded-full bg-transparent text-gray-900 dark:text-white">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-md mx-auto w-full pb-24">
+<!-- Calendar Section -->
+<section class="p-4">
+<div class="bg-surface-dark/50 rounded-xl p-4 border border-white/5">
+<div class="flex items-center p-1 justify-between mb-2">
+<button class="text-white hover:bg-white/10 rounded-full p-2">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<p class="text-white text-base font-bold leading-tight flex-1 text-center">October 2023</p>
+<button class="text-white hover:bg-white/10 rounded-full p-2">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 mb-2">
+<p class="text-gray-400 text-[11px] font-bold uppercase tracking-widest flex h-8 w-full items-center justify-center">S</p>
+<p class="text-gray-400 text-[11px] font-bold uppercase tracking-widest flex h-8 w-full items-center justify-center">M</p>
+<p class="text-gray-400 text-[11px] font-bold uppercase tracking-widest flex h-8 w-full items-center justify-center">T</p>
+<p class="text-gray-400 text-[11px] font-bold uppercase tracking-widest flex h-8 w-full items-center justify-center">W</p>
+<p class="text-gray-400 text-[11px] font-bold uppercase tracking-widest flex h-8 w-full items-center justify-center">T</p>
+<p class="text-gray-400 text-[11px] font-bold uppercase tracking-widest flex h-8 w-full items-center justify-center">F</p>
+<p class="text-gray-400 text-[11px] font-bold uppercase tracking-widest flex h-8 w-full items-center justify-center">S</p>
+</div>
+<div class="grid grid-cols-7 gap-y-1">
+<!-- Placeholder days -->
+<div class="h-10 col-start-1"></div><div class="h-10"></div><div class="h-10"></div>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">1</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">2</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">3</div></button>
+<button class="h-10 w-full text-white text-sm font-medium relative flex items-center justify-center">
+<div class="flex size-8 items-center justify-center rounded-full bg-primary/20 text-white border border-primary/30">4</div>
+<span class="material-symbols-outlined absolute -top-1 -right-1 text-[14px] text-accent-yellow glow-heart" style="font-variation-settings: 'FILL' 1">favorite</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">5</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">6</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">7</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">8</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">9</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">10</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">11</div></button>
+<button class="h-10 w-full text-white text-sm font-medium relative flex items-center justify-center">
+<div class="flex size-8 items-center justify-center rounded-full bg-primary/20 text-white border border-primary/30">12</div>
+<span class="material-symbols-outlined absolute -top-1 -right-1 text-[14px] text-accent-yellow glow-heart" style="font-variation-settings: 'FILL' 1">favorite</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">13</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">14</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">15</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">16</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">17</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">18</div></button>
+<button class="h-10 w-full text-white text-sm font-medium relative flex items-center justify-center">
+<div class="flex size-8 items-center justify-center rounded-full bg-primary text-white font-bold">19</div>
+<span class="material-symbols-outlined absolute -top-1 -right-1 text-[14px] text-accent-yellow glow-heart" style="font-variation-settings: 'FILL' 1">favorite</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">20</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">21</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">22</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">23</div></button>
+<button class="h-10 w-full text-white text-sm font-medium relative flex items-center justify-center">
+<div class="flex size-8 items-center justify-center rounded-full bg-primary/20 text-white border border-primary/30">24</div>
+<span class="material-symbols-outlined absolute -top-1 -right-1 text-[14px] text-accent-yellow glow-heart" style="font-variation-settings: 'FILL' 1">favorite</span>
+</button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">25</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">26</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">27</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">28</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">29</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">30</div></button>
+<button class="h-10 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full">31</div></button>
+</div>
+</div>
+</section>
+<!-- Section Header -->
+<div class="flex items-center justify-between px-4 pt-2">
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Recent Letters</h3>
+<button class="text-primary text-sm font-semibold">View All</button>
+</div>
+<!-- Letters List -->
+<div class="space-y-0">
+<!-- Card 1 -->
+<div class="p-4 pb-0">
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-surface-dark p-4 shadow-lg border border-white/5">
+<div class="flex flex-[2_2_0px] flex-col justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-gray-400 text-xs font-medium uppercase tracking-wider">Today, Oct 24</p>
+<h4 class="text-white text-base font-bold leading-tight">Forgiving my morning haste</h4>
+<div class="mt-2 flex items-center gap-2">
+<span class="bg-primary/20 text-primary text-[10px] px-2 py-0.5 rounded-full border border-primary/30 font-bold uppercase tracking-tight">Core Act: Forgiveness</span>
+</div>
+</div>
+<button class="mt-4 flex items-center gap-1 text-white/80 hover:text-white transition-colors">
+<span class="text-sm font-medium">Read reflection</span>
+<span class="material-symbols-outlined text-[18px]">keyboard_arrow_right</span>
+</button>
+</div>
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-xl flex-shrink-0" data-alt="Soft morning sunlight hitting a calm workspace" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGH4aGaUmpiNSRFollZFl-SAyZXFLvM6x1yf1CnEDCdvd_-MOmlFkgVge4utaR8cGOLcA9HWNIFdaTZs2HC2h2wKSOb5ZXfvr-MkvLwd8VPG6xc24eAKRCVkIYZplnDNHE7tOSicedSLONWgcB2PS6kSx2tM18Ibxd5iJpSdvqlFsx8NQGjXYuyrWaqoh90cwNKZS_rEFlNg58NOhGQ9sQLPrOoCvkqRTML28O0uv94LgOH4IKOgWmJjcvD-mDU8F9ReWe_FMWAdmG");'></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-4 pb-0">
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-surface-dark p-4 shadow-lg border border-white/5">
+<div class="flex flex-[2_2_0px] flex-col justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-gray-400 text-xs font-medium uppercase tracking-wider">Oct 19, 2023</p>
+<h4 class="text-white text-base font-bold leading-tight">A note on quiet patience</h4>
+<div class="mt-2 flex items-center gap-2">
+<span class="bg-primary/20 text-primary text-[10px] px-2 py-0.5 rounded-full border border-primary/30 font-bold uppercase tracking-tight">Core Act: Patience</span>
+</div>
+</div>
+<button class="mt-4 flex items-center gap-1 text-white/80 hover:text-white transition-colors">
+<span class="text-sm font-medium">Read reflection</span>
+<span class="material-symbols-outlined text-[18px]">keyboard_arrow_right</span>
+</button>
+</div>
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-xl flex-shrink-0" data-alt="Abstract watercolor in soothing pink and purple tones" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQKdG679_DtKoIT7xVECjvtk9TD-Qb_aXC8JCaW3t23VQR256phUOitRPp-4FfKKv39YquE3pCbKLMVtCXKEBI8PL9WYeeVC96MDuBDPKPPv3QIfSD2HkHCrqjeXWsktX54J-wGdltsAoa1Aij8DBLN-0bjCDYOhoY0i9ED-Z5WDxCQcPwOFfECYBl6lJrqXFQT882YNR-jJ5THP9TnXfdmS7kwozEkb3QIBI1ncM-qdqgC1z1jQUBwOuhHn7ox-wbcIYs6sK5AOQN");'></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-4 pb-0">
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-surface-dark p-4 shadow-lg border border-white/5">
+<div class="flex flex-[2_2_0px] flex-col justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-gray-400 text-xs font-medium uppercase tracking-wider">Oct 12, 2023</p>
+<h4 class="text-white text-base font-bold leading-tight">Accepting the messy middle</h4>
+<div class="mt-2 flex items-center gap-2">
+<span class="bg-primary/20 text-primary text-[10px] px-2 py-0.5 rounded-full border border-primary/30 font-bold uppercase tracking-tight">Core Act: Acceptance</span>
+</div>
+</div>
+<button class="mt-4 flex items-center gap-1 text-white/80 hover:text-white transition-colors">
+<span class="text-sm font-medium">Read reflection</span>
+<span class="material-symbols-outlined text-[18px]">keyboard_arrow_right</span>
+</button>
+</div>
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-xl flex-shrink-0" data-alt="Macro photo of a delicate flower petal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWDR7dfMfgIBSUHvaDAx02nIOv3xlW31xBDi7uqBl_bY2Ge3vjHO5tZAlJwf1DNN23lY06wdS8_lcDB-146yJ9wYYXFZgiTCoJDW8fnSF5LbX9RNhCzfDwxmaUAb8Rl9nrL9RBP1xD7AmqIrQkSTKfUJpITE0Fn2pzqtUCNmQrxuwCWYmkOLonpU95oDsR4ltCCf1XUvy9I3khr0m9u225dMhCetHfugB56M0ByUCvxF_fZDLjnWevnL8zCrBoFElzaloNMJtHYi8k");'></div>
+</div>
+</div>
+</div>
+<div class="p-6 text-center">
+<p class="text-gray-500 text-xs italic">Your archive is private and end-to-end encrypted.</p>
+<div class="mt-2 flex justify-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-gray-600">lock</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-white/5 pb-6 pt-2">
+<div class="max-w-md mx-auto flex justify-around items-center px-4">
+<div class="flex flex-col items-center gap-1 group cursor-pointer text-gray-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer text-gray-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="text-[10px] font-medium">Practices</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer text-gray-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-medium">Coach</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer text-gray-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-medium">Community</span>
+</div>
+<div class="flex flex-col items-center gap-1 group cursor-pointer text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">insights</span>
+<span class="text-[10px] font-medium">Insights</span>
+</div>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gentle Letter Intro - PHOBIK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee5b2b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .lotus-glow {
+            box-shadow: 0 0 60px 10px rgba(255, 182, 193, 0.2), 0 0 100px 20px rgba(255, 255, 153, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col font-display">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 justify-between sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</div>
+<div class="text-sm font-bold tracking-widest uppercase opacity-50">Practice</div>
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 cursor-pointer">
+<span class="material-symbols-outlined text-2xl">more_horiz</span>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 py-8 text-center max-w-lg mx-auto">
+<!-- Glowing Lotus Icon -->
+<div class="relative mb-12 group">
+<div class="absolute inset-0 bg-gradient-to-tr from-pink-400/30 to-yellow-200/30 blur-3xl rounded-full scale-150 animate-pulse"></div>
+<div class="relative w-32 h-32 flex items-center justify-center bg-gradient-to-tr from-pink-500/20 to-yellow-400/20 rounded-full border border-white/10 lotus-glow">
+<span class="material-symbols-outlined text-6xl text-pink-300" style="font-variation-settings: 'FILL' 1, 'wght' 200;">
+                    filter_vintage
+                </span>
+</div>
+</div>
+<!-- Text Stack -->
+<h1 class="text-white tracking-tight text-[32px] font-bold leading-tight pb-3">
+            Write a Gentle Letter to Yourself
+        </h1>
+<h2 class="text-primary text-lg font-medium leading-tight tracking-[-0.015em] pb-6">
+            A PHOBIK practice in courage and kindness.
+        </h2>
+<p class="text-slate-400 text-base font-normal leading-relaxed pb-12 max-w-[320px]">
+            A guided exercise in self-compassion. Through 5 gentle steps, replace harsh self-judgment with understanding and care.
+        </p>
+<!-- Action Buttons -->
+<div class="w-full space-y-4">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-5 px-8 rounded-full shadow-lg transition-all active:scale-[0.98]">
+                Start My Letter
+            </button>
+<button class="w-full flex items-center justify-center gap-2 text-slate-400 hover:text-white font-medium py-3 transition-colors">
+<span class="material-symbols-outlined text-xl">history_edu</span>
+<span>View Past Letters</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<nav class="bg-background-light dark:bg-[#1a110d] border-t border-white/5 pb-8 pt-3 px-6">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<div class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 cursor-pointer transition-opacity">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary cursor-pointer">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">self_improvement</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Practices</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 cursor-pointer transition-opacity">
+<span class="material-symbols-outlined text-2xl">psychology</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Coach</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 cursor-pointer transition-opacity">
+<span class="material-symbols-outlined text-2xl">group</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Community</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-50 hover:opacity-100 cursor-pointer transition-opacity">
+<span class="material-symbols-outlined text-2xl">monitoring</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Insights</span>
+</div>
+</div>
+</nav>
+<!-- Background Decoration -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
+<div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-pink-500/5 rounded-full blur-[100px]"></div>
+</div>
+</body></html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Intimacy Quiz - Speaker Role Q5</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#ff719b",
+              "secondary": "#ffd709",
+              "surface": "#f9f6f5",
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+        }
+        .aura-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 113, 155, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #ff719b, #ffd709);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .active-rating {
+            background: linear-gradient(135deg, #ff719b, #ffd709);
+            box-shadow: 0 0 25px rgba(255, 113, 155, 0.4);
+        }
+    </style>
+</head>
+<body class="font-body text-white selection:bg-primary/30 overflow-x-hidden min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-black/60 backdrop-blur-xl">
+<button class="flex items-center justify-center w-10 h-10 hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-white" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold tracking-tight text-xl text-white">Intimacy Quiz</h1>
+<button class="flex items-center justify-center w-10 h-10 hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-white" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<main class="relative pt-24 pb-40 px-6 max-w-xl mx-auto">
+<!-- Background Accents -->
+<div class="fixed top-0 right-0 w-full h-full aura-glow pointer-events-none z-0"></div>
+<section class="relative z-10">
+<!-- Progress Header -->
+<div class="mb-10 flex items-end justify-between">
+<div>
+<span class="text-secondary font-headline font-bold tracking-[0.2em] text-[10px] uppercase block mb-1">Speaker Role</span>
+<h2 class="text-white font-headline font-extrabold text-5xl tracking-tighter">05<span class="text-neutral-700">/08</span></h2>
+</div>
+<div class="w-32 h-1.5 bg-neutral-900 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary w-[62.5%]"></div>
+</div>
+</div>
+<!-- Question Card -->
+<div class="bg-neutral-900/50 backdrop-blur-2xl rounded-[2.5rem] p-10 mb-12 border border-white/5">
+<p class="font-headline font-bold text-2xl md:text-3xl text-white leading-tight tracking-tight text-center">
+                    "I check when it’s a good time to talk, and try not to initiate when emotions are too high."
+                </p>
+</div>
+<!-- Standardized Rating Scale -->
+<div class="mb-16">
+<div class="flex justify-between items-center mb-6 px-2">
+<span class="text-neutral-500 text-[10px] font-bold uppercase tracking-[0.2em]">Never</span>
+<span class="text-neutral-500 text-[10px] font-bold uppercase tracking-[0.2em]">Always</span>
+</div>
+<div class="flex justify-between items-center gap-2">
+<!-- Rating Buttons: Circular -->
+<button class="w-16 h-16 rounded-full bg-neutral-900/80 border border-white/10 flex items-center justify-center transition-all duration-300 active:scale-90 group">
+<span class="text-xl font-headline font-bold text-neutral-500 group-hover:text-white">0</span>
+</button>
+<button class="w-16 h-16 rounded-full bg-neutral-900/80 border border-white/10 flex items-center justify-center transition-all duration-300 active:scale-90 group">
+<span class="text-xl font-headline font-bold text-neutral-500 group-hover:text-white">1</span>
+</button>
+<button class="w-16 h-16 rounded-full bg-neutral-900/80 border border-white/10 flex items-center justify-center transition-all duration-300 active:scale-90 group">
+<span class="text-xl font-headline font-bold text-neutral-500 group-hover:text-white">2</span>
+</button>
+<!-- Active State -->
+<button class="w-16 h-16 rounded-full active-rating flex items-center justify-center transition-all duration-300 active:scale-95">
+<span class="text-xl font-headline font-bold text-black">3</span>
+</button>
+<button class="w-16 h-16 rounded-full bg-neutral-900/80 border border-white/10 flex items-center justify-center transition-all duration-300 active:scale-90 group">
+<span class="text-xl font-headline font-bold text-neutral-500 group-hover:text-white">4</span>
+</button>
+</div>
+</div>
+<!-- Why This Matters Section -->
+<div class="space-y-4">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-xs" data-icon="lightbulb" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.15em]">Why this matters</span>
+</div>
+<p class="text-neutral-400 font-body text-lg leading-relaxed px-1">
+                    Effective speakers prioritize <span class="text-white font-semibold">connection over being heard</span>. Timing and emotional regulation ensure your message is received with empathy rather than defensiveness.
+                </p>
+</div>
+</section>
+<!-- Navigation Action -->
+<div class="mt-16 flex justify-center">
+<button class="w-full py-5 rounded-full bg-gradient-to-r from-primary to-secondary text-black font-extrabold text-lg flex items-center justify-center gap-3 shadow-[0_15px_35px_rgba(255,113,155,0.25)] hover:scale-[0.98] transition-transform active:scale-95">
+<span>Next Question</span>
+<span class="material-symbols-outlined font-bold" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 px-4 pb-8 pt-3 bg-black/80 backdrop-blur-2xl border-t border-white/5">
+<div class="max-w-md mx-auto flex justify-around items-center">
+<div class="flex flex-col items-center justify-center text-neutral-500 transition-colors">
+<span class="material-symbols-outlined text-[26px] mb-1" data-icon="favorite">favorite</span>
+<span class="font-manrope text-[10px] font-bold tracking-wider uppercase">Connect</span>
+</div>
+<div class="flex flex-col items-center justify-center">
+<div class="bg-gradient-to-r from-primary to-secondary rounded-full px-6 py-1.5 mb-1 flex items-center justify-center">
+<span class="material-symbols-outlined text-black text-[22px]" data-icon="analytics" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<span class="font-manrope text-[10px] font-bold tracking-wider uppercase text-white">Insights</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-500 transition-colors">
+<span class="material-symbols-outlined text-[26px] mb-1" data-icon="menu_book">menu_book</span>
+<span class="font-manrope text-[10px] font-bold tracking-wider uppercase">Library</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-500 transition-colors">
+<span class="material-symbols-outlined text-[26px] mb-1" data-icon="person">person</span>
+<span class="font-manrope text-[10px] font-bold tracking-wider uppercase">Profile</span>
+</div>
+</div>
+</nav>
+</body></html>

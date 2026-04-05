@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Intimacy Quiz - Speaker Role</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed-variant": "#665500",
+                        "error-dim": "#9f0519",
+                        "tertiary-fixed": "#bda1ff",
+                        "tertiary-container": "#bda1ff",
+                        "on-secondary": "#fff2cd",
+                        "primary": "#b60055",
+                        "error": "#b31b25",
+                        "surface-tint": "#b60055",
+                        "on-secondary-fixed": "#453900",
+                        "on-tertiary-fixed": "#1f0052",
+                        "secondary-fixed": "#ffd709",
+                        "primary-fixed": "#ff719b",
+                        "inverse-surface": "#0e0e0e",
+                        "surface-container-highest": "#dfdcdb",
+                        "outline": "#787676",
+                        "on-error-container": "#570008",
+                        "on-error": "#ffefee",
+                        "on-secondary-container": "#5b4b00",
+                        "surface-bright": "#f9f6f5",
+                        "primary-dim": "#a0004a",
+                        "outline-variant": "#afacac",
+                        "surface-dim": "#d7d4d3",
+                        "surface-container-low": "#f3f0ef",
+                        "on-primary-fixed": "#000000",
+                        "tertiary-dim": "#6200e1",
+                        "on-surface-variant": "#5c5b5b",
+                        "on-tertiary-fixed-variant": "#4700a7",
+                        "primary-container": "#ff719b",
+                        "on-background": "#2f2e2e",
+                        "error-container": "#fb5151",
+                        "tertiary-fixed-dim": "#b190ff",
+                        "secondary-dim": "#5e4e00",
+                        "surface": "#f9f6f5",
+                        "secondary-fixed-dim": "#efc900",
+                        "tertiary": "#7000ff",
+                        "background": "#f9f6f5",
+                        "inverse-on-surface": "#9f9c9c",
+                        "on-primary": "#ffeff1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#3c0091",
+                        "surface-container": "#ebe7e7",
+                        "secondary": "#6c5a00",
+                        "on-surface": "#2f2e2e",
+                        "secondary-container": "#ffd709",
+                        "surface-variant": "#dfdcdb",
+                        "primary-fixed-dim": "#ff528c",
+                        "on-primary-container": "#4c0020",
+                        "inverse-primary": "#ff4b89",
+                        "on-tertiary": "#f8f1ff",
+                        "on-primary-fixed-variant": "#5e0028",
+                        "surface-container-high": "#e5e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .aura-glow {
+            background: radial-gradient(circle at center, rgba(228, 0, 108, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+        }
+        .glass-card {
+            backdrop-filter: blur(24px);
+            background: rgba(255, 255, 255, 0.03);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body text-surface-bright selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-neutral-900/80 backdrop-blur-lg">
+<div class="flex items-center gap-4">
+<button class="hover:scale-95 transition-transform duration-200 active:opacity-80">
+<span class="material-symbols-outlined text-[#ff8aa9]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold tracking-tighter text-2xl text-white">Intimacy Quiz</h1>
+</div>
+<button class="hover:scale-95 transition-transform duration-200 active:opacity-80">
+<span class="material-symbols-outlined text-neutral-400" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<main class="relative min-h-screen pt-24 pb-32 px-6 overflow-hidden">
+<!-- Aura Visual (Lotus Mandala Inspired) -->
+<div class="absolute -top-20 -right-20 w-96 h-96 aura-glow rounded-full blur-3xl opacity-50"></div>
+<div class="absolute bottom-20 -left-20 w-[500px] h-[500px] bg-gradient-to-tr from-[#b60055]/10 to-[#ffd709]/5 rounded-full blur-[100px]"></div>
+<div class="max-w-xl mx-auto space-y-10 relative z-10">
+<!-- Progress Section -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="font-headline font-extrabold text-sm tracking-widest text-[#ff8aa9] uppercase">Progress 04/08</span>
+<span class="text-neutral-500 font-medium text-xs">Speaker Role</span>
+</div>
+<div class="h-1.5 w-full bg-neutral-800 rounded-full overflow-hidden">
+<div class="h-full w-1/2 bg-gradient-to-r from-[#ff8aa9] to-[#ffd709] rounded-full"></div>
+</div>
+</div>
+<!-- Question Card -->
+<section class="space-y-6">
+<h2 class="font-headline text-[2.5rem] leading-tight font-extrabold tracking-tight text-white">
+                    I stay open to <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8aa9] to-[#ffd709]">learning something</span> about myself.
+                </h2>
+<p class="text-neutral-400 text-lg font-medium leading-relaxed max-w-[90%]">
+                    "I stay open to learning something about myself during the conversation (rather than just trying to get my way)."
+                </p>
+</section>
+<!-- Rating Scale (Bento-ish interaction) -->
+<div class="grid grid-cols-5 gap-3">
+<!-- 0 -->
+<button class="group flex flex-col items-center gap-4 p-4 rounded-xl transition-all duration-300 bg-neutral-900 border border-neutral-800 hover:border-[#ff8aa9]/50 hover:bg-neutral-800/50 active:scale-95">
+<span class="text-2xl font-headline font-bold text-neutral-500 group-hover:text-[#ff8aa9]">0</span>
+<span class="text-[10px] uppercase tracking-tighter text-neutral-600 font-bold">Never</span>
+</button>
+<!-- 1 -->
+<button class="group flex flex-col items-center gap-4 p-4 rounded-xl transition-all duration-300 bg-neutral-900 border border-neutral-800 hover:border-[#ff8aa9]/50 hover:bg-neutral-800/50 active:scale-95">
+<span class="text-2xl font-headline font-bold text-neutral-500 group-hover:text-[#ff8aa9]">1</span>
+<span class="text-[10px] uppercase tracking-tighter text-neutral-600 font-bold">Rarely</span>
+</button>
+<!-- 2 -->
+<button class="group flex flex-col items-center gap-4 p-4 rounded-xl transition-all duration-300 bg-neutral-900 border border-neutral-800 hover:border-[#ff8aa9]/50 hover:bg-neutral-800/50 active:scale-95">
+<span class="text-2xl font-headline font-bold text-neutral-500 group-hover:text-[#ff8aa9]">2</span>
+<span class="text-[10px] uppercase tracking-tighter text-neutral-600 font-bold">Sometimes</span>
+</button>
+<!-- 3 -->
+<button class="group flex flex-col items-center gap-4 p-4 rounded-xl transition-all duration-300 bg-neutral-900 border border-neutral-800 hover:border-[#ff8aa9]/50 hover:bg-neutral-800/50 active:scale-95">
+<span class="text-2xl font-headline font-bold text-neutral-500 group-hover:text-[#ff8aa9]">3</span>
+<span class="text-[10px] uppercase tracking-tighter text-neutral-600 font-bold">Often</span>
+</button>
+<!-- 4 -->
+<button class="group flex flex-col items-center gap-4 p-4 rounded-xl transition-all duration-300 bg-gradient-to-tr from-[#ff8aa9] to-[#ffd709] border-none active:scale-95 shadow-[0_10px_30px_rgba(255,138,169,0.3)]">
+<span class="text-2xl font-headline font-bold text-black">4</span>
+<span class="text-[10px] uppercase tracking-tighter text-black font-extrabold">Always</span>
+</button>
+</div>
+<!-- Insight Section (Glassmorphism Card) -->
+<div class="glass-card p-8 rounded-xl border border-white/5 space-y-4">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-full bg-[#ff8aa9]/10">
+<span class="material-symbols-outlined text-[#ff8aa9] text-xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="font-headline font-bold text-white tracking-tight">Why this matters</h3>
+</div>
+<p class="text-neutral-400 font-medium leading-relaxed">
+                    Dialogue isn’t just a vehicle for your needs; it’s a mirror for your growth. Staying open to self-discovery prevents defensiveness and transforms a conflict into a shared evolution.
+                </p>
+</div><div class="pt-8 pb-4">
+<button class="w-full py-4 rounded-full bg-gradient-to-tr from-[#ff8aa9] to-[#ffd709] text-black font-headline font-extrabold text-lg shadow-[0_10px_30px_rgba(255,138,169,0.3)] hover:scale-[1.02] active:scale-95 transition-all duration-300">
+        Next Question
+    </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-neutral-900/60 backdrop-blur-3xl">
+<div class="flex flex-col items-center justify-center text-neutral-500 px-5 py-1 hover:text-[#ff8aa9] transition-colors active:scale-90 duration-300 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-manrope text-[11px] font-semibold tracking-wide uppercase mt-1">Connect</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-gradient-to-tr from-[#ff8aa9] to-[#ffd709] text-black rounded-full px-5 py-1 active:scale-90 transition-all duration-300 cursor-pointer shadow-lg shadow-[#ff8aa9]/20">
+<span class="material-symbols-outlined" data-icon="analytics" data-weight="fill" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-manrope text-[11px] font-extrabold tracking-wide uppercase mt-1">Insights</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-500 px-5 py-1 hover:text-[#ff8aa9] transition-colors active:scale-90 duration-300 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-manrope text-[11px] font-semibold tracking-wide uppercase mt-1">Library</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-500 px-5 py-1 hover:text-[#ff8aa9] transition-colors active:scale-90 duration-300 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-manrope text-[11px] font-semibold tracking-wide uppercase mt-1">Profile</span>
+</div>
+</nav>
+<!-- Decorative Elements -->
+<div class="fixed top-1/2 -right-40 w-80 h-80 aura-glow opacity-20 pointer-events-none"></div>
+</body></html>

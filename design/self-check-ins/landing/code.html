@@ -1,0 +1,168 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4258c",
+                        "accent-yellow": "#FDE047",
+                        "background-light": "#f8f5f7",
+                        "background-dark": "#121212",
+                        "card-dark": "#1e1e1e",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .gradient-border {
+                position: relative;
+                background: #1e1e1e;
+                background-clip: padding-box;
+                border: 1.5px solid transparent;
+            }
+            .gradient-border::before {
+                content: '';
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                z-index: -1;
+                margin: -1.5px;
+                border-radius: inherit;
+                background: linear-gradient(to bottom right, #f4258c, #FDE047);
+            }
+            .glow-icon {
+                text-shadow: 0 0 10px rgba(244, 37, 140, 0.6);
+            }
+            .nav-active {
+                @apply text-primary;
+            }
+            .nav-active .material-symbols-outlined {
+                font-variation-settings: 'FILL' 1;
+                text-shadow: 0 0 8px rgba(244, 37, 140, 0.4);
+            }
+            .btn-gradient {
+                background: linear-gradient(90deg, #f4258c 0%, #FDE047 100%);
+            }
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen">
+<nav class="sticky top-0 z-50 flex items-center bg-background-light dark:bg-background-dark/90 backdrop-blur-md p-4 pb-2 justify-between border-b border-slate-200 dark:border-white/5">
+<div class="flex items-center gap-3">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+<span class="material-symbols-outlined text-[24px]" style="">psychology</span>
+</div>
+<div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight uppercase" style="">PHOBIK</h2>
+</div>
+</div>
+<button class="text-slate-600 dark:text-slate-400 p-2" style="">
+<span class="material-symbols-outlined" style="">notifications</span>
+</button>
+</nav>
+<main class="p-4 pb-32 max-w-md mx-auto">
+<header class="mb-6">
+<h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-1 tracking-tight" style="">Assessment Hub</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium" style="">Deep insights for personal evolution.</p>
+</header>
+<div class="grid grid-cols-1 gap-4">
+<div class="gradient-border rounded-2xl overflow-hidden shadow-xl">
+<div class="p-5 flex flex-col">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/30 shrink-0">
+<span class="material-symbols-outlined text-primary text-[28px] glow-icon" style="">favorite</span>
+</div>
+<div class="flex-1">
+<h3 class="text-white text-lg font-bold" style="">Intimacy &amp; Connection</h3>
+<p class="text-slate-400 text-xs" style="">Discover your relationship dynamics.</p>
+</div>
+</div>
+<button class="btn-gradient text-background-dark text-xs font-black py-3 px-4 rounded-xl flex items-center justify-center gap-2 w-full uppercase tracking-widest" style="">
+<span class="" style="">Start Test</span>
+<span class="material-symbols-outlined text-[16px]" style="">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="gradient-border rounded-2xl overflow-hidden shadow-xl">
+<div class="p-5 flex flex-col">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/30 shrink-0">
+<span class="material-symbols-outlined text-primary text-[28px] glow-icon" style="">polyline</span>
+</div>
+<div class="flex-1">
+<h3 class="text-white text-lg font-bold" style="">The Pivot Point</h3>
+<p class="text-slate-400 text-xs" style="">Discover how you respond under pressure—and where you can shift in the moment.</p>
+</div>
+</div>
+<button class="btn-gradient text-background-dark text-xs font-black py-3 px-4 rounded-xl flex items-center justify-center gap-2 w-full uppercase tracking-widest" style="">
+<span class="" style="">Start Test</span>
+<span class="material-symbols-outlined text-[16px]" style="">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="gradient-border rounded-2xl overflow-hidden shadow-xl">
+<div class="p-5 flex flex-col">
+<div class="flex items-center gap-4 mb-4">
+<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/30 shrink-0">
+<span class="material-symbols-outlined text-primary text-[28px] glow-icon" style="">explore</span>
+</div>
+<div class="flex-1">
+<h3 class="text-white text-lg font-bold" style="">The Stress Compass</h3>
+<p class="text-slate-400 text-xs" style="">Discover what really matters to you</p>
+</div>
+</div>
+<button class="btn-gradient text-background-dark text-xs font-black py-3 px-4 rounded-xl flex items-center justify-center gap-2 w-full uppercase tracking-widest" style="">
+<span class="" style="">Start Test</span>
+<span class="material-symbols-outlined text-[16px]" style="">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-background-dark/95 backdrop-blur-2xl border-t border-slate-200 dark:border-white/10 px-4 pt-3 pb-8 z-[100]">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" style="">
+<span class="material-symbols-outlined text-[24px]" style="">calendar_today</span>
+<span class="text-[9px] font-black uppercase tracking-tighter" style="">Today</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" style="">
+<span class="material-symbols-outlined text-[24px]" style="">self_improvement</span>
+<span class="text-[9px] font-black uppercase tracking-tighter" style="">Practices</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" style="">
+<span class="material-symbols-outlined text-[24px]" style="">chat_bubble</span>
+<span class="text-[9px] font-black uppercase tracking-tighter" style="">Coach</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" style="">
+<span class="material-symbols-outlined text-[24px]" style="">groups</span>
+<span class="text-[9px] font-black uppercase tracking-tighter" style="">Community</span>
+</button>
+<button class="flex flex-col items-center gap-1 nav-active" style="">
+<span class="material-symbols-outlined text-[24px]" style="">insights</span>
+<span class="text-[9px] font-black uppercase tracking-tighter" style="">Insights</span>
+</button>
+</div>
+</nav>
+</body></html>

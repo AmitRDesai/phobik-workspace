@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff3b8b",
+                        "accent-yellow": "#ff9d3d",
+                        "dark-bg": "#000000",
+                        "surface": "#111111",
+                        "surface-accent": "#1a1a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .gradient-phobik {
+            background: linear-gradient(90deg, #ff3b8b 0%, #ff9d3d 100%);
+        }
+        .glow-phobik {
+            box-shadow: 0 0 40px 5px rgba(255, 59, 139, 0.25);
+        }
+        .glow-accent {
+            box-shadow: 0 0 20px 0px rgba(255, 157, 61, 0.15);
+        }
+        body {
+            background-color: #000000;
+            min-height: 100dvh;
+        }
+    
+        @keyframes pulse-breathing {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .pulse-breathing {
+            animation: pulse-breathing 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-display text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col bg-dark-bg overflow-x-hidden">
+<!-- Navigation -->
+<nav class="flex items-center p-6 justify-between bg-black/80 backdrop-blur-md sticky top-0 z-20">
+<div class="size-10 flex shrink-0 items-center justify-center cursor-pointer hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-2xl" style="">close</span>
+</div>
+<h2 class="text-xs font-bold tracking-[0.3em] uppercase opacity-60" style="">PHOBIK Micro-Challenge</h2>
+<div class="size-10"></div> <!-- Spacer for symmetry -->
+</nav>
+<!-- Progress Indicator -->
+<div class="flex w-full flex-row items-center justify-center gap-2.5 py-8">
+<div class="h-1.5 w-14 rounded-full gradient-phobik"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-neutral-800"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-neutral-800"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-neutral-800"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-neutral-800"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-neutral-800"></div>
+</div>
+<main class="flex-1 flex flex-col items-center px-6 pb-12 max-w-lg mx-auto w-full">
+<!-- Header Section -->
+<div class="text-center mb-10">
+<div class="mb-2 text-primary font-bold tracking-[0.2em] uppercase text-[10px]" style="">Step 1 of 6</div>
+<h2 class="text-slate-400 text-lg font-light tracking-wide" style=""></h2><h1 class="text-white text-3xl font-bold tracking-tight mb-8" style="outline: none !important;">Pause and Notice</h1>
+</div>
+<!-- Visualization Area -->
+<div class="relative mb-14">
+<!-- Soft background glow -->
+<div class="absolute inset-0 gradient-phobik opacity-20 blur-[60px] rounded-full"></div>
+<!-- Main icon circle -->
+<div class="relative flex items-center justify-center size-36 rounded-full gradient-phobik glow-phobik pulse-breathing">
+<span class="material-symbols-outlined text-white text-6xl" style="font-variation-settings: &quot;FILL&quot; 1;">pause_circle</span>
+</div>
+</div>
+<!-- Content Card -->
+<div class="w-full space-y-10">
+<div class="text-center">
+<h1 class="text-white text-3xl font-bold tracking-tight mb-8" style="">
+                        Take one slow breath.</h1>
+<div class="p-8 rounded-2xl bg-surface border border-white/5 glow-accent">
+<p class="text-slate-200 text-lg mb-4 italic font-light tracking-wide" style="">
+                            Say quietly: <span class="text-white font-semibold" style="">"I notice..."</span>
+</p>
+<p class="text-slate-400 text-sm leading-relaxed max-w-[280px] mx-auto" style="">
+                            Describe what is happening in your body like you’re reporting facts.&nbsp; Simply noticing helps interrupt the stress loop.</p>
+</div>
+</div>
+<!-- Fact Chips -->
+<div class="grid grid-cols-1 gap-3 w-full">
+<div class="flex items-center gap-4 p-5 bg-surface-accent/50 border border-white/5 rounded-xl transition-colors hover:bg-surface-accent">
+<div class="size-6 rounded-full gradient-phobik flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[16px] font-bold" style="">info</span>
+</div>
+<p class="text-slate-300 text-sm italic font-light" style="">"My shoulders feel tense"</p>
+</div>
+<div class="flex items-center gap-4 p-5 bg-surface-accent/50 border border-white/5 rounded-xl transition-colors hover:bg-surface-accent">
+<div class="size-6 rounded-full gradient-phobik flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[16px] font-bold" style="">info</span>
+</div>
+<p class="text-slate-300 text-sm italic font-light" style="">"My thoughts feel fast"</p>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="mt-auto pt-16 w-full flex flex-col gap-6">
+<button class="w-full h-16 rounded-2xl gradient-phobik text-white text-lg font-bold shadow-xl transition-all active:scale-[0.98] hover:opacity-90" style="">
+                    Continue
+                </button>
+<p class="text-neutral-600 text-xs text-center tracking-wide font-medium" style="">Take your time. There is no rush.</p>
+</div>
+</main>
+<!-- Bottom Safe Area -->
+<div class="h-8 bg-black"></div>
+</div>
+</body></html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline-variant": "#494847",
+                        "on-error-container": "#ffa8a3",
+                        "on-secondary-container": "#fff7e6",
+                        "primary-fixed": "#ff719b",
+                        "on-tertiary-fixed": "#1f0052",
+                        "tertiary": "#ac89ff",
+                        "outline": "#777575",
+                        "surface-container-low": "#131313",
+                        "surface-variant": "#262626",
+                        "secondary-fixed": "#ffd709",
+                        "on-secondary-fixed": "#453900",
+                        "error": "#ff716c",
+                        "surface-container-highest": "#262626",
+                        "on-secondary-fixed-variant": "#665500",
+                        "on-surface": "#ffffff",
+                        "primary-container": "#ff719b",
+                        "on-primary-fixed": "#000000",
+                        "surface-container-high": "#201f1f",
+                        "primary-dim": "#e4006c",
+                        "surface": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#4700a7",
+                        "surface-tint": "#ff8aa9",
+                        "on-primary-container": "#4c0020",
+                        "on-secondary": "#5b4b00",
+                        "secondary-container": "#705d00",
+                        "on-background": "#ffffff",
+                        "inverse-surface": "#fcf8f8",
+                        "secondary-dim": "#efc900",
+                        "tertiary-container": "#7000ff",
+                        "on-error": "#490006",
+                        "background": "#0e0e0e",
+                        "secondary-fixed-dim": "#efc900",
+                        "primary-fixed-dim": "#ff528c",
+                        "on-surface-variant": "#adaaaa",
+                        "secondary": "#ffd709",
+                        "on-primary-fixed-variant": "#5e0028",
+                        "tertiary-fixed": "#bda1ff",
+                        "primary": "#ff8aa9",
+                        "inverse-on-surface": "#565554",
+                        "inverse-primary": "#bc0058",
+                        "surface-dim": "#0e0e0e",
+                        "surface-container-lowest": "#000000",
+                        "on-primary": "#62002b",
+                        "tertiary-dim": "#874cff",
+                        "error-container": "#9f0519",
+                        "on-tertiary": "#290067",
+                        "tertiary-fixed-dim": "#b190ff",
+                        "surface-container": "#1a1919",
+                        "surface-bright": "#2c2c2c",
+                        "error-dim": "#d7383b",
+                        "on-tertiary-container": "#f8f1ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .aura-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(228, 0, 108, 0.15) 0%, rgba(14, 14, 14, 0) 70%);
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px -10px rgba(228, 0, 108, 0.1);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary min-h-screen pb-32">
+<!-- Top Navigation -->
+<nav class="flex items-center px-8 w-full h-16 bg-neutral-200/60 dark:bg-neutral-900/60 backdrop-blur-3xl fixed top-0 z-50">
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity scale-98 active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#ff8aa9] dark:text-[#ff8aa9]">arrow_back</span>
+</button>
+<span class="font-plus-jakarta-sans tracking-tight font-bold text-xl text-neutral-900 dark:text-white">Love</span>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-6 md:px-12 max-w-5xl mx-auto relative overflow-hidden">
+<!-- Aura Visual Background -->
+<div class="absolute -top-20 -right-20 w-96 h-96 aura-glow pointer-events-none opacity-50"></div>
+<div class="absolute top-1/2 -left-40 w-[500px] h-[500px] bg-tertiary/5 blur-[120px] rounded-full pointer-events-none"></div>
+<!-- Hero Section -->
+<header class="mb-12 relative z-10">
+<h1 class="font-headline text-[3.5rem] md:text-[4.5rem] leading-[1.1] font-extrabold tracking-tighter mb-4 text-on-surface">
+            LOVE
+        </h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-xl leading-relaxed">
+            Deepen self-compassion and cultivate heart-centered awareness.
+        </p>
+</header>
+<!-- Editorial Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+<!-- Vertical Card 1: 7-Day Challenge -->
+<div class="group relative flex flex-col justify-end min-h-[550px] rounded-xl overflow-hidden cursor-pointer editorial-shadow transition-transform duration-500 hover:scale-[1.02]">
+<div class="absolute inset-0 z-0">
+<img alt="Abstract atmospheric light" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Ethereal abstract photography of warm pink and soft orange light beams intersecting in a hazy, dark atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm2ODElwgicBevMfQ9nuHaPmH-_XRLxheL5iyt-9lhNGCIrQhAvHO0uHLZ-yGqJpWev1pGJdMphNx9djzbAwCxjiNRC211VHZkUmAsY1OpwAsrG_g94t2ZEa4sOUyFkkUImaCTu6Qbonm_wuHDlSfn6VgwUwgux7aNa_IOWx3EVXuIhFzfocedfgXcIbkJdrOChqqTl7Sfp1gUWuDbs_BxKuBl2TB63zIlSid3lOhKBDPoxUWTXjuVsbMm2h3coxOExibvMJV8xV91"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+</div>
+<div class="relative z-10 p-8 md:p-10">
+<div class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mb-6 border border-white/10">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<h2 class="font-headline text-3xl font-bold mb-3 tracking-tight text-white">7-Day Empathy Challenge</h2>
+<p class="font-body text-on-surface-variant text-lg mb-8 leading-snug">
+                    A week to strengthen awareness, connection, and compassion.
+                </p>
+<button class="bg-gradient-to-br from-[#ff8aa9] to-[#ffd709] text-black font-bold py-4 px-8 rounded-full inline-flex items-center gap-2 scale-98 active:scale-95 transition-all hover:shadow-[0_0_20px_rgba(255,138,169,0.4)]">
+                    Start Journey
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Vertical Card 2: Gentle Letter -->
+<div class="group relative flex flex-col justify-end min-h-[550px] rounded-xl overflow-hidden cursor-pointer editorial-shadow transition-transform duration-500 hover:scale-[1.02]">
+<div class="absolute inset-0 z-0">
+<img alt="Modern abstract aura" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Beautiful abstract atmospheric energy field with soft pink, magenta and golden glowing nebulae against a dark background, mirroring the style of the empathy challenge card." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ6bCKC9JYyyI0WeVKkrMlUe-JaFkUJrMniuGTjDH1gono8o5KZcRmwIipUJzsIhexheUHt2C-1rm3tJ0FfcTJpJvAuNcHzvYuaUg_vZkyALKSTh8_ktZd0gHZvAHqSrm31hGQhLgXtQZQjvAe_9v1zQ_6QHRgR-4lBDi8VQYNKtdRZstEKmOPfSPwmYLXprb8AW-Gvu_b7W3oD163N2Gt17GWfFaeGDJBc6m-479QWvwVsPhgOrpKhZALJE5AjmaoVR85CgNmxSDa"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+</div>
+<div class="relative z-10 p-8 md:p-10">
+<div class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mb-6 border border-white/10">
+<span class="material-symbols-outlined text-secondary text-3xl">edit_note</span>
+</div>
+<h2 class="font-headline text-3xl font-bold mb-3 tracking-tight text-white">Gentle Letter to Yourself</h2>
+<p class="font-body text-on-surface-variant text-lg mb-8 leading-snug">
+                    A Phobik practice in courage and kindness.
+                </p>
+<button class="bg-white/10 backdrop-blur-lg text-white border border-white/20 font-bold py-4 px-8 rounded-full inline-flex items-center gap-2 scale-98 active:scale-95 transition-all hover:bg-white/20">
+                    Begin Practice
+                    <span class="material-symbols-outlined">auto_awesome</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Navigation Shell -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 bg-neutral-200/60 dark:bg-neutral-900/60 backdrop-blur-3xl rounded-t-[3rem] shadow-[0_-8px_40px_rgba(228,0,108,0.1)]">
+<div class="flex flex-col items-center justify-center text-[#525555] dark:text-[#b6b7b8] p-3 hover:scale-105 transition-transform scale-98 active:scale-95 duration-200">
+<span class="material-symbols-outlined mb-1">calendar_today</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase">Today</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#ff8aa9] to-[#ffd709] text-black rounded-full p-3 hover:scale-105 transition-transform scale-98 active:scale-95 duration-200">
+<span class="material-symbols-outlined mb-1">self_improvement</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase">Practices</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#525555] dark:text-[#b6b7b8] p-3 hover:scale-105 transition-transform scale-98 active:scale-95 duration-200">
+<span class="material-symbols-outlined mb-1">psychology</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase">Coach</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#525555] dark:text-[#b6b7b8] p-3 hover:scale-105 transition-transform scale-98 active:scale-95 duration-200">
+<span class="material-symbols-outlined mb-1">group</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase">Community</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#525555] dark:text-[#b6b7b8] p-3 hover:scale-105 transition-transform scale-98 active:scale-95 duration-200">
+<span class="material-symbols-outlined mb-1">analytics</span>
+<span class="font-manrope text-[10px] font-medium tracking-wide uppercase">Insights</span>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,209 @@
+<html class="dark" lang="en"><head></head><body class="font-body text-white min-h-screen selection:bg-primary-container selection:text-black">```html
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#665500",
+              "error-dim": "#9f0519",
+              "tertiary-fixed": "#bda1ff",
+              "tertiary-container": "#bda1ff",
+              "on-secondary": "#fff2cd",
+              "primary": "#b60055",
+              "error": "#b31b25",
+              "surface-tint": "#b60055",
+              "on-secondary-fixed": "#453900",
+              "on-tertiary-fixed": "#1f0052",
+              "secondary-fixed": "#ffd709",
+              "primary-fixed": "#ff719b",
+              "inverse-surface": "#0e0e0e",
+              "surface-container-highest": "#dfdcdb",
+              "outline": "#787676",
+              "on-error-container": "#570008",
+              "on-error": "#ffefee",
+              "on-secondary-container": "#5b4b00",
+              "surface-bright": "#f9f6f5",
+              "primary-dim": "#a0004a",
+              "outline-variant": "#afacac",
+              "surface-dim": "#d7d4d3",
+              "surface-container-low": "#f3f0ef",
+              "on-primary-fixed": "#000000",
+              "tertiary-dim": "#6200e1",
+              "on-surface-variant": "#5c5b5b",
+              "on-tertiary-fixed-variant": "#4700a7",
+              "primary-container": "#ff719b",
+              "on-background": "#2f2e2e",
+              "error-container": "#fb5151",
+              "tertiary-fixed-dim": "#b190ff",
+              "secondary-dim": "#5e4e00",
+              "surface": "#f9f6f5",
+              "secondary": "#6c5a00",
+              "on-surface": "#2f2e2e",
+              "secondary-container": "#ffd709",
+              "surface-variant": "#dfdcdb",
+              "primary-fixed-dim": "#ff528c",
+              "on-primary-container": "#4c0020",
+              "inverse-primary": "#ff4b89",
+              "on-tertiary": "#f8f1ff",
+              "on-primary-fixed-variant": "#5e0028",
+              "surface-container-high": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+        }
+        .aura-glow {
+            background: radial-gradient(circle at 20% 30%, rgba(255, 113, 155, 0.15) 0%, rgba(112, 0, 255, 0.05) 50%, transparent 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+        }
+        .gradient-primary {
+            background: linear-gradient(135deg, #ff8aa9 0%, #ffd709 100%);
+        }
+    </style>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-black/40 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<button class="hover:scale-95 transition-transform duration-200 text-white">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold tracking-tighter text-2xl text-white">Intimacy Quiz</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="hover:scale-95 transition-transform duration-200 text-white">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</header>
+<main class="relative pt-24 pb-32 px-6 max-w-2xl mx-auto aura-glow">
+<!-- Progress Indicator -->
+<div class="mb-12">
+<div class="flex justify-between items-end mb-3">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-neutral-500">Progress</span>
+<span class="font-headline font-extrabold text-xl text-primary-fixed">03/08</span>
+</div>
+<div class="h-1.5 w-full bg-neutral-800 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-[#ff8aa9] to-[#ffd709] w-[37.5%] rounded-full"></div>
+</div>
+</div>
+<!-- Question Section -->
+<section class="mb-12">
+<p class="font-label text-sm text-secondary-fixed font-bold uppercase tracking-widest mb-4">Speaker Role: Q3</p>
+<h2 class="font-headline text-3xl md:text-4xl font-extrabold leading-tight tracking-tight text-white mb-8 italic">
+                "I describe how I feel, think, and what I’d like (or need) without focusing only on what the other person did wrong."
+            </h2>
+</section>
+<!-- Rating Selection (Standardized Circular Layout) -->
+<div class="flex justify-between items-center gap-2 mb-16 px-2">
+<!-- 0 -->
+<div class="flex flex-col items-center gap-2">
+<button class="w-14 h-14 rounded-full bg-neutral-900 border border-white/10 flex items-center justify-center hover:border-primary/50 transition-all duration-300">
+<span class="text-xl font-headline font-bold text-neutral-500">0</span>
+</button>
+</div>
+<!-- 1 -->
+<div class="flex flex-col items-center gap-2">
+<button class="w-14 h-14 rounded-full bg-neutral-900 border border-white/10 flex items-center justify-center hover:border-primary/50 transition-all duration-300">
+<span class="text-xl font-headline font-bold text-neutral-500">1</span>
+</button>
+</div>
+<!-- 2 -->
+<div class="flex flex-col items-center gap-2">
+<button class="w-14 h-14 rounded-full bg-neutral-900 border border-white/10 flex items-center justify-center hover:border-primary/50 transition-all duration-300">
+<span class="text-xl font-headline font-bold text-neutral-500">2</span>
+</button>
+</div>
+<!-- 3 (Active) -->
+<div class="flex flex-col items-center gap-2">
+<button class="w-16 h-16 rounded-full gradient-primary flex items-center justify-center shadow-[0_0_20px_rgba(255,138,169,0.4)] transform scale-110">
+<span class="text-2xl font-headline font-bold text-black">3</span>
+</button>
+<span class="text-[10px] font-label font-bold uppercase text-primary-fixed tracking-wider">Active</span>
+</div>
+<!-- 4 -->
+<div class="flex flex-col items-center gap-2">
+<button class="w-14 h-14 rounded-full bg-neutral-900 border border-white/10 flex items-center justify-center hover:border-primary/50 transition-all duration-300">
+<span class="text-xl font-headline font-bold text-neutral-500">4</span>
+</button>
+</div>
+</div>
+<!-- Insight Card -->
+<div class="relative">
+<div class="glass-card rounded-2xl p-8 border border-white/5 relative overflow-hidden">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 text-primary-fixed">
+<span class="material-symbols-outlined" data-icon="lightbulb" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline text-xl font-bold text-white">Why this matters</h3>
+<div class="h-0.5 w-12 gradient-primary mt-1"></div>
+</div>
+</div>
+<p class="text-neutral-400 leading-relaxed text-lg italic">
+                    Using "I" statements shifts the focus from accusation to expression. This reduces defensiveness in others and opens a clearer pathway for your needs to be met without triggering conflict cycles.
+                </p>
+<div class="mt-8 flex justify-end">
+<span class="font-label text-xs uppercase tracking-widest text-neutral-600">— Emotional Intelligence Guide</span>
+</div>
+</div>
+</div>
+<!-- CTA Action -->
+<div class="mt-12 flex justify-center">
+<button class="group flex items-center gap-3 gradient-primary text-black font-headline font-bold py-4 px-10 rounded-full hover:scale-95 active:scale-90 transition-all duration-300 shadow-[0_10px_30px_rgba(255,138,169,0.3)]">
+                Next Insight
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-neutral-950/80 backdrop-blur-3xl rounded-t-[2.5rem] border-t border-white/5">
+<!-- Connect (Active) -->
+<button class="flex flex-col items-center justify-center gradient-primary text-black rounded-full px-5 py-1.5 transition-all duration-300">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label text-[10px] font-bold tracking-tight uppercase">Connect</span>
+</button>
+<!-- Insights -->
+<button class="flex flex-col items-center justify-center text-neutral-500 hover:text-white transition-colors px-5 py-1.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="analytics">analytics</span>
+<span class="font-label text-[10px] font-bold tracking-tight uppercase">Insights</span>
+</button>
+<!-- Library -->
+<button class="flex flex-col items-center justify-center text-neutral-500 hover:text-white transition-colors px-5 py-1.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="menu_book">menu_book</span>
+<span class="font-label text-[10px] font-bold tracking-tight uppercase">Library</span>
+</button>
+<!-- Profile -->
+<button class="flex flex-col items-center justify-center text-neutral-500 hover:text-white transition-colors px-5 py-1.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+<span class="font-label text-[10px] font-bold tracking-tight uppercase">Profile</span>
+</button>
+</nav>
+<!-- Background Elements -->
+<div class="fixed top-0 right-0 -z-10 w-full h-full overflow-hidden opacity-30 pointer-events-none">
+<div class="absolute -top-[10%] -right-[10%] w-[600px] h-[600px] rounded-full blur-[100px] bg-primary/10"></div>
+<div class="absolute bottom-[20%] -left-[10%] w-[400px] h-[400px] rounded-full blur-[100px] bg-secondary-fixed/5"></div>
+</div>
+```</body></html>
