@@ -34,15 +34,17 @@ User-scoped features that work without network:
 - Mystery challenges
 - Self check-ins
 - Calendar preferences
+- Affirmations (daily selection + history)
+- Profile writes (saveProfile, onboarding answers, completeOnboarding)
 
-These use `@powersync/react` hooks (`useQuery` for reads, `powersync.execute()` for writes). Data is stored locally in SQLite and synced to Postgres automatically.
+These use **Kysely** query builders with `@powersync/tanstack-react-query` watched queries for reads, and **Kysely** + standard TanStack `useMutation` for writes. Data is stored locally in SQLite and synced to Postgres automatically. No manual query invalidation needed — watched queries auto-update on table changes.
 
 ### What's online-only (React Query + oRPC)
 Features requiring server or other users' data:
 - Auth (Better Auth)
 - AI Coach (streaming)
 - Community (social feed)
-- Profile status check + onboarding writes (navigation guard)
+- Profile status check (navigation guard — read only)
 
 ### How sync works
 - **Reads**: Postgres → logical replication → PowerSync Service → WebSocket → local SQLite → reactive hooks → UI
@@ -51,10 +53,13 @@ Features requiring server or other users' data:
 - All write procedures accept optional client-generated `id` and use `onConflictDoUpdate` for idempotency
 
 ### Key conventions
-- PowerSync returns **snake_case** column names. Use `toCamel()` from `@/lib/powersync/utils` in hooks to convert to camelCase for screens
+- **Reads**: `useQuery` from `@powersync/tanstack-react-query` with Kysely query builders (`db.selectFrom(...)`)
+- **Writes**: `useMutation` from `@tanstack/react-query` with Kysely (`db.insertInto(...)`, `db.updateTable(...)`)
+- **No manual invalidation** — PowerSync watched queries auto-update when any table changes
+- Kysely wrapper at `@/lib/powersync/database` provides type-safe `db` instance
+- PowerSync returns **snake_case** column names. Use `toCamel()` from `@/lib/powersync/utils` in hooks to convert for screens
 - JSONB columns (tags, content, answers) are stored as text in SQLite — pass `{ tags: true }` etc. to `toCamel()` to auto-parse
 - Use `uuid()` from `@/lib/crypto` (expo-crypto) for generating IDs — `crypto.randomUUID()` is NOT available in React Native
-- Use `useLocalMutation()` from `@/lib/powersync/useLocalMutation` for write hooks — provides React Query-compatible `.mutate()`, `.mutateAsync()`, `.isPending` API
 - PowerSync requires **dev builds** (`npx expo run:ios`) — does NOT work in Expo Go
 
 ### Infrastructure (db/)
@@ -64,6 +69,7 @@ Features requiring server or other users' data:
 - `db/init/02_powersync_replication.sql` — Creates replication role + publication
 - Auth: ES256 JWKS — private key in backend `.env`, public key in PowerSync config
 - Key generation: `bun run scripts/generate-powersync-key.ts`
+- **After adding a new table/stream to `sync-config.yaml`, always restart PowerSync:** `docker compose up -d --force-recreate powersync` — the service does NOT hot-reload config changes
 
 ## Per-Project Instructions
 

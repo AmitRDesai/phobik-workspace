@@ -30,6 +30,10 @@ streams:
     auto_subscribe: true
     query: SELECT * FROM empathy_challenge_day WHERE user_id = auth.user_id()
 
+  micro_challenges:
+    auto_subscribe: true
+    query: SELECT * FROM micro_challenge WHERE user_id = auth.user_id()
+
   mystery_challenges:
     auto_subscribe: true
     query: SELECT * FROM mystery_challenge WHERE user_id = auth.user_id()
@@ -37,3 +41,11 @@ streams:
   self_check_ins:
     auto_subscribe: true
     query: SELECT * FROM self_check_in WHERE user_id = auth.user_id()
+
+  user_affirmations:
+    auto_subscribe: true
+    query: SELECT * FROM user_affirmation WHERE user_id = auth.user_id()
+
+  practice_sessions:
+    auto_subscribe: true
+    query: SELECT * FROM practice_session WHERE user_id = auth.user_id()
